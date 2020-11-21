@@ -3,10 +3,11 @@
 The core GeneNetwork team maintains modern Linux servers and storage
 systems for genetic, genomic, and phenome analyses. Machines are
 located in the main UTHSC machine room of the Lamar Alexander Building
-at UTHSC (Memphis campus). The whole team has access to this space
-for upgrades and hardware maintenance. Issues and work packages are
-tracked through a Trello board and we use git repositories for
-documentation (all available on request).
+at UTHSC (Memphis campus). The whole team has access to this space for
+upgrades and hardware maintenance. We use remote racadm and/or ipmi on
+all important machines. Issues and work packages are tracked through a
+Trello board and we use git repositories for documentation (all
+available on request).
 
 This computing facility has four computer racks dedicated to
 GeneNetwork-related work. Each rack has a mix of Dell PowerEdge
@@ -53,3 +54,10 @@ use ISAAC and storage facilities for public-facing web services
 because of stringent security requirements.  ISAAC however, can be
 highly useful for precomputed genomics and genetics results using
 standardized pipelines.
+
+The software stack is maintained and deployed throughout with GNU
+Guix, a modern software package manager. All current tools are
+maintained on
+http://git.genenetwork.org/guix-bioinformatics/guix-bioinformatics.
+Dr Garrison's pangenome tools are packaged on
+https://github.com/ekg/guix-genomics.
