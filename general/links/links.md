@@ -1,6 +1,6 @@
 ## GeneNetwork and WebQTL have integrated links to the following resources
 
- ### GN PARTNERS, DEVELOPMENT SITES, AND MIRRORS
+### GN PARTNERS, DEVELOPMENT SITES, AND MIRRORS
 
 *   <a href="http://genenetwork.helmholtz-hzi.de">German Helmholtz Foundation GeneNetwork</a> at the <A href="http://www.helmholtz-hzi.de/en/" target="_blank">Helmholtz Centre for Infection Research (HZI)</a>, Braunschweig Germany, in the <a href="hzi.de/en/research/research_groups/experimental_mouse_genetics/experimental_mouse_genetics/team/" target="_blank">research group</A> of Dr. Klaus Schughart.
 
