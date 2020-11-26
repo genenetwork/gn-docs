@@ -2,7 +2,7 @@
 
 |  Operating System |   |   |   |
 |---|---|---|---|
-| Ubuntu  | 12.04.5 LTS 64-bit  |  (http://www.ubuntu.com) | Free software licenses (mainly GPL)  |
+| Ubuntu  |  ubuntu-latest  |  [ubuntu](http://www.ubuntu.com) | Free software licenses (mainly GPL)  |
 |  **Database** |   |   |   |
 |  MySQL | 5.5.40  | [http://www.mysql.com/](http://www.mysql.com/)  | GPL (version 2) or proprietary  |
 | **Python**  |   |   |   |

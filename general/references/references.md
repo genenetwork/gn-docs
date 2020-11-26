@@ -10,11 +10,13 @@
 | [2020](#2020) | [2019](#2019) | [2018](#2018) |  [2017](#2017) | [2016](#2016) | [2015](#2015) | [2014](#2014) | [2013](#2013) |[2012](#2012) | [2011](#2011) | [2010](#2010) |[2009](#2009) | [2008](#2008) |[2007](#2007) |[2006](#2006) | [2005](#2005) | [2004](#2004) | [2003](#2003) |
 
 Google Scholar search for   _"genenetwork" OR "webqtl"_   generated:
+
 1. 1430 hits on 2016/09/08
 2. 1730 hits on 2017/10/17
 3. 2020 hits on 2019/05/13 
 
 [Google Scholar](https://scholar.google.com/scholar?as_q=&as_epq=&as_oq=genenetwork.org&as_eq=&as_occt=any&as_sauthors=&as_publication=&as_ylo=&as_yhi=&btnG=&hl=en&as_sdt=0%2C5) &nbsp; search for  *genenetwork.org*  &nbsp; generated:
+
 1. 1030 hits on 2019/05/13
 2. 105 hits from 2018/01/01 to 2019/05/13
 
@@ -22,6 +24,7 @@ Google Scholar search for   _"genenetwork" OR "webqtl"_   generated:
 <div id="New"> </div>
 
 ##  Highlighted References
+
 ####  **_Please send us citations to articles that we may have missed._**
 
 1.  Mulligan MK, Mozhui K, Prins P, Williams RW [2017](https://ncbi.nlm.nih.gov/pubmed/27933521) GeneNetwork: A Toolbox for Systems Genetics. In *Systems Genetics*, Methods in Molecular Biology 1488:75-120
@@ -57,7 +60,7 @@ Google Scholar search for   _"genenetwork" OR "webqtl"_   generated:
 
 8. Merkwirth C, Jovaisaite V, Durieux J, Matilainen O, Jordan SD, Quiros PM, Steffen KK, Williams EG, Mouchiroud L, Tronnes SU, Murillo V, Wolff SC, Shaw RJ, Auwerx J, Dillin A [2016](https://ncbi.nlm.nih.gov/pubmed/27133168) Two conserved histone demethylases regulate mitochondrial stress-induced longevity. Cell 165:1209-1223
 
-9. Wang X, Pandey AK, Mulligan MK, Williams EG, Mozhui K, Li Z, Jovaisaite V, Quarles LD, Xiao Z, Huang J, Capra JA, Chen Z, Taylor WL, Bastarache L, Niu X, Pollard KS, Ciobanu DC, Reznik AO, Tishkov AV, Zhulin IB, Peng J, Nelson SF, Denny JC, Auwerx J, Lu L, Williams RW [2016]("https://ncbi.nlm.nih.gov/pubmed/26833085). Joint mouse-human phenome-wide association to test gene function and disease risk. Nature Communications 7:10464 
+9. Wang X, Pandey AK, Mulligan MK, Williams EG, Mozhui K, Li Z, Jovaisaite V, Quarles LD, Xiao Z, Huang J, Capra JA, Chen Z, Taylor WL, Bastarache L, Niu X, Pollard KS, Ciobanu DC, Reznik AO, Tishkov AV, Zhulin IB, Peng J, Nelson SF, Denny JC, Auwerx J, Lu L, Williams RW [2016](https://ncbi.nlm.nih.gov/pubmed/26833085). Joint mouse-human phenome-wide association to test gene function and disease risk. Nature Communications 7:10464 
 [Best reference on the BXD family of strains and the wide range of phenotypes that have been generated over the past 40 years.] 
    - <small>[PDF version](http://gn1.genenetwork.org/images/upload/Wang_PheWas_NatComm_2016.pdf)  and the
      [Supplementary Tables in one Excel file](http://gn1.genenetwork.org/images/upload/Wang_SupplementalTables_NatComm_2016.xlsx) </small>
@@ -95,19 +98,18 @@ The first section lists key technical papers that are appropriate references whe
 
 1. Mulligan MK, Mozhui K, Prins P, Williams RW [2016](https://ncbi.nlm.nih.gov/pubmed/26092713). GeneNetwork – A toolbox for systems genetics. In *Systems Genetics*, Methods in Molecular Biology; Schughart K, Williams RW eds.; Humana Press, in press
 [This is a currently the most comprehensive protocol and guide (20 Mb) for GeneNetwork.] 
-
    - <small>[PDF Version](http://gn1.genenetwork.org/images/upload/Mulligan_How_To_Use_GeneNetwork_2016_v1.pdf)</small>
 				
 2. Williams RW, Mulligan MK [2012](https://ncbi.nlm.nih.gov/pubmed/23195314). Genetic and molecular network analysis of behavior. Int Rev Neurobiol. 104:135-57. [Explains the  use of GeneNetwork in behavioral neurogenetics]
    - <small><a href="http://gn1.genenetwork.org/images/upload/Williams_Mulligan_Bioinformatics of Brain Short 2012.pdf" target="_blank" >PDF version</A>
     </small> 
 
-3. Williams EG, Auwerx J [2015](https://ncbi.nlm.nih.gov/pubmed/26140590). The convergence of systems and reductionist approaches in complex trait analysis. Cell 162:23-32. [Research into the genetic and environmental factors behind complex trait variation has traditionally been segregated into distinct scientific camps. The reductionist approach aims to decrypt phenotypic variability bit by bit, founded on the underlying hypothesis that genome-to-phenome relations are largely constructed from the additive effects of their molecular players. In contrast, the systems approach aims to examine large-scale interactions of many components simultaneously, on the premise that interactions in gene networks can be both linear and non-linear. Both approaches are complementary, and they are becoming increasingly intertwined due to developments in gene editing tools, omics technologies, and population resources. Together, these strategies are beginning to drive the next era in complex trait research, paving the way to improve agriculture and toward more personalized medicine.] 
+3. Williams EG, Auwerx J [2015](https://ncbi.nlm.nih.gov/pubmed/26140590). The convergence of systems and reductionist approaches in complex trait analysis. Cell 162:23-32. [Research into the genetic and environmental factors behind complex trait variation has traditionally been segregated into distinct scientific camps. The reductionist approach aims to decrypt phenotypic variability bit by bit, founded on the underlying hypothesis that genome-to-phenome relations are largely constructed from the additive effects of their molecular players. In contrast, the systems approach aims to examine large-scale interactions of many components simultaneously, on the premise that interactions in gene networks can be both linear and non-linear. Both approaches are complementary, and they are becoming increasingly intertwined due to developments in gene editing tools, omics technologies, and population resources. Together, these strategies are beginning to drive the next era in complex trait research, paving the way to improve agriculture and toward more personalized medicine.]
    -  <small>[PDF version](http://gn1.genenetwork.org/images/upload/WilliamsEG_Auwerx_Cell2015.pdf)</small>
 
-4. Wang J, Williams RW, Manly KF ([2003](http://journals.humanapress.com/ArticleDetail.pasp?issn=1539-2791&acode=NI:1:4:299))  WebQTL: Web-based complex trait analysis. Neuroinformatics 1: 299-308 [*Full Text PDF Version*](http://www.genenetwork.org/pdf/webqtl.pdf). [A good technical reference to WebQTL and GeneNetwork]
+4. Wang J, Williams RW, Manly KF ([2003](http://journals.humanapress.com/ArticleDetail.pasp?issn=1539-2791&acode=NI:1:4:299))  WebQTL: Web-based complex trait analysis. Neuroinformatics 1: 299-308 [*Full Text PDF Version*](http://www.genenetwork.org/pdf/webqtl.pdf).[A good technical reference to WebQTL and GeneNetwork]
 
-5. Williams RW, Gu J, Qi S, Lu L ([2003](http://journals.humanapress.com/ArticleDetail.pasp?issn=1539-2791&acode=NI:1:4:299)) The genetic structure of recombinant inbred mice: high-resolution consensus maps for complex trait analysis. Genome Biology 2(11)  [*Full Text Version*](http://genomebiology.com/content/2/11/RESEARCH0046). [A detailed analysis of the genetics of recombinant inbred strains]
+5. Williams RW, Gu J, Qi S, Lu L ([2003](http://journals.humanapress.com/ArticleDetail.pasp?issn=1539-2791&acode=NI:1:4:299)) The genetic structure of recombinant inbred mice: high-resolution consensus maps for complex trait analysis. Genome Biology 2(11)[*Full Text Version*](http://genomebiology.com/content/2/11/RESEARCH0046).[A detailed analysis of the genetics of recombinant inbred strains]
 
 6. Chesler EJ, Wang J, Lu L, Qu Y, Manly KF, Williams RW ([2003](http://journals.humanapress.com/ArticleDetail.pasp?issn=1539-2791&acode=NI:1:4:343)) Genetic correlates of gene expression in recombinant inbred strains: a relational model to explore for neurobehavioral  phenotypes. Neuroinformatics 1: 343-357.[*Full Text PDF Version*](http://www.nervenet.org/pdf/Genetic_Correlation_webQTL.pdf). [Best reference regarding interpretation of genetic correlations.]
 
@@ -132,8 +134,11 @@ The first section lists key technical papers that are appropriate references whe
        - [Part 1](http://www.youtube.com/watch?v=5UniEc_pzs0)
 
        - [Part 2](http://www.youtube.com/watch?v=zjdOWC7zxt0)
+
        - [Part 3](http://www.youtube.com/watch?v=caC0YGhDoo8)
+
        - [Part 4](http://www.youtube.com/watch?v=eTzIcM3aspM)
+
        - [Part 5](http://www.youtube.com/watch?v=Dnq7w4RIAXI)
 
      </small>
@@ -553,7 +558,7 @@ PMID: 25236450
 
 7. Li D, Mulligan MK, Wang X, Miles MF, Lu L, Williams RW ([2010](http://www.ncbi.nlm.nih.gov/pubmed/20808911)) A transposon in *Comt* generates mRNA variants and causes widespread expression and behavioral differences among mice.  PLoS One. 2010 Aug 17;5(8):e12181. [*Full Text HTML and PDF Versions*](http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0012181)  
 
-8. Lionikas A, Carlborg O, Lu L; Peirce JL, Williams RW, Yu F, Vogler GP, McClearn GE, Blizard DA [2010](http://www.ncbi.nlm.nih.gov/pubmed/20233743)  target="_blank"  >2010</a> Genomic analysis of variation in hindlimb musculature of mice from the C57BL/6J and DBA/2J lineage. Journal of Heredity 2010; doi: 10.1093/jhered/esq023.  [*Full Text PDF Version*](http://http://jhered.oxfordjournals.org/cgi/reprint/esq023?ijkey=BbuUGMafKrjFO5f&keytype=ref)
+8. Lionikas A, Carlborg O, Lu L; Peirce JL, Williams RW, Yu F, Vogler GP, McClearn GE, Blizard DA [2010](http://www.ncbi.nlm.nih.gov/pubmed/20233743). Genomic analysis of variation in hindlimb musculature of mice from the C57BL/6J and DBA/2J lineage. Journal of Heredity 2010; doi: 10.1093/jhered/esq023.  [*Full Text PDF Version*](http://http://jhered.oxfordjournals.org/cgi/reprint/esq023?ijkey=BbuUGMafKrjFO5f&keytype=ref)
 
 9. Loguercio S, Overall RW, Michaelson JJ, Wiltshire T, Pletcher MT, Miller BH, Walker JR, Kempermann G, Su AI, Beyer A [2010]("http://www.ncbi.nlm.nih.gov/pubmed/21085707)Integrative analysis of low- and high-resolution eQTL. PLoS One 5(11):e13920
 [*Full Text PDF Version*](http://www.plosone.org/article/fetchObjectAttachment.action;jsessionid=C93DEB44991B6401001E7585AC4C4393.ambra02?uri=info%3Adoi%2F10.1371%2Fjournal.pone.0013920&representation=PDF)  
@@ -566,7 +571,8 @@ PMID: 25236450
 
 13. Mulligan MK, Lu L,   Overall RW,   Kempermann G,   Rogers GL,   Langston MA,   Williams RW   ([2010](http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=5510847)) Genetic analysis of BDNF expression cliques and adult neurogenesis in the hippocampus.  Biomedical Sciences and Engineering Conference (BSEC) DOI: 10.1109/BSEC.2010.5510848  [*Full Text PDF version*](http://gn1.genenetwork.org/images/upload/BDNF_Clique_Apr13.pdf)
 
-14. Peidis P, Giannakouros T, Burow ME, Williams RW, Scott RE ([2010](http://www.ncbi.nlm.nih.gov/pubmed/20184719)) Systems genetics analyses predict a transcription role for P2P-R: molecular confirmation that P2P-R is a transcriptional co-repressor. BMC Systems Biology 4:14 [*Full Text PDF version*]("http://www.biomedcentral.com/content/pdf/1752-0509-4-14.pdf)  and 
+14. Peidis P, Giannakouros T, Burow ME, Williams RW, Scott RE ([2010](http://www.ncbi.nlm.nih.gov/pubmed/20184719)) Systems genetics analyses predict a transcription role for P2P-R: molecular confirmation that P2P-R is a transcriptional co-repressor. BMC Systems Biology 4:14 [*Full Text PDF version*]("http://www.biomedcentral.com/content/pdf/1752-0509-4-14.pdf)  and
+
 15. Philip VM, Duvvuru S, Gomero B, Ansah TA, Blaha CD, Cook MN, Hamre KM, Laviviere WR, Matthews DB, Mittleman G, Goldowitz D, Chesler EJ ([2010](http://www.ncbi.nlm.nih.gov/pubmed/19958391)) High-throughput behavioral phenotyping in the expanded panel of BXD recombinant inbred strains.  Genes, Brain and Behavior 8:129-159  [*Full Text HTML Version*](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2855868/)
 
 16. Reinius B, Shi C, Hengshuo L, Sandhu KS, Radomska KJ, Rosen GD, Lu L, Kullander K, Williams RW, Jazin E. ([2010](http://www.ncbi.nlm.nih.gov/pubmed/21047393)) Female-biased expression of long non-coding RNAs in domains that escape X-inactivation in mouse.  BMC Genomics. 2010 Nov 3;11:614 [*Full Text HTML Version*](http://www.biomedcentral.com/1471-2164/11/614)
@@ -574,6 +580,7 @@ PMID: 25236450
 17. Rulten SL, Ripley TL, Hunt CL, Stephens DN, Mayne LV ([2010](http://www.ncbi.nlm.nih.gov/pubmed/16594979)) Sp1 and NFkappaB pathways are regulated in brain in response to acute and chronic ethanol. Genes, Brain and Behavior  5:257-73. [*Full Text HTML Version*](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2855868/)
 
 18. Suwanwela J, Farber CR, Haung BL, Song B, Pan C, Lyons KM, Lusis AJ  ([2010](http://gn1.genenetwork.org/images/upload/Suwanwela-1.JBMR.10.pdf)) Systems genetics analysis of mouse chondrocyte differentiation. JBMR, in press [*Full Text PDF version*](http://gn1.genenetwork.org/images/upload/Suwanwela-1.JBMR.10.pdf)
+
 19. Wang X, Chen Y, Wang X, Lu L. ([2010](http://www.ncbi.nlm.nih.gov/pubmed/20054728)) Genetic regulatory network analysis for *App* based on genetical genomics approach. Exp Aging Res 36:79-93 
 
 
@@ -612,9 +619,9 @@ PMID: 25236450
 
 
 11. Grisham W ([2009](http://www.funjournal.org/downloads/200981/grisham81.pdf)) Modular digitial course in undergraduate neuroscience education (MDCUNE): A website offering free digital tools for neuroscience educators.  Journal of Undergraduate Neuroscience Education 8:A26-A31  [*Full Text PDF Version*](http://www.funjournal.org/downloads/200981/grisham81.pdf)
-<BR><SMALL>
+<br/><small>
 An excellent example of how resources such as GeneNetwork and the Mouse Brain Library can be used in class room labs. 
-</SMALL>
+</small>
 
 12. Jellen LC, Beard JL, Jones BC ([2009](http://www.ncbi.nlm.nih.gov/pubmed/19393285)) Systems genetics analysis of iron regulation. Biochemie in press.
 19393285
@@ -640,14 +647,14 @@ An excellent example of how resources such as GeneNetwork and the Mouse Brain Li
 
 19. Rosen GL, Pung C, Owens C, Caplow J, Kim H, Lu L, Williams RW ([2009](http://www.ncbi.nlm.nih.gov/pubmed/19191878)) Genetic modulation of striatal volume in BXD recombinant inbred mice. Genes, Brain & Behavior 8:296-308
 
-20. Saccone SF, Bierut LJ, Chesler EJ, Kalivas PW, Lerman C, Saccone NL, Uhl GR, Li CY, Philip VM, Edenberg HJ, Sherry ST, Feolo M, Moyzis RK, Rutter JL ([2009](http://www.ncbi.nlm.nih.gov/pubmed/19381300)) Supplementing high-density SNP microarrays for additional coverage of disease-related genes: addiction as a paradigm. PLoS ONE 4:e5225. [*Full Text HTML Version*]("http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0005225),
+20. Saccone SF, Bierut LJ, Chesler EJ, Kalivas PW, Lerman C, Saccone NL, Uhl GR, Li CY, Philip VM, Edenberg HJ, Sherry ST, Feolo M, Moyzis RK, Rutter JL ([2009](http://www.ncbi.nlm.nih.gov/pubmed/19381300)) Supplementing high-density SNP microarrays for additional coverage of disease-related genes: addiction as a paradigm. PLoS ONE 4:e5225. [*Full Text HTML Version*](http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0005225),
 [*Full Text PDF Version*](http://www.plosone.org/article/fetchObjectAttachment.action?uri=info%3Adoi%2F10.1371%2Fjournal.pone.0005225&representation=PDF). [Supplementary table 1 provides links to many transcripts and genes, some of which were mined from an analysis of GeneNetwork data sets.] 
 
 21. Silva GL, Junta CM, Sakamoto-Hojo ET, Donadi EA, Louzada-Junior P, Passos GA ([2009](http://www.ncbi.nlm.nih.gov/pubmed/19758195)) Genetic susceptibility loci in rheumatoid arthritis establish transcriptional regulatory networks with other genes. Ann N Y Acad Sci 1173:521-37
 
 22. Tapocik JD, Letwin N, Mayo CL, Frank B, Luu T, Achinike O, House C, Williams R, Elmer GI, Lee NH ([2009](http://www.ncbi.nlm.nih.gov/pubmed/19386926)) Identification of candidate genes and gene networks specifically associated with analgesic tolerance to morphine. J Neurosci 2:5295-307  [*Full Text HTML*](http://www.jneurosci.org/cgi/content/full/29/16/5295)
 
-23. Thomas C, Gioiello A, Noriega L, Strehle A, Oury J, Rizzo G, Macchiarulo A, Yamamoto H, Mataki C, Pruzanski M, Pellicciari R, Auwerx J, Schoonjans K ([2009]("http://www.ncbi.nlm.nih.gov/pubmed/19723493)) TGR5-mediated bile acid sensing controls glucose homeostasis. Cell Metab 10:167-77
+23. Thomas C, Gioiello A, Noriega L, Strehle A, Oury J, Rizzo G, Macchiarulo A, Yamamoto H, Mataki C, Pruzanski M, Pellicciari R, Auwerx J, Schoonjans K ([2009](http://www.ncbi.nlm.nih.gov/pubmed/19723493)) TGR5-mediated bile acid sensing controls glucose homeostasis. Cell Metab 10:167-77
 [*Full Text PDF*](http://www.genenetwork.orghttp://gn1.genenetwork.org/images/upload/Thomas_Auwerx_2009.pdf)
 
 24. Webb BT, McClay JL, Vargas-Irwin C, York TP, van den Oord EJCG ([2009](http://www.ncbi.nlm.nih.gov/pubmed/19723493)) In silico whole genome association scan for murine prepulse inhibition. PLoS ONE 4: e5246. doi:10.1371/journal.pone.0005246
@@ -701,7 +708,7 @@ An excellent example of how resources such as GeneNetwork and the Mouse Brain Li
 
 
 9. Druka A, Druka I, Centeno AG, Li H, Sun Z, Thomas WT, Bonar N, Steffenson BJ, Ullrich SE, Kleinhofs A, Wise RP, Close TJ, Potokina E, Luo Z, Wagner C, Schweizer GF, Marshall DF, Kearsey MJ, Williams RW, Waugh R ([2008](http://www.ncbi.nlm.nih.gov/pubmed/19017390)) Towards systems genetic analyses in barley: Integration of phenotypic, expression and genotype data into GeneNetwork. BMC Genet 9:73
-[*Full Text HTML Version*]("http://www.biomedcentral.com/1471-2156/9/73)
+[*Full Text HTML Version*](http://www.biomedcentral.com/1471-2156/9/73)
 
 10. Dykstra B, de Haan G ([2008](http://www.ncbi.nlm.nih.gov/pubmed/18008087)) Hematopoietic stem cell aging and self-renewal. Cell Tissue Res 331:91-101
 
@@ -732,7 +739,7 @@ An excellent example of how resources such as GeneNetwork and the Mouse Brain Li
 19. Johnson KR, Longo-Guessa C, Gagnona LH, Yub H, Zhengb QY ([2008](http://www.ncbi.nlm.nih.gov/pubmed/18662770)) A locus on distal chromosome 11 (*ahl8*) and its interaction with *Cdh23 ahl* underlie the early onset, age-related hearing loss of DBA/2J mice. Genomics 92:219-225 
 
 20. Jones LC, Beard JL, Jones BC ([2008](http://www.ncbi.nlm.nih.gov/pubmed/18189309)) Genetic analysis reveals polygenic influences on iron, copper, and zinc in mouse hippocampus with neurobiological implications. Hippocampus 18:398-410
-[*Full Text PDF Version*](images/upload/Jones_2008_Hippocampus.pdf)
+[*Full Text PDF Version*](http://gn1.genenetwork.org/images/upload/Jones_2008_Hippocampus.pdf)
 
 
 21. Jones LC, Earley CJ, Allen RP, Jones BC ([2008](http://www.ncbi.nlm.nih.gov/pubmed/18189309)) Of mice and men, periodic limb movements and iron: how the human genome informs the mouse genome. Genes, Brain and Behavior 7:513-514.
@@ -811,9 +818,9 @@ Genes and cell metabolism. Curr Opin Clin Nutr Metab Care 11:393-397
 
 3. Bao L, Zhou M, Wu L, Lu L, Goldowitz D, Williams RW, Cui Y ([2007](http://www.ncbi.nlm.nih.gov/pubmed/17099235)) PolymiRTS Database: linking polymorphisms in microRNA target sites with complex traits. Nucleic Acids Res. 35(Database issue):D51-54 
 [*Full Text PDF Version*](http://nar.oxfordjournals.org/cgi/reprint/35/suppl_1/D51), 
-[Full Text HTML Version*](http://nar.oxfordjournals.org/cgi/content/full/35/suppl_1/D51)   
+[*Full Text HTML Version*](http://nar.oxfordjournals.org/cgi/content/full/35/suppl_1/D51)   
 
-4. Benhamou JP, Rizzetto M, Reichen J, Rodés J ([2007](http://books.google.com/books?id=taE276KCyecC&dq=genenetwork+webqtl)) Textbook of hepatology: from basic science to clinical practice. Blackwell Publishing, p. [379]("http://books.google.com/books?id=taE276KCyecC&pg=PA379&lpg=PA379&dq=genenetwork+webqtl&source=web&ots=2CjGbbDh3B&sig=tXdbQ7KAGOyxOee9TECF40GXyywl)), ISBN 1405127414
+4. Benhamou JP, Rizzetto M, Reichen J, Rodés J ([2007](http://books.google.com/books?id=taE276KCyecC&dq=genenetwork+webqtl)) Textbook of hepatology: from basic science to clinical practice. Blackwell Publishing, p. [379](http://books.google.com/books?id=taE276KCyecC&pg=PA379&lpg=PA379&dq=genenetwork+webqtl&source=web&ots=2CjGbbDh3B&sig=tXdbQ7KAGOyxOee9TECF40GXyywl)), ISBN 1405127414
 
 5. Bennett B, Downing C, Carosone-Link P, Ponicsan H, Ruf C, Johnson TE ([2007](http://www.ncbi.nlm.nih.gov/pubmed/17250610)) Quantitative trait locus mapping for acute functional tolerance to ethanol in the L x S recombinant inbred panel. Alcohol Clin Exp Res. 31:200-208. [Phenotype data described in this paper are accessible in GeneNetwork in the LXS Phenotype database; ID numbers 10126, 10127, 10132, 10134, 10138, and 10139 (select Species=MOUSE, Group=LXS, Type=PHENOTYPES and search the ALL field with the term "functional" or just enter the ID numbers above.]  
 
@@ -837,7 +844,7 @@ CRC Press ISBN 084931903X InterScience
 [*Full Text HTML Version*](http://www.plosgenetics.org/article/info:doi/10.1371/journal.pgen.0030214)
  
 
-11. Dong H, Martin MV, Colvin J, Ali Z, Wang L, Lu L, Williams RW, Rosen GD, Csernansky JG, Cheverud JM ([2007]("http://www.ncbi.nlm.nih.gov/pubmed/17406662)) Quantitative trait loci linked to thalamus and cortex gray matter volumes in BXD recombinant inbred mice. Heredity 99:62-69
+11. Dong H, Martin MV, Colvin J, Ali Z, Wang L, Lu L, Williams RW, Rosen GD, Csernansky JG, Cheverud JM ([2007](http://www.ncbi.nlm.nih.gov/pubmed/17406662)) Quantitative trait loci linked to thalamus and cortex gray matter volumes in BXD recombinant inbred mice. Heredity 99:62-69
 
 12. Fox JG, Barthold SW, Davisson MT, Newcomer CE ([2007](http://books.google.com/books?id=vnRpW-gI9JMC)) The mouse in biomedical research. (2nd ed). Academic Press,  p. 530.
 
@@ -848,7 +855,7 @@ CRC Press ISBN 084931903X InterScience
 
 15. Grice DE, Reenila I, Mannisto PT, Brooks Ai, Smith GG, Golden GT, Buxbaum JD, Berrettini WH (2007) Transcriptional profiling of C57 and DBA strains of mice in the absence and presence of morphine. BMC Genomics 8:76
 [*Full Text PDF Version*](http://www.biomedcentral.com/content/pdf/1471-2164-8-76.pdf),
-[*Full Text HTML Version*]("http://www.biomedcentral.com/1471-2164/8/76) 
+[*Full Text HTML Version*](http://www.biomedcentral.com/1471-2164/8/76) 
 
 16. Hancock JM, Mallon AM ([2007](http://www.ncbi.nlm.nih.gov/pubmed/18192320)) Phenobabelomics--mouse phenotype data resources. Brief Funct Genomic Proteomic 6:292-301
 
@@ -886,7 +893,7 @@ CRC Press ISBN 084931903X InterScience
 29. Meng PH, Macquet A, Loudet O, Marion-Poll A, North HM ([2007](http://mplant.oxfordjournals.org/cgi/content/full/ssm014v1)) Analysis of natural allelic variation controlling Arabidopsis thaliana seed germinability in response to cold and dark: identification of three major quantitative trait loci. Molecular Plant, doi:10.1093/mp/ssm014 
 
 30. Mouse Phenotype Database Integration Consortium ([2007](http://www.ncbi.nlm.nih.gov/pubmed/17436037)) Integration of mouse phenome data resources. Mammalian Genome, 18:157-163. 
-[*PDF Preprint Version*]("http://www.har.mrc.ac.uk/research/bioinformatics/publications/Preprint1.pdf)
+[*PDF Preprint Version*](http://www.har.mrc.ac.uk/research/bioinformatics/publications/Preprint1.pdf)
 
 31. Miyairi I, Tatireddigari VR, Mahdi OS, Rose LA, Belland RJ, Lu L, Williams RW, Byrne GI ([2007](http://www.ncbi.nlm.nih.gov/pubmed/17641048)) The p47 GTPases Iigp2 and Irgb10 regulate innate immunity and inflammation to murine Chlamydia psittaci. J Immunol 179:1814-1824
 
@@ -896,13 +903,13 @@ CRC Press ISBN 084931903X InterScience
 
 
 33. Peirce JL, Broman KW, Lu L, Williams RW ([2007](http://www.ncbi.nlm.nih.gov/pubmed/17400728)) A simple method for combining genetic mapping data from multiple crosses and experimental designs. PLoS ONE 2:e1036
-[*Full Text PDF Version*]("http://www.plosone.org/article/fetchObjectAttachment.action;jsessionid=009B2741B48AC1CB94E68107E714A1B0?uri=info%3Adoi%2F10.1371%2Fjournal.pone.0001036&representation=PDF), 
-[*Full Text HTML Version*]("http://www.plosone.org/article/info:doi%2F10.1371%2Fjournal.pone.0001036")
+[*Full Text PDF Version*](http://www.plosone.org/article/fetchObjectAttachment.action;jsessionid=009B2741B48AC1CB94E68107E714A1B0?uri=info%3Adoi%2F10.1371%2Fjournal.pone.0001036&representation=PDF), 
+[*Full Text HTML Version*](http://www.plosone.org/article/info:doi%2F10.1371%2Fjournal.pone.0001036)
 
 
 34. Pérez-Enciso M, Quevedo JR, Bahamonde A ([2007](http://www.ncbi.nlm.nih.gov/pubmed/17352813)) Genetical genomics: use all data. BMC Genomics 8:69.
 [*Full Text PDF Version*](http://www.biomedcentral.com/content/pdf/1471-2164-8-69.pdf), 
-[*Full Text HTML Version*]("http://www.biomedcentral.com/1471-2164/8/69)
+[*Full Text HTML Version*](http://www.biomedcentral.com/1471-2164/8/69)
 
 35.  Rosen GD, Bai J, Wang Y, Fiondella CG, Threlkeld SW, LoTurco JJ, Galaburda AM ([2007](http://www.ncbi.nlm.nih.gov/pubmed/17218481)) Disruption of neuronal migration by RNAi of Dyx1c1 results in neocortical and hippocampal malformations. Cereb Cortex 17:2562-72.
 [*Full Text PDF Version*](http://cercor.oxfordjournals.org/cgi/reprint/bhl162v1.pdf)
@@ -931,7 +938,7 @@ CRC Press ISBN 084931903X InterScience
 [*HTML example of using GEMMA and GeneNetwork*](http://www.bioinformatics.ubc.ca/pavlidis/lab/reuse/walkthrough.pdf)
 
 43. Zou W, Aylor DL, Zeng ZB ([2007](http://www.biomedcentral.com/1471-2105/8/7)) eQTL Viewer: visualizing how sequence variation affects genome-wide transcription. BMC Bioinformatics 8:7.
-[*Full Text PDF Version*]("http://www.biomedcentral.com/content/pdf/1471-2105-8-7.pdf),
+[*Full Text PDF Version*](http://www.biomedcentral.com/content/pdf/1471-2105-8-7.pdf),
 [*Full Text HTML Version*](http://www.biomedcentral.com/1471-2105/8/7) 
 
 
@@ -990,7 +997,7 @@ CRC Press ISBN 084931903X InterScience
 21. Peirce JL, Li H, Wang J, Manly KF, Hitzemann RJ, Belknap JK, Rosen GD, Goodwin S, Sutter TR, Williams RW, Lu L  [2006](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&cmd=Retrieve&dopt=Abstract&list_uids=16783644&query_hl=1&itool=pubmed_docsum)) How replicable are mRNA expression QTL? Mammalian Genome 17:643-656. [*Full Text PDF Version*](http://www.springerlink.com/content/a23g75163p624324/fulltext.pdf), [*Full Text HTML Version*](http://www.springerlink.com/content/a23g75163p624324/fulltext.html). [An important paper in which four matched expression data sets (whole brain and striatum) generated using both recombinant inbred and F2 intercrosses were directly compared.]  
 
 22. Ponomarev I, Maiya R, Harnett MT, Schafer GL, Ryabinin AE, Blednov YA, Morikawa H, Boehm SL 2nd, Homanics GE, Berman AE, Lodowski KH, Bergeson SE, Harris RA [2006](http://www.ncbi.nlm.nih.gov/pubmed/16783644) Transcriptional signatures of cellular plasticity in mice lacking the alpha1 subunit of GABAA receptors. J Neurosci 26:5673-83
-[*Full Text PDF Version*](tp://www.jneurosci.org/cgi/reprint/26/21/5673.pdf), 
+[*Full Text PDF Version*](http://www.jneurosci.org/cgi/reprint/26/21/5673.pdf), 
 [*Full Text HTML Version*](http://www.jneurosci.org/cgi/content/full/26/21/5673)
 
 23. Radcliffe RA, Lee MJ, Williams RW ([2006](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&cmd=Retrieve&dopt=Abstract&list_uids=16783639&query_hl=1&itool=pubmed_docsum)) Prediction of cis-QTLs in a pair of inbred mouse strains with the use of expression and haplotype data from public databases. Mammalian Genome 17:629-642 [*Full Text PDF Version*](http://www.springerlink.com/content/3u641hgk642221r6/fulltext.pdf), [*Full Text HTML Version*](http://www.springerlink.com/content/3u641hgk642221r6/fulltext.html)
@@ -1016,7 +1023,8 @@ CRC Press ISBN 084931903X InterScience
 
 ### GeneNetwork (2005)
 
-1. Alberts R, Terpstra P, Bystrykh LV, de Haan G, Jansen RC ([2005]("http://www.ncbi.nlm.nih.gov/pubmed&dopt=Abstract&list_uids=15711547&query_hl=10)) A statistical multiprobe model for analyzing cis and trans genes in genetical genomics experiments with short-oligonucleotide arrays Genetics 171:1437-1439
+1. Alberts R, Terpstra P, Bystrykh LV, de Haan G, Jansen RC ([2005](http://www.ncbi.nlm.nih.gov/pubmed&dopt=Abstract&list_uids=15711547&query_hl=10)) A statistical multiprobe model for analyzing cis and trans genes in genetical genomics experiments with short-oligonucleotide arrays Genetics 171:1437-1439
+
 2. Alberts R, Fu J, Swertz MA, Lubbers LA, Albers CJ, Jansen RC  ([2005](http://www.ncbi.nlm.nih.gov/pubmed/15975223)) Combining microarrays and genetic analysis. Brief Bioinform. 6:135-145 
 [*Full text PDF version*](http://bib.oxfordjournals.org/cgi/reprint/6/2/135.pdf)
 
@@ -1047,23 +1055,23 @@ CRC Press ISBN 084931903X InterScience
 
 13. Matthews B, Bhave SV, Belknap JK, Brittingham C, Chesler EJ, Hitzemann RJ, Hoffman PL, Lu L, McWeeney S, Miles MR, Tabakoff B, Williams RW ([2005](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&cmd=Retrieve&dopt=AbstractPlus&list_uids=16205371&query_hl=1&itool=pubmed_docsum)) Complex genetics of interactions of alcohol and CNS function and behavior. Alcoholism: Clinical and Experimental Research 29:1706-1719
 
-14. Mountz JD, Yang P, Wu Q, Zhou J, Tousson A, Fitzgerald A, Allen J, Wang X, Cartner S, Grizzle WE, Yi N, Lu L, Williams RW, Hsu HC ([2005]("http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=15683449&query_hl=4)) Genetic segregation of spontaneous erosive arthritis and generalized autoimmune disease in BXD2 recombinant inbred strain of mice. Scadinavian Journal of Immunology 61:1-11
+14. Mountz JD, Yang P, Wu Q, Zhou J, Tousson A, Fitzgerald A, Allen J, Wang X, Cartner S, Grizzle WE, Yi N, Lu L, Williams RW, Hsu HC ([2005](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=15683449&query_hl=4)) Genetic segregation of spontaneous erosive arthritis and generalized autoimmune disease in BXD2 recombinant inbred strain of mice. Scadinavian Journal of Immunology 61:1-11
 [*Full Text PDF Version*](http://gn1.genenetwork.org/images/upload/Mountz2005.pdf)
 
-15.  Li CX, Wei X, Lu L, Peirce JL, Wiliams RW, Waters RS ([2005]("http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=16338823&query_hl=12&itool=pubmed_docsum)) Genetic analysis of barrel field size in the first somatosensory area (S1) in inbred and recombinant inbred strains of mice. Somatosensory and Motor Research 22:141-150 
+15.  Li CX, Wei X, Lu L, Peirce JL, Wiliams RW, Waters RS ([2005](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=16338823&query_hl=12&itool=pubmed_docsum)) Genetic analysis of barrel field size in the first somatosensory area (S1) in inbred and recombinant inbred strains of mice. Somatosensory and Motor Research 22:141-150 
 
 16. Palmer AA, Verbitsky M, Suresh R, Kamen HM, Reed CI, Li N, Burkhart-Kasch S, McKinnon CS, Belknap JK, Gilliam TC, Phillips TJ ([2005](http://www.ncbi.nlm.nih.gov/pubmed/16104378)) Gene expression differences in mice divergently selected for methamphetamine sensitivity. Mammalian Genome 16:291-305
 
-17. Pravenec M, Kren V ([2005](ttp://www.ncbi.nlm.nih.gov/pubmed/15728137)) Genetic analysis of complex cardiovascular traits in the spontaneously hypertensive rat. Exp Physiol 90:273-276
+17. Pravenec M, Kren V ([2005](http://www.ncbi.nlm.nih.gov/pubmed/15728137)) Genetic analysis of complex cardiovascular traits in the spontaneously hypertensive rat. Exp Physiol 90:273-276
 [*Full Text PDF Version*](http://ep.physoc.org/cgi/reprint/90/3/273.pdf),
 [*Full Text HTML Version*](http://ep.physoc.org/cgi/content/full/90/3/273) 
 
-18. Scott RE, White-Grindley E, Ruley HE, Chesler EJ, Williams RW ([2005]("http://www3.interscience.wiley.com/cgi-bin/fulltext/109860478/HTMLSTART)) P2P-R expression is genetically coregulated with components of the translation machinery and with PUM2, a translational repressor that associates with the P2P-R mRNA. Journal of Cellular Physiology 204:99-105   [ *Full text HTML version*](http://www3.interscience.wiley.com/cgi-bin/fulltext/109860478/HTMLSTART)
+18. Scott RE, White-Grindley E, Ruley HE, Chesler EJ, Williams RW ([2005](http://www3.interscience.wiley.com/cgi-bin/fulltext/109860478/HTMLSTART)) P2P-R expression is genetically coregulated with components of the translation machinery and with PUM2, a translational repressor that associates with the P2P-R mRNA. Journal of Cellular Physiology 204:99-105   [ *Full text HTML version*](http://www3.interscience.wiley.com/cgi-bin/fulltext/109860478/HTMLSTART)
 
 19. Vazquez-Chona FR, Khan AN, Chan CK, Moore AN, Dash PK, Rosario Hernandez R, Lu L, Chesler EJ, Manly KF, Williams RW, Geisert Jr EE  ([2005](http://www.molvis.org/molvis/v11/a115/)) Genetic networks controlling retinal injury. Molecular Vision 11:958-970
 
 20. Yang H, Crawford N, Lukes L, Finney R, Lancaster M, Hunter KW ([2005](http://www.ncbi.nlm.nih.gov/pubmed/15728137)) Metastasis predictive signature profiles pre-exist in normal tissues. Clin Exp Metastasis 22:593-603
-[*Full Text HTML Version*]("http://www.pubmedcentral.nih.gov/articlerender.fcgi?tool=pubmed&pubmedid=16475030)
+[*Full Text HTML Version*](http://www.pubmedcentral.nih.gov/articlerender.fcgi?tool=pubmed&pubmedid=16475030)
 
 
 
@@ -1072,7 +1080,7 @@ CRC Press ISBN 084931903X InterScience
 ### GeneNetwork (2004) 
 
 1. Baldwin NE, Chesler EJ, Kirov S, Langston MA, Snoddy JR, Williams RW, Zhang B (2004) Computational, integrative and comparative methods for the elucidation of genetic co-expression networks. Journal of Biomedicine and Biotechnology 2:172-180 
-[*HTML*](ttp://www.pubmedcentral.gov/articlerender.fcgi?tool=pubmed&pubmedid=16046823) and [*PDF* reprints.](http://www.pubmedcentral.nih.gov/picrender.fcgi?artid=1184052&blobtype=pdf)
+[*HTML*](http://www.pubmedcentral.gov/articlerender.fcgi?tool=pubmed&pubmedid=16046823) and [*PDF* reprints.](http://www.pubmedcentral.nih.gov/picrender.fcgi?artid=1184052&blobtype=pdf)
 
 
 2. Carlborg O, De Koning DJ, Chesler EJ, Manly KM, Williams RW, Haley CS ([2004](http://bioinformatics.oupjournals.org/cgi/content/abstract/bti241v1)) Methological aspects of the genetic dissection of gene expression. Bioinformatics 10:1093
@@ -1110,18 +1118,18 @@ CRC Press ISBN 084931903X InterScience
 1. Bolivar V, Flaherty L (2003) A region on chromosome 15 controls intersession habituation in mice. Journal of Neuroscience 23: 9435-9438 [*Full Text HTML and PDF Versions*](http://www.jneurosci.org/cgi/content/full/23/28/9435)
 
 
-2. Jones BC, Reed CL, Hitzemann R, Wiesinger JA, McCarthy KA, Buwen JP, Beard JL [2003](http://www.ncbi.nlm.nih.gov/pubmed/14744041)) Quantitative genetic analysis of ventral midbrain and liver iron in BXD recombinant inbred mice. Nutr Neuroscience 6:369-77
-<a href="images/upload/Jones_2003_NN1203.pdf"  target="_blank" >*Full Text PDF Version*</a>
+2. Jones BC, Reed CL, Hitzemann R, Wiesinger JA, McCarthy KA, Buwen JP, Beard JL ([2003](http://www.ncbi.nlm.nih.gov/pubmed/14744041)) Quantitative genetic analysis of ventral midbrain and liver iron in BXD recombinant inbred mice. Nutr Neuroscience 6:369-77
+<a href="http://gn1.genenetwork.org/images/upload/Jones_2003_NN1203.pdf"  target="_blank" >*Full Text PDF Version*</a>
 
 3. Hitzemann R, Hitzemann B, Rivera S, Gatley J, Thanos P, Shou S, Lu L, Williams RW ([2003](http://www.ncbi.nlm.nih.gov/pubmed/12543998)) Dopamine D2 receptor binding, Drd2 expression and the number of dopamine neurons in the BXD recombinant inbred series: genetic relationships to alcohol and other drug associated phenotypes. Alcoholism: Clinical and Experimental Research 27:1-11
 
 
-4. Hitzemann R, Malmanger B, Reed C, Lawler M, Hitzemann B, Coulombe S, Buck K, Rademacher B, Walter N, Polyakov Y, Sikela J, Williams RW, Flint J, Talbot C ([2003]("http://www.ncbi.nlm.nih.gov/pubmed/14722723)) A strategy for integration of QTL, gene expression, and sequence analyses. Mammalian Genome 14:733-747
+4. Hitzemann R, Malmanger B, Reed C, Lawler M, Hitzemann B, Coulombe S, Buck K, Rademacher B, Walter N, Polyakov Y, Sikela J, Williams RW, Flint J, Talbot C ([2003](http://www.ncbi.nlm.nih.gov/pubmed/14722723)) A strategy for integration of QTL, gene expression, and sequence analyses. Mammalian Genome 14:733-747
 
 5. Lionikas A, Blizard DA, Vandenbergh DJ, Glover MG, Stout JT, Vogler GP, McClearn GE, Larsson L ([2003](http://physiolgenomics.physiology.org/cgi/content/full/16/1/141))  Genetic architecture of fast- and slow-twitch skeletal muscle weight in 200-day-old mice of the C57BL/6J and DBA/2J lineage. Physiological Genomics 16:141-152
 
 6. Peirce J, Chesler EJ, Williams RW, Lu L (2003) Genetic architecture of the mouse hippocampus: identification of gene loci with regional effects. Genes, Brain and Behavior 2:238–252
-[*Full Text PDF Version*](images/upload/Peirce_Lu_2003.pdf)
+[*Full Text PDF Version*](http://gn1.genenetwork.org/images/upload/Peirce_Lu_2003.pdf)
 
 7. Rosen GD, La Porte NT, Diechtiareff B, Pung, CJ, Nissanov J, Gustafson C, Bertrand L, Gefen S, Fan Y, Tretiak OJ, Manly KF, Parks MR, Williams AG, Connolly MT, Capra JA, Williams RW (2003) Informatics center for mouse genomics: the dissection of complex traits of the nervous system. Neuroinformatics 1:327–342
 <a href="images/upload/Rosen_2003.pdf"  target="_blank" >*Full Text PDF Version*</a>
