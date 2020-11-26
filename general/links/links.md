@@ -83,10 +83,10 @@
     - <small>[Added Jan 15, 2010; last site review Jan 15, 2010 by RWW.]</small>
 
 *  <a href="http://www.snpedia.com/index.php/SNPedia" target="_blank">**SNPedia**</a> is a wiki investigating human genetics. We share information about the effects of variations in DNA, citing peer-reviewed scientific publications. It is used by Promethease to analyze and help explain your DNA.
-   - <small>[Added Jan 15, 2010; last site review Jan 15, 2010 by RWW.]</small>
+    - <small>[Added Jan 15, 2010; last site review Jan 15, 2010 by RWW.]</small>
 
 *  <a href="https://www.genoglyphix.com/ggx_browser/search/" target="_blank">**Genoglyphix Browser**</a> includes extensive data on human copy number variants as well as maps of low copy number repeat regions. 
-   - <small>[Added Nov 5, 2009; last site review Nov 5, 2009 by RWW.]</small>
+    - <small>[Added Nov 5, 2009; last site review Nov 5, 2009 by RWW.]</small>
 
 * <a href="http://www.hprd.org/query" target="_blank">**Human Protein Reference DB**</a>: a manually curated resource with data on 20, 000 proteins. Very effective interface and rich data.
     - <small>[Added Oct 30, 2005; last site review Sept 19, 2008 by RWW.]</small>
@@ -96,11 +96,11 @@
 * <a href="http://xmap.picr.man.ac.uk" target="_blank">**x:map**</a> is a terrific visual display tool for exploring Affymetrix Exon array data sets for mouse and human transcriptomes. 
     - <small>[Added April 18, 2008; last site review Sept 19, 2008 by RWW.]</small>
 
-* <a href="http://www.pdg.cnb.uam.es/UniPub/iHOP/" target="_blank">iHOP</a> retrieves PubMed sentences that report interactions between a reference gene and associate genes and proteins. It allows the assembly of complex graphs that plot the literature interactions of genes. Effective interface for humans and machines. 
-   - <small>[Added Dec 25, 2004; last site review Sept 19, 2008 by RWW.]</small>
+* <a href="http://www.pdg.cnb.uam.es/UniPub/iHOP/" target="_blank">**iHOP**</a> retrieves PubMed sentences that report interactions between a reference gene and associate genes and proteins. It allows the assembly of complex graphs that plot the literature interactions of genes. Effective interface for humans and machines. 
+    - <small>[Added Dec 25, 2004; last site review Sept 19, 2008 by RWW.]</small>
 
 * <a href="http://www.proteinatlas.org/" target="_blank">**Human Protein Atlas**</a> displays expression and localization of proteins in a large variety of normal human tissues and cancer cells as high resolution images of immunohistochemically stained tissues and cell lines. 
-   - <small>[Added Sept 22, 2007; last site review Sept 22, 2007 by RWW.]</small>
+    - <small>[Added Sept 22, 2007; last site review Sept 22, 2007 by RWW.]</small>
 
 * <a href="http://www.gopubmed.com/" target="_blank">**GoPubMed**</a> is a simple tool that searches PubMed and sorts the results by GO and MeSH terms. 
     - <small>[Added July 5, 2007 by RWW; last site review Sept 19, 2008 by RWW.]</small>
@@ -109,42 +109,42 @@
     - <small>[Added Jan 1, 2005; last site review Sept 19, 2008 by RWW.]</small>
 
 *  <a href="http://www.informatics.jax.org/menus/allsearch_menu.shtml" target="_blank">**MGI**</a> and <a href="http://rgd.mcw.edu/tool-entry.shtml" target="_blank">**RGD**</a> are reference sites for mouse and rat genetics, respectively. 
-   - <small>[Added Dec 22, 2004; last site review Sept 19, 2008 by RWW.]</small>
+    - <small>[Added Dec 22, 2004; last site review Sept 19, 2008 by RWW.]</small>
 
 *  <a href="http://www.dsi.univ-paris5.fr/genatlas/" target="_blank">**GenAtlas**</a> provides summary data for approximately 19300 human genes and has a useful link that will fetch 10 Kb of upstream sequence for promoter analysis. 
-   - <small>[Added Jan 9, 2005; last site review Sept 19, 2008 by RWW.]</small>
+    - <small>[Added Jan 9, 2005; last site review Sept 19, 2008 by RWW.]</small>
 
 * <a href="http://polly.wustl.edu/promolign/main.html" target="_blank">**PromoLign**</a> aligns homologous regions of mouse and human promoters and highlights SNPs and transcription factor binding sites. Check the quick tutorial to see how to extract key data. This site requires an SVG plugin that may not be supported by some browsers and operating systems.
-   - <small>[Added May 10, 2005; FAILED: last site review Sept 19, 2008 by RWW.]</small>
+    - <small>[Added May 10, 2005; FAILED: last site review Sept 19, 2008 by RWW.]</small>
 
 * <a href="http://gai.nci.nih.gov/cgi-bin/GeneViewer.cgi?" target="_blank">**CGAP SNP Viewer**</a> allows users to view SNPs in the context of transcripts, ORFs and protein motifs for either human or mouse genes. Try the *Ahr* gene in mouse as an example. 
 
-   - <small>[Added April 10, 2006; last site review Sept 19, 2008 by RWW.]</small>
+    - <small>[Added April 10, 2006; last site review Sept 19, 2008 by RWW.]</small>
 
 * <a href="http://syndb.cbi.pku.edu.cn/" target="_blank">****Synapse Database****</a> (SynDB) is a comprehensive database of genes and proteins associated with the neuronal or neuromuscular synapse. Many **Trait Data and Analysis** pages provide links to SynDB. 
     - <small>[Added May 29, 2005; last site review Sept 19, 2008 by RWW.]</small>
 
 * <a href="http://crb118.med.upenn.edu/syn/dev/syndb/main.php" target="_blank">**Synapse Database**</a> at University of Pennsylvania is a comprehensive database of roughly 200 genes and proteins associated with the synapse. 
-   - <small>[Added Nov 26, 2006; last site review Sept 19, 2008 by RWW.]</small>
+    - <small>[Added Nov 26, 2006; last site review Sept 19, 2008 by RWW.]</small>
 
 * <a href="http://biosingapore.org/index.php/Databases_and_tools" target="_blank">**Singapore**</a> Bio Databases and Tool. 
-   - <small>[Added Dec 22, 2004; Dragon Genome Explorer site FAILED last site review, changed link; Sept 19, 2008 by RWW.]</small>
+    - <small>[Added Dec 22, 2004; Dragon Genome Explorer site FAILED last site review, changed link; Sept 19, 2008 by RWW.]</small>
 
  - <a href="http://mutdb.org/AnnoSNP/" target="_blank" >**MutDB**</a> and <a href="http://www.snps3d.org/modules.php?name=Search&op=advanced%20search" target="_blank">**SNPs3D**</a> provide great data on functional SNPs in human genes.  To analyze the functional impact of non-synonymous SNPs you will also find <a href="http://snpanalyzer.uthsc.edu/" target="_blank" >**SNP Analyzer**</a> useful because it evaluates SNP impact in terms of the whole protein structural context.
-   - <small>[Added Dec 22, 2004; last site review Sept 19, 2008 by RWW.]</small>
+    - <small>[Added Dec 22, 2004; last site review Sept 19, 2008 by RWW.]</small>
 
 * <a href="http://moult.umbi.umd.edu/mouse2004/modules.php?name=Targets" target="_blank" >**Alternative Splicing**</a> Project provides great summaries and output graphs on splice variants in human, mouse, and Drosophila.
-   - <small>[Added Nov 8, 2005; last site review Sept 19, 2008 by RWW.]</small>
+    - <small>[Added Nov 8, 2005; last site review Sept 19, 2008 by RWW.]</small>
 
 > ### **Resources on Imprinting and Parental Origin Effects**
 
 * <a href="http://www.geneimprint.org/site/genes-by-species" target="_blank">**Geneimprint**</a> is a portal into the burgeoning field of genomic imprinting, collecting relevant articles and reviews, press reports, video and audio lectures, and genetic information   
-  - <small>[Added June 23, 2010 by RWW; last site review June 23, 2010 by RWW.]</small>
+    - <small>[Added June 23, 2010 by RWW; last site review June 23, 2010 by RWW.]</small>
 
 	
 
 * <a href="http://igc.otago.ac.nz/Search.html" target="_blank">**Catalogue of Parent of Origin Effects**</a> provides a list of imprinted and putatively imprinted genes with commentary by Ian Morison (University of Otago, New Zealand). Database was last updated in 2008.   
-   - <small>[Added June 23, 2010 by RWW; last site review June 23, 2010 by RWW.]</small>
+    - <small>[Added June 23, 2010 by RWW; last site review June 23, 2010 by RWW.]</small>
 
 > ### **Resources for the Spatial Analysis of Gene and Protein Expression**
 
@@ -152,13 +152,13 @@
     - <small>[Added May 24, 2007 by RWW; last site review Sept 19, 2008 by RWW.]</small>
 
 *  The <a href="http://mamep.molgen.mpg.de/mamep/search.php?searchtype=simple" target="_blank">**mamep GeneExpression Links**</a> image database of whole-mounted in situ hybridization of mid-gestation mouse embryos. Try entering the symbol *Ptch1*.  
-   - <small>[Added May 28, 2007 by RWW.]</small>
+    - <small>[Added May 28, 2007 by RWW.]</small>
 
 *  The <a href="http://www.genes2cognition.org/genetics.html" target="_blank">**Genes to Cognition**</a> databases have a focus on proteins expressed in several key cellular compartments related to synpase function.  
-   - <small>[Added Aug 9, 2007 by RWW.]</small>
+    - <small>[Added Aug 9, 2007 by RWW.]</small>
 
 * <a href="http://www.cdtdb.brain.riken.jp/CDT/CDTSearch.jsp" target="_blank">**Cerebellar Development Transcriptome Database**</a>. Expression data for the mouse cerebellum, both microarray and in situ. 
-   - <small>[Added Sept 1, 2010; last site review Sept 1, 2010 by RWW.]</small>
+    - <small>[Added Sept 1, 2010; last site review Sept 1, 2010 by RWW.]</small>
 
 Several excellent resources can be used to explore patterns of gene expression primarily in C57BL/6J mice. This strain is one of the parents of the BXD, AXB/BXA, BXH, and CXB genetic reference populations that are key resources in the Gene Network and its companion site, the  <a href="http://www.mbl.org" target="_blank" >Mouse Brain Library</a>.
 
@@ -173,36 +173,36 @@ Several excellent resources can be used to explore patterns of gene expression p
 * <a href="http://www.mouseatlas.org/data/mouse/project_tissue_view" target="_blank">**Mouse Atlas of Gene Expression**</a> is a massive SAGE library. The Atlas has quantified the normal state for many tissues by determining the number and identity of genes expressed throughout development. The scope of the project encompasses multiple stages of development of C57BL/6J mouse, from the single cell zygote to the adult, and includes an extensive initial collection of 200 tissues. DiscoverySpace is a WebStart application for use with The Mouse Atlas of Gene Expression.
 
 * <a href="http://mahoney.chip.org/mahoney/database.html" target="_blank">**Mahoney**</a> Center maintains a rich image collection for ~1000 transcription factors expressed in brain (developmental stages, coronal plane).
-   - <small>[Added Dec 22, 2004; sites reviewed last on Sept 26, 2005 by RWW.]</small>
+    - <small>[Added Dec 22, 2004; sites reviewed last on Sept 26, 2005 by RWW.]</small>
 
 ###  Resources for the Analysis of Sets and Networks of Transcripts, Genes, Proteins, and SNPs
 
 * <a href="http://www.genemania.org/full.jsf" target="_blank">**GeneMANIA**</a> helps you predict the function of your favourite genes and gene sets. Powerful and fast computational methods and a great use of Cytoscape Web. (<A HREF="http://nar.oxfordjournals.org/cgi/content/full/38/suppl_2/W214" target="_blank">2010 PDF</a>).
-   - <small>[Added July 1, 2010; last site review Aug 8, 2010 by RWW.]</small>
+    - <small>[Added July 1, 2010; last site review Aug 8, 2010 by RWW.]</small>
 
 * <a href="http://toppgene.cchmc.org/" target="_blank">**ToppGene Suite**</a> A one-stop portal for gene list enrichment analysis and candidate gene prioritization based on functional annotations and protein interactions network 
-   - <small>[Added Jan 16, 2010; last site review Jan 16, 2010 by RWW.]</small>
+    - <small>[Added Jan 16, 2010; last site review Jan 16, 2010 by RWW.]</small>
 
 * <a href="http://www.wikipathways.org/index.php/WikiPathways" target="_blank">**WikiPathways**</a> (WGCNA) is an open, public platform dedicated to the curation of biological pathways by and for the scientific community. 
-   - <small>[Added Nov 12, 2009; last site review Nov 12, 2009 by RWW.]</small>
+    - <small>[Added Nov 12, 2009; last site review Nov 12, 2009 by RWW.]</small>
 
 * <a href="http://www.pathwaycommons.org/pc/" target="_blank">**Pathway Commons**</a> (WGCNA) is a search tool to find  and visualize public biological pathway information. This site collates from several major sites.
-   - <small>[Added Nov 12, 2009; last site review Nov 12, 2009 by RWW.]</small>
+    - <small>[Added Nov 12, 2009; last site review Nov 12, 2009 by RWW.]</small>
 
 * <a href="http://www.sanger.ac.uk/cgi-bin/modelorgs/mousegenomes/snps.pl" target="_blank">**Sanger Mouse Genome Project SNP Finder**</a> provides access to SNP and indels generated by sequencing 17 strains of mice (plus C57BL/6J). Marvelous.
-   - <small>[Added Nov 18, 2009; last site review Nov 18, 2009 by RWW.]</small>
+    - <small>[Added Nov 18, 2009; last site review Nov 18, 2009 by RWW.]</small>
 
 *  <a href="http://www.genetics.ucla.edu/labs/horvath/CoexpressionNetwork/" target="_blank">**Weighted Gene Coexpression Network Analysis**</a> (WGCNA) is a collection of R functions to perform weighted correlation network analysis that includes functions for network construction, module detection, gene selection, calculations of topological properties, data simulation, visualization, and interfacing with external software. See the recent paper on <a href="http://www.biomedcentral.com/1471-2105/9/559">WGCNA</a>. 
-   - <small>[Added Aug 21, 2009; last site review Aug 21, 2009 by RWW.]</small>
+    - <small>[Added Aug 21, 2009; last site review Aug 21, 2009 by RWW.]</small>
 
 * <a href="http://www.genome.jp/" target="_blank">**GenomeNet**</a> is a terrific site for the analysis of molecular networks. Download the very effective <a href="http://www.genome.jp/download/" target="_blank">KegArray</A> 0.2.6beta package (May 2005) for exploratory data analysis of microarray data set. This package is as good as most commerical software and includes with built-in linkage to the KEGG databases. Versions are available for Mac OS X and Windows.   
     - <small>[Added Jan 3, 2005; last site review Aug 5, 2005 by RWW.]</small>
 
 * <a href="http://www.bioinf.ebc.ee/EP/EP/" target="_blank">**Expression Profiler** at http://ep.ebi.ac.uk/</a> is a set of tools for clustering, analysis and visualization of gene expression and other genomic data. Tools in the Expression Profiler allow you to perform cluster analysis, pattern discovery, pattern visualization, study and search Gene Ontology categories, generate sequence logos, extract regulatory sequences, study protein interactions, as well as to link analysis results to external tools and databases.
-   - <small>[Added May 20, 2008; last site review May 20, 2008 by RWW.]</small>
+    - <small>[Added May 20, 2008; last site review May 20, 2008 by RWW.]</small>
 
 * <a href="http://www.thebiogrid.org/" target="_blank">**BioGRID**</a>: the Biological General Repository for Interaction Datasets is a freely accessible database of protein and genetic interactions from Mt. Sinai, Toronto. 
-   - <small>[Added July 28, 2007; last site review July 28, 2007 by RWW.]</small>
+    - <small>[Added July 28, 2007; last site review July 28, 2007 by RWW.]</small>
 
 * <a href="http://cismols.cchmc.org/" target="_blank">**CisMols Analyzer**</a> at Cincinnati Children's Hospital (Aronow and colleagues) is a server and database for the analysis of cis element co-occurences in the promoters of a list of genes. The <a href="http://polydoms.cchmc.org/polydoms/" target="_blank">PolyDoms Analyzer</a> is a tool for scanning through gene lists for those members of a pathway, ontolog, or disease that contain potentially harmful protein-coding SNPs. <a href="http://genometrafac.cchmc.org/" target="_blank">GenomeTraFaC</a> is a comparative genomics-based resource for initial characterization of gene models and the identification of putative cis-regulatory regions of RefSeq Gene Orthologs.
     - <small>[Added Sept 23, 2006; last site review Sept 23, 2006 by RWW.]</small>
@@ -211,18 +211,18 @@ Several excellent resources can be used to explore patterns of gene expression p
     - <small>[Added Sept 23, 2006; last site review Sept 23, 2006 by RWW.]</small>
 
 * <a href="http://www.broad.mit.edu/gsea/msigdb/msigdb_index.html" target="_blank">**MSigDB**</a>: The Molecular Signature Database is part of the Broad Institute Gene Set Enrichment Analysis suite. MSigDB contains large numbers of static and partly annotated sets of genes/transcripts. Registration is not actually required to download data sets. 
-   - <small>[Added Jan 18, 2007; last site review Jan 18, 2007 by RWW.]</small>
+    - <small>[Added Jan 18, 2007; last site review Jan 18, 2007 by RWW.]</small>
 
 * <a href="http://inia.uchsc.edu/INIA/index.jsp" target="_blank">**C-INIA**</a> MAGIC-B microarray knowledgebase from the Department of Pharmacology, University of Colorado, Denver, part of the NIAAA INIA project. Extensive public and privated brain array data sets in a powerful analytic web environment. 
-   - <small>[Added May 31, 2007 by RWW.]</small>
+    - <small>[Added May 31, 2007 by RWW.]</small>
 
 *  <a href="http://www.genmapp.org/introduction.asp" target="_blank">GenMAPP 2.0</a> (2004), the Gene Map Annotation and Pathway Prolifer, is a free Windows application (simple registration required) with which you can visualize expression and other genomic data sets on maps of biological pathways. Very flexible suite of programs that you can also use to make custom gene annotation maps (and more).
-   - <small>[Added Aug 5, 2005; last site review Aug 5, 2005 by RWW.]</small>
+    - <small>[Added Aug 5, 2005; last site review Aug 5, 2005 by RWW.]</small>
 
 <a href="http://bind.ca/" target="_blank">**BIND**</a> and <a href="http://string.embl.de/" target="_blank">**STRING**</a> and <a href="http://www.ebi.ac.uk/intact/index.jsp" target="_blank">IntAct</a> are great sites that provide access to well curated data on protein-protein interactions. BIND and IntAct focus on experimentally verified interactions whereas STRING and preBIND incorporate inferred interaction based on other data types, including gene expression. Links to BIND and STRING have been added to the Trait Data and Analysis forms on the GeneNetwork BETA site.<small>[Added Aug 21, 2005; last site reviews Aug 27, 2005 by RWW.]</small>
 
 *  <a href="http://ai.stanford.edu/~erans/cancer/index.html" target="_blank">**Microarray Module Maps**</a> is a great site that databases a large number of coexpression modules defined using many cancer array studies.   
-   - <small>[Added Aug 26, 2005; last site review Aug 26, 2005 by RWW.]</small>
+    - <small>[Added Aug 26, 2005; last site review Aug 26, 2005 by RWW.]</small>
 
 *  <a href="http://www.geneontology.org/GO.tools.microarray.shtml" target="_blank">**The Gene Ontology Consortium**</a> maintains a well annotated list of open resources for the analysis of large expression data sets and gene ontologies. Note that there are several different lists, each with valuable links.
     - <small>[Added July 15, 2005; last site review July 15, 2005 by RWW.]</small>
