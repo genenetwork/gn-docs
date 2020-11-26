@@ -33,11 +33,11 @@ Google Scholar search for   _"genenetwork" OR "webqtl"_   generated:
 
 2. Williams RW, Williams EG [2017](http://gn1.genenetwork.org/images/upload/Williams_ResourcesSystemsGenetics_MethodsMolBio_2016.pdf) Resources for Systems Genetics. In *Systems Genetics*, Methods in Molecular Biology 1488:3-29.
 [This review is intended to help you when making the hard choices about types of resources to use in system genetic studies. The short answer: embrace diversity in your resources. The computational barriers to joint analysis are now minimal.]
-   - <small>[PDF version](http://gn1.genenetwork.org/images/upload/Williams_ResourcesSystemsGenetics_MethodsMolBio_2016.pdf)</small>  
+    - <small>[PDF version](http://gn1.genenetwork.org/images/upload/Williams_ResourcesSystemsGenetics_MethodsMolBio_2016.pdf)</small>  
 
 3. Williams RW [2009](http://journal.frontiersin.org/article/10.3389/neuro.01.016.2009/full) Herding cats: the sociology of data integration. Frontier in Neuroscience 3(2):154-6.
 [An short but amusing commentary on predictive (someday perhaps even precision) medicine and how to get there using genetic reference populations such as the BXD and Collaborative Cross families.]
-   - <small>[PDF version](http://journal.frontiersin.org/article/10.3389/neuro.01.016.2009/full)</small>
+    - <small>[PDF version](http://journal.frontiersin.org/article/10.3389/neuro.01.016.2009/full)</small>
 
 
 4. Pinelli M, Carissimo A, Cutillo L, Lai CH, Mutarelli M, Moretti MN, Singh MV, Karali M, Carrella D, Pizzo M, Russo F, Ferrari S, Ponzin D, Angelini C, Banfi S, di Bernardo D  [2016](https://ncbi.nlm.nih.gov/pubmed/27235414) An atlas of gene expression and gene co-regulation in the human retina.Nucleic Acids Res. 2016 Jul 8;44(12):5773-84
@@ -51,8 +51,8 @@ Google Scholar search for   _"genenetwork" OR "webqtl"_   generated:
      </small>
 	
 6. Sloan Z, Arends D, Broman KW, Centeno A, Furlotte N, Nijveen H, Yan L, Zhou X, Williams RW, Prins P (2016) GenetNetwork: framework for web-based genetics. The Journal of Open Source Software http://joss.theoj.org/papers/10.21105/joss.00025  (http://dx.doi.org/10.21105/joss.00025)
-   - <small>[HTML version](http://joss.theoj.org/papers/10.21105/joss.00025)
-  </small>
+    - <small>[HTML version](http://joss.theoj.org/papers/10.21105/joss.00025)
+    </small>
 
 7. Alam G, Miller DB, O'Callaghan JP, Lu L, Williams RW, Jones BC  [2016](https://ncbi.nlm.nih.gov/pubmed/27182044) MPTP neurotoxicity is highly concordant between the sexes among BXD recombinant inbred mouse strains. Neurotoxicology in press
 <small>[PDF version](http://gn1.genenetwork.org/images/upload/Alam_Jones_MPTP_Neurotox_2016.pdf)
@@ -97,15 +97,15 @@ Google Scholar search for   _"genenetwork" OR "webqtl"_   generated:
 The first section lists key technical papers that are appropriate references when citing GeneNetwork and WebQTL. The second section lists publications and other resources that have made use of GeneNetwork.
 
 1. Mulligan MK, Mozhui K, Prins P, Williams RW [2016](https://ncbi.nlm.nih.gov/pubmed/26092713). GeneNetwork – A toolbox for systems genetics. In *Systems Genetics*, Methods in Molecular Biology; Schughart K, Williams RW eds.; Humana Press, in press
-[This is a currently the most comprehensive protocol and guide (20 Mb) for GeneNetwork.] 
-   - <small>[PDF Version](http://gn1.genenetwork.org/images/upload/Mulligan_How_To_Use_GeneNetwork_2016_v1.pdf)</small>
+[This is a currently the most comprehensive protocol and guide (20 Mb) for GeneNetwork.] <small>[PDF Version](http://gn1.genenetwork.org/images/upload/Mulligan_How_To_Use_GeneNetwork_2016_v1.pdf)
+    </small>
 				
 2. Williams RW, Mulligan MK [2012](https://ncbi.nlm.nih.gov/pubmed/23195314). Genetic and molecular network analysis of behavior. Int Rev Neurobiol. 104:135-57. [Explains the  use of GeneNetwork in behavioral neurogenetics]
-   - <small><a href="http://gn1.genenetwork.org/images/upload/Williams_Mulligan_Bioinformatics of Brain Short 2012.pdf" target="_blank" >PDF version</A>
+    - <small><a href="http://gn1.genenetwork.org/images/upload/Williams_Mulligan_Bioinformatics of Brain Short 2012.pdf" target="_blank" >PDF version</A>
     </small> 
 
 3. Williams EG, Auwerx J [2015](https://ncbi.nlm.nih.gov/pubmed/26140590). The convergence of systems and reductionist approaches in complex trait analysis. Cell 162:23-32. [Research into the genetic and environmental factors behind complex trait variation has traditionally been segregated into distinct scientific camps. The reductionist approach aims to decrypt phenotypic variability bit by bit, founded on the underlying hypothesis that genome-to-phenome relations are largely constructed from the additive effects of their molecular players. In contrast, the systems approach aims to examine large-scale interactions of many components simultaneously, on the premise that interactions in gene networks can be both linear and non-linear. Both approaches are complementary, and they are becoming increasingly intertwined due to developments in gene editing tools, omics technologies, and population resources. Together, these strategies are beginning to drive the next era in complex trait research, paving the way to improve agriculture and toward more personalized medicine.]
-   -  <small>[PDF version](http://gn1.genenetwork.org/images/upload/WilliamsEG_Auwerx_Cell2015.pdf)</small>
+    -  <small>[PDF version](http://gn1.genenetwork.org/images/upload/WilliamsEG_Auwerx_Cell2015.pdf)</small>
 
 4. Wang J, Williams RW, Manly KF ([2003](http://journals.humanapress.com/ArticleDetail.pasp?issn=1539-2791&acode=NI:1:4:299))  WebQTL: Web-based complex trait analysis. Neuroinformatics 1: 299-308 [*Full Text PDF Version*](http://www.genenetwork.org/pdf/webqtl.pdf).[A good technical reference to WebQTL and GeneNetwork]
 
