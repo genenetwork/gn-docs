@@ -22,8 +22,7 @@ Google Scholar search for   _"genenetwork" OR "webqtl"_   generated:
 <div id="New"> </div>
 
 ##  Highlighted References
-
-  #### **_Please send us citations to articles that we may have missed._**
+####  **_Please send us citations to articles that we may have missed._**
 
 1.  Mulligan MK, Mozhui K, Prins P, Williams RW [2017](https://ncbi.nlm.nih.gov/pubmed/27933521) GeneNetwork: A Toolbox for Systems Genetics. In *Systems Genetics*, Methods in Molecular Biology 1488:75-120
 [An updated primer in using GeneNetwork for molecular analysis of mouse and human cohorts.]
