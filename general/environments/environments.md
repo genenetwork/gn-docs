@@ -1,6 +1,5 @@
 ### System properties
 
-
 |  Operating System |   |   |   |
 |---|---|---|---|
 | Ubuntu  | 12.04.5 LTS 64-bit  |  (http://www.ubuntu.com) | Free software licenses (mainly GPL)  |
