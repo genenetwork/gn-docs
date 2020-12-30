@@ -320,7 +320,7 @@ The literature correlation can be used to compare the "semantic" signal-to-noise
 
 The logarithm of the odds (LOD) provides a measure of the association between variation in a phenotype and genetic differences (alleles) at a particular chromosomal locus (see Nyholt [2000](http://www.sciencedirect.com/science/article/pii/S0002929707626391) for a lovely review of LOD scores).
 
-A LOD score is defined as the logarithm of the ratio of two likelihoods: (1) in the numerator the likelihood for the alternative hypothesis, namely that there is linkage at the chromosomal marker, and (2) the likelihood of the null hypothesis that there is no linkage. Likelihoods are probabilities, but they are not Pr(hypothesis | data) but rather Pr(data | two alternative hypotheses). That's why they are called likelihoods rather than probabilities. (The "|" symbol above translates to "given the"). Since LOD and LRS scores are associated with two particular hypotheses or models, they are also associated with the degrees of freedom of those two alternative models. When the model only has one degree of freedom this conversion between LOD to p value will work:
+A LOD score is defined as the logarithm of the ratio of two likelihoods: (1) in the numerator the likelihood for the so-called alternative hypothesis, namely that there is linkage at a given test marker, and (2) the likelihood of the null hypothesis that there is no linkage at a given test markers. Likelihoods are probabilities, but they are not P(hypothesis | data) but rather P(data | two alternative hypotheses). That is why they are called likelihoods rather than probabilities. (The "|" symbol above translates to "given the"). Since LOD and LRS scores are associated with two particular alternative hypotheses or models, they are also associated with the degrees of freedom of those two alternative models. When the model only has one degree of freedom this conversion between LOD to p value will work:
 <pre>
     lodToPval <-
     function(x)
@@ -332,9 +332,45 @@ A LOD score is defined as the logarithm of the ratio of two likelihoods: (1) in 
 
 In the two likelihoods, one has maximized over the various nuisance parameters (the mean phenotypes for each genotype group, or overall for the null hypothesis, and the residual variance). Or one can say, one has plugged in the maximum likelihood estimates for these nuisance parameters.
 
-With complete data at a marker, the log likelihood for the normal model reduces to the (-n/2) times the log of the residual sum of squares.
+With complete genotype data for a marker, the log likelihood for the normal model reduces to (-n/2) times the log of the residual sum of squares.
 
-LOD values can be converted to LRS scores (likelihood ratio statistics) by multiplying by 4.61. The LOD is also roughly equivalent to the -log(P), where P is the probability of linkage (P = 0.001 => 3). The LOD itself is not a precise measurement of the probability of linkage, but in general for F2 crosses and RI strains, values above 3.3 will usually be worth attention for simple interval maps. [Williams RW, June 15, 2005, updated with text from Karl Broman, Oct 28, 2010, updated Apr 21, 2020 with Nyholt reference].
+LOD values can be converted to LRS scores (likelihood ratio statistics) by multiplying by 4.61. The LOD is also roughly equivalent to the -log(P) when the degrees of freedom of the mapping has two degrees of freedom, as in a standard F2 intercross. In such as case, where P is the probability of linkage (P = 0.001) the –logP => 3), will also equal a LOD of 3. The LOD itself is not a precise measurement of the probability of linkage, but in general for F2 crosses and RI strains, values above 3.3 will usually be worth attention for simple interval maps. 
+
+LOD scores and –logP scores are only interchangable when models have two degrees of freedom (2 df).
+
+Let us begin with an example.
+Suppose we have a LOD score of 3 from an F2 cross; this test has 2 df. Let us calculate the p-value (and the logp) corresponding to this LOD score.
+We know that
+$$ LOD = \log_{10}(LR),$$
+where $LR$ is the likelihood ratio. We also know that $2\log(LR)$ follows a $\chi^2$ distribution with 2 df. Note that when unqualified, we will mean natural logarithms with base $e$.
+Thus,
+$$ LOD = \log_{10}(LR) = \log(LR)/log(10).$$
+Therefore $$ 2 \times \log(10) \times LOD = 2 \log(LR)$$ which follows a $\chi^2$ distribution with 2 df.
+Using this information, we will calculate the p-value and logp.
+
+In [1]:
+# load package
+ load package
+using Distributions
+
+# LOD score
+LOD = 3.0
+# p-value from chi-square with 2df calculated from 
+# cdf (cumulative distribution function)
+p = 1-cdf(Chisq(2),2*log(10)*LOD)
+Out[1]: 0.0010000000000000009
+
+We can now calculate the logp value which is the negative of the base 10 logarithm of the p-value.
+In [2]:
+# now logp
+-log10(p)
+Out[2]:
+2.9999999999999996
+
+
+
+
+[Williams RW, June 15, 2005, updated with text from Karl Broman, Oct 28, 2010, updated Apr 21, 2020 with Nyholt reference, updated Dec 30, 2020].
 
 <div id="LRS"></div>
 
