@@ -1,0 +1,67 @@
+#+TITLE: Running the common workflow language on GNU Guix
+
+* Introduction
+
+The common workflow language (CWL) can run workflows defined in a YAML
+definition. Some key concepts are that CWL workflows can be analysed
+and reasoned on (unlike shell scripts) and CWL workflows are a
+separation of concerns: (1) tools/scripts, (2) data and (3) the
+workflow, i.e. how it connects up.
+
+CWL is also agnostic about finding underlying tooling. Docker links
+are often provided as hints, but with ~--no-container~ a tool just
+gets invoked. This is great in the context of GNU Guix environments!
+
+* Install CWL using GNU Guix
+
+You may need to install GNU Guix and see the README on
+http://git.genenetwork.org/guix-bioinformatics/guix-bioinformatics
+
+Recent versions of GNU Guix contain =cwl-runner=:
+
+: guix pull
+: ~/.config/guix/current/bin/guix package -A cwl
+:   cwltool 3.0.20201121085451      out     gnu/packages/bioinformatics.scm:2627:2
+
+Install with
+
+: guix package -i cwltool
+
+or in a special profile (I tend to do that)
+
+: guix package -i cwltool -p ~/opt/CWL
+
+Set the PATH and you should be able to run cwltool
+
+: . ~/opt/CWL/etc/profile
+: cwltool
+
+
+* Set up a more advanced workflow
+
+Let's run the workflow that was described in [[https://hpc.guix.info/blog/2019/01/creating-a-reproducible-workflow-with-cwl/][creating a reproducible
+workflow with GNU Guix]]:
+
+: git clone https://github.com/pjotrp/CWL-workflows
+
+Build the contained trimmomatic (if you are unlucky this may take a
+while)
+
+: cd CWL-workflows
+: env GUIX_PACKAGE_PATH=. guix build trimmomatic-jar
+
+Now let's rerun the workflow as set up in above [[https://hpc.guix.info/blog/2019/01/creating-a-reproducible-workflow-with-cwl/][BLOG]] (I created a
+local version to skip IPFS). Make sure your PATH points to all the
+tools and
+
+: cwltool --no-container Workflows/test-workflow.cwl Jobs/local-small.ERR034597.test-workflow.yml
+: <lots of output>
+: INFO Final process status is success
+
+Note that I hard coded two paths which you need to point to your Guix
+profile first:
+
+: Tools/trimmomaticPE.cwl:    valueFrom: /gnu/store/v2jys382g6j5b7lsxzh8v4vfhd414nhz-profile/lib/share/jar/trimmomatic-0.38.jar
+: Tools/trimmomaticPE.cwl:    valueFrom: 'ILLUMINACLIP:/gnu/store/v2jys382g6j5b7lsxzh8v4vfhd414nhz-profile/lib/share/jar/adapters/TruSeq2-PE.fa:2:40:15'
+
+This is not typical and I should find a proper way to do this ;)
