@@ -55,13 +55,71 @@ local version to skip IPFS). Make sure your PATH points to all the
 tools and
 
 : cwltool --no-container Workflows/test-workflow.cwl Jobs/local-small.ERR034597.test-workflow.yml
+
+in the first run gives an error: ERROR 'fastqc' not found. We need to
+add the tool to the environment. For this I created a file .guix-deploy
+in the root of the repo:
+
+: cat .guix-deploy
+: env GUIX_PACKAGE_PATH=.:~/iwrk/opensource/guix/guix-bioinformatics/  ~/.config/guix/current/bin/guix environment -C guix --ad-hoc cwltool trimmomatic-jar bwa fastqc go-ipfs curl --network
+
+You can see it requires the guix-bioinformatics, so you may need to clone
+that repo first. Next start the Guix container:
+
+: . ./guix-deploy
+: cwltool --no-container Workflows/test-workflow.cwl Jobs/local-small.ERR034597.test-workflow.yml
+
+Now the workflow should run fastq. When it works it should say
+
 : <lots of output>
 : INFO Final process status is success
 
-Note that I hard coded two paths which you need to point to your Guix
+The current workflow is only working partly. It now complains with
+
+ILLUMINACLIP:/gnu/store/v2jys382g6j5b7lsxzh8v4vfhd414nhz-profile/lib/share/jar/adapters/TruSeq2-PE.fa:2:40:15.
+Error: Unable to access jarfile /gnu/store/v2jys382g6j5b7lsxzh8v4vfhd414nhz-profile/lib/share/jar/trimmomatic-0.38.jar
+
+This is because I hard coded two paths which you need to point to your Guix
 profile first:
 
 : Tools/trimmomaticPE.cwl:    valueFrom: /gnu/store/v2jys382g6j5b7lsxzh8v4vfhd414nhz-profile/lib/share/jar/trimmomatic-0.38.jar
 : Tools/trimmomaticPE.cwl:    valueFrom: 'ILLUMINACLIP:/gnu/store/v2jys382g6j5b7lsxzh8v4vfhd414nhz-profile/lib/share/jar/adapters/TruSeq2-PE.fa:2:40:15'
 
-This is not typical and I should find a proper way to do this ;)
+In the container the Guix profile can be found with
+
+: echo $GUIX_ENVIRONMENT
+
+Plug it into above values.  This is not typical and I should find a
+proper way to do this. cwltool has a switch `--preserve-environment
+ENVVAR'. After modifying the source by splitting in the GUIX_ENVIROMENT
+it worked.
+
+#+begin_src diff
+diff --git a/Tools/trimmomaticPE.cwl b/Tools/trimmomaticPE.cwl
+index ed57eb5..aedd23a 100644
+--- a/Tools/trimmomaticPE.cwl
++++ b/Tools/trimmomaticPE.cwl
+@@ -55,7 +55,7 @@ outputs:
+
+ arguments:
+   - position: 1
+-    valueFrom: /gnu/store/v2jys382g6j5b7lsxzh8v4vfhd414nhz-profile/lib/share/jar/trimmomatic-0.38.jar
++    valueFrom: /gnu/store/j1ljhxzaxmcqy8v6d4v1y37p48c68f5q-profile/lib/share/jar/trimmomatic-0.38.jar
+   - position: 2
+     valueFrom: PE
+   - position: 5
+@@ -67,4 +67,4 @@ arguments:
+   - position: 8
+     valueFrom: $(inputs.fq2.basename).trim.2U.fastq
+   - position: 9
+-    valueFrom: 'ILLUMINACLIP:/gnu/store/v2jys382g6j5b7lsxzh8v4vfhd414nhz-profile/lib/share/jar/adapters/TruSeq2-PE.fa:2:40:15'
++    valueFrom: 'ILLUMINACLIP:/gnu/store/j1ljhxzaxmcqy8v6d4v1y37p48c68f5q-profile/lib/share/jar/adapters/TruSeq2-PE.fa:2:40:15'
+
+#+end_src
+
+Try
+
+: . ./guix-deploy
+: cwltool --no-container --preserve-environment GUIX_ENVIRONMENT Workflows/test-workflow.cwl Jobs/local-small.ERR034597.test-workflow.yml
+: (output)
+: INFO Final process status is success
