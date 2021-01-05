@@ -90,9 +90,8 @@ In the container the Guix profile can be found with
 : echo $GUIX_ENVIRONMENT
 
 Plug it into above values.  This is not typical and I should find a
-proper way to do this. cwltool has a switch `--preserve-environment
-ENVVAR'. After modifying the source by splitting in the GUIX_ENVIROMENT
-it worked.
+proper way to do this. After modifying the source by splitting in the
+GUIX_ENVIROMENT it worked.
 
 #+begin_src diff
 diff --git a/Tools/trimmomaticPE.cwl b/Tools/trimmomaticPE.cwl
@@ -123,3 +122,19 @@ Try
 : cwltool --no-container --preserve-environment GUIX_ENVIRONMENT Workflows/test-workflow.cwl Jobs/local-small.ERR034597.test-workflow.yml
 : (output)
 : INFO Final process status is success
+
+
+** GUIX_ENVIRONMENT
+
+The question is how to deal with GUIX_ENVIRONMENT. cwltool has a
+switch `--preserve-environment ENVVAR'. This value is then available
+in the environment, but it is not available to the CWL parser, it
+appears.
+
+To automate this I think there are two options:
+
+1. Add GUIX_ENVIRONMENT support to CWL
+2. Generate/patch above CWL script before running
+
+The second one is easy if this is part of a Guix package, but
+I think we need to add proper support in CWL.
