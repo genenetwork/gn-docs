@@ -2,34 +2,35 @@
 
 The core GeneNetwork team maintains modern Linux servers and storage
 systems for genetic, genomic, and phenome analyses. Machines are
-located in the main UTHSC machine room of the Lamar Alexander Building
-at UTHSC (Memphis campus). The whole team has access to this space for
-upgrades and hardware maintenance. We use remote racadm and/or ipmi on
-all important machines. Issues and work packages are tracked through a
-Trello board and we use git repositories for documentation (all
-available on request).
+located in four racks in the main UTHSC machine room of the Lamar
+Alexander Building at UTHSC (Memphis TN campus). The whole team has
+access to this space for upgrades and hardware maintenance. We use
+remote racadm and/or ipmi on all important machines. Issues and work
+packages are tracked through a Trello board and we use git
+repositories for documentation (all available on request).
 
 This computing facility has four computer racks dedicated to
 GeneNetwork-related work. Each rack has a mix of Dell PowerEdge
-servers (from a few low-end R610s, R6515, and two R7425 AMD Epyc
-64-core 256GB RAM systems - tux01 and tux02 - running the GeneNetwork
-web services). We also support several more experimental systems,
-including a 40-core R7425 system with 196 GB RAM and 2x NVIDIA V100
-GPU (tux03), and one Penguin Computing Relion 2600GT systems
-(Penguin2) with NVIDIA Tesla K80 GPU used for software development and
-to serve outside-facing less secure R/shiny and Python services that
-run in isolated containers. Effectively, we have three outward facing
-servers that are fully used by the GeneNetwork team with a total of
-64+64+40+28 = 196 real cores. Late 2020 we added a small HPC cluster
-(Octopus), consisting of 11 PowerEdge R6515 AMD EPYC 7402P 24-core
-CPUs (264 real cores). Nine of these machines are equipped with 128 GB
-RAM and two nodes have 1 TB of memory.  Octopus is designed for
-Mouse/Rat pangenome work without HIPAA restrictions. All Octopus nodes
-run Debian and GNU Guix and use Slurm for batch submission. We are
-adding support for distributed network file storage and running the
-common workflow language (CWL) and Docker containers. The racks have
-dedicated high-speed Cisco switches and firewalls that are maintained
-by UTHSC IT staff.
+servers (from a few older low-end R610s, R6515, and two recent R7425
+AMD Epyc 64-core 256GB RAM systems - tux01 and tux02 - running the
+GeneNetwork web services). We also support several more experimental
+systems, including a 40-core R7425 system with 196 GB RAM and 2x
+NVIDIA V100 GPU (tux03), and one Penguin Computing Relion 2600GT
+systems (Penguin2) with NVIDIA Tesla K80 GPU used for software
+development and to serve outside-facing less secure R/shiny and Python
+services that run in isolated containers. Effectively, we have three
+outward facing servers that are fully used by the GeneNetwork team
+with a total of 64+64+40+28 = 196 real cores.
+
+Late 2020 we added a small HPC cluster (Octopus), consisting of 11
+PowerEdge R6515 AMD EPYC 7402P 24-core CPUs (264 real cores). Nine of
+these machines are equipped with 128 GB RAM and two nodes have 1 TB of
+memory.  Octopus is designed for Mouse/Rat pangenome work without
+HIPAA restrictions. All Octopus nodes run Debian and GNU Guix and use
+Slurm for batch submission. We run lizardfs for distributed network
+file storage and we run the common workflow language (CWL) and Docker
+containers. The racks have dedicated high-speed Cisco switches and
+firewalls that are maintained by UTHSC IT staff.
 
 We also run some 'specials' including an ARM-based NVIDIA Jetson and a
 RISC-V [PolarFire
@@ -38,22 +39,22 @@ have also ordered two RISC-V
 [SiFive](https://www.sifive.com/blog/the-heart-of-risc-v-development-is-unmatched)
 computers.
 
-In addition to above hardware we have batch submission access to the
-cluster computing resource at the ISAAX computing facility operated by
-the UT Joint Institute for Computational Sciences in a secure setup at
-the DOE Oak Ridge National Laboratory (ORNL) and on the UT Knoxville
-campus. We have a 10 Gbit connection from the machine room at UTHSC to
-data transfer nodes at ISAAC.  ISAAC has been upgraded in the past
-year (see [ISAAC system
+In addition to above hardware the GeneNetwork team also has batch
+submission access to the HIPAA complient cluster computing resource at
+the ISAAX computing facility operated by the UT Joint Institute for
+Computational Sciences in a secure setup at the DOE Oak Ridge National
+Laboratory (ORNL) and on the UT Knoxville campus. We have a 10 Gbit
+connection from the machine room at UTHSC to data transfer nodes at
+ISAAC.  ISAAC has been upgraded in the past year (see [ISAAC system
 overview](http://www.nics.utk.edu/computing-resources/acf/acf-system-overview)
 and now has over 3 PB of high-performance Lustre DDN storage and
 contains over 8000 cores with some large RAM nodes and several GPU
-nodes. Drs. Prins, Chen, Ashbrook and other team members use ISAAC
-systems to analyze genomic and genetic data sets. Note that we can not
-use ISAAC and storage facilities for public-facing web services
-because of stringent security requirements.  ISAAC however, can be
-highly useful for precomputed genomics and genetics results using
-standardized pipelines.
+nodes. Drs. Prins, Garrison, Chen, Ashbrook and other team members use
+ISAAC systems to analyze genomic and genetic data sets. Note that we
+can not use ISAAC and storage facilities for public-facing web
+services because of stringent security requirements.  ISAAC however,
+can be highly useful for precomputed genomics and genetics results
+using standardized pipelines.
 
 The software stack is maintained and deployed throughout with GNU
 Guix, a modern software package manager. All current tools are
