@@ -1,13 +1,14 @@
 # Facilities
 
-The core GeneNetwork team maintains modern Linux servers and storage
-systems for genetic, genomic, and phenome analyses. Machines are
-located in four racks in the main UTHSC machine room of the Lamar
-Alexander Building at UTHSC (Memphis TN campus). The whole team has
-access to this space for upgrades and hardware maintenance. We use
-remote racadm and/or ipmi on all important machines. Issues and work
-packages are tracked through a Trello board and we use git
-repositories for documentation (all available on request).
+The core [GeneNetwork team](https://github.com/genenetwork/) maintains
+modern Linux servers and storage systems for genetic, genomic, and
+phenome analyses. Machines are located in four racks in the main UTHSC
+machine room of the Lamar Alexander Building at UTHSC (Memphis TN
+campus). The whole team has access to this space for upgrades and
+hardware maintenance. We use remote racadm and/or ipmi on all
+important machines. Issues and work packages are tracked through a
+Trello board and we use git repositories for documentation (all
+available on request).
 
 This computing facility has four computer racks dedicated to
 GeneNetwork-related work. Each rack has a mix of Dell PowerEdge
@@ -46,7 +47,7 @@ Computational Sciences in a secure setup at the DOE Oak Ridge National
 Laboratory (ORNL) and on the UT Knoxville campus. We have a 10 Gbit
 connection from the machine room at UTHSC to data transfer nodes at
 ISAAC.  ISAAC has been upgraded in the past year (see [ISAAC system
-overview](http://www.nics.utk.edu/computing-resources/acf/acf-system-overview)
+overview](http://www.nics.utk.edu/computing-resources/acf/acf-system-overview))
 and now has over 3 PB of high-performance Lustre DDN storage and
 contains over 8000 cores with some large RAM nodes and several GPU
 nodes. Drs. Prins, Garrison, Chen, Ashbrook and other team members use
