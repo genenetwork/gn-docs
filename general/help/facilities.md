@@ -23,6 +23,9 @@ services that run in isolated containers. Effectively, we have three
 outward facing servers that are fully used by the GeneNetwork team
 with a total of 64+64+40+28 = 196 real cores.
 
+## Octopus HPC cluster
+
+
 Late 2020 we added a small HPC cluster (Octopus), consisting of 11
 PowerEdge R6515 AMD EPYC 7402P 24-core CPUs (264 real cores). Nine of
 these machines are equipped with 128 GB RAM and two nodes have 1 TB of
@@ -33,12 +36,18 @@ file storage and we run the common workflow language (CWL) and Docker
 containers. The racks have dedicated high-speed Cisco switches and
 firewalls that are maintained by UTHSC IT staff.
 
+![Octopus HPC](./octopus.jpg)
+
+## Specials
+
 We also run some 'specials' including an ARM-based NVIDIA Jetson and a
 RISC-V [PolarFire
 SOC](https://www.cnx-software.com/2020/07/20/polarfire-soc-icicle-64-bit-risc-v-and-fpga-development-board-runs-linux-or-freebsd/). We
 have also ordered two RISC-V
 [SiFive](https://www.sifive.com/blog/the-heart-of-risc-v-development-is-unmatched)
 computers.
+
+## ISAAC access
 
 In addition to above hardware the GeneNetwork team also has batch
 submission access to the HIPAA complient cluster computing resource at
@@ -56,6 +65,8 @@ can not use ISAAC and storage facilities for public-facing web
 services because of stringent security requirements.  ISAAC however,
 can be highly useful for precomputed genomics and genetics results
 using standardized pipelines.
+
+## Deployment
 
 The software stack is maintained and deployed throughout with GNU
 Guix, a modern software package manager. All current tools are
