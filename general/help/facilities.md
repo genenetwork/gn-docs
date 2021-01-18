@@ -36,7 +36,7 @@ file storage and we run the common workflow language (CWL) and Docker
 containers. The racks have dedicated high-speed Cisco switches and
 firewalls that are maintained by UTHSC IT staff.
 
-![Octopus HPC](https://github.com/genenetwork/gn-docs/raw/master/general/help/octopus.jpg)
+<img style="width: 100%; margin: 20px 0px;" alt="Octopus HPC" src="https://github.com/genenetwork/gn-docs/raw/master/general/help/octopus.jpg"/>
 
 ## Specials
 
