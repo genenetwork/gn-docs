@@ -1,8 +1,8 @@
 # GeneNetwork upload API
 
-## API
+## Upload API
 
-The REST API will accept gzipped tar ball which contains multiple
+The REST API will accept a gzipped tar ball which contains multiple
 files:
 
 1. A metadata file (JSON)
@@ -44,7 +44,17 @@ On error the result should include the error output
 }
 ```
 
-### Metadata
+## Metadata
+
+For metadata we will follow the R/qtl2 input
+[format]https://kbroman.org/qtl2/assets/vignettes/input_files.html).
+See the examples at https://kbroman.org/qtl2/pages/sampledata.html.
+One example is
+[here](https://github.com/kbroman/qtl2/blob/gh-pages/assets/sampledata/iron/iron.yaml). We
+will not be using YAML though! Use JSON instead.
+
+
+The files that are uploaded are listed in the metadata.
 
 The metadata file is a simple JSON file containing
 
@@ -56,11 +66,27 @@ The metadata file is a simple JSON file containing
   "authors": [
     "R.W. Williams"
   ],
-  "cross": "BXD"
+  "crosstype": "BXD",
+  "geno": "iron_geno.csv",
+  "pheno": "iron_pheno.csv",
 }
 ```
 
-### Phenotype file
+## File lookup (resolving)
+
+Files can be in three places:
+
+1. On the internet (URL) - fixme later
+2. Uploaded in the local dir (file, but no path)
+3. In the database (identifier) - fixme later
+
+For Genotype files a file name is passed in. We will first look in the
+upload dir. If it is not there we will look in the genotype_files
+directory of GeneNetwork.
+
+For phenotype files we currently only look in the upload directory.
+
+## Phenotype file
 
 The phenotype file is a tab delimited 'spreadsheet' where the columns
 contain phenotypes and the rows contain individuals. Example
@@ -90,3 +116,14 @@ BXD20 309.500
 ```
 
 Missing data are 'NA'. Multiple pheno columns are possible.
+
+## Running GEMMA
+
+Using the hash received earlier we can run GEMMA against the uploaded
+data. Example: `/api/gemma/lmm2/e524ee7ea9b1f452c58abe560960a60f`
+should do the trick and result a status or error. The resulting output
+files should be fetchable with something like:
+
+`/api/gemma/lmm2/loco/e524ee7ea9b1f452c58abe560960a60f/results.log.txt`
+and
+`/api/gemma/lmm2/loco/e524ee7ea9b1f452c58abe560960a60f/results.assoc.txt`
