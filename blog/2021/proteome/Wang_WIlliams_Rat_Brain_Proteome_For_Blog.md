@@ -70,12 +70,8 @@ variation, and contribution to addiction
 
 ![](media/image1.png)
 
-QUESTION: **What proteins related to dopamine and its many roles in behavior are
-> strongly modulated by DNA variants, and can we determine what gene
-> variants are related both to dopamine function and substance use
-> disorders. **
+QUESTION: **What proteins related to dopamine and its many roles in behavior are strongly modulated by DNA variants, and can we determine what gene variants are related both to dopamine function and substance use disorders. **
 > 
->
 > The Red Hot Chili Peppers ask this question in *This is the Place.*
 >
 > \"[Can I isolate your gene? Can I kiss your
