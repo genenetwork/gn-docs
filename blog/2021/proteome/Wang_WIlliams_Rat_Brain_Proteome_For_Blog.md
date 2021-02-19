@@ -20,13 +20,13 @@ the Hybrid Rat Diversity Panel.
 
 For those of you on this list at NIH, first, thank you for all of your
 support over more than 20 years that has made this Valentine\'s primer
-possible---starting with the NIH Human Brain Project and continuing now
+possible--starting with the NIH Human Brain Project and continuing now
 with a NIDA P30. I hope you will be impressed not only by the data that
 Xusheng generated, but by the FAIR-ness and ease of analysis of highly
 valuable smart quadratic data.
 
 What the heck is *smart quadratic data*? Please see an extended
-discussion on this topic (verging on a rant in sections) given at the
+discussion on this topic (verging on a soap box rant in sections) given at the
 University of Virginia in the Data Science program, 20Nov2020:
  ***<https://youtu.be/4ZhnXU8gV44> ***
 
@@ -36,20 +36,20 @@ University of Virginia in the Data Science program, 20Nov2020:
 > blinking. Anyone who read Roger J. Williams\'s *Biochemical
 > Individuality* when it came out in 1956 should have known better
 > (***https://en.wikipedia.org/wiki/Roger_J._Williams***). My excuse
-> is that I was four years old, but James Shannon was 52 years old.
-> Elias Zerhouni was 5 years old, Francis Collins was 6 years old, and
-> Eric Lander was about --9 months old. But it is now 2021 and in this
+> is that I was four years old, Elias Zerhouni was 5 years old, Francis Collins was 6 years old.
+> Eric Lander was about -9 months old. 
+> But James Shannon was 52 years old. It is now 2021 and in this
 > glorious \"post-genomics\" era of highly accurate personalized health
-> care and prevention (not) we should grow up and embrace the diversity
-> and complexity of living systems. *Necessary and sufficient*---only in
-> your reductive dreams. Want more of this: see *Herding Cats---the
+> care and prevention (NOT) we should grow up and embrace the diversity
+> and complexity of living systems. *Necessary and sufficient*--only in
+> your reductive dreams. Want more of this: see *Herding Cats--the
 > Sociology of Data Integration*, 2009: PMID: 20228863
 > https://doi.org/10.3389/neuro.01.016.2009
 
 Many of you have given talks with a hierarchy of traits. I remember a
 lovely talk that Nora Volkow gave to the Human Brain Project teams in
-about 2005---from gene variants at the bottom to variable outcome
-measures at the top---susceptible vs resistant, fast vs slow
+about 2005--from gene variants at the bottom to variable outcome
+measures at the top--susceptible vs resistant, fast vs slow
 metabolizer, will relapse, won\'t replase. I would say we have made only
 modest progress at true holistic integration, and few biomedical
 researcher know much about causal quantitative modeling. We absolutely
@@ -65,7 +65,7 @@ to addiction.
 
 End of context; on with the topic at hand:
 
-One small molecule of great fame---dopamine---and its modulation,
+One small molecule of great fame--DOPAMINE--and its modulation,
 variation, and contribution to addiction
 
 ![](media/image1.png)
