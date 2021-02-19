@@ -372,7 +372,7 @@ MTRR: not much related to CNS function--mainly cancer and development
 
 FASKD3: not much CNS but key in mitochondrial function
 
-Ok, time to go out and sled.
+Ok, time to go out and sled (or shovel snow, even in Memphis).
 
 Any one that made it this far--bravo--you have persistence.
 
@@ -399,7 +399,7 @@ researchers.
 Rob
 
 ps. You may want to know about OPRM1 as a great position and biological
-candidate gene---is it causal. Unfortunately expression is not
+candidate gene--is it causal? Unfortunately expression is not
 consistently high in this proteomics analysis and we will have to look
-at bit harder to find peptide fragments for this protein. Coming soon to
+at bit harder to find peptide fragments for the mu opioid receptor. Coming soon to
 a webservice near you.
