@@ -15,7 +15,7 @@ Wang (University of North Dakota) and colleagues, including Jumin Peng
 at St. Jude Children\'s Research Hospital, and Michal Pravenec at the
 Czech Academy of Science. This is an open, but not yet final,
 quantitative proteomics data for the whole brain for 21 strains of rat
-(male and female isogenic littermates) from the HXB/BXH family---part of
+(male and female isogenic littermates) from the HXB/BXH family--part of
 the Hybrid Rat Diversity Panel.
 
 For those of you on this list at NIH, first, thank you for all of your
@@ -224,11 +224,11 @@ like this: 
 
 Beneath the Manahattan plot there is a **Mapping Statistics** table that
 provides estimates a SNP coordinates (Rnor6 assembly) calculated by
-GEMMA with --logP values and additive effects (log2 scale).
+GEMMA with -logP values and additive effects (log2 scale).
 
 ![](media/image10.png)
 
-A --logP value of 5.27 is good---normally at or above genome-wide
+A -logP value of 5.27 is good---normally at or above genome-wide
 threshold of significance. (This assertion does need more support, and
 we are testing thresholds using using other mapping methods, including
 R/qtl\'s and WebQTL\'s standard interval mapping methods, and using
@@ -239,7 +239,7 @@ protein expression quantitative trait locus (QTL) on Chr 1? To answer
 this question we need to sort the **Mapping Statistics** by
 the **Position** column. Once sorted, we have to decide how wide a
 confidence interval is appropriate given the density of DNA variants,
-gene density, and --logP values. Karl Broman and others recommend a drop
+gene density, and -logP values. Karl Broman and others recommend a drop
 in the --logP linkage statistic of about 1.5 on either side of the peak,
 or plateau in this case. For the QTL map of SYT7 the confidence interval
 encompasses an stretch of DNA from about 35 megabases (Mb) to 43 Mb.
