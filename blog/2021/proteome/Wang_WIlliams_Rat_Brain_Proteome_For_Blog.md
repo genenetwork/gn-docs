@@ -138,7 +138,7 @@ Results** table should look like the screenshot below. 
 
 I have highlighted the row 8---the ARNTL protein---a major transcription
 factor involved in circadian rhythms that is upregulated by DRD2
-signaling (PMID: 16606840 in PNAS, 2006)
+signaling (PMID: 16606840 in PNAS 2006)
 
 **Step 3.** To begin to answer the second question---is there a major
 modulator of multiple dopamine-associated proteins---we need to re-sort
@@ -159,7 +159,7 @@ proteins---Chr 19 at about 60 Mb. But before we head to Chr 19, let\'s
 continue to work with this proximal part of Chr 1 and try to figure out
 why the variation in expression of this band of nine proteins map to
 this part of the rat genome. Step 3 below is a long step---my
-apologysorry. Perhaps time for a coffee break.
+apology, sorry. Perhaps time for a coffee break.
 
 **Step 3** involves mapping one or more of these nine proteins. I will
 pick SYT7 since it has the highest expression (9 log2 units of
