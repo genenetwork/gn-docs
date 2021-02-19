@@ -76,9 +76,7 @@ QUESTION: **What proteins related to dopamine and its many roles in behavior ar
 >
 > \"[Can I isolate your gene? Can I kiss your
 > dopamine?](https://genius.com/Red-hot-chili-peppers-this-is-the-place-lyrics#note-1422525)
->
-> \...
->
+> ...
 > A master piece of DNA caught in a flashing ray\"
 >
 > (The lyrics are* *on the horror of drug addiction. The lead, Anthony
