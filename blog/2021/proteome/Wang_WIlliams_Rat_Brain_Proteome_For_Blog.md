@@ -70,7 +70,7 @@ variation, and contribution to addiction
 
 ![](media/image1.png)
 
-QUESTION: **What proteins related to dopamine and its many roles in behavior are strongly modulated by DNA variants, and can we determine what gene variants are related both to dopamine function and substance use disorders. **
+THE BIG QUESTION: **What proteins related to dopamine and its many roles in behavior are strongly modulated by DNA variants, and can we determine what gene variants are related both to dopamine function and substance use disorders. **
 > 
 > The Red Hot Chili Peppers ask this question in *This is the Place.*
 >
@@ -79,15 +79,15 @@ QUESTION: **What proteins related to dopamine and its many roles in behavior ar
 > ...
 > A master piece of DNA caught in a flashing ray\"
 >
-> (The lyrics are* *on the horror of drug addiction. The lead, Anthony
+> (The lyrics are on the horror of drug addiction. The lead, Anthony
 > Kiedis, has relapsed several times. The PG version of the
 > song: ***<https://www.youtube.com/watch?v=gqgm7ViA2Ag>  ***and the
 > typical RHCP shirtless version for the cool
 > kids:*** <https://www.youtube.com/watch?v=8Dkvwu3aWkY>***
 
 **Step 1. **To answer the BIG Question, we are going to review all
-genes/proteins in NCBI **Gene Reference into Function**---RIF for
-short---that are related in some way to *dopamine*. 
+genes/proteins in NCBI **Gene Reference into Function**--RIF for
+short--that are related in some way to *dopamine*. 
 
 There are two ways to do this:
 
@@ -107,12 +107,12 @@ well (just over 8,000 proteins and over 200,000 peptide fragments) in
 the whole brain.  
 
 The second part of the search string (LRS\...) finds all proteins that
-have strong linkage---a likelihood ratio statistic score of at least 15.
+have strong linkage--a likelihood ratio statistic score of at least 15.
 This is equivalent to a LOD score of 3.3, and this is a value that is
 often close to the genome-wide significance level. The other value, 999,
 is just a high upper limit.
 
-The second way to find these proteins is a bit easier---just paste this
+The second way to find these proteins is a bit easier--just paste this
 URL into your browser:
 
 > [***https://genenetwork.org/search?species=rat&group=HXBBXH&type=Whole+Brain+Proteome&dataset=UND\_NIDA\_HXB-BXH\_WBPr\_log2z8\_0221&search\_terms\_or=&search\_terms\_and=RIF%3Ddopamine+LRS%3D%2815+999%29&FormID=searchResult***](https://genenetwork.org/search?species=rat&group=HXBBXH&type=Whole+Brain+Proteome&dataset=UND_NIDA_HXB-BXH_WBPr_log2z8_0221&search_terms_or=&search_terms_and=RIF%3Ddopamine+LRS%3D%2815+999%29&FormID=searchResult)
@@ -129,12 +129,12 @@ Results** table should look like the screenshot below. 
 
 ![](media/image3.png)
 
-I have highlighted the row 8---the ARNTL protein---a major transcription
+I have highlighted the row 8--the ARNTL protein--a major transcription
 factor involved in circadian rhythms that is upregulated by DRD2
 signaling (PMID: 16606840 in PNAS 2006)
 
-**Step 3.** To begin to answer the second question---is there a major
-modulator of multiple dopamine-associated proteins---we need to re-sort
+**Step 3.** To begin to answer the second question--is there a major
+modulator of multiple dopamine-associated proteins--we need to re-sort
 this table using the column labeled **Peak Location**. In this
 screenshot below I have scrolled over to the right to display the **Peak
 Location** column after having performing the sort. All of these
@@ -151,14 +151,14 @@ region of the rat genome that is highly linked with dopamine-associated
 proteins---Chr 19 at about 60 Mb. But before we head to Chr 19, let\'s
 continue to work with this proximal part of Chr 1 and try to figure out
 why the variation in expression of this band of nine proteins map to
-this part of the rat genome. Step 3 below is a long step---my
-apology, sorry. Perhaps time for a coffee break.
+this part of the rat genome. Step 3 below is a long step--my
+apology. Perhaps time for a coffee break.
 
 **Step 3** involves mapping one or more of these nine proteins. I will
 pick SYT7 since it has the highest expression (9 log2 units of
 expression) and the second highest LOD score (6.8).
 
-You can either click on the UNIPROT identifier---**Q62747 **in the
+You can either click on the UNIPROT identifier--**Q62747 **in the
 window, or you can just paste this URL command into a browser:
 
 > [***https://genenetwork.org/show\_trait?trait\_id=Q62747&dataset=UND\_NIDA\_HXB-BXH\_WBPr\_log2z8\_0221***](https://genenetwork.org/show_trait?trait_id=Q62747&dataset=UND_NIDA_HXB-BXH_WBPr_log2z8_0221)
@@ -184,7 +184,8 @@ synaptotagmin 7 (SYT7).\
 \
 Again we pause briefly for \"data due diligence\". In the **Statistics**
 **histogram** window you will note that the distribution of SYT7 protein
-levels in 21 strains has a hint of bimodality---that is a good thing.
+levels in 21 strains has a hint of bimodality--that is a good thing. 
+Bimodality worked well for Gregor Mendel, and may work well for us.
 
 <img src="media/image7.png" width="300">
 
@@ -192,7 +193,7 @@ There are no outliers, so we can map these logged protein expression
 data \"as given\" without further normalization.
 
 We can now finally proceed to the actual mapping of variation in protein
-expression---using for the first time infinite marker maps for
+expression--using for the first time infinite marker maps for
 chromosome of all of the HXB/BXH family, and using the
 updated GEMMA linear mixed model mapping function in GeneNetwork.
 
@@ -221,7 +222,7 @@ GEMMA with -logP values and additive effects (log2 scale).
 
 ![](media/image10.png)
 
-A -logP value of 5.27 is good---normally at or above genome-wide
+A -logP value of 5.27 is good--normally at or above genome-wide
 threshold of significance. (This assertion does need more support, and
 we are testing thresholds using using other mapping methods, including
 R/qtl\'s and WebQTL\'s standard interval mapping methods, and using
@@ -233,7 +234,7 @@ this question we need to sort the **Mapping Statistics** by
 the **Position** column. Once sorted, we have to decide how wide a
 confidence interval is appropriate given the density of DNA variants,
 gene density, and -logP values. Karl Broman and others recommend a drop
-in the --logP linkage statistic of about 1.5 on either side of the peak,
+in the -logP linkage statistic of about 1.5 on either side of the peak,
 or plateau in this case. For the QTL map of SYT7 the confidence interval
 encompasses an stretch of DNA from about 35 megabases (Mb) to 43 Mb.
 
@@ -254,7 +255,7 @@ This will generate a chromosome-specific view; part shown below.
 
 The QTL peak is a \"non-recombinant\" plateau that extends from 35.5 to
 45 Mb---confirming visually what we had already determined from the
---logP values.  The blue blocks along the top are gene \"models\" and
+-logP values.  The blue blocks along the top are gene \"models\" and
 the lighter blue dots are the linkage values at different SNP locations.
 You can zoom to a map with specific start- and end-coordinates. 
 
@@ -264,8 +265,8 @@ the SYT7 protein expression QTL.
 
 ![](media/image12.png)
 
-As you can tell from the screenshot, there are lots of genes---real and
-putative---that call this part of Chr 1 home.
+As you can tell from the screenshot, there are lots of genes--real and
+putative--that call this part of Chr 1 home.
 
 Underneath each map an **Interval Analyst** table of all genes and
 pseudogenes in a specific interval. In this case, there are about 130
@@ -336,13 +337,13 @@ IPCEF1 
 CNKSR3 
 
 Anything catch your eye? Actually, lots to catch the eye
-here---perhaps too much. 
+here--perhaps too much. 
 
-The gene/\'protein that most of you will catch is **OPRM1**---the mu
+The gene/\'protein that most of you will catch is **OPRM1**--the mu
 opioid receptor. 
 
 Variants in this gene and locus are definitely controllers of morphine
-response---particularly so in the BXD mouse family (Paige Lemen, Hao
+response--particularly so in the BXD mouse family (Paige Lemen, Hao
 Chen, Guy Mittleman, and Price Dickson have a strong abstract on this at
 the upcoming 2021 NIDA Genetics meeting). Also true in *Homo sapiens*
 based on initial GWAS analysis.\
@@ -351,7 +352,7 @@ based on initial GWAS analysis.\
 controller of some subset of the nine proteins with variable expression
 that map to this region?
 
-Simple---clip out all of those positional candidate genes and paste them
+Simple--clip out all of those positional candidate genes and paste them
 into the search **Get Any** window of GeneNetwork. It should look like
 this:
 
@@ -359,21 +360,21 @@ this:
 
 About 12 of these proteins have reasonably high expression in the rat
 brain, and three of these also are associated with reasonably strong
-cis-acting modulation---FASTKD3, PPP1R14C, and MTRR. That means that DNA
+cis-acting modulation--FASTKD3, PPP1R14C, and MTRR. That means that DNA
 variant in or around these genes modulate both mRNA expression but much
 more importantly, also the protein level.
 
 You can review these three candidates at your leisure. 
 
-PPP1R14C (aka KEPI)---see PMID: 11812771
+PPP1R14C (aka KEPI)--see PMID: 11812771
 
-MTRR: not much related to CNS function---mainly cancer and development
+MTRR: not much related to CNS function--mainly cancer and development
 
 FASKD3: not much CNS but key in mitochondrial function
 
 Ok, time to go out and sled.
 
-Any one that made it this far---bravo---you have persistence.
+Any one that made it this far--bravo--you have persistence.
 
 Any questions about the proteomics to Xusheng Wang.
 
