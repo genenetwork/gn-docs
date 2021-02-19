@@ -1,6 +1,6 @@
 From: RW Williams, rwilliams\@uthsc.edu, labwilliams\@gmail.com
 
-To: Many (and now converted by Pjotr Prins for a blog (thanks)
+To: Many      (and now converted by Pjotr Prins for a blog; thanks)
 
 Date: 14Feb2021
 
