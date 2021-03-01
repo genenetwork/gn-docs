@@ -11,32 +11,42 @@ Trello board and we use git repositories for documentation (all
 available on request).
 
 This computing facility has four computer racks dedicated to
-GeneNetwork-related work. Each rack has a mix of Dell PowerEdge
-servers (from a few older low-end R610s, R6515, and two recent R7425
-AMD Epyc 64-core 256GB RAM systems - tux01 and tux02 - running the
-GeneNetwork web services). We also support several more experimental
-systems, including a 40-core R7425 system with 196 GB RAM and 2x
-NVIDIA V100 GPU (tux03), and one Penguin Computing Relion 2600GT
-systems (Penguin2) with NVIDIA Tesla K80 GPU used for software
-development and to serve outside-facing less secure R/shiny and Python
-services that run in isolated containers. Effectively, we have three
-outward facing servers that are fully used by the GeneNetwork team
-with a total of 64+64+40+28 = 196 real cores.
+GeneNetwork-related work. Each rack has a mix of Dell PowerEdge servers
+(from a few older low-end R610s, R6515, and two recent R7425 AMD Epyc
+64-core 256GB RAM systems - tux01 and tux02 - running the GeneNetwork
+web services). We also support several more experimental systems,
+including a 40-core R7425 system with 196 GB RAM and 2x NVIDIA V100 GPU
+(tux03), and one Penguin Computing Relion 2600GT systems (Penguin2) with
+NVIDIA Tesla K80 GPU used for software development and to serve
+outside-facing less secure R/shiny and Python services that run in
+isolated containers. Effectively, we have three outward facing servers
+that are fully used by the GeneNetwork team with a total of 64+64+40+28
+= 196 real cores.
 
 ## Octopus HPC cluster
-
 
 Late 2020 we added a small HPC cluster (Octopus), consisting of 11
 PowerEdge R6515 AMD EPYC 7402P 24-core CPUs (264 real cores). Nine of
 these machines are equipped with 128 GB RAM and two nodes have 1 TB of
-memory.  Octopus is designed for Mouse/Rat pangenome work without
-HIPAA restrictions. All Octopus nodes run Debian and GNU Guix and use
-Slurm for batch submission. We run lizardfs for distributed network
-file storage and we run the common workflow language (CWL) and Docker
+memory. Octopus is designed for pangenomics work without HIPAA
+restrictions. All Octopus nodes run Debian and GNU Guix and use Slurm
+for batch submission. We run lizardfs for distributed network file
+storage and we run the common workflow language (CWL) and Docker
 containers. The racks have dedicated high-speed Cisco switches and
-firewalls that are maintained by UTHSC IT staff.
+firewalls that are maintained by UTHSC IT staff. This heavily used
+cluster, however, is almost self-managed by its users and was featured
+on the GNU Guix High Performance Computing [2020 Activity
+Report](https://hpc.guix.info/blog/2021/02/guix-hpc-activity-report-2020/)!
+In 2021 we expect to double the number nodes.
 
 <img style="width: 100%; margin: 20px 0px;" alt="Octopus HPC" src="https://github.com/genenetwork/gn-docs/raw/master/general/help/octopus.jpg"/>
+
+## Backups
+
+We run three Synology servers with a total of 300TB of storage. We
+also have an off-site fallback server and encrypted backups in the
+Amazon cloud for the main web-service databases and files. We plan to
+expand backup storage in the summer of 2021.
 
 ## Specials
 
@@ -68,9 +78,8 @@ using standardized pipelines.
 
 ## Deployment
 
-The software stack is maintained and deployed throughout with GNU
-Guix, a modern software package manager. All current tools are
-maintained on
-http://git.genenetwork.org/guix-bioinformatics/guix-bioinformatics.
-Dr Garrison's pangenome tools are packaged on
+The software stack is maintained and deployed throughout with GNU Guix,
+a modern software package manager. All current tools are maintained on
+http://git.genenetwork.org/guix-bioinformatics/guix-bioinformatics. Dr
+Garrison's pangenome tools are packaged on
 https://github.com/ekg/guix-genomics.
