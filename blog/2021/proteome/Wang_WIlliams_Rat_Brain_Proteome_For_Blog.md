@@ -68,7 +68,10 @@ End of context; on with the topic at hand:
 One small molecule of great fame--DOPAMINE--and its modulation,
 variation, and contribution to addiction
 
-![](media/image1.png)
+
+<img class="control-img img-1" style="max-width: 100%" alt="Dopamine" src="https://github.com/genenetwork/gn-docs/raw/master/blog/2021/proteome/media/image1.png"/>
+
+
 
 THE BIG QUESTION: **What proteins related to dopamine and its many roles in behavior are strongly modulated by DNA variants, and can we determine what gene variants are related both to dopamine function and substance use disorders. **
 > 
@@ -95,7 +98,7 @@ There are two ways to do this:
 to [***https://www.genenetwork.org***](https://www.genenetwork.org) and
 set up the **Select and search **screen to look as shown below:
 
-![](media/image2.png)
+<img class="control-img img-2" style="max-width: 100%" alt="Select and search" src="https://github.com/genenetwork/gn-docs/raw/master/blog/2021/proteome/media/image2.png"/>
 
 Note that in the **Combined** field above, I have entered the string
 
@@ -127,7 +130,9 @@ linked to *dopamine* AND that have reasonable genetic linkage in the HXB
 family to a particular genome coordinate (usually a SNP). The **Search
 Results** table should look like the screenshot below. 
 
-![](media/image3.png)
+
+<img class="control-img img-3" style="max-width: 100%" alt="Search Results" src="https://github.com/genenetwork/gn-docs/raw/master/blog/2021/proteome/media/image3.png"/>
+
 
 I have highlighted the row 8--the ARNTL protein--a major transcription
 factor involved in circadian rhythms that is upregulated by DRD2
@@ -140,7 +145,9 @@ screenshot below I have scrolled over to the right to display the **Peak
 Location** column after having performing the sort. All of these
 proteins map to Chr 1 at about 43.7 megabases (Mb).
 
-![](media/image4.png)
+
+<img class="control-img img-4" style="max-width: 100%" alt="Search Results" src="https://github.com/genenetwork/gn-docs/raw/master/blog/2021/proteome/media/image4.png"/>
+
 
 We see ARNTL again and eight other proteins that are genetically
 downstream of one or many DNA variants located on the proximal part of
@@ -166,7 +173,9 @@ window, or you can just paste this URL command into a browser:
 If all goes well, your browser will display this content (and much more
 too):
 
-![](media/image5.png)
+
+<img class="control-img img-5" style="max-width: 100%" alt="mapping" src="https://github.com/genenetwork/gn-docs/raw/master/blog/2021/proteome/media/image5.png"/>
+
 
 
 Before we map SYT7 protein expression, you may be curious to know how
@@ -175,7 +184,9 @@ this protein has been linked to dopamine. 
 The answer is one click away. Tap on the **GeneWiki** button,
 highlighted below in grey.
 
-![](media/image6.png)
+
+<img class="control-img img-6" style="max-width: 100%" alt="" src="https://github.com/genenetwork/gn-docs/raw/master/blog/2021/proteome/media/image6.png"/>
+
 
 A **GeneWiki** window will open, and RIF number 18 explains the
 association with *dopamine* and also links to a 2011 paper (PMID
@@ -187,7 +198,7 @@ Again we pause briefly for \"data due diligence\". In the **Statistics**
 levels in 21 strains has a hint of bimodality--that is a good thing. 
 Bimodality worked well for Gregor Mendel, and may work well for us.
 
-<img src="media/image7.png" width="300">
+<img class="control-img img-7"  width="300" alt="" src="https://github.com/genenetwork/gn-docs/raw/master/blog/2021/proteome/media/image7.png"/>
 
 There are no outliers, so we can map these logged protein expression
 data \"as given\" without further normalization.
@@ -199,7 +210,9 @@ updated GEMMA linear mixed model mapping function in GeneNetwork.
 
 Open the **Mapping Tools** window
 
-![](media/image8.png)
+
+<img class="control-img img-8" style="max-width: 100%" alt="" src="https://github.com/genenetwork/gn-docs/raw/master/blog/2021/proteome/media/image8.png"/>
+
 
 In the screenshot above I have mapped variation in SYT7 protein level
 using the new **Genotypes file: Experimental (smoothed)**
@@ -214,13 +227,16 @@ Jonathan, David, Hakan, Tristan, Victor, Jun, many others\....).
 The Manhattan plot of variation in SYT7 protein expression should look
 like this: 
 
-![](media/image9.png)
+
+<img class="control-img img-9" style="max-width: 100%" alt="" src="https://github.com/genenetwork/gn-docs/raw/master/blog/2021/proteome/media/image9.png"/>
+
 
 Beneath the Manahattan plot there is a **Mapping Statistics** table that
 provides estimates a SNP coordinates (Rnor6 assembly) calculated by
 GEMMA with -logP values and additive effects (log2 scale).
 
-![](media/image10.png)
+
+<img class="control-img img-10" style="max-width: 100%" alt="" src="https://github.com/genenetwork/gn-docs/raw/master/blog/2021/proteome/media/image10.png"/>
 
 A -logP value of 5.27 is good--normally at or above genome-wide
 threshold of significance. (This assertion does need more support, and
@@ -251,7 +267,8 @@ case.
 
 This will generate a chromosome-specific view; part shown below.
 
-<img src="media/image11.png" width="300">
+
+<img class="control-img img-11" width="300" alt="" src="https://github.com/genenetwork/gn-docs/raw/master/blog/2021/proteome/media/image11.png"/>
 
 The QTL peak is a \"non-recombinant\" plateau that extends from 35.5 to
 45 Mb---confirming visually what we had already determined from the
@@ -263,7 +280,9 @@ You can keep zooming in on a specific region of a chromosome by clicking
 on the pink horizontal bar alonge the top. Here is the plateau region of
 the SYT7 protein expression QTL.
 
-![](media/image12.png)
+
+<img class="control-img img-12" style="max-width: 100%"  alt="" src="https://github.com/genenetwork/gn-docs/raw/master/blog/2021/proteome/media/image12.png"/>
+
 
 As you can tell from the screenshot, there are lots of genes--real and
 putative--that call this part of Chr 1 home.
@@ -356,7 +375,8 @@ Simple--clip out all of those positional candidate genes and paste them
 into the search **Get Any** window of GeneNetwork. It should look like
 this:
 
- ![](media/image13.png)
+<img class="control-img img-13" style="max-width: 100%"  alt="" src="https://github.com/genenetwork/gn-docs/raw/master/blog/2021/proteome/media/image13.png"/>
+
 
 About 12 of these proteins have reasonably high expression in the rat
 brain, and three of these also are associated with reasonably strong
