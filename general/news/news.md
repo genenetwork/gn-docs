@@ -171,12 +171,12 @@
 
 **2019-10-08: DOD BXD INDV PFC GWI CD RNA-Seq (Oct19) TPM Log2.** profiling by array entered into GeneNetwork.
   
- -   [DOD BXD INDV PFC GWI CD RNA-Seq (Oct19) TPM Log2 ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=880)
-   -   [DOD BXD INDV PFC GWI CTL RNA-Seq (Oct19) TPM Log2  ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=881)
-    -   [DOD BXD INDV PFC GWI DFP RNA-Seq (Oct19) TPM Log2  ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=882)
-     -   [DOD BXD PFC GWI CD RNA-Seq (Oct19) TPM Log2 ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=883)
-      -   [DOD BXD PFC GWI CTL RNA-Seq (Oct19) TPM Log2  ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=884)
-      -   [DOD BXD PFC GWI DFP RNA-Seq (Oct19) TPM Log2  ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=885)
+-   [DOD BXD INDV PFC GWI CD RNA-Seq (Oct19) TPM Log2](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=880)
+-   [DOD BXD INDV PFC GWI CTL RNA-Seq (Oct19) TPM Log2](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=881)
+-   [DOD BXD INDV PFC GWI DFP RNA-Seq (Oct19) TPM Log2](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=882)
+-   [DOD BXD PFC GWI CD RNA-Seq (Oct19) TPM Log2](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=883)
+-   [DOD BXD PFC GWI CTL RNA-Seq (Oct19) TPM Log2](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=884)
+-   [DOD BXD PFC GWI DFP RNA-Seq (Oct19) TPM Log2](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=885)
 
  This dataset is publicly available in most cases. For more information
  on how to access the data please refer to the link above.
