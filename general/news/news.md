@@ -145,9 +145,9 @@
  
 **2019-11-23: UTHSC BXD Liver CD-HFD DNAm (Nov19) Sesame.** profiling by array entered into GeneNetwork.
   
- -   [UTHSC BXD Liver CD-HFD DNAm (Nov19) Sesame ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=891)
-   -   [UTHSC BXD Liver HFD DNAm (Nov19) Sesame  ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=892)
-    -   [UTHSC BXD Liver CD DNAm (Nov19) Sesame)   ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=893) 
+-   [UTHSC BXD Liver CD-HFD DNAm (Nov19) Sesame ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=891)
+-   [UTHSC BXD Liver HFD DNAm (Nov19) Sesame  ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=892)
+-   [UTHSC BXD Liver CD DNAm (Nov19) Sesame)   ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=893) 
      
  This dataset is publicly available in most cases. For more information
  on how to access the data please refer to the link above.
@@ -161,10 +161,10 @@
  
 **2019-10-08: EPFL/ETHZ BXD Liver Proteome CD-HFD (Nov19).** profiling by array entered into GeneNetwork.
   
- -   [EPFL/ETHZ BXD Liver Proteome CD-HFD (Nov19) ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=886)
-   -   [EPFL/ETHZ BXD Liver Proteome CD+HFD (Nov19)  ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=887)
-    -   [EPFL/ETHZ BXD Liver Proteome CD (Nov19)   ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=888)
-     -   [EPFL/ETHZ BXD Liver Proteome HFD (Nov19) ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=889)
+-   [EPFL/ETHZ BXD Liver Proteome CD-HFD (Nov19) ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=886)
+-   [EPFL/ETHZ BXD Liver Proteome CD+HFD (Nov19)  ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=887)
+-   [EPFL/ETHZ BXD Liver Proteome CD (Nov19)   ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=888)
+-   [EPFL/ETHZ BXD Liver Proteome HFD (Nov19) ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=889)
       
  This dataset is publicly available in most cases. For more information
  on how to access the data please refer to the link above.
