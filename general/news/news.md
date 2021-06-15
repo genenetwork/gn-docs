@@ -83,60 +83,8 @@
  functions.
 
  (Updated Dec 19, 2018 by RW Williams)
-
- **2018-09-12: GeneNetwork 1 will be supported in 2018 but GeneNetwork
- 2 will become the main production server**
-
- [GeneNetwork 2](http://gn2.genenetwork.org) is ready for testing and
- research projects. GeneNetwork 1 (GN1) and GeneNetwork 2 (GN2) share
- the a single database, but they use different code and algorithms for
- mapping and data analysis. There are some benefits of using GN2,
- including more powerful linear mixed model mapping methods that
- account for kinship structure.
-
- The interface of GN2 is still a work in progress. Please send any
- suggestion, requests, or bug reports to rwilliams@uthsc.edu.
-
- **2018-09-12: Notes on new BXD names**.
-
- 1.  [BXD73](http://jaxmice.jax.org/strain/007117),
-     [BXD73a](http://jaxmice.jax.org/strain/007124) (original known as
-     *BXD80*), and [BXD73b](http://jaxmice.jax.org/strain/007146)
-     (originally known as *BXD103*) are genetically very similar.
-     [BXD73](http://jaxmice.jax.org/strain/007117) and *BXD80* are
-     genetically identical at 82264 of 100290 markers (82% identical by
-     descent). [BXD73](http://jaxmice.jax.org/strain/007117) keeps its
-     original name and JAX identifier number (JR\#7117), whereas
-     *BXD80* is now referred to as
-     [BXD73a](http://jaxmice.jax.org/strain/007124) (JR\#7124).
-     [BXD73](http://jaxmice.jax.org/strain/007117) and BXD103 are
-     genetically identical at 90917 of 100290 markers (90.6% identical
-     by descent). *BXD103* is now referred to as
-     [BXD73b](http://jaxmice.jax.org/strain/007146) (JR\#7146).
- 2.  [BXD48](http://jaxmice.jax.org/strain/007097) and
-     [BXD48a](http://jaxmice.jax.org/strain/007139) (originally known
-     as *BXD96*) are sister substrains, and are genetically identical
-     at 93485 of 100290 markers (93.2% identical by descent).
-     [BXD48](http://jaxmice.jax.org/strain/007097) retains its original
-     name and JAX identifier number (JAX JR\#7097) whereas BXD96 is now
-     referred to as [BXD48a](http://jaxmice.jax.org/strain/007139)
-     (JR\#7139).
- 3.  [BXD65](http://jaxmice.jax.org/strain/007110),
-     [BXD65a](http://jaxmice.jax.org/strain/007140) (originally known
-     as *BXD97*), and [BXD65b](http://jaxmice.jax.org/strain/009677)
-     (originally known as *BXD92*) are sister substrains.
-     [BXD65](http://jaxmice.jax.org/strain/007110) and *BXD97* are
-     genetically identical at 92225 of 100290 markers (92% identical by
-     descent). *BXD97* is now referred to as
-     [BXD65a](http://jaxmice.jax.org/strain/007140) (JR\#7140).
-     [BXD65](http://jaxmice.jax.org/strain/007110) and *BXD92* are
-     genetically identical at 6155 of 6459 markers (95.3% identical by
-     descent). [BXD65](http://jaxmice.jax.org/strain/007110) retains
-     its original name and JAX identifier (JR\#7110) whereas *BXD92* is
-     now referred to as [BXD65b](http://jaxmice.jax.org/strain/009677)
-     (JR\#9677).
-        
-**2019-12-01: LSRU CC Male Midbrain RNA-Seq (Dec19) TPM Log2.** profiling by array entered into GeneNetwork.
+ 
+ **2019-12-01: LSRU CC Male Midbrain RNA-Seq (Dec19) TPM Log2.** profiling by array entered into GeneNetwork.
   
  -   [LSRU CC Male Midbrain RNA-Seq (Dec19) TPM Log2](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=361)
 
@@ -203,6 +151,58 @@
 
  This dataset is publicly available in most cases. For more information
  on how to access the data please refer to the link above.
+
+ **2018-09-12: GeneNetwork 1 will be supported in 2018 but GeneNetwork
+ 2 will become the main production server**
+
+ [GeneNetwork 2](http://gn2.genenetwork.org) is ready for testing and
+ research projects. GeneNetwork 1 (GN1) and GeneNetwork 2 (GN2) share
+ the a single database, but they use different code and algorithms for
+ mapping and data analysis. There are some benefits of using GN2,
+ including more powerful linear mixed model mapping methods that
+ account for kinship structure.
+
+ The interface of GN2 is still a work in progress. Please send any
+ suggestion, requests, or bug reports to rwilliams@uthsc.edu.
+
+ **2018-09-12: Notes on new BXD names**.
+
+ 1.  [BXD73](http://jaxmice.jax.org/strain/007117),
+     [BXD73a](http://jaxmice.jax.org/strain/007124) (original known as
+     *BXD80*), and [BXD73b](http://jaxmice.jax.org/strain/007146)
+     (originally known as *BXD103*) are genetically very similar.
+     [BXD73](http://jaxmice.jax.org/strain/007117) and *BXD80* are
+     genetically identical at 82264 of 100290 markers (82% identical by
+     descent). [BXD73](http://jaxmice.jax.org/strain/007117) keeps its
+     original name and JAX identifier number (JR\#7117), whereas
+     *BXD80* is now referred to as
+     [BXD73a](http://jaxmice.jax.org/strain/007124) (JR\#7124).
+     [BXD73](http://jaxmice.jax.org/strain/007117) and BXD103 are
+     genetically identical at 90917 of 100290 markers (90.6% identical
+     by descent). *BXD103* is now referred to as
+     [BXD73b](http://jaxmice.jax.org/strain/007146) (JR\#7146).
+ 2.  [BXD48](http://jaxmice.jax.org/strain/007097) and
+     [BXD48a](http://jaxmice.jax.org/strain/007139) (originally known
+     as *BXD96*) are sister substrains, and are genetically identical
+     at 93485 of 100290 markers (93.2% identical by descent).
+     [BXD48](http://jaxmice.jax.org/strain/007097) retains its original
+     name and JAX identifier number (JAX JR\#7097) whereas BXD96 is now
+     referred to as [BXD48a](http://jaxmice.jax.org/strain/007139)
+     (JR\#7139).
+ 3.  [BXD65](http://jaxmice.jax.org/strain/007110),
+     [BXD65a](http://jaxmice.jax.org/strain/007140) (originally known
+     as *BXD97*), and [BXD65b](http://jaxmice.jax.org/strain/009677)
+     (originally known as *BXD92*) are sister substrains.
+     [BXD65](http://jaxmice.jax.org/strain/007110) and *BXD97* are
+     genetically identical at 92225 of 100290 markers (92% identical by
+     descent). *BXD97* is now referred to as
+     [BXD65a](http://jaxmice.jax.org/strain/007140) (JR\#7140).
+     [BXD65](http://jaxmice.jax.org/strain/007110) and *BXD92* are
+     genetically identical at 6155 of 6459 markers (95.3% identical by
+     descent). [BXD65](http://jaxmice.jax.org/strain/007110) retains
+     its original name and JAX identifier (JR\#7110) whereas *BXD92* is
+     now referred to as [BXD65b](http://jaxmice.jax.org/strain/009677)
+     (JR\#9677).
  
  
  **2018-09-12: UConn-Rheaume Retina RGC (Sep18) scRNA-Seq Log2 and raw
