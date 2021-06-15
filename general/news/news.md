@@ -1,4 +1,4 @@
---- GeneNetwork News
+### GeneNetwork News
 
  **2019-Sep-24: BXD Genotypes file: Sequence-based improvements coming
  soon**
