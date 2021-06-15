@@ -135,8 +135,77 @@
      its original name and JAX identifier (JR\#7110) whereas *BXD92* is
      now referred to as [BXD65b](http://jaxmice.jax.org/strain/009677)
      (JR\#9677).
+        
+**2019-12-01: LSRU CC Male Midbrain RNA-Seq (Dec19) TPM Log2.** profiling by array entered into GeneNetwork.
+  
+ -   [LSRU CC Male Midbrain RNA-Seq (Dec19) TPM Log2](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=361)
 
- **2018-09-08: UConn-Rheaume Retina RGC (Sep18) scRNA-Seq Log2 and raw
+ This dataset is currently unpublished. For more information
+ on how to access the data please refer to the link above.
+ 
+**2019-11-23: UTHSC BXD Liver CD-HFD DNAm (Nov19) Sesame.** profiling by array entered into GeneNetwork.
+  
+ -   [UTHSC BXD Liver CD-HFD DNAm (Nov19) Sesame ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=891)
+   -   [UTHSC BXD Liver HFD DNAm (Nov19) Sesame  ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=892)
+    -   [UTHSC BXD Liver CD DNAm (Nov19) Sesame)   ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=893) 
+     
+ This dataset is publicly available in most cases. For more information
+ on how to access the data please refer to the link above.
+ 
+**2019-10-08: NIA-UTHSC Aging BXD Liver DNAm CD-HFD (Oct20) Sesame.** profiling by array entered into GeneNetwork.
+  
+ -   [NIA-UTHSC Aging BXD Liver DNAm CD-HFD (Oct20) Sesame ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=890)
+
+ This dataset is currently unpublished. For more information
+ on how to access the data please refer to the link above.
+ 
+**2019-10-08: EPFL/ETHZ BXD Liver Proteome CD-HFD (Nov19).** profiling by array entered into GeneNetwork.
+  
+ -   [EPFL/ETHZ BXD Liver Proteome CD-HFD (Nov19) ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=886)
+   -   [EPFL/ETHZ BXD Liver Proteome CD+HFD (Nov19)  ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=887)
+    -   [EPFL/ETHZ BXD Liver Proteome CD (Nov19)   ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=888)
+     -   [EPFL/ETHZ BXD Liver Proteome HFD (Nov19) ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=889)
+      
+ This dataset is publicly available in most cases. For more information
+ on how to access the data please refer to the link above.
+
+**2019-10-08: DOD BXD INDV PFC GWI CD RNA-Seq (Oct19) TPM Log2.** profiling by array entered into GeneNetwork.
+  
+ -   [DOD BXD INDV PFC GWI CD RNA-Seq (Oct19) TPM Log2 ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=880)
+   -   [DOD BXD INDV PFC GWI CTL RNA-Seq (Oct19) TPM Log2  ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=881)
+    -   [DOD BXD INDV PFC GWI DFP RNA-Seq (Oct19) TPM Log2  ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=882)
+     -   [DOD BXD PFC GWI CD RNA-Seq (Oct19) TPM Log2 ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=883)
+      -   [DOD BXD PFC GWI CTL RNA-Seq (Oct19) TPM Log2  ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=884)
+      -   [DOD BXD PFC GWI DFP RNA-Seq (Oct19) TPM Log2  ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=885)
+
+ This dataset is publicly available in most cases. For more information
+ on how to access the data please refer to the link above.
+                
+**2019-10-08: UTHSC BXD Liver RNA-Seq (Oct19) TPM Log2.** profiling by array entered into GeneNetwork.
+  
+ -   [UTHSC BXD Liver RNA-Seq (Oct19) TPM Log2  ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=877)
+
+ This dataset is publicly available in most cases. For more information
+ on how to access the data please refer to the link above.
+ 
+ **2019-06-16: JAX DBA/2J Monocyte 1-2 vs PBMC RNA-Seq (Jun19).** profiling by array entered into GeneNetwork.
+  
+ -   [JAX DBA/2J Monocyte 1 vs PBMC RNA-Seq (Jun19)  ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=878)
+ -   [JAX DBA/2J Monocyte 2 vs PBMC RNA-Seq (Jun19)  ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=879)
+
+ This dataset is publicly available in most cases. For more information
+ on how to access the data please refer to the link above.
+ 
+  
+**2019-02-10: JAX BXD Hippocampal Proteome (Feb19).** profiling by array entered into GeneNetwork.
+  
+ -   [JAX BXD Hippocampal Proteome (Feb19) ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=873)
+
+ This dataset is publicly available in most cases. For more information
+ on how to access the data please refer to the link above.
+ 
+ 
+ **2018-09-12: UConn-Rheaume Retina RGC (Sep18) scRNA-Seq Log2 and raw
  data.** profiling by array entered into GeneNetwork.
 
  -   [UConn-Rheaume Retina RGC (Sep18) scRNA-Seq
@@ -145,6 +214,17 @@
      Raw](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=865)
  -   [UConn-Rheaume Retina RGC (Sep18) scRNA-Seq
      Siamak](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=867)
+
+ This dataset is publicly available in most cases. For more information
+ on how to access the data please refer to the link above.
+ 
+   **2018-09-17: HSNIH-Palmer RNA-Seq (Aug18) log2.** profiling by array entered into GeneNetwork.
+  
+ -   [HSNIH-Palmer Nucleus Accumbens Core RNA-Seq (Aug18) log2 ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=868)
+ -   [HSNIH-Palmer Infralimbic Cortex RNA-Seq (Aug18) log2 ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=869)
+ -   [HSNIH-Palmer Lateral Habenula RNA-Seq (Aug18) log2 ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=870)
+ -   [HSNIH-Palmer Prelimbic Cortex RNA-Seq (Aug18) log2 ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=871)
+ -   [HSNIH-Palmer Orbitofrontal Cortex RNA-Seq (Aug18) log2 ](http://genenetwork.org/webqtl/main.py?FormID=sharinginfo&GN_AccessionId=872)
 
  This dataset is publicly available in most cases. For more information
  on how to access the data please refer to the link above.
