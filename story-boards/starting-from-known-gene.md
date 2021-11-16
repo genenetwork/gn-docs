@@ -24,4 +24,10 @@ GeneNetwork ignores case by default. In a search use quotes to search case sensi
 
 ## Find the GeneNetwork genewiki entry
 
-TBD
+GeneNetwork maintains info on gene entries. For example for [BRCA2](http://gn1.genenetwork.org/webqtl/main.py?FormID=geneWiki&symbol=BRCA2).
+
+## TODO
+
+* [ ] expand story line
+* [ ] global search is faulty, see gn-gemtext-threads/issues/genenetwork/global-search.gmi
+* [ ] migrate GeneWiki entries
