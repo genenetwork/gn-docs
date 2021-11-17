@@ -10,7 +10,11 @@ GeneNetwork contains data on thousands of experiments. How do you mine GN when y
 
 ## Use the search page <a name="gsearch" />
 
-The top bar of GeneNetwork shows a global search. We can look for the `Brca2` mouse gene:
+The top bar of GeneNetwork shows a global search.
+
+![Home page](./genenetwork.png "The GeneNetwork HOME")
+
+We can look for the `Brca2` mouse gene:
 
 <p align="center">
   <img src="global-search-gene.png" alt="Global gene search"/>
