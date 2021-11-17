@@ -2,6 +2,29 @@
 
 This document describes fetching data from GeneNetwork using the REST API.
 
+Karl Broman wrote the [GNapi](https://github.com/kbroman/GNapi/blob/master/README.md) R package for accessing the GN API which allows convenient access:
+
+- `check_gn()` - Check connection.
+- `list_species()` - List available species.
+- `list_groups("drosophila")` - List available groups of datasets
+- `list_datasets("BXD")` - List available datasets for a given group (here, `"BXD"`).
+- `info_dataset("CB_M_1004_P")` - Get meta information about a data set.
+- `info_datasets("B6D2F2")` - Get meta information about all data sets for a group.
+- `info_pheno("BXD", "10038")` - Get summary information for a phenotype
+- `get_pheno("BXD", "10646")` - Get phenotype values for a classical trait.
+- `get_geno("BXD")` - Get genotypes for a group.
+- `run_gemma("BXDPublish", "10015")` - Perform a genome scan with [gemma](https://github.com/genetics-statistics/GEMMA)
+- `run_rqtl("BXDPublish", "10015")` - Perform a genome scan with [R/qtl](https://rqtl.org)
+- `run_correlation("HC_M2_0606_P", "BXDPublish", "1427571_at")` - Finds traits that are correlated with a given trait.
+
+For further examples, see the [online
+vignette](https://kbroman.org/GNapi/GNapi.html), which is also
+available from within R:
+
+```r
+vignette("GNapi")
+```
+
 ---
 # Fetching Dataset/Trait info/data #
 ---
@@ -24,7 +47,10 @@ curl http://genenetwork.org/api/v_pre1/species/mouse.json
 
 *For all queries where the last field is a user-specified name/ID, there will be the option to append a file format type. Currently there is only JSON (and it will default to JSON if none is provided), but other formats will be added later*
 
-## Fetch Groups/RISets ##
+## Groups
+
+The data is organised by group (also a drop down menu on the GN search page). General information on groups can be found [here](http://gn1.genenetwork.org/mouseCross.html).
+
 
 This query can optionally filter by species:
 
@@ -86,6 +112,19 @@ curl http://genenetwork.org/api/v_pre1/sample_data/HSNIH-PalmerPublish.csv
 ```
 
 Returns a CSV file with sample/strain names as the columns and trait IDs as rows
+
+## Phenotype matrix
+
+```
+curl https://genenetwork.org/api/v_pre1/sample_data/BXDPublish.csv > BXDPublish.csv
+```
+
+You should query the API to get more information. Something like this
+for the BXD
+
+```
+curl https://genenetwork.org/api/v_pre1/datasets/mouse/bxd > bxd_datasets.json
+```
 
 ## Fetch Sample Data for Single Trait ##
 ```
