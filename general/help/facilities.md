@@ -39,7 +39,7 @@ on the GNU Guix High Performance Computing [2020 Activity
 Report](https://hpc.guix.info/blog/2021/02/guix-hpc-activity-report-2020/)!
 In 2021 we expect to double the number nodes.
 
-<img style="width: 100%; margin: 20px 0px;" alt="Octopus HPC" src="https://github.com/genenetwork/gn-docs/raw/master/general/help/octopus.jpg"/>
+<img style="width: 40%; margin: 20px 0px;" alt="Octopus HPC" src="https://github.com/genenetwork/gn-docs/raw/master/general/help/octopus.jpg"/>
 
 ## Backups
 
