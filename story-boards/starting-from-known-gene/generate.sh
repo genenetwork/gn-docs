@@ -1,5 +1,8 @@
 #!/bin/bash
 
+ruby ../../scripts/screenshot.rb --url "http://gn1.genenetwork.org/webqtl/main.py?FormID=geneWiki&symbol=BRCA2"  --out genewiki.png --extract 1200x500+0+0
+
+exit 1
 ruby ../../scripts/screenshot.rb --url "https://genenetwork.org/" --out genenetwork-home.png
 convert -extract 800x100+0+0 genenetwork-home.png global-search.png
 
