@@ -59,7 +59,7 @@ If you the right curator access for a resource, you will see a
 
 Clicking one of the diffs will display the diff:
 
-![JSON Diff view](./json-dif.png "JSON Diff view")
+![JSON Diff view](./json-diff.png "JSON Diff view")
 
 ## Approve and Reject the changes
 
