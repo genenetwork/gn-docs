@@ -48,7 +48,7 @@ a successful upload:
 ## View your diffs
 
 Go to the [diffs page](https://genenetwork.org/datasets/diffs "diffs
-page") where you will see your previous edits:
+page") where you will see your previous uploaded data:
 
 ![Diffs Page](./diffs-page.png "Diffs Page")
 
