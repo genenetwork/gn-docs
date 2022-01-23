@@ -25,19 +25,20 @@ that are fully used by the GeneNetwork team with a total of 64+64+40+28
 
 ## Octopus HPC cluster
 
-Late 2020 we added a small HPC cluster (Octopus), consisting of 11
-PowerEdge R6515 AMD EPYC 7402P 24-core CPUs (264 real cores). Nine of
-these machines are equipped with 128 GB RAM and two nodes have 1 TB of
-memory. Octopus is designed for pangenomics work without HIPAA
-restrictions. All Octopus nodes run Debian and GNU Guix and use Slurm
-for batch submission. We run lizardfs for distributed network file
-storage and we run the common workflow language (CWL) and Docker
-containers. The racks have dedicated high-speed Cisco switches and
-firewalls that are maintained by UTHSC IT staff. This heavily used
-cluster, however, is almost self-managed by its users and was featured
-on the GNU Guix High Performance Computing [2020 Activity
-Report](https://hpc.guix.info/blog/2021/02/guix-hpc-activity-report-2020/)!
-In 2021 we expect to double the number nodes.
+In 2020 we added a small but powerful HPC cluster (Octopus) dedicated
+to [pangenomic](https://www.biorxiv.org/content/10.1101/2021.11.10.467921v1) and [genetic](https://genenetwork.org/) computations, consisting of 11 PowerEdge
+R6515 AMD EPYC 7402P 24-core CPUs (264 real cores). Nine of these
+machines are equipped with 378 GB RAM and two have 1 TB of
+memory. All machines have large SSD storage (~10TB) driving 50+ TB
+shared network storage. All Octopus nodes run Debian and GNU Guix
+and use Slurm for batch submission. We run lizardfs for distributed
+network file storage and we run the common workflow language (CWL) and
+Docker containers. The racks have dedicated 10Gbs high-speed Cisco
+switches and firewalls that are maintained by UTHSC IT staff. This
+heavily used cluster, however, is almost self-managed by its users and
+was featured on the GNU Guix High Performance Computing
+[2020 Activity Report](https://hpc.guix.info/blog/2021/02/guix-hpc-activity-report-2020/)!
+In the near future we expect to double the number nodes.
 
 <img style="width: 40%; margin: 20px 0px;" alt="Octopus HPC" src="https://github.com/genenetwork/gn-docs/raw/master/general/help/octopus.jpg"/>
 
