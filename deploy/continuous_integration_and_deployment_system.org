@@ -18,9 +18,42 @@ In the sections that follow, we shall dive deeper into how the CI/CD system is p
 - The CI system runs the unit tests, linting and type checks mostly concurrently
 - If *ALL* the unit tests pass, the application is redeployed
 
+* Guix Forge and G-Expressions
+
+The CI/CD used for GeneNetwork makes heavy use of
+[[https://guix.gnu.org/manual/en/html_node/G_002dExpressions.html][Guix G-Expressions]] (also known as *gexps*) written for guix-forge.
+
+The CI system begins by defining a data structure to hold the development server's configuration
+
+#+BEGIN_SRC scheme
+(define-record-type* <development-server-configuration>
+  development-server-configuration make-development-server-configuration
+  development-server-configuration?
+  (name development-server-configuration-name)
+  (git-repository development-server-configuration-git-repository)
+  (git-branch development-server-configuration-git-branch)
+  (executable-path development-server-configuration-executable-path)
+  (runner development-server-configuration-runner)
+  (port development-server-configuration-port
+        (default 8080)))
+#+END_SRC
+
+The ~define-record-type~ macro is defined in the ~(guix records)~ module.
+
+The server configuration has the following values:
+
+- *name*: The name of the server configuration
+- *git-repository*: The git repository relating to the server configuration
+- *git-branch*: The branch to run the CI against
+- *executable-path*: something to do with laminar?
+- *runner*: A gexp that runs the service under ...
+- *port*: The port to run the service under CI/CD on
+
+**** TODO Identify what 'executable-path' above is about :genenetwork:CI:CD:
+**** TODO Find out under what conditions the gexp runs :genenetwork:CI:CD:
+
 * TODO Figure out how to organise these notes             :genenetwork:CI:CD:
 - The system uses webhook to trigger the builds on each commit
-- Use of [[https://guix.gnu.org/manual/en/html_node/G_002dExpressions.html][Guix G-Expressions]]
 - There is some use of ~development-server-configuration~ objects
 
 * TODO Maybe do a deep dive into at least one of the service definitions, explaining what each "thing" is and how it works :genenetwork:CI:CD: 
