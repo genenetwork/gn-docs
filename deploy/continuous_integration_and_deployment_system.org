@@ -1,0 +1,26 @@
+#+STARTUP: contents inlineimages shrink
+#+OPTIONS: ^:{}
+#+TITLE: Continuous Integration and Deployment System
+
+* Overview
+
+The continuous integration (CI) and continuous deployment (CD) system is dependent on the following:
+
+- [[https://guix.gnu.org/][GNU Guix]]: used to define the machine (VM, container, etc) within which the CI/CD system will run
+- [[https://guix-forge.systemreboot.net/][Guix Forge]]: does the main ochestration that enables the CI/CD system to function
+- [[https://laminar.ohwg.net/][Laminar]]: Runs the CI jobs
+
+In the sections that follow, we shall dive deeper into how the CI/CD system is put together
+
+** CI/CD Flow
+- Developer writes some code and pushes it to the /main/ branch in the GeneNetwork(2/3) repositories
+- A webhook triggers the CI system
+- The CI system runs the unit tests, linting and type checks mostly concurrently
+- If *ALL* the unit tests pass, the application is redeployed
+
+* TODO Figure out how to organise these notes             :genenetwork:CI:CD:
+- The system uses webhook to trigger the builds on each commit
+- Use of [[https://guix.gnu.org/manual/en/html_node/G_002dExpressions.html][Guix G-Expressions]]
+- There is some use of ~development-server-configuration~ objects
+
+* TODO Maybe do a deep dive into at least one of the service definitions, explaining what each "thing" is and how it works :genenetwork:CI:CD: 
