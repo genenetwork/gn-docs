@@ -1,0 +1,223 @@
+#+STARTUP: contents inlineimages shrink
+#+OPTIONS: ^:{}
+#+TITLE: Continuous Integration and Deployment System
+
+* Overview
+
+The continuous integration (CI) and continuous deployment (CD) system is dependent on the following:
+
+- GNU Guix[fn:1]: used to define the machine (VM, container, etc) within which the CI/CD system will run
+- Guix Forge[fn:2]: does the main ochestration that enables the CI/CD system to function
+- Laminar[fn:3]: Runs the CI jobs
+
+In the sections that follow, we shall dive deeper into how the CI/CD system is put together
+
+** CI/CD Flow
+- Developer writes some code and pushes it to the /main/ branch in the GeneNetwork(2/3) repositories
+- A webhook triggers the CI system
+- The CI system runs the unit tests, linting and type checks mostly concurrently
+- If *ALL* the unit tests pass, the application is redeployed
+
+* Guix Forge and G-Expressions
+
+The CI/CD used for GeneNetwork makes heavy use of Guix G-Expressions[fn:4] (also
+known as *gexps*) written for guix-forge.
+
+** Server Configuration
+
+The CI system begins by defining a data structure to hold the development server's configuration
+
+#+BEGIN_SRC scheme
+(define-record-type* <development-server-configuration>
+  development-server-configuration make-development-server-configuration
+  development-server-configuration?
+  (name development-server-configuration-name)
+  (git-repository development-server-configuration-git-repository)
+  (git-branch development-server-configuration-git-branch)
+  (executable-path development-server-configuration-executable-path)
+  (runner development-server-configuration-runner)
+  (port development-server-configuration-port
+        (default 8080)))
+#+END_SRC
+
+The ~define-record-type~ macro is defined in the ~(guix records)~ module.
+
+The server configuration objects are used in the definition of the guix services that will run on the CI/CD machine.
+
+The server configuration has the following values:
+
+- *name*: The name of the server configuration
+- *git-repository*: The git repository relating to the server configuration
+- *git-branch*: The branch to run the CI against
+- *executable-path*: where to symlink the latest *runner* script
+- *runner*: A gexp that runs the service (i.e. GN2, GN3, etc) undergoing CI/CD. This is run by GNU
+- *port*: The port to run the service under CI/CD on
+
+*** *executable-path* and *runner*
+
+The g-expression in *runner* is rebuilt on every commit and saved to an executable script in the guix store. This script is then symlinked to the *executable-path*.
+
+The GNU Shepherd[fn:5] service running the runner script is then restarted. This gets the latest version of GN2, GN3, etc running.
+
+The *runner* gexp runs the service (GN2, GN3, etc) within a profile containing all the dependencies needed by the service. This profile is *not* rebuilt on every commit.
+
+** CI/CD Actions/Commands
+
+The commands that the laminar service runs for the CI/CD system are defined in functions that "generate" the appropriate gexps to run. As an example, we look at at an example function that could build the actions to run the GeneNetwork2 tests.
+
+#+BEGIN_SRC scheme
+(define (genenetwork2-tests project test-command)
+  (with-imported-modules '((guix build utils))
+    (with-packages (list bash coreutils git-minimal nss-certs)
+      #~(begin
+          (use-modules (guix build utils))
+
+          (define (hline)
+            "Print a horizontal line 50 '=' characters long."
+            (display (make-string 50 #\=))
+            (newline)
+            (force-output))
+
+          (invoke "git" "clone" "--depth" "1"
+                  "--branch" #$(forge-project-repository-branch project)
+                  #$(forge-project-repository project)
+                  ".")
+          (hline)
+          (invoke "git" "log" "--max-count" "1")
+          (hline)
+          (setenv "SERVER_PORT" "8080")
+          (setenv "GN2_PROFILE"
+                  #$(profile
+                     (content (package->development-manifest genenetwork2))
+                     (allow-collisions? #t)))
+          (setenv "GN_PROXY_URL" "http://genenetwork.org/gn3-proxy")
+          (setenv "GN3_LOCAL_URL" "http://localhost:9093")
+          (setenv "GENENETWORK_FILES" #$%genotype-files)
+          (setenv "HOME" "/tmp")
+          (setenv "SQL_URI" "mysql://dbuser:dbpass@dbhost/db_webqtl")
+          (apply invoke '#$test-command)))))
+#+END_SRC
+
+This function builds a gexp that will be used to run the tests.
+
+The ~with-imported-modules~ macro (defined in the ~(guix gexp)~ module) ensures that the ~(guix build utils)~ module is available in the environment where the gexp defined in the body executes - essentially, it makes sure that the load path for the guile process executing the gexp has a reference to the code for the ~(guix build utils)~ module. 
+
+The ~with-packages~ macro (defined in the ~(forge utils)~  module) ensures that the provided list of packages are available in the execution environment of the gexp. It also makes sure that the appropriate environment variables for all the listed packages have been set up as appropriate.
+
+*** The gexp Proper
+Within the body of the gexp, the actions to run the tests are defined. The first of these is to "import" the ~(guix build utils)~ module to give access to the ~invoke~ function.
+
+A function ~hline~ is defined to print out separator lines for the output.
+
+With that in place, the following occurs:
+
+- The repo is cloned: ~(invoke "git" "clone" ...)~
+- The latest commit and its message are output ~(invoke "git" "log" ...)~
+- A number of environment variables are set up ~(setenv ...)~
+- The tests are run ~(apply invoke '#$test-command)~
+
+** Project Definitions
+
+- e.g. genenetwork2-project
+
+  In the project definitions, the CI/CD commands defined in the section above are used to build ~forge-laminar-job~ objects.
+
+  The projects are themselves ~forge-project~ objects, that are used in the definition of the services that are to be run in the CI/CD machine.
+
+  The ~forge-laminar*~ code is defined by guix-forge[fn:2]
+
+*** ~forge-laminar-job~
+
+This defines a job to be performed by laminar[fn:3]. It is specified with the following fields:
+
+- *name*: The name of the action. This shows up on the laminar UI too, as the name of a job.
+- *run*: A gexp that is converted to a script. This is where the *CI/CD Actions/Commands* defined in the previous section are used.
+- *after*: A gexp - converted to a script to be run after the "main" job has
+  been run. It is useful to trigger things like the actual redeployment of a
+  service after the job has been run.
+- *trigger?*: A flag representing whether or not to trigger the job. Default
+  value is ~#t~ (True - indicating the job should be triggered)
+
+*** TODO ~forge-project~
+
+- *name*: The name of the project
+- *user*: An optional field, used to identify the user that owns the repository,
+  in the case where the repository is not remote. Default value is ~#f~
+- *repository*: The code repository used for this project. This is defined in a
+  ~<development-server-configuration>~ object.
+- *repository-branch*: The branch in the code repository above, to use for this
+  project
+- *description*: An optional description of the project
+- *website-directory*: An optional path to ???
+- *ci-jobs*: A list of jobs for the CI system (Laminar) to run. These are
+  defined as ~forge-laminar-jobs~ as detailed above.
+- *ci-jobs-trigger*: This is how the CI jobs are triggered. The value here is
+  one of ~'post-receive-hook~, ~'cron~ or ~'webhook~. The current iteration of
+  the CI/CD definition (as of 31^{st} March 2022) uses the ~'webhook~ trigger.
+
+** Guix Service Definition
+
+The guix service definitions are used in the machine declaration to indicate
+which services are to be run by the machine and how.
+
+As an example, for GN2
+
+#+BEGIN_SRC scheme
+(define genenetwork2-service-type
+  (service-type
+   (name 'genenetwork2)
+   (description "Run GeneNetwork 2.")
+   (extensions
+    (list (service-extension activation-service-type
+                             development-server-activation)
+          (service-extension shepherd-root-service-type
+                             (compose list genenetwork2-shepherd-service))
+          (service-extension forge-service-type
+                             (compose list genenetwork2-project))))
+   (default-value %default-genenetwork2-configuration)))
+#+END_SRC
+
+where
+
+- *genenetwork2-project* is a ~forge-project~ as defined in the section above
+- *%default-genenetwork2-configuration* is a ~<development-server-configuration>~
+  object as defined in a previous section
+
+** System/Machine Definition
+
+The ~operating-system~ definition puts it all together. It defines the state of
+the machine that runs the CI/CD system.
+
+The GNU Guix[fn:1] documentation provides a detailed documentation of the system
+configuration[fn:6].
+
+In this system configuration, the service definitions are included, as in the
+snippet below:
+
+#+BEGIN_SRC scheme
+  (operating-system
+    ...
+    (services (cons* ...
+                     (service genenetwork2-service-type
+                              (development-server-configuration
+                               (inherit %default-genenetwork2-configuration)
+                               (port 9092)))
+                     ...
+                     %base-services)))
+#+END_SRC
+
+* Footnotes
+
+[fn:1] GNU Guix: https://guix.gnu.org/
+
+[fn:2] guix-forge: https://guix-forge.systemreboot.net/
+
+[fn:3] Laminar CI: https://laminar.ohwg.net/
+
+[fn:4] G-Expressions: https://guix.gnu.org/manual/en/html_node/G_002dExpressions.html
+
+[fn:5] GNU Shepherd: https://www.gnu.org/software/shepherd/
+
+[fn:6] Guix System Configuration: https://guix.gnu.org/manual/en/guix.html#System-Configuration
+
+[fn:7] guix-forge Manual: https://guix-forge.systemreboot.net/manual/dev/en/
