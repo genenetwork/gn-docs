@@ -4,7 +4,7 @@
 |---|---|---|---|
 | Ubuntu  |  ubuntu-latest  |  [ubuntu](http://www.ubuntu.com) | Free software licenses (mainly GPL)  |
 |  **Database** |   |   |   |
-|  MySQL | 5.5.40  | [http://www.mysql.com/](http://www.mysql.com/)  | GPL (version 2) or proprietary  |
+|  MariaDB | 10.X.XX  | [http://www.mariadb.org/](http://www.mariadb.org/)  | GPL (version 2)  |
 | **Python**  |   |   |   |
 |  Python | 3.8  | [http://www.python.org/](http://www.python.org/)  | Python Software Foundation License  |
 | Flask  | 1.1.2 | [http://flask.pocoo.org/](http://flask.pocoo.org/) | BSD   |
