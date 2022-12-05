@@ -2,6 +2,6 @@
 
 In this section we describe GN features:
 
-=> introduction.gmi Introduction
-=> search.gmi Search for genes, QTL, SNPs, etc.
-=> future-work.gmi Future work
+* [Introduction](introduction.md)
+* [Search](search.md) for genes, QTL, SNPs, etc.
+* [Future work](future-work.md)

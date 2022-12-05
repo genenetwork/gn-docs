@@ -18,7 +18,7 @@ species:mouse tissue:Liver - 0 results
 brca - only renders 2 results, why not BRCA2?
 ```
 
-Keywords like tissue appear to be case sensitive. Should not be the case.
+FIXME: keywords like tissue appear to be case sensitive. Should not be the case.
 
 GeneNetwork search functionality is used in the publication `Integrative Functional Genomics for Systems Genetics in GeneWeaver.org`. The authors present their webservice by searching for a "nociception" QTL in a region on chromosome 4 found in GN. They export the details and use it for further analysis in GeneWeaver\cite{bubier2016}.
 
@@ -35,10 +35,7 @@ and found new candidate genes included Slitrk6 and Cdk14. Slitrk6, in a Chromoso
 
 ## Methods
 
-GN search is built on
-Xapian, an Open Source Search Engine Library, released under the GPL v2+. It's written in C++, with bindings to allow use from Python, Guile and other languages.
+GN search is built on Xapian, an Open Source Search Engine Library, released under the GPL v2+. It's written in C++, with bindings to allow use from Python, Guile and other languages.
 Xapian is actively maintained and current Xapian users include, for example, the Debian website and the notmuch E-mail indexer.
 Xapian is a highly adaptable toolkit which allows developers to easily add advanced indexing and search facilities to their own applications. It has built-in support for several families of weighting models and also supports a rich set of boolean query operators\cite{Xapian}.
 We build the Xapian index from SQL data and RDF data in the GN databases.
-
-=> topics/xapian-indexing.gmi indexing optimizations
