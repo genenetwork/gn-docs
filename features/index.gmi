@@ -3,4 +3,5 @@
 In this section we describe GN features:
 
 => introduction.gmi Introduction
-=> search.gmi Search for genes, QTL, SNPs, etc.
+=> ./search.gmi Search for genes, QTL, SNPs, etc.
+=> future-work.gmi
