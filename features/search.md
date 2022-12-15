@@ -2,9 +2,12 @@
 
 ## Overview
 
-One of the key features of GN is the powerful search functionality. For most users it is the entry point for using the GeneNetwork web service. On the front-page a menu is offered that allows selecting species, e.g. mouse or rat, and relevant datasets grouped by family, e.g. BXD, and type, e.g. Hippocampus mRNA.
-Recently we introduced the Xapian search engine that allows for fast lookups and powerful search queries.
-A example search for the BRCA2 results in GN searching for the term "BRCA2" in 754 datasets and 39,765,944 traits across 10 species and found 7998 results that match the query.
+One of the key features of GeneNetwork (GN) are powerful search functions. For most users "Search" is the entry point. The main GN front page has a simple heirarchical menu modeled roughy on the USCS Genome Browser that enables a focused search by species (human, mouse, rat, potato), and then by more and more refined groups, cohorts, families, or studies (BXD family, GTEx). The lowest level of this heirarchy enable a search of a particular data type (phenotypes, genotypes, molecular traits such as "Hippocampus mRNA").
+
+The problem with heirarchical search is that it is not practical to search for all instances of data on lifespan or BRACA2 expression across all species and data sets. We therefore added a global search function, but this search was too slow for all but the most patient users. We therefore reworked the global search using the Xapian search engine. Xapian implements a very fast search using deep indexing of files. Xapian also enables much more powerful search queries.
+
+A example a global search for the BRCA2 results in a comprehensive trawling expedition through 754 datasets and 39,765,944 traits across 10 species. The result is a table of 7998 results that can now be selected and sorted by species, family, or even expression levels.
+
 The search URL looks like 'https://genenetwork.org/gsearch?type=gene&terms=BRCA2' and can be copy-pasted and shared with other users.
 
 More powerful queries will narrow down on field in the result table. For example to get only mouse results "species:mouse BRCA2" found 5916 results.
