@@ -12,16 +12,19 @@ In this section we describe GN features:
 1. Online genome, variant, SNP browsers
 1. [Mapping](mapping.md) QTL and GWAS
 1. Statistical overviews and heatmaps
-1. Correlations
-1. PheWAS
-1. BNW
-1. Networks
-1. Collections and sharing
-1. Connecting other services, such as Webgestalt, GeneWeaver
-1. Upload, review and edit data
-1. Experimental design and power calculations
-1. Community, materials and documentation
-1. Free software and deployment
+2. About mapping and population stratification—Using LMMs
+3. Correlations and scatterplots—the first steps toward networks
+4. Partial correlations—a simple type of causal modeling
+5. Graphs and moving toward acyclic causal models—from Swell Wright to Judea Pearl
+6. Phenome-wide association mapping: Getting at pleiotropy
+7. Bayesian Network Webserver in GN
+8. Collections and sharing
+9. Mutlifamily and multispecies data comparison and integration
+10. Connecting other services, such as Webgestalt, GeneWeaver
+11. Upload, review and edit data
+12. Experimental design and power calculations
+13. Community, materials and documentation
+14. Free software and deployment
 
 ## Discussion
 
