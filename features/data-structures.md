@@ -10,6 +10,7 @@
 * Theoretically traits can belong to multiple groups
 * An attribute can be a trait
 * An attribute can be a cofactor (also a vector)
+* An attribute is like a trait, but not used in computations, other than as a cofactor
 * Attributes are editable by group owners
 * We can have shared vocabulary for traits and attributes
 
