@@ -6,6 +6,7 @@ In this section we describe GN features:
 
 ## Topics
 
+1. [Data structures](data-structures.md)
 1. [Search](search.md) for genes, QTL, SNPs, etc.
 1. Available datasets and annotation
 1. Selecting and filtering data
@@ -19,7 +20,7 @@ In this section we describe GN features:
 6. Phenome-wide association mapping: Getting at pleiotropy
 7. Bayesian Network Webserver in GN
 8. Collections and sharing
-9. Mutlifamily and multispecies data comparison and integration
+9. Multifamily and multispecies data comparison and integration
 10. Connecting other services, such as Webgestalt, GeneWeaver
 11. Upload, review and edit data
 12. Experimental design and power calculations
