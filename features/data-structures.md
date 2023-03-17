@@ -1,5 +1,27 @@
 # Data structures
 
+
+* Species, e.g. 'Mouse', are split into groups, such as 'BXD bone studies'
+* A group can contain multiple families (see rat below) divided into subgroups
+* A trait, e.g. 'body weight' is a vector of data points the belongs to a study
+* A genotype vector can be a trait
+* A trait is always a member of group
+* A trait is part of a study/sample described in metadata
+* Theoretically traits can belong to multiple groups
+* An attribute can be a trait
+* An attribute can be a cofactor (also a vector)
+* Attributes are editable by group owners
+* We can have shared vocabulary for traits and attributes
+
+But
+
+* A trait is shown with attributes as cofactors
+* A cofactor can be a trait
+* A cofactor can be an attribute
+* A cofactor is not stored in the database - it is an optional vector
+
+(cofactors and attributes and traits overlap)
+
 ## Groups
 
 In GN datasets are organised in groups. On the main menu you can see
@@ -32,6 +54,7 @@ MariaDB [db_webqtl]> select * from InbredSet limit 3;
 +----+-------------+-------------------+--------+-----------+-------------------+--------+-----------------+-------------+--------------------------------------------------+-------------+-------------+---------------+
 3 rows in set (0.000 sec)
 ```
+
 
 ## What is a trait?
 
