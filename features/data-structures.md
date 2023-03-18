@@ -2,9 +2,10 @@
 
 
 * Species, e.g. 'Mouse', are split into groups, such as 'BXD bone studies'
+* Experiments are described in metadata
 * A group can contain multiple families (see rat below) divided into subgroups
-* A trait, e.g. 'body weight' is a vector of data points the belongs to a study
-* A genotype vector can be a trait
+* A trait, e.g. 'body weight' is a vector of measured data points the belongs to a study
+* A genotype vector can also be a trait
 * A trait is always a member of group
 * A trait is part of a study/sample described in metadata
 * Theoretically traits can belong to multiple groups
@@ -16,28 +17,29 @@
 
 But
 
-* A trait is shown with attributes as cofactors
+* A trait is shown with attributes as cofactors in the mapping tool
 * A cofactor can be a trait
 * A cofactor can be an attribute
 * A cofactor is not stored in the database - it is an optional vector
 
-(cofactors and attributes and traits overlap)
+(i.e., in terminology cofactors and attributes and traits somewhat overlap)
 
 ## Groups
 
 In GN datasets are organised in groups. On the main menu you can see
-BXD datasets are grouped into BXD aged hippocampus or BXD bone studies
+BXD datasets are grouped into 'BXD aged hippocampus' or 'BXD bone studies'
 reflecting higher level interests. Groups are formed around a strain
-(here BXD) and are linked to experiments, or sample lists.
+(here BXD) and are linked to experiments and sample lists.
+
 A group, family, cohort, population is almost always a set of N cases or
-individuals or isogenic animals treated as "individuals".  The BXD family
+individuals or isogenic animals treated as 'individuals'.  The BXD family
 of strains is a good and complex example. We can treat the 100+ BXD strains
-as if they were 100 "genetic" individuals and collapse traits for 10
+as if they were 100 genetic individuals and collapse traits for 10
 animals each into one value with an error term. Or we can treat all 100 x
 10 animals as actual individuals. Even though we use the same animals in
 both cases, they are treated in GN as two separate GROUPS.
 
-From a computational perspective a GROUP is a set that can be used to
+From a computational perspective a GROUP is a set that (particularly) can be used to
 compute correlations among traits. Coming back to the two BXD groups (N =
 100 strain means; or N = 1000 individuals), we can only
 compute correlations within either mean data or individual data.
@@ -73,7 +75,7 @@ traits that we have mapped or studied in GN are just simple vectors of
 numbers.
 
 Traits can also be genotypes that are coded as integers (usually). Some
-genotypes are coded as floats if genotype probabilities.
+genotypes are coded as floats if they represent genotype probabilities.
 
 In GeneNetwork a single trait value (a scalar) always belongs to a
 genetically-defined unit/case/individual/clone/strain/F1 hybrid. A single
@@ -85,26 +87,22 @@ membership. For example, the rat Hybrid Rat Diversity Population (HRDP)
 consists of the HXB family, the LEXF family, and a bunch of other inbred
 rat strains. HRDP traits can therefore be split into subgroups. This is a
 pain from a programming perspective, since a data matrix of TRAITS-by-GROUP
-may be a sparse matrix. And the GUI become more complex, since the user may
+may be a sparse matrix. And the GUI becomes more complex, since the user may
 want to slice and dice the GROUP in multiple ways, for example—just map the
 HXB family, just map the LEXF family, or map everything together.
 
 ## Case attributes
 
-Case attributes, such as body weight or gene expression, are
-"strain/sample metadata" at the group level. All traits within a group
-share the same sample list. The other way, case attribute are
-connected to samples within a group.
-
-An attribute can be any trait as defined above, or it can be a short
-alphanumeric code used primarily as a cofactor in analysis. Sex is a good
-example of an attribute that can be coded as an integer (0 or 1 or
-x=unknown) and used computationally as if it were any other trait, or it
-can be coded as M and F and use for display and as a cofactor. But some
-attributes are not even cofactors. For example, an Attribute column may
-define which strains or cases were used in Study X by Roy et al in 2021. In
-this situation, the GUI and the attribute are used to quickly sort or
-select or exclude particular cases.
+An attribute can (theoretically) be any trait as defined above, or it
+can be a short alphanumeric code used primarily as a cofactor in
+analysis. Sex is a good example of an attribute that can be coded as
+an integer (0 or 1 or x=unknown) and used computationally as if it
+were any other trait, or it can be coded as M and F and use for
+display and as a cofactor. But some attributes are not even
+cofactors. For example, an Attribute column may define which strains
+or cases were used in Study X by Roy et al in 2021. In this situation,
+the GUI and the attribute are used to quickly sort or select or
+exclude particular cases.
 
 Attributes are a recent addition to GeneNetwork. The motivation was to
 provide the user with a display of the most important cofactors of a
