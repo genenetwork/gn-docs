@@ -23,6 +23,10 @@ brca - only renders 2 results, why not BRCA2?
 
 FIXME: keywords like tissue appear to be case sensitive. Should not be the case.
 
+See also
+
+=> https://issues.genenetwork.org/topics/xapian-search-queries
+
 GeneNetwork search functionality is used in the publication `Integrative Functional Genomics for Systems Genetics in GeneWeaver.org`. The authors present their webservice by searching for a "nociception" QTL in a region on chromosome 4 found in GN. They export the details and use it for further analysis in GeneWeaver\cite{bubier2016}.
 
 In the publication `Systems Genetics of Obesity` GeneNetwork search is used to find genes contributing to collagen content in adipose tissue in the BXD and find similar cis-eQTL connected with adipose tissue that exist in other studies hosted on GN\cite{brockmann2016}.
