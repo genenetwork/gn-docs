@@ -152,3 +152,40 @@ groups).
 However, it would be cool to compare differences in gene expression in
 the liver of BXD mice, HXD rats, and GTEx humans as a function of sex
 and age.
+
+## RDF and relationship databases
+
+Naming is hard. Properties might have been more descriptive than attributes. But is
+a publication or a cage name a property or attribute for individual
+mouse? Not really. RDFS has vocabulary for such
+
+=> https://www.sti-innsbruck.at/sites/default/files/courses/fileadmin/documents/semweb13-14/SW-Lecture7.pdf
+
+I think, rather than bringing it in its one term we should be using relationships. So a publication would be a property of trait and therefore of group.
+
+* publication belongs to trait
+* individual partOf trait
+
+That way publications are connected to individual mouse.
+
+* trait belongs to group
+
+That way publications are connected to group
+
+That also makes the ownership path clear. Publications are handled at the trait level, not at the group level. This makes the discussion around how attributes are handled *much* clearer. Meanwhile
+
+* individual partOf epoch
+* status partOf individual
+
+Status is also arbitrary. Here status might be individualLocation or
+something more descriptive. I.e.
+
+* individual hasLocation location
+
+But it is also clear that the 'status' attribute is handled at the individual level and not at the group level. Maybe I get this wrong, but then we can decide at what level 'status' belongs for editing. Right?
+
+Anyway, you can see I am talking relationships that are descriptive and can be parsed by AI. Also this brings out where today's attributes belong.
+
+Anything enumerable can be used as a covariate, that includes location, handler etc.
+
+The RRID is a strain level property that we display as if it is an individual level property.
