@@ -49,7 +49,7 @@ ISAAC however, can be highly useful for precomputed genomics and genetics result
 ## Deployment
 
 The software stack is maintained and deployed throughout with GNU Guix, a modern software package manager that allows running Docker and Apptainer (formerly Singularity) containers as well as full system containers and VMs.
-All current tools are maintained on http://git.genenetwork.org/guix-bioinformatics/guix-bioinformatics. Dr Garrison's pangenome tools are packaged on https://github.com/ekg/guix-genomics.
+All current tools are maintained on [https://gitlab.com/genenetwork/guix-bioinformatics](https://gitlab.com/genenetwork/guix-bioinformatics). Dr&nbsp;Garrison's pangenome tools are packaged on [https://github.com/ekg/guix-genomics](https://github.com/ekg/guix-genomics).
 
 ## Cloud computing
 
