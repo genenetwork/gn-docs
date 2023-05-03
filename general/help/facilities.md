@@ -38,6 +38,8 @@ have also two RISC-V
 [SiFive](https://www.sifive.com/blog/the-heart-of-risc-v-development-is-unmatched)
 computers for development purposes.
 
+Additionally, together with Chris Batten of Cornell and Michael Taylor of the University of Washington, Erik Garrison and Pjotr Prins are UTHSC PIs responsible for leading the NSF-funded [RISC-V supercomputer for pangenomics](https://news.cornell.edu/stories/2021/11/5m-grant-will-tackle-pangenomics-computing-challenge). This supercomputer will come online in 2025.
+
 ## ISAAC access
 
 In addition to above hardware the GeneNetwork team has batch submission access to the HIPAA complient cluster computing resource at the ISAAC computing facility operated by the UT Joint Institute for Computational Sciences in a secure setup at the DOE Oak Ridge National Laboratory (ORNL) and on the UT Knoxville campus.
