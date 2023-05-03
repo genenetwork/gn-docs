@@ -20,7 +20,7 @@ All machines have large SSD storage (~10TB) driving 100+ TB shared network stora
 All Octopus nodes run Debian and GNU Guix and use Slurm for batch submission.
 We run lizardfs for distributed network file storage and we run the common workflow language (CWL) and Docker containers.
 The racks have dedicated 10Gbs high-speed Cisco switches and firewalls that are maintained by UTHSC IT staff.
-This heavily used cluster, however, is almost self-managed by its users and was featured on the GNU Guix High Performance Computing [2020 Activity Report](https://hpc.guix.info/blog/2021/02/guix-hpc-activity-report-2020/)! In the near future we expect to double the number nodes.
+This heavily used cluster, however, is almost self-managed by its users and was featured on the GNU Guix High Performance Computing [2020](https://hpc.guix.info/blog/2021/02/guix-hpc-activity-report-2020/) and  [2022](https://hpc.guix.info/blog/2023/02/guix-hpc-activity-report-2022/) activity reports! In the near future we expect to double the number nodes.
 <img style="width: 40%; margin: 20px 0px;" alt="Octopus HPC" src="https://github.com/genenetwork/gn-docs/raw/master/general/help/octopus.jpg"/>
 
 ## Backups
