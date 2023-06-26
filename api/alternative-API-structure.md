@@ -23,12 +23,22 @@
 - There may be several alternative genotypes for a species (e.g. mm9, mm10 or GRCm39 for mouse).
 - These may also be served in different formats.
 The content and the format are conceptually different, so they should be handled as such.
-- `http://genenetwork.org/api/v_pre1/genotypes/bimbam/BXD` Is wrong. 
-- `http://genenetwork.org/api/v_pre1/genotypes/BXD.bimbam` Is better.
-- `http://genenetwork.org/api/v_pre1/mouse/BXD/genotypes/mm10.bimbam` [**! not a real URL**] Is ideal.
-
+	- `http://genenetwork.org/api/v_pre1/genotypes/bimbam/BXD` Is wrong. 
+	- `http://genenetwork.org/api/v_pre1/genotypes/BXD.bimbam` Is better.
+	- `http://genenetwork.org/api/v_pre1/mouse/BXD/genotypes/mm10.bimbam` [**! not a real URL**] Is ideal.
+- The genotypes are conceptually at the same level as datasets, and could be seen as a special type of dataset.
+  
 ### Datasets
 - Again, why are these not nested under 'population'?
+
+### Data versions (?)
+Perhaps another hierarchy level below dataset is needed to accommodate versions/releases.
+- For microarray experiments, this would be the processing variant (e.g. PDNN/RMA).
+- For genotypes, this would be the genome build.
+Each version would be associated with different raw sample data.
+
+Currently, all versions have unique IDs so they can be (and are) accessed as distinct datasets.
+There may be no advantage to making this level of the hierarchy explicit.
 
 ### Sample data
 - Surely should be nested under dataset?
@@ -53,15 +63,16 @@ The user should be able to retrieve some sample-level data in one deep query and
 		- genotypes
 		- dataset
 			- dataset_info
-			- trait
-				- trait_info
-				- trait_data
-				- trait_qtl
-			- whole-dataset_data_matrix
-			- whole-dataset_qtl_matrix
+   			- versions (?)
+				- trait
+					- trait_info
+					- trait_data
+					- trait_qtl
+				- whole-dataset_data_matrix
+				- whole-dataset_qtl_matrix
 
-### URL construction
-It should be unnecessary to include the class terms 'species', 'genotypes', 'datasets' etc. in the URL.
+## URL construction
+It should be unnecessary to include the class terms 'species', 'populations', 'datasets' etc. in the URL.
 These levels should be implicit in the nesting structure.
 
 If used, these can refer to a listing of all available options.
