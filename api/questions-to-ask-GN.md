@@ -391,9 +391,129 @@ curl -s "https://genenetwork.org/api3/api/search/?query=diabetes&per_page=2&type
 ]
 ```
 
+And limit search to rat
+
+```
+curl -s "https://genenetwork.org/api3/api/search/?query=diabetes%20species:rat&per_page=2&type=phenotype"
+[
+  {
+    "additive": 29122.0720720721,
+    "authors": [
+      "Aitman TJ",
+      "Gotoda T",
+      "Evans AL",
+      "Imrie H",
+      "Heath KE",
+      "Trembling PM",
+      "Truman H",
+      "Wallace CA",
+      "Rahman A",
+      "Dore C",
+      "Flint J",
+      "Kren V",
+      "Zidek V",
+      "Kurtz TW",
+      "Pravenec M",
+      "Scott J"
+    ],
+    "dataset": "HXBBXHPublish",
+    "dataset_fullname": "HXB/BXH Published Phenotypes",
+    "description": "fat cell volume",
+    "geno_chr": "9",
+    "geno_mb": 113.254852,
+    "group": "HXBBXH",
+    "inbredsetcode": "HRP",
+    "lrs": 13.194881937804,
+    "mean": 161028.5185185185,
+    "name": "10077",
+    "pubmed_id": 9171835,
+    "pubmed_link": "http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=9171835&dopt=Abstract",
+    "species": "rat",
+    "year": 1997
+  },
+  {
+    "additive": -1.76917307692308,
+    "authors": [
+      "Aitman TJ",
+      "Gotoda T",
+      "Evans AL",
+      "Imrie H",
+      "Heath KE",
+      "Trembling PM",
+      "Truman H",
+      "Wallace CA",
+      "Rahman A",
+      "Dore C",
+      "Flint J",
+      "Kren V",
+      "Zidek V",
+      "Kurtz TW",
+      "Pravenec M",
+      "Scott J"
+    ],
+    "dataset": "HXBBXHPublish",
+    "dataset_fullname": "HXB/BXH Published Phenotypes",
+    "description": "maximal/basal glucose uptake",
+    "geno_chr": "8",
+    "geno_mb": 47.2059,
+    "group": "HXBBXH",
+    "inbredsetcode": "HRP",
+    "lrs": 15.974503211303,
+    "mean": 2.6577037087193243,
+    "name": "10078",
+    "pubmed_id": 9171835,
+    "pubmed_link": "http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=9171835&dopt=Abstract",
+    "species": "rat",
+    "year": 1997
+  }
+]
+```
+
+For more search options see
+
+https://issues.genenetwork.org/topics/xapian-search-queries
+
 ## What phenotypes do we have for a certain dataset?
 
-TBD
+```
+curl -s "https://genenetwork.org/api3/api/search/?query=ucla+bdf2&per_page=2&type=phenotype"
+  {
+    "additive": -1.78751654677337,
+    "authors": [
+      "M. Mehrabian"
+    ],
+    "dataset": "CTB6F2Publish",
+    "dataset_fullname": "CastB6/B6Cast F2 UCLA Published Phenotypes",
+    "description": "Bodyweight",
+    "geno_chr": "X",
+    "geno_mb": 143.108849,
+    "group": "CTB6F2",
+    "lrs": 60.1557267730131,
+    "mean": 26.791255800147034,
+    "name": "10002",
+    "species": "mouse",
+    "year": 2004
+  },
+  {
+    "additive": -9.34532520325203,
+    "authors": [
+      "M. Mehrabian"
+    ],
+    "dataset": "CTB6F2Publish",
+    "dataset_fullname": "CastB6/B6Cast F2 UCLA Published Phenotypes",
+    "description": "High Density Lipoprotein",
+    "geno_chr": "X",
+    "geno_mb": 143.108849,
+    "group": "CTB6F2",
+    "lrs": 51.9819452425847,
+    "mean": 78.04118993135012,
+    "name": "10001",
+    "species": "mouse",
+    "year": 2004
+  }
+```
+
+This should work on actual dataset identifiers.
 
 # More
 
