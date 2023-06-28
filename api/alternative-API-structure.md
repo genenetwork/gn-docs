@@ -364,6 +364,25 @@ _______________________________
 I question whether a scripting API should return a 404 in HTML on a failed query.
 An error response wrapped in valid JSON would seem to be much more useful.
 
+This is already implemented for some query URLs, for example: `http://genenetwork.org/api/v_pre1/groups/rubbish`
+```
+{
+  "errors": [
+    {
+      "detail": "",
+      "source": {
+        "pointer": "/api/v_pre1/groups/<path:species_name>"
+      },
+      "status": 204,
+      "title": "No Results"
+    }
+  ]
+}
+
+```
+Although I think the returned status should be **`400 Bad Request`**.
+A list of correct possible responses (for the error at the highest hierarchichal level) could be included, as well as a template for correct syntax.
+
 <hr>
 
 ## Wishlist
