@@ -6,6 +6,10 @@ The GN API is used by the gnapi R package
 
 https://github.com/kbroman/gnapi
 
+as well as the Julia GeneNetworkAPI package
+
+https://github.com/senresearch/GeneNetworkAPI.jl
+
 Note the API is currently up for discussion (WIP).
 
 To understand concepts such as Groups it may be worth reading
