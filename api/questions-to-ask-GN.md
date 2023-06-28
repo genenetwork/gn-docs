@@ -70,6 +70,7 @@ curl -s http://genenetwork.org/api/v_pre1/groups/mouse |jq '.[8:10]' -M
   }
 ]
 ```
+**Note: I wonder if the key "Short_Abbreviation" could have a different name. This is the keyword that users need in order to construct the URLs. I guess most people would be looking for something in the metadata a bit more 'important'-sounding: like "Key" or "Keyword" or even "Title" ("ID" is already used by a database index - although this value can't be used in the URLs). The name of the key required for URL-building is also different for each hierarchy level ("Name" in most cases (although sometimes all lowercase) but "id" for phenotype traits for example).**
 
 ## Return cross info
 
