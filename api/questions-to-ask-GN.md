@@ -15,6 +15,7 @@ curl https://genenetwork.org/api/v_pre1/
 {"hello":"world"}
 ```
 
+
 ## Return species
 
 * Current:
@@ -36,6 +37,20 @@ curl -s https://genenetwork.org/api/v_pre1/species|jq '.[0:2]'
   }
 ]
 ```
+
+* Current SPARQL:
+
+https://sparql.genenetwork.org/sparql?default-graph-uri=&qtxt=prefix%20gn%3A%20%3Chttp%3A%2F%2Fgenenetwork.org%2F%3E%0A%0ASELECT%20*%20WHERE%20%7B%0A%3Fs%20rdf%3Atype%20gn%3Aspecies%20.%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on
+
+What is known about mouse?
+
+```
+SELECT * WHERE {
+  gn:species_mus_musculus ?p ?o.
+}
+```
+
+https://sparql.genenetwork.org/sparql?default-graph-uri=&qtxt=prefix%20gn%3A%20%3Chttp%3A%2F%2Fgenenetwork.org%2F%3E%0A%0ASELECT%20*%20WHERE%20%7B%0Agn%3Aspecies_mus_musculus%20%3Fp%20%3Fo.%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on
 
 ## Return available groups/populations
 
@@ -347,6 +362,18 @@ Next the GN3 code base which is all supposed to be REST API:
 
 * https://github.com/genenetwork/genenetwork3/tree/main/gn3/api
 
+
+is GN3 live?
+
+```
+curl -s http://genenetwork.org/api3/api/version
+"1.0"
+```
+
 Finally the SPARQL endpoint which is driven by RDF generated with
 
 * https://github.com/genenetwork/dump-genenetwork-database
+
+Visit
+
+* https://sparql.genenetwork.org/sparql
