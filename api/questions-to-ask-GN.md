@@ -352,7 +352,44 @@ curl -s "https://genenetwork.org/api/v_pre1/correlation?trait_id=1427571_at&db=H
 
 ## Return datasets are relevant to diabetes?
 
-TBD
+```
+curl -s "https://genenetwork.org/api3/api/search/?query=diabetes&per_page=2&type=phenotype"
+[
+  {
+    "authors": [
+      "Gerling",
+      "I"
+    ],
+    "dataset": "Islets-GerlingPublish",
+    "dataset_fullname": "Islets-Gerling Phenotypes",
+    "description": "Cofactor, metadata: Cohort (0=control, 1=AB+, 2=type 1 diabetes, 3=type 2 diabetes) [cohort]",
+    "group": "Islets-Gerling",
+    "mean": 1.3103448275862069,
+    "name": "10003",
+    "species": "human",
+    "year": 2017
+  },
+  {
+    "additive": 1.28571428571429,
+    "authors": [
+      "Weerasekera S",
+      "Morahan G"
+    ],
+    "dataset": "BXDPublish",
+    "dataset_fullname": "BXD Published Phenotypes",
+    "description": "Metabolism, pancreas, visual system: Diabetes model, alloxan response (80 mg/kg iv to induce diabetes by killing pancretic beta cells), retinopathy severity score, males and females from 7 to 17 weeks of age [ordinal scale, 1=normal, 2=slight retinopathy, 3=moderate, 4=severe retinopathy]",
+    "geno_chr": "6",
+    "geno_mb": 3.266392,
+    "group": "BXD",
+    "inbredsetcode": "BXD",
+    "lrs": 22.082744135228,
+    "mean": 2.8333333333333335,
+    "name": "15958",
+    "species": "mouse",
+    "year": 2012
+  }
+]
+```
 
 ## What phenotypes do we have for a certain dataset?
 
