@@ -6,7 +6,7 @@ The GN API is used by the gnapi R package
 
 https://github.com/kbroman/gnapi
 
-
+Note the API is currently up for discussion (WIP).
 
 ## Is it live?
 
@@ -186,6 +186,19 @@ curl -s https://genenetwork.org/api/v_pre1/dataset/10.json|jq
 }
 ```
 
+```
+curl -s https://genenetwork.org/api/v_pre1/dataset/bxd/10001|jq
+{
+  "dataset_type": "phenotype",
+  "description": "Central nervous system, morphology: Cerebellum weight, whole, bilateral in adults of both sexes [mg]",
+  "id": 10001,
+  "name": "CBLWT2",
+  "pubmed_id": 11438585,
+  "title": "Genetic control of the mouse cerebellum: identification of quantitative trait loci modulating size and architecture",
+  "year": "2001"
+}
+```
+
 ## Return sample data
 
 Return all traits in a dataset.
@@ -285,3 +298,40 @@ curl -s "https://genenetwork.org/api/v_pre1/mapping?trait_id=10015&db=BXDPublish
   }
 ]
 ```
+
+## Correlate
+
+```
+curl -s "https://genenetwork.org/api/v_pre1/correlation?trait_id=1427571_at&db=HC_M2_0606_P&target_db=BXDPublish&method=spearman&type=sample&return_count=5"|jq ".[0:3]"[
+  {
+    "#_strains": 6,
+    "p_value": 0.004804664723032055,
+    "sample_r": -0.942857142857143,
+    "trait": 20511
+  },
+  {
+    "#_strains": 6,
+    "p_value": 0.004804664723032055,
+    "sample_r": -0.942857142857143,
+    "trait": 20724
+  },
+  {
+    "#_strains": 12,
+    "p_value": 1.8288943424888848e-05,
+    "sample_r": -0.9233615170820528,
+    "trait": 13536
+  }
+]
+```
+
+## Return datasets are relevant to diabetes?
+
+TBD
+
+## What phenotypes do we have for a certain dataset?
+
+TBD
+
+## More
+
+All computations in GN can be exposed through the API.
