@@ -137,7 +137,7 @@ Return trait metadata such as probeset info or other "trait covariates" for the 
 * Current: through SPARQL
 * Proposed: https://genenetwork.org/api/v_pre1/mouse/bxd/HC_M2_0606_P/1436869_at
 
-> The above scheme works for single features, but most analysis involves analyzing the "omid" data in its entirety. For those cases, making repeated calls is cumbersome. It would be better to have a single call that will return all thetrait covariates at once.  For gene expression we will want the gene name, and genomic position at the least.  We will also want free text metadata that explan what the probesets are, eg. what database/version is used for the gene names or probesets, preprocessing steps, authors/reference and experimental protocols.
+> The above scheme works for single features, but most analysis involves analyzing the "omic" data in its entirety. For those cases, making repeated calls is cumbersome, and perhaps not ideal for the web service as well. It would be better to have a single call that will return all the trait covariates at once.  For gene expression we will want the gene name, and genomic position at the least.  We will also want free text metadata that explan what the probesets are, eg. what database/version is used for the gene names or probesets, preprocessing steps, authors/reference and experimental protocols. Similar comments apply for other omics. For metabolite we will want the name of the metabolite and information on how to get more information about it.
 
 
 ## List datasets
