@@ -23,11 +23,11 @@
 - There may be several alternative genotypes for a species (e.g. mm9, mm10 or GRCm39 for mouse).
 - These may also be served in different formats.
 The content and the format are conceptually different, so they should be handled as such.
-	- `http://genenetwork.org/api/v_pre1/genotypes/bimbam/BXD` Is wrong. 
+	- `http://genenetwork.org/api/v_pre1/genotypes/bimbam/BXD` Is wrong.
 	- `http://genenetwork.org/api/v_pre1/genotypes/BXD.bimbam` Is better.
 	- `http://genenetwork.org/api/v_pre1/mouse/BXD/genotypes/mm10.bimbam` [**! not a real URL**] Is ideal.
 - The genotypes are conceptually at the same level as datasets, and could be seen as a special type of dataset.
-  
+
 ### Datasets
 - Again, why are these not nested under 'population'?
 
@@ -48,7 +48,7 @@ Does this need to be called 'sample_data" rather than just 'data'?
 This ma (?) make it easier to handle cases where different subsets of strains are present in different datasets.
 
 - Keep in mind that 'data' is actually processed results and not raw data.
-There seems to be some interest in actually storing or access raw data (CEL/fasta/video) files. 
+There seems to be some interest in actually storing or access raw data (CEL/fasta/video) files.
 This would necessitate an even deeper level (e.g. 'data/raw') that should also be accessed through this conceptual hierarchy.
 
 ### Fetching
@@ -110,7 +110,7 @@ if(RCurl::url.exists("http://genenetwork.org/api/v_pre1/species/mouse")){
 do.call("rbind", species_info)
 ```
 
-### Fetch the population listing for a species 
+### Fetch the population listing for a species
 Proposed URL: "http://genenetwork.org/api/v_pre1/mouse/populations"
 
 The next level of grouping within each species is the population.
@@ -129,17 +129,17 @@ do.call("rbind", population)[1:20, ]
 **! It is not clear whether this level of grouping currently exists for all species.**
 
 
-### Fetch info for a population 
+### Fetch info for a population
 Proposed URL: "http://genenetwork.org/api/v_pre1/mouse/bxd"
 
 **! Is this currently possible?**
 
-### Fetch genotype listing 
+### Fetch genotype listing
 Proposed URL: "http://genenetwork.org/api/v_pre1/mouse/bxd/genotypes"
 
 **! Is this currently possible?**
 
-### Fetch genotypes for a population 
+### Fetch genotypes for a population
 Proposed URL: "http://genenetwork.org/api/v_pre1/mouse/bxd/mm10.geno"
 
 Is it necessary for an API to provide data in every format possible?
@@ -202,7 +202,7 @@ Conceptually, that means that dataset metadata should exist that describe the ph
 It is unclear what useful information this could contain though.
 
 **! Is this currently possible?**
-*The following code returns info for a single trait. This command should usefully return one such row of results for every trait in the phenotype database. This would enable local searching and selection of traits of interest.* 
+*The following code returns info for a single trait. This command should usefully return one such row of results for every trait in the phenotype database. This would enable local searching and selection of traits of interest.*
 
 ```{r echo = FALSE}
 ```
@@ -213,7 +213,7 @@ Proposed URL: "http://genenetwork.org/api/v_pre1/mouse/bxd/phenotypes/traits"
 Because of the slightly different information attached to phenotypes, the info returned by this command would most usefully be metadata on all the individual traits and the studies they are associated with.
 
 **! Is this currently possible?**
-*The following code returns info for a single trait. This command should usefully return one such row of results for every trait in the phenotype database. This would enable local searching and selection of traits of interest.* 
+*The following code returns info for a single trait. This command should usefully return one such row of results for every trait in the phenotype database. This would enable local searching and selection of traits of interest.*
 
 ```{r echo = FALSE}
 if(RCurl::url.exists("http://genenetwork.org/api/v_pre1/dataset/bxd/10001")){
@@ -398,7 +398,4 @@ As examples:
 - "BXD96" in older publications is now present in GeneNetwork as "BXD48a". Data from this strain will be dropped if a re-analysis is attempted.
 
 ### Upload API
-The ability to upload temporary datasets programmatically and analyse them directly using the API would be a hugely useful workflow. 
-
-
-
+The ability to upload temporary datasets programmatically and analyse them directly using the API would be a hugely useful workflow.
