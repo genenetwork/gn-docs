@@ -332,6 +332,20 @@ TBD
 
 TBD
 
-## More
+# More
 
 All computations in GN can be exposed through the API.
+
+# Implementation
+
+Currently the API is managed from three bases. First the main web server code base:
+
+* https://github.com/genenetwork/genenetwork2/blob/testing/wqflask/wqflask/api/router.py
+
+Next the GN3 code base which is all supposed to be REST API:
+
+* https://github.com/genenetwork/genenetwork3/tree/main/gn3/api
+
+Finally the SPARQL endpoint which is driven by RDF generated with
+
+* https://github.com/genenetwork/dump-genenetwork-database
