@@ -8,6 +8,9 @@ https://github.com/kbroman/gnapi
 
 Note the API is currently up for discussion (WIP).
 
+To understand concepts such as Groups it may be worth reading
+[this](../features/data-structures.md)
+
 ## Is it live?
 
 ```
