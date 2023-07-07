@@ -45,7 +45,7 @@ curl -s https://genenetwork.org/api/v_pre1/species|jq '.[0:2]'
 ]
 ```
 
-* Current SPARQL:
+### Current SPARQL:
 
 https://sparql.genenetwork.org/sparql?default-graph-uri=&qtxt=prefix%20gn%3A%20%3Chttp%3A%2F%2Fgenenetwork.org%2F%3E%0A%0ASELECT%20*%20WHERE%20%7B%0A%3Fs%20rdf%3Atype%20gn%3Aspecies%20.%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on
 
@@ -58,6 +58,10 @@ SELECT * WHERE {
 ```
 
 https://sparql.genenetwork.org/sparql?default-graph-uri=&qtxt=prefix%20gn%3A%20%3Chttp%3A%2F%2Fgenenetwork.org%2F%3E%0A%0ASELECT%20*%20WHERE%20%7B%0Agn%3Aspecies_mus_musculus%20%3Fp%20%3Fo.%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on
+
+There are some issues with these results we are working on. See
+
+@@
 
 ## Return available groups/populations
 
@@ -139,6 +143,18 @@ Return trait metadata such as probeset info or other "trait covariates" for the 
 
 > The above scheme works for single features, but most analysis involves analyzing the "omic" data in its entirety. For those cases, making repeated calls is cumbersome, and perhaps not ideal for the web service as well. It would be better to have a single call that will return all the trait covariates at once.  For gene expression we will want the gene name, and genomic position at the least.  We will also want free text metadata that explan what the probesets are, eg. what database/version is used for the gene names or probesets, preprocessing steps, authors/reference and experimental protocols. Similar comments apply for other omics. For metabolite we will want the name of the metabolite and information on how to get more information about it.
 
+- trait covariates
+  + id, info/description
+- e.g probe id - gene expression
+  + on the mapping page Chr 5 @ 28.480441 Mb on the plus strand
+
+### Existing SPARQL endpoints
+
+Most information is available already:
+
+=> https://issues.genenetwork.org/topics/RDF/example-sparql-queries
+
+Note that this is not final. We'll need to work on documentation.
 
 ## List datasets
 
@@ -514,6 +530,10 @@ curl -s "https://genenetwork.org/api3/api/search/?query=ucla+bdf2&per_page=2&typ
 ```
 
 This should work on actual dataset identifiers.
+
+## What is the sample size for a trait
+
+This should also be visible on the mapping page.
 
 ## How many phenotypes do we have for each species?
 
