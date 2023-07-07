@@ -515,6 +515,18 @@ curl -s "https://genenetwork.org/api3/api/search/?query=ucla+bdf2&per_page=2&typ
 
 This should work on actual dataset identifiers.
 
+## How many phenotypes do we have for each species?
+
+Could we apply some filters to choose the phenotypes to use (is it easy to discard the mapping trait with specific LRS threshold)?
+
+## Are there genetic variants (SNPs, indels, etc.) linked to a particular trait?
+
+PheWAS or reversed genetics.
+It would be nice to insert a marker we are interested in and see the correlations with the traits, the result could be a graph or a table.
+
+## Which genes or genomic regions show conserved synteny across the species we are interested in?
+
+
 # More
 
 All computations in GN can be exposed through the API.
@@ -544,11 +556,4 @@ Finally the SPARQL endpoint which is driven by RDF generated with
 Visit
 
 * https://sparql.genenetwork.org/sparql
-* 
-### How many phenotypes do we have for each species? 
-Could we apply some filters to choose the phenotypes to use (is it easy to discard the mapping trait with specific LRS threshold)?
-
-### Are there genetic variants (SNPs, indels, etc.) linked to a particular trait? 
-It would be nice to insert a marker we are interested in and see the correlations with the traits, the result could be a graph or a table.
-
-### Which genes or genomic regions show conserved synteny across the species we are interested in?
+*
