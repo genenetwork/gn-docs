@@ -83,7 +83,118 @@ Suggested URLs for each query are given below.
 
 <hr>
 
-## Fetch tests
+## Mock-up API
+Each level has two types of associated metadata: detailed information about the current level ('info') and a listing of options/endpoints at the next level ('index').
+One of these endpoints could/should be returned without a keyword---probably the 'info' is more useful and intuitive.
+
+### API version
+For the highest level ('version'), the results might look like this:
+
+https://genenetwork.org/api/2.0/info
+
+or
+
+https://genenetwork.org/api/2.0
+```
+{
+  "name": "GeneNetwork REST API",
+  "version": "2.0",
+  "comment": "This is the official REST API for the GeneNetwork service hosted at https://genenetwork.org/",
+  "license": {
+    "source code": "AGPL"
+  },
+  "note": "work in progress (WIP)",
+  "see also": "https://genenetwork.org/api/2.0/meta",
+  "next level": "species", 
+  "next level options": "https://genenetwork.org/api/2.0/index"
+}
+```
+
+https://genenetwork.org/api/2.0/index *Has the advantage that the 'index' keyword works at all levels even if the next level is unknown to the user.*
+```
+{
+  "API": {
+    "https://genenetwork.org/api/2.0/species": "Get a list of all species",
+    "https://genenetwork.org/api/2.0/Arabidopsis_thaliana": "Get information on mouse (Arabidopsis thaliana; Taxonomy ID 3702)",
+    "https://genenetwork.org/api/2.0/Drosophila_melanogaster": "Get information on fruit fly (Drosophila melanogaster; Taxonomy ID 7227)",
+    "https://genenetwork.org/api/2.0/Glossophaga_soricina": "Get information on bat (Glossophaga soricina; Taxonomy ID 27638)",
+    "https://genenetwork.org/api/2.0/Glycine_max": "Get information on soybean (Glycine max; Taxonomy ID 3847)",
+    "https://genenetwork.org/api/2.0/Homo_sapiens": "Get information on human (Homo sapiens; Taxonomy ID 9606)",
+    "https://genenetwork.org/api/2.0/Hordeum_vulgare": "Get information on barley (Hordeum_vulgare; Taxonomy ID 4513)",
+    "https://genenetwork.org/api/2.0/Mus_musculus": "Get information on mouse (Mus musculus; Taxonomy ID 10090)",
+    "https://genenetwork.org/api/2.0/Oryzias_latipes": "Get information on medaka fish (Oryzias latipes; Taxonomy ID 8090)",
+    "https://genenetwork.org/api/2.0/Populus_trichocarpa": "Get information on California poplar/black cottonwood (Populus trichocarpa; Taxonomy ID 3694)",
+    "https://genenetwork.org/api/2.0/Rattus_norvegicus": "Get information on rat (Rattus norvegicus; Taxonomy ID 10116)",
+    "https://genenetwork.org/api/2.0/Solanum_lycopersicum": "Get information on tomato (Solanum lycopersicum; Taxonomy ID 4081)"
+  }
+}
+```
+
+
+### Species
+The next level is 'species'.
+A listing of all the species available can be obtained from `$api/2.0/index` as above, but it might also be useful to have an alias like `$api/2.0/species`.
+
+https://genenetwork.org/api/2.0/species 
+```
+{
+  "API": {
+    "https://genenetwork.org/api/2.0/species": "Get a list of all species",
+    "https://genenetwork.org/api/2.0/Arabidopsis_thaliana": "Get information on mouse (Arabidopsis thaliana; Taxonomy ID 3702)",
+    "https://genenetwork.org/api/2.0/Drosophila_melanogaster": "Get information on fruit fly (Drosophila melanogaster; Taxonomy ID 7227)",
+    "https://genenetwork.org/api/2.0/Glossophaga_soricina": "Get information on bat (Glossophaga soricina; Taxonomy ID 27638)",
+    "https://genenetwork.org/api/2.0/Glycine_max": "Get information on soybean (Glycine max; Taxonomy ID 3847)",
+    "https://genenetwork.org/api/2.0/Homo_sapiens": "Get information on human (Homo sapiens; Taxonomy ID 9606)",
+    "https://genenetwork.org/api/2.0/Hordeum_vulgare": "Get information on barley (Hordeum_vulgare; Taxonomy ID 4513)",
+    "https://genenetwork.org/api/2.0/Mus_musculus": "Get information on mouse (Mus musculus; Taxonomy ID 10090)",
+    "https://genenetwork.org/api/2.0/Oryzias_latipes": "Get information on medaka fish (Oryzias latipes; Taxonomy ID 8090)",
+    "https://genenetwork.org/api/2.0/Populus_trichocarpa": "Get information on California poplar/black cottonwood (Populus trichocarpa; Taxonomy ID 3694)",
+    "https://genenetwork.org/api/2.0/Rattus_norvegicus": "Get information on rat (Rattus norvegicus; Taxonomy ID 10116)",
+    "https://genenetwork.org/api/2.0/Solanum_lycopersicum": "Get information on tomato (Solanum lycopersicum; Taxonomy ID 4081)"
+  }
+}
+```
+
+To get information on a particular species, use the ID/key given in the listing:
+
+https://genenetwork.org/api/2.0/Mus_musculus
+
+```
+{
+  "binomial_name": "Mus musculus", 
+  "id": Mus_musculus, 
+  "alias": "mouse", 
+  "taxon_id": "10090",
+  "wikidata_id": "Q83310",
+  "tags", ["vertebrate", "mammal", "rodent"]
+}
+```
+
+At the next level are 'populations' and the available mouse populations can be determined using the index endpoint as above:
+
+https://genenetwork.org/api/2.0/Mus_musculus/index 
+
+```
+{
+  "API": {
+    "https://genenetwork.org/api/2.0/Mus_musculus/populations": "Get a list of all populations available for this species",
+    "https://genenetwork.org/api/2.0/Mus_musculus/BXD": "Get information on the BXD population",
+    "https://genenetwork.org/api/2.0/Mus_musculus/MDP": "Get information on the MDP population",
+    "https://genenetwork.org/api/2.0/Mus_musculus/LXS": "Get information on the LXS population",
+    "https://genenetwork.org/api/2.0/Mus_musculus/BXH": "Get information on the BXH population",
+    "https://genenetwork.org/api/2.0/Mus_musculus/AXBXA": "Get information on the AXBXA population",
+    "https://genenetwork.org/api/2.0/Mus_musculus/B6D2F2": "Get information on the B6D2F2 population",
+    "https://genenetwork.org/api/2.0/Mus_musculus/AKXD": "Get information on the AKXD population",
+    "https://genenetwork.org/api/2.0/Mus_musculus/CFW": "Get information on the CFW population",
+    "https://genenetwork.org/api/2.0/Mus_musculus/HS": "Get information on the HS population",
+    "https://genenetwork.org/api/2.0/Mus_musculus/LGSM": "Get information on the LGSM population",
+    "https://genenetwork.org/api/2.0/Mus_musculus/DO": "Get information on the DO population",
+    "https://genenetwork.org/api/2.0/Mus_musculus/CC": "Get information on the CC population"
+  }
+}
+```
+
+## Fetch tests (to be updated with real URLs as they are implemented)
 ### Fetch species listing
 Species are the highest level of grouping.
 ```{r echo = FALSE}
