@@ -1,0 +1,92 @@
+#+STARTUP: content
+#+TITLE: API Structure Implementation Notes
+
+* Introduction
+
+This document is subservient to the following documents:
+- [[./alternative-API-structure.md][Notes on the API]]
+- [[./questions-to-ask-GN.md][Questions to ask GN]]
+
+If there are any conflicts, refer to the documents above for clarification. This
+simply follows those documents, and might thus be out of sync from time to time.
+
+This document is mostly for those concerned with the implementation of the API.
+End users of the API should probably concern themselves with the other document,
+though that is not to say they will not find useful information here.
+
+* Routing
+
+It is possible to have separate API versions: we could make use of blueprints
+for this and flask's ~add_url_rule~. With this, we should be able to reuse
+existing code, writing new code for only the endpoints that might need them.
+
+For example, we could have a file =gn3/api/version02.py= with
+content like:
+
+#+BEGIN_SRC python
+  from flask import url_for, Blueprint
+
+    from wqflask import species
+    from wqflask import populations
+    ...
+
+    v2 = Blueprint("v2", __name__)
+
+    @v2.route("/")
+    @v2.route("/info")
+    def info():
+        """Information for the root of the V2 endpoints"""
+        return {
+            "name": "GeneNetwork REST API",
+            "version": "2.0",
+            "comment": "This is the official REST API for the GeneNetwork service hosted at https://genenetwork.org/",
+            "license": {
+                "source code": "AGPL"
+            },
+            "note": "work in progress (WIP)",
+            "see also": "https://genenetwork.org/api/2.0/meta",
+            "next level": url_for("api.v2.species.index"), 
+            "next level options": url_for("api.v2.index")
+        }
+
+    def index():
+        """The index of the URIs accessible from this level of the API."""
+        return {
+            "API": {
+                url_for(rule.endpoint): rule.endpoint.__doc__
+                for rule in v2.url_map.iter_rules()
+            }
+        }
+
+    v2.add_url_rule("/species", endpoint=species.index, methods=["GET"])
+    v2.add_url_rule("/<species>", endpoint=species.species_info, methods=["GET"])
+    v2.add_url_rule("/<species>/populations",
+                    endpoint=populations.index,
+                    methods=["GET"])
+    v2.add_url_rule("/<species>/<population>",
+                    endpoint=populations.population,
+                    methods=["GET"])
+    ...
+#+END_SRC
+
+and that would then be registered with the main application with something like:
+
+#+BEGIN_SRC python
+  # file gn3/app.py
+  ...
+
+  def create_app(...):
+      ...
+      from api.version02 import v2
+      ...
+      app.register_blueprint(v2, url_prefix="/api/2.0")
+      ...
+#+END_SRC
+
+The code above demonstrates the idea, but will probably need some cleanup for
+real-world use.
+
+Some url endpoints, especially  =.../index= endpoint, will need for the final
+URI's to be computed from the available data, e.g. for =/species/index= we have
+eleven (11) species listed in the proposed documentation, but the underlying
+data could change, if say, a new species is added to the system.
