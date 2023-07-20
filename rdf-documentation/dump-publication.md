@@ -1,19 +1,7 @@
 # Publications Metadata
 ## 'dump-publication'
 
-## Schema Triples:
 
-```text
-gn:pubMedId -> rdfs:range -> rdfs:Literal
-gn:title -> rdfs:range -> rdfs:Literal
-gn:journal -> rdfs:range -> rdfs:Literal
-gn:volume -> rdfs:range -> rdfs:Literal
-gn:pages -> rdfs:range -> rdfs:Literal
-gn:month -> rdfs:range -> rdfs:Literal
-gn:year -> rdfs:range -> rdfs:Literal
-gn:author -> rdfs:range -> rdfs:Literal
-gn:abstract -> rdfs:range -> rdfs:Literal
-```
 ## Generated Triples:
 
 The following SQL query was executed:
@@ -25,25 +13,25 @@ SELECT IF(Publication.PubMed_ID IS NULL, '', CONVERT(Publication.PubMed_Id, INT)
 The above query results to triples that have the form:
 
 ```text
-publication:pmid -> rdf:type -> gn:publication 
-publication:pmid -> gn:pubMedId -> pubmed:pubmedId 
-publication:pmid -> gn:title -> Publication(Title) 
-publication:pmid -> gn:journal -> Publication(Journal) 
-publication:pmid -> gn:volume -> Publication(Volume) 
-publication:pmid -> gn:pages -> Publication(Pages) 
-publication:pmid -> gn:month -> Publication(Month) 
-publication:pmid -> gn:year -> Publication(Year) 
-publication:pmid -> gn:abstract -> Abstract 
-publication:pmid -> gn:author -> PublicationAuthors 
+pubmed:pmid -> rdf:type -> gn:publication 
+pubmed:pmid -> gn-term:pubMedId -> pubmed:pubmedId 
+pubmed:pmid -> gn-term:title -> Publication(Title) 
+pubmed:pmid -> gn-term:journal -> Publication(Journal) 
+pubmed:pmid -> gn-term:volume -> Publication(Volume) 
+pubmed:pmid -> gn-term:pages -> Publication(Pages) 
+pubmed:pmid -> gn-term:month -> Publication(Month) 
+pubmed:pmid -> gn-term:year -> Publication(Year) 
+pubmed:pmid -> gn:abstract -> Abstract 
+pubmed:pmid -> gn:author -> PublicationAuthors 
 ```
 Here's an example query:
 
 ```sparql
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-PREFIX gn: <http://genenetwork.org/terms/> 
-PREFIX publication: <http://genenetwork.org/publication/> 
-PREFIX pubmed: <http://rdf.ncbi.nlm.nih.gov/pubmed/> 
+@prefix gn-term: <http://genenetwork.org/terms/> .
+@prefix gn: <http://genenetwork.org/id/> .
+@prefix pubmed: <http://rdf.ncbi.nlm.nih.gov/pubmed/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 SELECT ?s ?p ?o WHERE { 
     ?s rdf:type gn:publication .
@@ -55,6 +43,6 @@ Expected Result:
 
 ```rdf
 gn:unpublished_1 rdf:type gn:publication .
-gn:unpublished_1 gn:year "0" .
+gn:unpublished_1 gn-term:year "0" .
 ```
 
