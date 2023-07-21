@@ -45,14 +45,14 @@ gn:Infofiles_infopagename_ -> gn-term:acknowledgment -> DatasetsAcknowledgment
 Here's an example query:
 
 ```sparql
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix geoSeries: <http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=> .
-@prefix gn-term: <http://genenetwork.org/term/> .
-@prefix gn: <http://genenetwork.org/id/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix taxon: <http://purl.uniprot.org/taxonomy/> .
-@prefix dct: <http://purl.org/dc/terms/> .
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX geoSeries: <http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=> 
+PREFIX gn-term: <http://genenetwork.org/term/> 
+PREFIX gn: <http://genenetwork.org/id/> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX taxon: <http://purl.uniprot.org/taxonomy/> 
+PREFIX dct: <http://purl.org/dc/terms/> 
 
 SELECT ?s ?p ?o WHERE { 
     ?s rdf:type gn:dataset .
@@ -117,14 +117,14 @@ gn:investigator_investigators_firstname_investigators_lastname_investigators_ema
 Here's an example query:
 
 ```sparql
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix geoSeries: <http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=> .
-@prefix gn-term: <http://genenetwork.org/term/> .
-@prefix gn: <http://genenetwork.org/id/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix taxon: <http://purl.uniprot.org/taxonomy/> .
-@prefix dct: <http://purl.org/dc/terms/> .
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX geoSeries: <http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=> 
+PREFIX gn-term: <http://genenetwork.org/term/> 
+PREFIX gn: <http://genenetwork.org/id/> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX taxon: <http://purl.uniprot.org/taxonomy/> 
+PREFIX dct: <http://purl.org/dc/terms/> 
 
 SELECT ?s ?p ?o WHERE { 
     ?s rdf:type foaf:Person .

@@ -23,11 +23,11 @@ gn:Species_fullname -> gn-term:organism -> taxon:Species(TaxonomyId)
 Here's an example query:
 
 ```sparql
-@prefix gn: <http://genenetwork.org/id/> .
-@prefix gn-term: <http://genenetwork.org/term/> .
-@prefix rdf: <https://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix taxon: <http://purl.uniprot.org/taxonomy/> .
+PREFIX gn: <http://genenetwork.org/id/> 
+PREFIX gn-term: <http://genenetwork.org/term/> 
+PREFIX rdf: <https://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX taxon: <http://purl.uniprot.org/taxonomy/> 
 
 SELECT ?s ?p ?o WHERE { 
     ?s rdf:type gn:species .
@@ -73,11 +73,11 @@ gn:Strainname -> gn-term:symbol -> Strain(Symbol)
 Here's an example query:
 
 ```sparql
-@prefix gn: <http://genenetwork.org/id/> .
-@prefix gn-term: <http://genenetwork.org/term/> .
-@prefix rdf: <https://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix taxon: <http://purl.uniprot.org/taxonomy/> .
+PREFIX gn: <http://genenetwork.org/id/> 
+PREFIX gn-term: <http://genenetwork.org/term/> 
+PREFIX rdf: <https://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX taxon: <http://purl.uniprot.org/taxonomy/> 
 
 SELECT ?s ?p ?o WHERE { 
     ?s rdf:type gn:strain .
@@ -116,11 +116,11 @@ gn:mappingMethod_mappingmethod_name -> rdf:type -> gn:mappingMethod
 Here's an example query:
 
 ```sparql
-@prefix gn: <http://genenetwork.org/id/> .
-@prefix gn-term: <http://genenetwork.org/term/> .
-@prefix rdf: <https://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix taxon: <http://purl.uniprot.org/taxonomy/> .
+PREFIX gn: <http://genenetwork.org/id/> 
+PREFIX gn-term: <http://genenetwork.org/term/> 
+PREFIX rdf: <https://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX taxon: <http://purl.uniprot.org/taxonomy/> 
 
 SELECT ?s ?p ?o WHERE { 
     ?s rdf:type gn:mappingMethod .
@@ -155,11 +155,11 @@ gn:avgmethod_avgmethod_name -> gn-term:normalization -> AvgMethod(Normalization)
 Here's an example query:
 
 ```sparql
-@prefix gn: <http://genenetwork.org/id/> .
-@prefix gn-term: <http://genenetwork.org/term/> .
-@prefix rdf: <https://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix taxon: <http://purl.uniprot.org/taxonomy/> .
+PREFIX gn: <http://genenetwork.org/id/> 
+PREFIX gn-term: <http://genenetwork.org/term/> 
+PREFIX rdf: <https://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX taxon: <http://purl.uniprot.org/taxonomy/> 
 
 SELECT ?s ?p ?o WHERE { 
     ?s rdf:type gn:avgMethod .

@@ -27,11 +27,11 @@ pubmed:pmid -> gn:author -> PublicationAuthors
 Here's an example query:
 
 ```sparql
-@prefix gn-term: <http://genenetwork.org/terms/> .
-@prefix gn: <http://genenetwork.org/id/> .
-@prefix pubmed: <http://rdf.ncbi.nlm.nih.gov/pubmed/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+PREFIX gn-term: <http://genenetwork.org/terms/> 
+PREFIX gn: <http://genenetwork.org/id/> 
+PREFIX pubmed: <http://rdf.ncbi.nlm.nih.gov/pubmed/> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
 
 SELECT ?s ?p ?o WHERE { 
     ?s rdf:type gn:publication .

@@ -23,11 +23,12 @@ gn:Genofreeze_name_ -> gn-term:datasetOfInbredSet -> gn:_inbredset_inbredsetname
 Here's an example query:
 
 ```sparql
-@prefix gn: <http://genenetwork.org/id/> .
-@prefix gn-term: <http://genenetwork.org/term/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+PREFIX dct: <http://purl.org/dc/terms/> 
+PREFIX gn: <http://genenetwork.org/id/> 
+PREFIX gn-term: <http://genenetwork.org/term/> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
 
 SELECT ?s ?p ?o WHERE { 
     ?s rdf:type gn:genotypeDataset .
@@ -79,11 +80,12 @@ gn:Abbrev -> gn-term:cM -> "Chr_mm8"^^xsd:int
 Here's an example query:
 
 ```sparql
-@prefix gn: <http://genenetwork.org/id/> .
-@prefix gn-term: <http://genenetwork.org/term/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+PREFIX dct: <http://purl.org/dc/terms/> 
+PREFIX gn: <http://genenetwork.org/id/> 
+PREFIX gn-term: <http://genenetwork.org/term/> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
 
 SELECT ?s ?p ?o WHERE { 
     ?s rdf:type gn:genotype .

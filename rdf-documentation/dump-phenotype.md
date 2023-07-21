@@ -17,18 +17,19 @@ gn:Publishfreeze_name_ -> rdf:type -> gn:phenotypeDataset
 gn:Publishfreeze_name_ -> gn-term:name -> PublishFreeze(Name) 
 gn:Publishfreeze_name_ -> gn-term:fullName -> PublishFreeze(FullName) 
 gn:Publishfreeze_name_ -> gn-term:shortName -> PublishFreeze(ShortName) 
-gn:Publishfreeze_name_ -> dc-termt:created -> "PublishFreeze(CreateTime)"^^xsd:date 
+gn:Publishfreeze_name_ -> dct:created -> "PublishFreeze(CreateTime)"^^xsd:date 
 gn:Publishfreeze_name_ -> gn-term:datasetOfInbredSet -> gn:inbredSet_inbredset_inbredsetname 
 ```
 Here's an example query:
 
 ```sparql
-@prefix gn: <http://genenetwork.org/id/> .
-@prefix gn-term: <http://genenetwork.org/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix pubmed: <http://rdf.ncbi.nlm.nih.gov/pubmed/> .
+PREFIX dct: <http://purl.org/dc/terms/> 
+PREFIX gn: <http://genenetwork.org/id/> 
+PREFIX gn-term: <http://genenetwork.org/terms/> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX pubmed: <http://rdf.ncbi.nlm.nih.gov/pubmed/> 
 
 SELECT ?s ?p ?o WHERE { 
     ?s rdf:type gn:phenotypeDataset .
@@ -45,7 +46,7 @@ gn:B6d2f2_psupublish rdf:type gn:phenotypeDataset .
 gn:B6d2f2_psupublish gn-term:name "B6D2F2-PSUPublish" .
 gn:B6d2f2_psupublish gn-term:fullName "B6D2F2 PSU Phenotypes" .
 gn:B6d2f2_psupublish gn-term:shortName "B6D2F2 PSU Publish" .
-gn:B6d2f2_psupublish dc-termt:created "2015-03-18"^^xsd:date .
+gn:B6d2f2_psupublish dct:created "2015-03-18"^^xsd:date .
 gn:B6d2f2_psupublish gn-term:datasetOfInbredSet gn:inbredSet_b6d2f2-psu .
 ```
 
@@ -85,12 +86,13 @@ gn:Abbrev -> gn-term:phenotypeOfPublication -> pubmed:pmid
 Here's an example query:
 
 ```sparql
-@prefix gn: <http://genenetwork.org/id/> .
-@prefix gn-term: <http://genenetwork.org/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix pubmed: <http://rdf.ncbi.nlm.nih.gov/pubmed/> .
+PREFIX dct: <http://purl.org/dc/terms/> 
+PREFIX gn: <http://genenetwork.org/id/> 
+PREFIX gn-term: <http://genenetwork.org/terms/> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX pubmed: <http://rdf.ncbi.nlm.nih.gov/pubmed/> 
 
 SELECT ?s ?p ?o WHERE { 
     ?s rdf:type gn:phenotype .

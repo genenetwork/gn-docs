@@ -20,12 +20,13 @@ gn:platform_genechip_name -> gn-term:geoPlatform -> geoSeries:GeneChip(GeoPlatfo
 Here's an example query:
 
 ```sparql
-@prefix geoSeries: <http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=> .
-@prefix gn: <http://genenetwork.org/id/> .
-@prefix gn-term: <http://genenetwork.org/term/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+PREFIX geoSeries: <http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=> 
+PREFIX gn: <http://genenetwork.org/id/> 
+PREFIX dct: <> 
+PREFIX gn-term: <http://genenetwork.org/term/> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
 
 SELECT ?s ?p ?o WHERE { 
     ?s rdf:type gn:platform .
@@ -70,12 +71,13 @@ gn:Probesetfreeze_name_ -> gn-term:datasetOfInbredSet -> gn:inbredSet_inbredset_
 Here's an example query:
 
 ```sparql
-@prefix geoSeries: <http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=> .
-@prefix gn: <http://genenetwork.org/id/> .
-@prefix gn-term: <http://genenetwork.org/term/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+PREFIX geoSeries: <http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=> 
+PREFIX gn: <http://genenetwork.org/id/> 
+PREFIX dct: <> 
+PREFIX gn-term: <http://genenetwork.org/term/> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
 
 SELECT ?s ?p ?o WHERE { 
     ?s rdf:type gn:probesetDataset .
