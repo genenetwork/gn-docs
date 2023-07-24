@@ -25,7 +25,7 @@ Here's an example query:
 ```sparql
 PREFIX gn: <http://genenetwork.org/id/> 
 PREFIX gn-term: <http://genenetwork.org/term/> 
-PREFIX rdf: <https://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
 PREFIX taxon: <http://purl.uniprot.org/taxonomy/> 
 
