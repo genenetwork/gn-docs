@@ -58,6 +58,8 @@ Standard JSON data (the .json postfix) will return a minimal structure that requ
 }
 ```
 
+We'll probably get rid of some duplication and terms.
+
 # Metadata
 
 Metadata contains further information on a JSON record, but typically not the data that is already served by above JSON record. Example for `api:mouse.meta.json`
