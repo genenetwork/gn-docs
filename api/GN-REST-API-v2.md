@@ -10,11 +10,11 @@ We are working on a new REST API that is more consistent.
 
 ## Postfix extension
 
-* The API call with .json extension returns a record *without* metadata, i.e., the data version. Example: `api:species/Mus_musculus.json` or, the short form, `api:mouse.json`. This typically represents the API call that people use
+* The API call with .json extension returns a record *without* metadata, i.e., the data version. Example of a URI: `api:species/Mus_musculus.json` or, the short form, `api:mouse.json`. This typically represents the API call that people use (see below for some output).
 
-* The API call with .meta.json extension returns the metadata, including a link to the docs and links to dig further into the API. Example: `api:species/Mus_musculus.meta.json`, or the short form, `api:mouse.meta.json`
+* The API call with .meta.json extension returns the metadata, including a link to the docs and links to dig further into the API. Example: `api:species/Mus_musculus.meta.json`, or the short form, `api:mouse.meta.json` (see below for output).
 
-* The API call with other extensions may return CSV, TSV etc. Depending on documented implementation details.
+* The API call with other extensions may return CSV, TSV etc. Depending on *documented* implementation details.
 
 So, for species list in GN we get:
 
@@ -37,7 +37,7 @@ We may forward `api:mouse` and `api:species/Mus_musculus` (no extension) to `doc
 
 # JSON data
 
-Standard JSON data (the .json postfix) will return a minimal structure that requires the minimum of parsin. Example for `api:mouse.json` can be
+Standard JSON data (the .json postfix) will return a minimal structure that requires the minimum amount of work to parse. Example `api:mouse.json` can result in a dictionary of:
 
 ```js
 {
@@ -60,7 +60,7 @@ Standard JSON data (the .json postfix) will return a minimal structure that requ
 
 # Metadata
 
-Metadata contains information on a record, but typically not the data that is already served by above JSON record. Example for `api:mouse.meta.json`
+Metadata contains further information on a JSON record, but typically not the data that is already served by above JSON record. Example for `api:mouse.meta.json`
 
 ```
 {
