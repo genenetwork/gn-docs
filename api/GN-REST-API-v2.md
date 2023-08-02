@@ -39,7 +39,7 @@ We may forward `api:mouse` and `api:species/Mus_musculus` (no extension) to `doc
 
 Standard JSON data (the .json postfix) will return a minimal structure that requires the minimum amount of work to parse. Example `api:mouse.json` can result in a dictionary of:
 
-```js
+```json
 {
   "id": "Mouse",
   "wikidata": "Q83310",
@@ -62,7 +62,7 @@ Standard JSON data (the .json postfix) will return a minimal structure that requ
 
 Metadata contains further information on a JSON record, but typically not the data that is already served by above JSON record. Example for `api:mouse.meta.json`
 
-```
+```json
 {
   "api": "api:mouse.json",
   "doc": "doc:mouse.html",
