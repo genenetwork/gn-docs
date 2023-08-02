@@ -66,8 +66,8 @@ Metadata contains further information on a JSON record, but typically not the da
 {
   "api": "api:mouse.json",
   "doc": "doc:mouse.html",
-  "links":
-    Expand on metadata links that can be followed:
+  "links": {
+    # Expand on metadata links that can be followed:
     "strains": {
       "BXD12": "api:BXD12.meta.json",
       "BXD13": "api:BXD13.meta.json",
