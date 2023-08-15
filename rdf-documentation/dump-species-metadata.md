@@ -244,18 +244,18 @@ gn:Mus_musculus gnt:organism taxon:10090 .
 The following SQL query was executed:
 
 ```sql
-SELECT CAST(CONVERT(BINARY CONVERT(Strain.Name USING latin1) USING utf8) AS VARCHAR(15000)) AS StrainName, Species.Fullname, Strain.Name, IF ((Strain.Name2 != Strain.Name), Strain.Name2, '') AS Name2, IF ((Strain.Alias != Strain.Name), Strain.Alias, '') AS Alias, IF ((Strain.Symbol != Strain.Name), Strain.Symbol, '') AS Symbol FROM Strain LEFT JOIN Species ON Strain.SpeciesId = Species.SpeciesId
+SELECT Strain.Name, Species.Fullname, Strain.Name, IF ((Strain.Name2 != Strain.Name), Strain.Name2, '') AS Name2, IF ((Strain.Alias != Strain.Name), Strain.Alias, '') AS Alias, IF ((Strain.Symbol != Strain.Name), Strain.Symbol, '') AS Symbol FROM Strain LEFT JOIN Species ON Strain.SpeciesId = Species.SpeciesId
 ```
 
 The above query results to triples that have the form:
 
 ```text
-gn:Strainname -> rdf:type -> gnc:strain 
-gn:Strainname -> gnt:species -> gn:Species_fullname 
-gn:Strainname -> rdfs:label -> StrainName 
-gn:Strainname -> rdfs:label -> Name2 
-gn:Strainname -> gnt:alias -> Alias 
-gn:Strainname -> gnt:symbol -> Symbol 
+gn:Strain_name_ -> rdf:type -> gnc:strain 
+gn:Strain_name_ -> gnt:species -> gn:Species_fullname 
+gn:Strain_name_ -> rdfs:label -> StrainName 
+gn:Strain_name_ -> rdfs:label -> Name2 
+gn:Strain_name_ -> gnt:alias -> Alias 
+gn:Strain_name_ -> gnt:symbol -> Symbol 
 ```
 Here's an example query:
 
