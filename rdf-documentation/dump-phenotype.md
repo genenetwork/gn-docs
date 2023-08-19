@@ -60,28 +60,25 @@ gn:B6d2f2_psupublish gnt:belongsToInbredSet gn:B6d2f2-psupublish .
 The following SQL query was executed:
 
 ```sql
-SELECT CONCAT(IF(PublishFreeze.Name IS NULL, '', CONCAT(PublishFreeze.Name, '_')), IF(Phenotype.Post_publication_abbreviation IS NULL, IF(Phenotype.Pre_publication_abbreviation IS NULL, Phenotype.Id, Pre_publication_abbreviation), Phenotype.Post_publication_abbreviation)) AS abbrev, IF(Phenotype.Post_publication_abbreviation IS NULL, IF(Phenotype.Pre_publication_abbreviation IS NULL, Phenotype.Id, Phenotype.Pre_publication_abbreviation), Phenotype.Post_publication_abbreviation) AS PhenotypeName, CONCAT(InbredSet.Name, '_', PublishXRef.Id) AS phenotypeAltName, Phenotype.Post_publication_description, Phenotype.Post_publication_abbreviation, Phenotype.Lab_code, Phenotype.Submitter, Phenotype.Owner, Phenotype.Owner, IFNULL(PublishXRef.mean, '') AS mean, PublishXRef.Locus, IFNULL(PublishXRef.LRS, '') AS lrs, IFNULL(PublishXRef.additive, '') AS additive, PublishXRef.Sequence, InfoFiles.InfoPageName, IF(Publication.PubMed_ID IS NULL, '', CONVERT(Publication.PubMed_Id, INT)) AS pmid, Publication.Id FROM Phenotype LEFT JOIN PublishXRef ON Phenotype.Id = PublishXRef.PhenotypeId LEFT JOIN Publication ON Publication.Id = PublishXRef.PublicationId LEFT JOIN InbredSet ON InbredSet.InbredSetId = PublishXRef.InbredSetId LEFT JOIN PublishFreeze ON PublishFreeze.InbredSetId = PublishXRef.InbredSetId LEFT JOIN InfoFiles ON InfoFiles.InfoPageName = PublishFreeze.Name WHERE PublishFreeze.public > 0 AND PublishFreeze.confidentiality < 1 AND PublishFreeze.Id IS NOT NULL
+SELECT CONCAT(IFNULL(InbredSet.Name, PublishXRef.InbredSetId), '_', PublishXRef.Id) AS Phenotype, CONCAT(IFNULL(InbredSet.Name, PublishXRef.InbredSetId), '_', PublishXRef.Id) AS Phenotype, Phenotype.Post_publication_description, Phenotype.Post_publication_abbreviation, Phenotype.Lab_code, Phenotype.Submitter, Phenotype.Owner, IFNULL(PublishXRef.mean, '') AS mean, PublishXRef.Locus, IFNULL(PublishXRef.LRS, '') AS lrs, IFNULL(PublishXRef.additive, '') AS additive, PublishXRef.Sequence, IF(Publication.PubMed_ID IS NULL, '', CONVERT(Publication.PubMed_Id, INT)) AS pmid, Publication.Id FROM PublishXRef LEFT JOIN InbredSet ON InbredSet.InbredSetId = PublishXRef.InbredSetId LEFT JOIN Publication ON Publication.Id = PublishXRef.PublicationId LEFT JOIN Phenotype ON Phenotype.Id = PublishXRef.PhenotypeId WHERE PublishXRef.InbredSetId IN (SELECT PublishFreeze.InbredSetId FROM PublishFreeze)
 ```
 
 The above query results to triples that have the form:
 
 ```text
-gn:Abbrev -> rdf:type -> gnc:phenotype 
-gn:Abbrev -> skos:prefLabel -> PhenotypeName 
-gn:Abbrev -> skos:altLabel -> phenotypeAltName 
-gn:Abbrev -> dct:description -> PhenotypePost_publication_description 
-gn:Abbrev -> gnt:abbreviation -> Phenotype(Post_publication_abbreviation) 
-gn:Abbrev -> gnt:labCode -> Phenotype(Lab_code) 
-gn:Abbrev -> gnt:submitter -> PhenotypeSubmitter 
-gn:Abbrev -> dct:contributor -> PhenotypeOwner 
-gn:Abbrev -> gnt:mean -> "mean"^^xsd:double 
-gn:Abbrev -> gnt:locus -> PublishXRef(Locus) 
-gn:Abbrev -> gnt:LRS -> "lrs"^^xsd:double 
-gn:Abbrev -> gnt:additive -> "additive"^^xsd:double 
-gn:Abbrev -> gnt:sequence -> "PublishXRef(Sequence)"^^xsd:integer 
-gn:Abbrev -> gnt:belongsToDataset -> gn:Infofiles_infopagename_ 
-gn:Abbrev -> dct:isReferencedBy -> pubmed:pmid 
-gn:Abbrev -> dct:contributor -> PhenotypeOwner 
+gn:trait_phenotype -> rdf:type -> gnc:phenotype 
+gn:trait_phenotype -> rdfs:label -> Phenotype 
+gn:trait_phenotype -> dct:description -> PhenotypePost_publication_description 
+gn:trait_phenotype -> gnt:abbreviation -> Phenotype(Post_publication_abbreviation) 
+gn:trait_phenotype -> gnt:labCode -> Phenotype(Lab_code) 
+gn:trait_phenotype -> gnt:submitter -> PhenotypeSubmitter 
+gn:trait_phenotype -> gnt:mean -> "mean"^^xsd:double 
+gn:trait_phenotype -> gnt:locus -> PublishXRef(Locus) 
+gn:trait_phenotype -> gnt:LRS -> "lrs"^^xsd:double 
+gn:trait_phenotype -> gnt:additive -> "additive"^^xsd:double 
+gn:trait_phenotype -> gnt:sequence -> "PublishXRef(Sequence)"^^xsd:integer 
+gn:trait_phenotype -> dct:isReferencedBy -> pubmed:pmid 
+gn:trait_phenotype -> dct:contributor -> PhenotypeOwner 
 ```
 Here's an example query:
 
@@ -99,9 +96,9 @@ PREFIX pubmed: <http://rdf.ncbi.nlm.nih.gov/pubmed/>
 
 SELECT * WHERE { 
     ?s rdf:type gnc:phenotype .
-    ?s skos:prefLabel "CBLWT2" .
-    ?s skos:altLabel "BXD_10001" .
+    ?s rdfs:label "BXD_10001" .
     ?s dct:description "Central nervous system, morphology: Cerebellum weight, whole, bilateral in adults of both sexes [mg]" .
+    ?s gnt:abbreviation "CBLWT2" .
     ?s ?p ?o .
 }
 ```
@@ -109,18 +106,16 @@ SELECT * WHERE {
 Expected Result:
 
 ```rdf
-gn:Bxdpublish_cblwt2 rdf:type gnc:phenotype .
-gn:Bxdpublish_cblwt2 skos:prefLabel "CBLWT2" .
-gn:Bxdpublish_cblwt2 skos:altLabel "BXD_10001" .
-gn:Bxdpublish_cblwt2 dct:description "Central nervous system, morphology: Cerebellum weight, whole, bilateral in adults of both sexes [mg]" .
-gn:Bxdpublish_cblwt2 gnt:abbreviation "CBLWT2" .
-gn:Bxdpublish_cblwt2 gnt:submitter "robwilliams" .
-gn:Bxdpublish_cblwt2 gnt:mean "52.13529418496525"^^xsd:double .
-gn:Bxdpublish_cblwt2 gnt:locus "rs48756159" .
-gn:Bxdpublish_cblwt2 gnt:LRS "13.4974911471087"^^xsd:double .
-gn:Bxdpublish_cblwt2 gnt:additive "2.39444435069444"^^xsd:double .
-gn:Bxdpublish_cblwt2 gnt:sequence "1"^^xsd:integer .
-gn:Bxdpublish_cblwt2 gnt:belongsToDataset gn:Bxdpublish .
-gn:Bxdpublish_cblwt2 dct:isReferencedBy pubmed:11438585 .
+gn:trait_bxd_10001 rdf:type gnc:phenotype .
+gn:trait_bxd_10001 rdfs:label "BXD_10001" .
+gn:trait_bxd_10001 dct:description "Central nervous system, morphology: Cerebellum weight, whole, bilateral in adults of both sexes [mg]" .
+gn:trait_bxd_10001 gnt:abbreviation "CBLWT2" .
+gn:trait_bxd_10001 gnt:submitter "robwilliams" .
+gn:trait_bxd_10001 gnt:mean "52.13529418496525"^^xsd:double .
+gn:trait_bxd_10001 gnt:locus "rs48756159" .
+gn:trait_bxd_10001 gnt:LRS "13.4974911471087"^^xsd:double .
+gn:trait_bxd_10001 gnt:additive "2.39444435069444"^^xsd:double .
+gn:trait_bxd_10001 gnt:sequence "1"^^xsd:integer .
+gn:trait_bxd_10001 dct:isReferencedBy pubmed:11438585 .
 ```
 

@@ -18,10 +18,10 @@ gn:Inbredset_name -> gnt:geneticType -> InbredSet(GeneticType)
 gn:Inbredset_name -> gnt:family -> InbredSet(Family) 
 gn:Inbredset_name -> gnt:mappingMethod -> MappingMethod(Name) 
 gn:Inbredset_name -> gnt:code -> InbredSet(InbredSetCode) 
-gn:Inbredset_name -> gnt:species -> gn:Species_fullname 
+gn:Inbredset_name -> gnt:belongsToSpecies -> gn:Species_fullname 
 gn:Inbredset_name -> gnt:genotype -> genotypeP 
 gn:Inbredset_name -> gnt:phenotype -> phenotypeP 
-gn:Inbredset_name -> gnt:molecularTrait -> gn:tissue_moleculartrait 
+gn:Inbredset_name -> gnt:hasTissue -> gn:tissue_moleculartrait 
 ```
 Here's an example query:
 
@@ -53,133 +53,133 @@ gn:Bxd gnt:geneticType "riset" .
 gn:Bxd gnt:family "Reference Populations (replicate average, SE, N)" .
 gn:Bxd gnt:mappingMethod "BXD" .
 gn:Bxd gnt:code "BXD" .
-gn:Bxd gnt:species gn:Mus_musculus .
+gn:Bxd gnt:belongsToSpecies gn:Mus_musculus .
 gn:Bxd gnt:genotype "Traits and Cofactors" .
 gn:Bxd gnt:phenotype "DNA Markers and SNPs" .
-gn:Bxd gnt:molecularTrait gn:tissue_a1c .
-gn:Bxd gnt:molecularTrait gn:tissue_acc .
-gn:Bxd gnt:molecularTrait gn:tissue_adr .
-gn:Bxd gnt:molecularTrait gn:tissue_amg .
-gn:Bxd gnt:molecularTrait gn:tissue_bebv .
-gn:Bxd gnt:molecularTrait gn:tissue_bla .
-gn:Bxd gnt:molecularTrait gn:tissue_brmet .
-gn:Bxd gnt:molecularTrait gn:tissue_brmicrorna .
-gn:Bxd gnt:molecularTrait gn:tissue_brn .
-gn:Bxd gnt:molecularTrait gn:tissue_cart .
-gn:Bxd gnt:molecularTrait gn:tissue_cb .
-gn:Bxd gnt:molecularTrait gn:tissue_cbc .
-gn:Bxd gnt:molecularTrait gn:tissue_ctx .
-gn:Bxd gnt:molecularTrait gn:tissue_dfc .
-gn:Bxd gnt:molecularTrait gn:tissue_drg .
-gn:Bxd gnt:molecularTrait gn:tissue_ec .
-gn:Bxd gnt:molecularTrait gn:tissue_emb .
-gn:Bxd gnt:molecularTrait gn:tissue_eye .
-gn:Bxd gnt:molecularTrait gn:tissue_fat .
-gn:Bxd gnt:molecularTrait gn:tissue_fecmet .
-gn:Bxd gnt:molecularTrait gn:tissue_femur .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_aor .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_atr .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_blo .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_bonm .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_bre .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_cau .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_cer .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_cerv .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_cml .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_col .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_colsig .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_cor .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_ebv .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_eso .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_esogas .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_fal .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_fro .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_muc .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_ner .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_pan .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_put .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_sintter .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_skinex .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_skisex .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_sn .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_sto .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_sub .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_tf .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_thy .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_tib .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_vag .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_ven .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_vis .
-gn:Bxd gnt:molecularTrait gn:tissue_gtex_who .
-gn:Bxd gnt:molecularTrait gn:tissue_gut .
-gn:Bxd gnt:molecularTrait gn:tissue_hea .
-gn:Bxd gnt:molecularTrait gn:tissue_hip .
-gn:Bxd gnt:molecularTrait gn:tissue_hippreccel .
-gn:Bxd gnt:molecularTrait gn:tissue_hipprot .
-gn:Bxd gnt:molecularTrait gn:tissue_hip_mirna .
-gn:Bxd gnt:molecularTrait gn:tissue_hsc .
-gn:Bxd gnt:molecularTrait gn:tissue_hyp .
-gn:Bxd gnt:molecularTrait gn:tissue_ifra_ctx .
-gn:Bxd gnt:molecularTrait gn:tissue_ipc .
-gn:Bxd gnt:molecularTrait gn:tissue_isl .
-gn:Bxd gnt:molecularTrait gn:tissue_itc .
-gn:Bxd gnt:molecularTrait gn:tissue_kid .
-gn:Bxd gnt:molecularTrait gn:tissue_lathab .
-gn:Bxd gnt:molecularTrait gn:tissue_lcm_brreg .
-gn:Bxd gnt:molecularTrait gn:tissue_leaf .
-gn:Bxd gnt:molecularTrait gn:tissue_liv .
-gn:Bxd gnt:molecularTrait gn:tissue_livdnam .
-gn:Bxd gnt:molecularTrait gn:tissue_livmet .
-gn:Bxd gnt:molecularTrait gn:tissue_livpro .
-gn:Bxd gnt:molecularTrait gn:tissue_lung .
-gn:Bxd gnt:molecularTrait gn:tissue_m1c .
-gn:Bxd gnt:molecularTrait gn:tissue_mam .
-gn:Bxd gnt:molecularTrait gn:tissue_mamtum .
-gn:Bxd gnt:molecularTrait gn:tissue_mbr .
-gn:Bxd gnt:molecularTrait gn:tissue_md .
-gn:Bxd gnt:molecularTrait gn:tissue_methyl .
-gn:Bxd gnt:molecularTrait gn:tissue_mfc .
-gn:Bxd gnt:molecularTrait gn:tissue_musmet .
-gn:Bxd gnt:molecularTrait gn:tissue_nac .
-gn:Bxd gnt:molecularTrait gn:tissue_nbcb .
-gn:Bxd gnt:molecularTrait gn:tissue_neutrophil .
-gn:Bxd gnt:molecularTrait gn:tissue_ocl .
-gn:Bxd gnt:molecularTrait gn:tissue_ofc .
-gn:Bxd gnt:molecularTrait gn:tissue_of_ctx .
-gn:Bxd gnt:molecularTrait gn:tissue_ova .
-gn:Bxd gnt:molecularTrait gn:tissue_pcg .
-gn:Bxd gnt:molecularTrait gn:tissue_pfc .
-gn:Bxd gnt:molecularTrait gn:tissue_pg .
-gn:Bxd gnt:molecularTrait gn:tissue_pln .
-gn:Bxd gnt:molecularTrait gn:tissue_pl_ctx .
-gn:Bxd gnt:molecularTrait gn:tissue_pons .
-gn:Bxd gnt:molecularTrait gn:tissue_pro .
-gn:Bxd gnt:molecularTrait gn:tissue_ret .
-gn:Bxd gnt:molecularTrait gn:tissue_ret_mirna .
-gn:Bxd gnt:molecularTrait gn:tissue_ret_sc-rna-s .
-gn:Bxd gnt:molecularTrait gn:tissue_s1c .
-gn:Bxd gnt:molecularTrait gn:tissue_sal .
-gn:Bxd gnt:molecularTrait gn:tissue_sg .
-gn:Bxd gnt:molecularTrait gn:tissue_skm .
-gn:Bxd gnt:molecularTrait gn:tissue_spi .
-gn:Bxd gnt:molecularTrait gn:tissue_spl .
-gn:Bxd gnt:molecularTrait gn:tissue_stc .
-gn:Bxd gnt:molecularTrait gn:tissue_str .
-gn:Bxd gnt:molecularTrait gn:tissue_tc .
-gn:Bxd gnt:molecularTrait gn:tissue_tes .
-gn:Bxd gnt:molecularTrait gn:tissue_tes_dna_met .
-gn:Bxd gnt:molecularTrait gn:tissue_thelp .
-gn:Bxd gnt:molecularTrait gn:tissue_thy .
-gn:Bxd gnt:molecularTrait gn:tissue_treg .
-gn:Bxd gnt:molecularTrait gn:tissue_ute .
-gn:Bxd gnt:molecularTrait gn:tissue_v1 .
-gn:Bxd gnt:molecularTrait gn:tissue_vfc .
-gn:Bxd gnt:molecularTrait gn:tissue_vta .
-gn:Bxd gnt:molecularTrait gn:tissue_wb .
-gn:Bxd gnt:molecularTrait gn:tissue_wbc .
-gn:Bxd gnt:molecularTrait gn:tissue_wbpr .
-gn:Bxd gnt:molecularTrait gn:tissue_wfat .
-gn:Bxd gnt:molecularTrait gn:tissue_wfat_pro .
+gn:Bxd gnt:hasTissue gn:tissue_a1c .
+gn:Bxd gnt:hasTissue gn:tissue_acc .
+gn:Bxd gnt:hasTissue gn:tissue_adr .
+gn:Bxd gnt:hasTissue gn:tissue_amg .
+gn:Bxd gnt:hasTissue gn:tissue_bebv .
+gn:Bxd gnt:hasTissue gn:tissue_bla .
+gn:Bxd gnt:hasTissue gn:tissue_brmet .
+gn:Bxd gnt:hasTissue gn:tissue_brmicrorna .
+gn:Bxd gnt:hasTissue gn:tissue_brn .
+gn:Bxd gnt:hasTissue gn:tissue_cart .
+gn:Bxd gnt:hasTissue gn:tissue_cb .
+gn:Bxd gnt:hasTissue gn:tissue_cbc .
+gn:Bxd gnt:hasTissue gn:tissue_ctx .
+gn:Bxd gnt:hasTissue gn:tissue_dfc .
+gn:Bxd gnt:hasTissue gn:tissue_drg .
+gn:Bxd gnt:hasTissue gn:tissue_ec .
+gn:Bxd gnt:hasTissue gn:tissue_emb .
+gn:Bxd gnt:hasTissue gn:tissue_eye .
+gn:Bxd gnt:hasTissue gn:tissue_fat .
+gn:Bxd gnt:hasTissue gn:tissue_fecmet .
+gn:Bxd gnt:hasTissue gn:tissue_femur .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_aor .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_atr .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_blo .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_bonm .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_bre .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_cau .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_cer .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_cerv .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_cml .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_col .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_colsig .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_cor .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_ebv .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_eso .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_esogas .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_fal .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_fro .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_muc .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_ner .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_pan .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_put .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_sintter .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_skinex .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_skisex .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_sn .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_sto .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_sub .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_tf .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_thy .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_tib .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_vag .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_ven .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_vis .
+gn:Bxd gnt:hasTissue gn:tissue_gtex_who .
+gn:Bxd gnt:hasTissue gn:tissue_gut .
+gn:Bxd gnt:hasTissue gn:tissue_hea .
+gn:Bxd gnt:hasTissue gn:tissue_hip .
+gn:Bxd gnt:hasTissue gn:tissue_hippreccel .
+gn:Bxd gnt:hasTissue gn:tissue_hipprot .
+gn:Bxd gnt:hasTissue gn:tissue_hip_mirna .
+gn:Bxd gnt:hasTissue gn:tissue_hsc .
+gn:Bxd gnt:hasTissue gn:tissue_hyp .
+gn:Bxd gnt:hasTissue gn:tissue_ifra_ctx .
+gn:Bxd gnt:hasTissue gn:tissue_ipc .
+gn:Bxd gnt:hasTissue gn:tissue_isl .
+gn:Bxd gnt:hasTissue gn:tissue_itc .
+gn:Bxd gnt:hasTissue gn:tissue_kid .
+gn:Bxd gnt:hasTissue gn:tissue_lathab .
+gn:Bxd gnt:hasTissue gn:tissue_lcm_brreg .
+gn:Bxd gnt:hasTissue gn:tissue_leaf .
+gn:Bxd gnt:hasTissue gn:tissue_liv .
+gn:Bxd gnt:hasTissue gn:tissue_livdnam .
+gn:Bxd gnt:hasTissue gn:tissue_livmet .
+gn:Bxd gnt:hasTissue gn:tissue_livpro .
+gn:Bxd gnt:hasTissue gn:tissue_lung .
+gn:Bxd gnt:hasTissue gn:tissue_m1c .
+gn:Bxd gnt:hasTissue gn:tissue_mam .
+gn:Bxd gnt:hasTissue gn:tissue_mamtum .
+gn:Bxd gnt:hasTissue gn:tissue_mbr .
+gn:Bxd gnt:hasTissue gn:tissue_md .
+gn:Bxd gnt:hasTissue gn:tissue_methyl .
+gn:Bxd gnt:hasTissue gn:tissue_mfc .
+gn:Bxd gnt:hasTissue gn:tissue_musmet .
+gn:Bxd gnt:hasTissue gn:tissue_nac .
+gn:Bxd gnt:hasTissue gn:tissue_nbcb .
+gn:Bxd gnt:hasTissue gn:tissue_neutrophil .
+gn:Bxd gnt:hasTissue gn:tissue_ocl .
+gn:Bxd gnt:hasTissue gn:tissue_ofc .
+gn:Bxd gnt:hasTissue gn:tissue_of_ctx .
+gn:Bxd gnt:hasTissue gn:tissue_ova .
+gn:Bxd gnt:hasTissue gn:tissue_pcg .
+gn:Bxd gnt:hasTissue gn:tissue_pfc .
+gn:Bxd gnt:hasTissue gn:tissue_pg .
+gn:Bxd gnt:hasTissue gn:tissue_pln .
+gn:Bxd gnt:hasTissue gn:tissue_pl_ctx .
+gn:Bxd gnt:hasTissue gn:tissue_pons .
+gn:Bxd gnt:hasTissue gn:tissue_pro .
+gn:Bxd gnt:hasTissue gn:tissue_ret .
+gn:Bxd gnt:hasTissue gn:tissue_ret_mirna .
+gn:Bxd gnt:hasTissue gn:tissue_ret_sc-rna-s .
+gn:Bxd gnt:hasTissue gn:tissue_s1c .
+gn:Bxd gnt:hasTissue gn:tissue_sal .
+gn:Bxd gnt:hasTissue gn:tissue_sg .
+gn:Bxd gnt:hasTissue gn:tissue_skm .
+gn:Bxd gnt:hasTissue gn:tissue_spi .
+gn:Bxd gnt:hasTissue gn:tissue_spl .
+gn:Bxd gnt:hasTissue gn:tissue_stc .
+gn:Bxd gnt:hasTissue gn:tissue_str .
+gn:Bxd gnt:hasTissue gn:tissue_tc .
+gn:Bxd gnt:hasTissue gn:tissue_tes .
+gn:Bxd gnt:hasTissue gn:tissue_tes_dna_met .
+gn:Bxd gnt:hasTissue gn:tissue_thelp .
+gn:Bxd gnt:hasTissue gn:tissue_thy .
+gn:Bxd gnt:hasTissue gn:tissue_treg .
+gn:Bxd gnt:hasTissue gn:tissue_ute .
+gn:Bxd gnt:hasTissue gn:tissue_v1 .
+gn:Bxd gnt:hasTissue gn:tissue_vfc .
+gn:Bxd gnt:hasTissue gn:tissue_vta .
+gn:Bxd gnt:hasTissue gn:tissue_wb .
+gn:Bxd gnt:hasTissue gn:tissue_wbc .
+gn:Bxd gnt:hasTissue gn:tissue_wbpr .
+gn:Bxd gnt:hasTissue gn:tissue_wfat .
+gn:Bxd gnt:hasTissue gn:tissue_wfat_pro .
 ```
 
 
@@ -251,7 +251,7 @@ The above query results to triples that have the form:
 
 ```text
 gn:Strain_name_ -> rdf:type -> gnc:strain 
-gn:Strain_name_ -> gnt:species -> gn:Species_fullname 
+gn:Strain_name_ -> gnt:belongsToSpecies -> gn:Species_fullname 
 gn:Strain_name_ -> rdfs:label -> StrainName 
 gn:Strain_name_ -> rdfs:label -> Name2 
 gn:Strain_name_ -> gnt:alias -> Alias 
@@ -271,7 +271,7 @@ PREFIX taxon: <http://purl.uniprot.org/taxonomy/>
 
 SELECT * WHERE { 
     ?s rdf:type gnc:strain .
-    ?s gnt:species gn:Mus_musculus .
+    ?s gnt:belongsToSpecies gn:Mus_musculus .
     ?s rdfs:label "B6D2F1" .
     ?s ?p ?o .
 }
@@ -281,7 +281,7 @@ Expected Result:
 
 ```rdf
 gn:B6d2f1 rdf:type gnc:strain .
-gn:B6d2f1 gnt:species gn:Mus_musculus .
+gn:B6d2f1 gnt:belongsToSpecies gn:Mus_musculus .
 gn:B6d2f1 rdfs:label "B6D2F1" .
 ```
 

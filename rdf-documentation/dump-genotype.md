@@ -59,25 +59,24 @@ gn:B6d2rigeno gnt:belongsToInbredSet gn:_b6d2ri .
 The following SQL query was executed:
 
 ```sql
-SELECT CONCAT(IF(GenoFreeze.Name IS NULL, '', CONCAT(GenoFreeze.Name, '_')), Geno.Name) AS abbrev, Geno.Name, Geno.Chr, IFNULL(Geno.Mb, '') AS Mb, IFNULL(Geno.Mb_mm8, '') AS Mb_mm8, IFNULL(Geno.Mb_2016, '') AS Mb_2016, Geno.Sequence, Geno.Source, IF((Source2 = Source), NULL, Source2) AS Source2, IFNULL(GenoFreeze.Name, '') AS DatasetName, Geno.chr_num, Geno.Comments, GenoXRef.cM FROM Geno LEFT JOIN GenoXRef ON Geno.Id = GenoXRef.GenoId LEFT JOIN GenoFreeze ON GenoFreeze.Id = GenoXRef.GenoFreezeId LEFT JOIN InbredSet ON InbredSet.InbredSetId = GenoFreeze.InbredSetId LEFT JOIN InfoFiles ON InfoFiles.InfoPageName = GenoFreeze.Name
+SELECT Geno.Name, Geno.Name, Geno.Chr, IFNULL(Geno.Mb, '') AS Mb, IFNULL(Geno.Mb_mm8, '') AS Mb_mm8, IFNULL(Geno.Mb_2016, '') AS Mb_2016, Geno.Sequence, Geno.Source, IF((Source2 = Source), NULL, Source2) AS Source2, Species.Fullname, Geno.chr_num, Geno.Comments FROM Geno LEFT JOIN Species USING (SpeciesId)
 ```
 
 The above query results to triples that have the form:
 
 ```text
-gn:Abbrev -> rdf:type -> gnc:genotype 
-gn:Abbrev -> skos:prefLabel -> GenoName 
-gn:Abbrev -> gnt:chr -> Geno(Chr) 
-gn:Abbrev -> gnt:mb -> "Mb"^^xsd:double 
-gn:Abbrev -> gnt:mbMm8 -> "Mb_mm8"^^xsd:double 
-gn:Abbrev -> gnt:mb2016 -> "Mb_2016"^^xsd:double 
-gn:Abbrev -> gnt:hasSequence -> Geno(Sequence) 
-gn:Abbrev -> gnt:hasSource -> Geno(Source) 
-gn:Abbrev -> gnt:hasAltSourceName -> Source2 
-gn:Abbrev -> gnt:belongsToDataset -> gn:Datasetname 
-gn:Abbrev -> gnt:chrNum -> "Geno(chr_num)"^^xsd:int 
-gn:Abbrev -> rdfs:comments -> Geno(Comments) 
-gn:Abbrev -> gnt:cM -> "GenoXRef(cM)"^^xsd:int 
+gn:Geno_name_ -> rdf:type -> gnc:genotype 
+gn:Geno_name_ -> skos:prefLabel -> GenoName 
+gn:Geno_name_ -> gnt:chr -> Geno(Chr) 
+gn:Geno_name_ -> gnt:mb -> "Mb"^^xsd:double 
+gn:Geno_name_ -> gnt:mbMm8 -> "Mb_mm8"^^xsd:double 
+gn:Geno_name_ -> gnt:mb2016 -> "Mb_2016"^^xsd:double 
+gn:Geno_name_ -> gnt:hasSequence -> Geno(Sequence) 
+gn:Geno_name_ -> gnt:hasSource -> Geno(Source) 
+gn:Geno_name_ -> gnt:hasAltSourceName -> Source2 
+gn:Geno_name_ -> gnt:belongsToSpecies -> gn:Species_fullname 
+gn:Geno_name_ -> gnt:chrNum -> "Geno(chr_num)"^^xsd:int 
+gn:Geno_name_ -> rdfs:comments -> Geno(Comments) 
 ```
 Here's an example query:
 
@@ -94,9 +93,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT * WHERE { 
     ?s rdf:type gnc:genotype .
-    ?s skos:prefLabel "D1Mit118" .
+    ?s skos:prefLabel "D1Mit296" .
     ?s gnt:chr "1" .
-    ?s gnt:mb #{"3.968933"^^xsd:double}# .
+    ?s gnt:mb #{"9.749729"^^xsd:double}# .
     ?s ?p ?o .
 }
 ```
@@ -104,16 +103,15 @@ SELECT * WHERE {
 Expected Result:
 
 ```rdf
-gn:B6d2f2geno_d1mit118 rdf:type gnc:genotype .
-gn:B6d2f2geno_d1mit118 skos:prefLabel "D1Mit118" .
-gn:B6d2f2geno_d1mit118 gnt:chr "1" .
-gn:B6d2f2geno_d1mit118 gnt:mb "3.968933"^^xsd:double .
-gn:B6d2f2geno_d1mit118 gnt:mbMm8 "3.959096"^^xsd:double .
-gn:B6d2f2geno_d1mit118 gnt:mb2016 "3.959014"^^xsd:double .
-gn:B6d2f2geno_d1mit118 gnt:hasSequence "TAATACGACTCNCTATAGGGCGAATTGAGGCCCTCTAGATGCATGCTCGANCGGCCGCCAGTGTGCTGGAAAGCCAGCCTGGNCTACAGAGCTCAAGAGACCACATGTGATACTTGCCTTTCTGAGTCTAACATATATAGAATGATCTAATGGTCTCTAATCACACACTTTTTTTTGTGAATGAAACTTATTAAGAGTTTTATATTTGTGTGTGTGTGTGTGTGTGTGTGTGTCTGTGTGTCTCTGTGTGTGTGT" .
-gn:B6d2f2geno_d1mit118 gnt:hasSource "Mit" .
-gn:B6d2f2geno_d1mit118 gnt:belongsToDataset gn:B6d2f2geno .
-gn:B6d2f2geno_d1mit118 gnt:chrNum "1"^^xsd:int .
-gn:B6d2f2geno_d1mit118 gnt:cM "0.0"^^xsd:int .
+gn:D1mit296 rdf:type gnc:genotype .
+gn:D1mit296 skos:prefLabel "D1Mit296" .
+gn:D1mit296 gnt:chr "1" .
+gn:D1mit296 gnt:mb "9.749729"^^xsd:double .
+gn:D1mit296 gnt:mbMm8 "9.734943"^^xsd:double .
+gn:D1mit296 gnt:mb2016 "9.73981"^^xsd:double .
+gn:D1mit296 gnt:hasSequence "CTTGCATGCCTGCGGNTNCGNACTCTAGAGGATCTCCCTATTATTNTNACATNACTTTNAATTAAAATAATAATCAGATAACTTCAACNNNNTGNNCACTTCTGTCAAGTGGACAGAAATAAACATAGAGCCTAATTATCCTGAATTTNAGAGAAAAGAGTGTGTTTANCACAANAGAACAGTTATAGATCTACACACACACACACACACACACACACACACACATACAGTTTGAAAAATGCATCAGTTGAGACC" .
+gn:D1mit296 gnt:hasSource "Mit" .
+gn:D1mit296 gnt:belongsToSpecies gn:Mus_musculus .
+gn:D1mit296 gnt:chrNum "1"^^xsd:int .
 ```
 
