@@ -132,8 +132,14 @@
 
 > - get_pheno("BXD", "10646") - Get phenotype values for a classical trait.
 
+lmdb
+
 > - get_geno("BXD") - Get genotypes for a group.
+
+lmdb
 
 > - run_gemma("BXDPublish", "10015") - Perform a genome scan with gemma
 > - run_rqtl("BXDPublish", "10015") - Perform a genome scan with R/qtl
 > - run_correlation("HC_M2_0606_P", "BXDPublish", "1427571_at") - Finds traits that are correlated with a given trait.
+
+NA
