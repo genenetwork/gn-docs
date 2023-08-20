@@ -24,7 +24,7 @@ SPARQL examples are:
             ?s ?p ?o .
         }
 
-[try me] (https://sparql.genenetwork.org/sparql?default-graph-uri=&qtxt=%20%20%20%20%20%20%20%20PREFIX%20gn%3A%20%3Chttp%3A%2F%2Fgenenetwork.org%2Fid%2F%3E%0A%20%20%20%20%20%20%20%20PREFIX%20gnc%3A%20%3Chttp%3A%2F%2Fgenenetwork.org%2Fcategory%2F%3E%0A%20%20%20%20%20%20%20%20PREFIX%20owl%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0A%20%20%20%20%20%20%20%20PREFIX%20gnt%3A%20%3Chttp%3A%2F%2Fgenenetwork.org%2Fterm%2F%3E%0A%20%20%20%20%20%20%20%20PREFIX%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0A%20%20%20%20%20%20%20%20PREFIX%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0A%20%20%20%20%20%20%20%20PREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A%20%20%20%20%20%20%20%20PREFIX%20taxon%3A%20%3Chttp%3A%2F%2Fpurl.uniprot.org%2Ftaxonomy%2F%3E%0A%0A%20%20%20%20%20%20%20%20SELECT%20DISTINCT%20*%20WHERE%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Fs%20rdf%3Atype%20gnc%3Aspecies%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Fs%20%3Fp%20%3Fo%20.%0A%20%20%20%20%20%20%20%20%7D%0A%0A&format=text%2Fhtml&timeout=0&signal_void=on)
+[try](https://sparql.genenetwork.org/sparql?default-graph-uri=&qtxt=%20%20%20%20%20%20%20%20PREFIX%20gn%3A%20%3Chttp%3A%2F%2Fgenenetwork.org%2Fid%2F%3E%0A%20%20%20%20%20%20%20%20PREFIX%20gnc%3A%20%3Chttp%3A%2F%2Fgenenetwork.org%2Fcategory%2F%3E%0A%20%20%20%20%20%20%20%20PREFIX%20owl%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0A%20%20%20%20%20%20%20%20PREFIX%20gnt%3A%20%3Chttp%3A%2F%2Fgenenetwork.org%2Fterm%2F%3E%0A%20%20%20%20%20%20%20%20PREFIX%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0A%20%20%20%20%20%20%20%20PREFIX%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0A%20%20%20%20%20%20%20%20PREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A%20%20%20%20%20%20%20%20PREFIX%20taxon%3A%20%3Chttp%3A%2F%2Fpurl.uniprot.org%2Ftaxonomy%2F%3E%0A%0A%20%20%20%20%20%20%20%20SELECT%20DISTINCT%20*%20WHERE%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Fs%20rdf%3Atype%20gnc%3Aspecies%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Fs%20%3Fp%20%3Fo%20.%0A%20%20%20%20%20%20%20%20%7D%0A%0A&format=text%2Fhtml&timeout=0&signal_void=on)
 
 ## Get 'group' or population info
 
@@ -147,7 +147,21 @@ And count them!
 ```
 - info_pheno("BXD", "10038") - Get summary information for a phenotype
 
+The following works if you change the gnt prefix to terms. This is bug.
+
 ```sparql
+
+        PREFIX gn: <http://genenetwork.org/id/>
+        PREFIX gnc: <http://genenetwork.org/category/>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX gnt: <http://genenetwork.org/term/>
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX taxon: <http://purl.uniprot.org/taxonomy/>
+        PREFIX fabio: <http://purl.org/spar/fabio/>
+        PREFIX dct: <http://purl.org/dc/terms/>
+
         SELECT DISTINCT * WHERE {
             ?s rdf:type gnc:phenotype .
             ?inbredSet skos:altLabel "BXD" .
@@ -160,6 +174,8 @@ And count them!
             ?pub ?pubTerms ?pubResult .
             }
         }
+
+
 ```
 
 > - get_pheno("BXD", "10646") - Get phenotype values for a classical trait.
