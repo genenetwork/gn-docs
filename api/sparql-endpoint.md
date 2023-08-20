@@ -50,7 +50,7 @@ SPARQL examples are:
 
 And list all 50+ sets for Mouse:
 
-```sql
+```sparql
        SELECT DISTINCT * WHERE {
             ?inbredSet rdf:type gnc:inbredSet ;
              gnt:belongsToSpecies gn:Mus_musculus .
@@ -64,7 +64,7 @@ And list all 50+ sets for Mouse:
 
 - list_datasets("BXD") - List available datasets for a given group (here, "BXD").
 
-```
+```sparql
 SELECT DISTINCT * WHERE {
              ?dataset gnt:belongsToInbredSet gn:inbredSetBxd ;
              rdfs:label ?descr .
@@ -75,7 +75,7 @@ SELECT DISTINCT * WHERE {
 
 Pick one, e.g. http://genenetwork.org/id/Devneocortex_ilm6_2p14rinv_1111 or `gn:Devneocortex_ilm6_2p14rinv_1111`
 
-```
+```sparql
 SELECT DISTINCT * WHERE {
       gn:Devneocortex_ilm6_2p14rinv_1111 ?p ?o .
 }
@@ -83,7 +83,7 @@ SELECT DISTINCT * WHERE {
 
 Will show something like:
 
-```
+```sparql
 http://www.w3.org/1999/02/22-rdf-syntax-ns#type    http://genenetwork.org/category/probesetDataset
 http://purl.org/dc/terms/created "2011-11-18"
 http://www.w3.org/2004/02/skos/core#prefLabel "BIDMC/UTHSC Dev Neocortex P14 ILMv6.2 (Nov10)"
@@ -95,7 +95,7 @@ http://vocab.fairdatacollective.org/gdmt/hasCreatorAffiliation 	"Beth Israel Dea
 
 Another way to list datasets with the name that is used in GN:
 
-```
+```sparql
         SELECT DISTINCT ?dataset ?datasetName WHERE {
             ?dataset rdf:type/rdfs:subClassOf gnc:dataset .
             ?dataset rdfs:label ?datasetName .
@@ -106,7 +106,7 @@ Another way to list datasets with the name that is used in GN:
 
 To list all datasets
 
-```
+```sparql
         SELECT DISTINCT  ?dataset ?datasetName WHERE {
             ?dataset rdf:type/rdfs:subClassOf gnc:dataset .
             ?dataset rdfs:label ?datasetName .
@@ -116,7 +116,7 @@ To list all datasets
 
 And count them!
 
-```
+```sparql
         SELECT count(?dataset) WHERE {
             ?dataset rdf:type/rdfs:subClassOf gnc:dataset .
           }
@@ -126,7 +126,7 @@ And count them!
 
 - info_dataset("CB_M_1004_P") - Get meta information about a data set using the GN name:
 
-```
+```sparql
         SELECT DISTINCT * WHERE {
             ?s rdfs:label "CB_M_1004_P" .
             ?s ?p ?o .
@@ -137,7 +137,7 @@ And count them!
 
 - info_datasets("B6D2F2") - Get meta information about all data sets for a group.
 
-```
+```sparql
     SELECT DISTINCT * WHERE {
             ?s rdf:type/rdfs:subClassOf gnc:dataset .
             ?s gnt:belongsToInbredSet ?inbredSet .
@@ -147,7 +147,7 @@ And count them!
 ```
 - info_pheno("BXD", "10038") - Get summary information for a phenotype
 
-```
+```sparql
         SELECT DISTINCT * WHERE {
             ?s rdf:type gnc:phenotype .
             ?inbredSet skos:altLabel "BXD" .
