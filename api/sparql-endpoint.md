@@ -104,6 +104,25 @@ Another way to list datasets with the name that is used in GN:
           }
 ```
 
+To list all datasets
+
+```
+        SELECT DISTINCT  ?dataset ?datasetName WHERE {
+            ?dataset rdf:type/rdfs:subClassOf gnc:dataset .
+            ?dataset rdfs:label ?datasetName .
+
+          }
+```
+
+And count them!
+
+```
+        SELECT count(?dataset) WHERE {
+            ?dataset rdf:type/rdfs:subClassOf gnc:dataset .
+          }
+```
+
+893 at last count(!)
 
 - info_dataset("CB_M_1004_P") - Get meta information about a data set using the GN name:
 
