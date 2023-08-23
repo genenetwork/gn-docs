@@ -48,6 +48,15 @@ SPARQL examples are:
         }
 ```
 
+List all sets with species and description:
+
+```sparql
+       SELECT DISTINCT ?set ?species ?descr WHERE {
+            ?set rdf:type gnc:inbredSet ;
+                 gnt:belongsToSpecies ?species .
+            OPTIONAL {?set rdfs:label ?descr } .
+```
+
 And list all 50+ sets for Mouse:
 
 ```sparql
@@ -60,7 +69,17 @@ And list all 50+ sets for Mouse:
 
 [try](https://sparql.genenetwork.org/sparql?default-graph-uri=&qtxt=%20%20%20%20%20%20%20PREFIX%20gn%3A%20%3Chttp%3A%2F%2Fgenenetwork.org%2Fid%2F%3E%0A%20%20%20%20%20%20%20%20PREFIX%20gnc%3A%20%3Chttp%3A%2F%2Fgenenetwork.org%2Fcategory%2F%3E%0A%20%20%20%20%20%20%20%20PREFIX%20owl%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0A%20%20%20%20%20%20%20%20PREFIX%20gnt%3A%20%3Chttp%3A%2F%2Fgenenetwork.org%2Fterm%2F%3E%0A%20%20%20%20%20%20%20%20PREFIX%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0A%20%20%20%20%20%20%20%20PREFIX%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0A%20%20%20%20%20%20%20%20PREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A%20%20%20%20%20%20%20%20PREFIX%20taxon%3A%20%3Chttp%3A%2F%2Fpurl.uniprot.org%2Ftaxonomy%2F%3E%0A%0A%20%20%20%20%20%20%20%20SELECT%20DISTINCT%20*%20WHERE%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%3FinbredSet%20rdf%3Atype%20gnc%3AinbredSet%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20gnt%3AbelongsToSpecies%20gn%3AMus_musculus%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%20%7B%3FinbredSet%20rdfs%3Alabel%20%3Fdescr%20%7D.%0A%20%20%20%20%20%20%20%20%7D&format=text%2Fhtml&timeout=0&signal_void=on).
 
+Show set info for one 'group' without tissue info
+
+```sparql
+       SELECT DISTINCT * WHERE {
+            gn:inbredSetHsnih-palmer ?p ?o .
+            FILTER ( !EXISTS{ gn:inbredSetHsnih-palmer gnt:hasTissue ?o }) .
+        }
+```
+
 ## List all datasets for a group/population:
+
 
 - list_datasets("BXD") - List available datasets for a given group (here, "BXD").
 
@@ -174,8 +193,6 @@ The following works if you change the gnt prefix to terms. This is bug.
             ?pub ?pubTerms ?pubResult .
             }
         }
-
-
 ```
 
 > - get_pheno("BXD", "10646") - Get phenotype values for a classical trait.
