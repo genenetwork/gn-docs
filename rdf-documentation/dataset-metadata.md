@@ -1,12 +1,12 @@
 # Info files / Investigators Metadata
-## 'dump-info-files'
+## 'info-files'
 
 ## Generated Triples:
 
 The following SQL query was executed:
 
 ```sql
-SELECT InfoFiles.InfoPageName, IF(GenoFreeze.Id IS NOT NULL, 'gnc:genotypeDataset', IF(PublishFreeze.Id IS NOT NULL, 'gnc:phenotypeDataset', IF(ProbeSetFreeze.Name IS NOT NULL, 'gnc:probesetDataset', 'gnc:dataset'))) AS rdfType, InfoFiles.InfoPageName, IFNULL(GenoFreeze.FullName, IFNULL(PublishFreeze.FullName, '')) AS DatasetFullName, Datasets.DatasetName AS DatasetGroup, InfoFiles.InfoFileTitle, Datasets.PublicationTitle, IFNULL(GenoFreeze.CreateTime, IFNULL(PublishFreeze.CreateTime, IFNULL(ProbeSetFreeze.CreateTime, ''))) AS createTimeGenoFreeze, Investigators.FirstName, Investigators.LastName, Investigators.Email, Organizations.OrganizationName, InfoFiles.GN_AccesionId, DatasetStatus.DatasetStatusName, InbredSet.Name AS InbredSetName, Tissue.Short_Name, AvgMethod.Name AS AvgMethodName, AvgMethod.Name AS AvgMethodName, GeneChip.Name AS GeneChip, Datasets.Summary, IFNULL(Datasets.GeoSeries, '') AS GeoSeries, Datasets.AboutTissue, InfoFiles.Specifics, Datasets.AboutCases, Datasets.AboutPlatform, Datasets.AboutDataProcessing, Datasets.Notes, Datasets.ExperimentDesign, Datasets.Contributors, Datasets.Citation, InfoFiles.Data_Source_Acknowledge, Datasets.Acknowledgment FROM InfoFiles LEFT JOIN PublishFreeze ON InfoFiles.InfoPageName = PublishFreeze.Name LEFT JOIN GenoFreeze ON InfoFiles.InfoPageName = GenoFreeze.Name LEFT JOIN ProbeSetFreeze ON InfoFiles.InfoPageName = ProbeSetFreeze.Name LEFT JOIN InbredSet ON InfoFiles.InbredSetId = InbredSet.InbredSetId LEFT JOIN Species ON InfoFiles.SpeciesId = Species.SpeciesId LEFT JOIN Datasets USING (DatasetId) LEFT JOIN DatasetStatus USING (DatasetStatusId) LEFT JOIN Tissue USING (TissueId) LEFT JOIN Investigators USING (InvestigatorId) LEFT JOIN AvgMethod USING (AvgMethodId) LEFT JOIN Organizations USING (OrganizationId) LEFT JOIN GeneChip USING (GeneChipId) WHERE GN_AccesionId IS NOT NULL
+SELECT InfoFiles.InfoPageName, IF(GenoFreeze.Id IS NOT NULL, 'gnc:genotypeDataset', IF(PublishFreeze.Id IS NOT NULL, 'gnc:phenotypeDataset', IF(ProbeSetFreeze.Name IS NOT NULL, 'gnc:probesetDataset', 'gnc:dataset'))) AS rdfType, InfoFiles.InfoPageName, IFNULL(GenoFreeze.FullName, IFNULL(PublishFreeze.FullName, '')) AS DatasetFullName, Datasets.DatasetName AS DatasetGroup, InfoFiles.InfoFileTitle, Datasets.PublicationTitle, IFNULL(GenoFreeze.CreateTime, IFNULL(PublishFreeze.CreateTime, IFNULL(ProbeSetFreeze.CreateTime, ''))) AS createTimeGenoFreeze, Investigators.FirstName, Investigators.LastName, Investigators.Email, Organizations.OrganizationName, InfoFiles.GN_AccesionId, DatasetStatus.DatasetStatusName, InbredSet.Name, Tissue.Short_Name, AvgMethod.Name AS AvgMethodName, AvgMethod.Name AS AvgMethodName, GeneChip.Name AS GeneChip, Datasets.Summary, IFNULL(Datasets.GeoSeries, '') AS GeoSeries, Datasets.AboutTissue, InfoFiles.Specifics, Datasets.AboutCases, Datasets.AboutPlatform, Datasets.AboutDataProcessing, Datasets.Notes, Datasets.ExperimentDesign, Datasets.Contributors, Datasets.Citation, InfoFiles.Data_Source_Acknowledge, Datasets.Acknowledgment FROM InfoFiles LEFT JOIN PublishFreeze ON InfoFiles.InfoPageName = PublishFreeze.Name LEFT JOIN GenoFreeze ON InfoFiles.InfoPageName = GenoFreeze.Name LEFT JOIN ProbeSetFreeze ON InfoFiles.InfoPageName = ProbeSetFreeze.Name LEFT JOIN InbredSet ON InfoFiles.InbredSetId = InbredSet.InbredSetId LEFT JOIN Species ON InfoFiles.SpeciesId = Species.SpeciesId LEFT JOIN Datasets USING (DatasetId) LEFT JOIN DatasetStatus USING (DatasetStatusId) LEFT JOIN Tissue USING (TissueId) LEFT JOIN Investigators USING (InvestigatorId) LEFT JOIN AvgMethod USING (AvgMethodId) LEFT JOIN Organizations USING (OrganizationId) LEFT JOIN GeneChip USING (GeneChipId) WHERE GN_AccesionId IS NOT NULL
 ```
 
 The above query results to triples that have the form:
@@ -23,7 +23,7 @@ gn:Infofiles_infopagename_ -> gdmt:hasCreatorInfo -> gn:investigator_investigato
 gn:Infofiles_infopagename_ -> gdmt:hasCreatorAffiliation -> Organizations(OrganizationName) 
 gn:Infofiles_infopagename_ -> gdmt:hasDatasetIdentifierSubType -> GNInfoFiles(GN_AccesionId) 
 gn:Infofiles_infopagename_ -> gdmt:hasRightsInfo -> datasetstatus(datasetstatusname) 
-gn:Infofiles_infopagename_ -> gnt:belongsToInbredSet -> gn:inbredSet_inbredset_inbredsetname 
+gn:Infofiles_infopagename_ -> gnt:belongsToSet -> gn:setInbredset_name 
 gn:Infofiles_infopagename_ -> gnt:hasTissue -> gn:tissue_tissue_short_name 
 gn:Infofiles_infopagename_ -> gnt:usesNormalization -> gn:avgmethod_avgmethod_avgmethodname 
 gn:Infofiles_infopagename_ -> gnt:usesPlatform -> gn:platform_genechip_genechip 
@@ -78,7 +78,7 @@ gn:Br_u_0803_m gdmt:hasCreatorInfo gn:investigator_robert_williams_rwilliams_uth
 gn:Br_u_0803_m gdmt:hasCreatorAffiliation "University of Tennessee Health Science Center" .
 gn:Br_u_0803_m gdmt:hasDatasetIdentifierSubType "GN1" .
 gn:Br_u_0803_m gdmt:hasRightsInfo "public" .
-gn:Br_u_0803_m gnt:belongsToInbredSet gn:inbredSet_bxd .
+gn:Br_u_0803_m gnt:belongsToSet gn:setBxd .
 gn:Br_u_0803_m gnt:hasTissue gn:tissue_brn .
 gn:Br_u_0803_m gnt:usesNormalization gn:avgmethod_mas5 .
 gn:Br_u_0803_m gnt:usesPlatform gn:platform_mg_u74av2 .
@@ -93,7 +93,187 @@ gn:Br_u_0803_m gnt:hasAcknowledgement "<p>Data were generated with funds to RWW 
 ```
 
 
-## 'dump-investigators'
+## 'publishfreeze'
+
+## Generated Triples:
+
+The following SQL query was executed:
+
+```sql
+SELECT PublishFreeze.Name, PublishFreeze.Name, PublishFreeze.FullName, PublishFreeze.ShortName, PublishFreeze.CreateTime, InbredSet.Name FROM PublishFreeze LEFT JOIN InfoFiles ON InfoFiles.InfoPageName = PublishFreeze.Name LEFT JOIN InbredSet ON PublishFreeze.InbredSetId = InbredSet.InbredSetId WHERE PublishFreeze.public > 0 AND PublishFreeze.confidentiality < 1 AND InfoFiles.InfoFileId IS NULL
+```
+
+The above query results to triples that have the form:
+
+```text
+gn:Publishfreeze_name_ -> rdf:type -> gnc:phenotypeDataset 
+gn:Publishfreeze_name_ -> rdfs:label -> PublishFreeze(Name) 
+gn:Publishfreeze_name_ -> skos:prefLabel -> PublishFreeze(FullName) 
+gn:Publishfreeze_name_ -> skos:altLabel -> PublishFreeze(ShortName) 
+gn:Publishfreeze_name_ -> dct:created -> "PublishFreeze(CreateTime)"^^xsd:date 
+gn:Publishfreeze_name_ -> gnt:belongsToSet -> gn:setInbredset_name 
+```
+Here's an example query:
+
+```sparql
+PREFIX v: <http://www.w3.org/2006/vcard/ns#> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX gdmt: <http://vocab.fairdatacollective.org/gdmt/> 
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
+PREFIX geoSeries: <http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=> 
+PREFIX gnt: <http://genenetwork.org/term/> 
+PREFIX gn: <http://genenetwork.org/id/> 
+PREFIX gnc: <http://genenetwork.org/category/> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX taxon: <http://purl.uniprot.org/taxonomy/> 
+PREFIX dct: <http://purl.org/dc/terms/> 
+
+SELECT * WHERE { 
+    ?s rdf:type gnc:phenotypeDataset .
+    ?s rdfs:label "B6D2F2-PSUPublish" .
+    ?s skos:prefLabel "B6D2F2 PSU Phenotypes" .
+    ?s ?p ?o .
+}
+```
+
+Expected Result:
+
+```rdf
+gn:B6d2f2_psupublish rdf:type gnc:phenotypeDataset .
+gn:B6d2f2_psupublish rdfs:label "B6D2F2-PSUPublish" .
+gn:B6d2f2_psupublish skos:prefLabel "B6D2F2 PSU Phenotypes" .
+gn:B6d2f2_psupublish skos:altLabel "B6D2F2 PSU Publish" .
+gn:B6d2f2_psupublish dct:created "2015-03-18"^^xsd:date .
+gn:B6d2f2_psupublish gnt:belongsToSet gn:setB6d2f2-psupublish .
+```
+
+
+## 'genofreeze'
+
+## Generated Triples:
+
+The following SQL query was executed:
+
+```sql
+SELECT GenoFreeze.Name, GenoFreeze.Name, GenoFreeze.FullName, GenoFreeze.ShortName, GenoFreeze.CreateTime, InbredSet.Name FROM GenoFreeze LEFT JOIN InfoFiles ON InfoFiles.InfoPageName = GenoFreeze.Name LEFT JOIN InbredSet ON GenoFreeze.InbredSetId = InbredSet.InbredSetId WHERE GenoFreeze.public > 0 AND GenoFreeze.confidentiality < 1 AND InfoFiles.InfoPageName IS NULL
+```
+
+The above query results to triples that have the form:
+
+```text
+gn:Genofreeze_name_ -> rdf:type -> gnc:genotypeDataset 
+gn:Genofreeze_name_ -> rdfs:label -> GenoFreeze(Name) 
+gn:Genofreeze_name_ -> skos:prefLabel -> GenoFreeze(FullName) 
+gn:Genofreeze_name_ -> skos:altLabel -> GenoFreeze(ShortName) 
+gn:Genofreeze_name_ -> dct:created -> "GenoFreeze(CreateTime)"^^xsd:date 
+gn:Genofreeze_name_ -> gnt:belongsToSet -> gn:setInbredset_name 
+```
+Here's an example query:
+
+```sparql
+PREFIX v: <http://www.w3.org/2006/vcard/ns#> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX gdmt: <http://vocab.fairdatacollective.org/gdmt/> 
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
+PREFIX geoSeries: <http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=> 
+PREFIX gnt: <http://genenetwork.org/term/> 
+PREFIX gn: <http://genenetwork.org/id/> 
+PREFIX gnc: <http://genenetwork.org/category/> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX taxon: <http://purl.uniprot.org/taxonomy/> 
+PREFIX dct: <http://purl.org/dc/terms/> 
+
+SELECT * WHERE { 
+    ?s rdf:type gnc:genotypeDataset .
+    ?s rdfs:label "B6D2RIGeno" .
+    ?s skos:prefLabel "B6D2RI Genotypes" .
+    ?s ?p ?o .
+}
+```
+
+Expected Result:
+
+```rdf
+gn:B6d2rigeno rdf:type gnc:genotypeDataset .
+gn:B6d2rigeno rdfs:label "B6D2RIGeno" .
+gn:B6d2rigeno skos:prefLabel "B6D2RI Genotypes" .
+gn:B6d2rigeno skos:altLabel "B6D2RIGeno" .
+gn:B6d2rigeno dct:created "2022-10-24"^^xsd:date .
+gn:B6d2rigeno gnt:belongsToSet gn:setB6d2rigeno .
+```
+
+
+## 'probesetfreeze'
+
+## Generated Triples:
+
+The following SQL query was executed:
+
+```sql
+SELECT ProbeSetFreeze.Name, AvgMethod.Name AS AvgMethodName, AvgMethod.Name AS AvgMethodName, ProbeSetFreeze.FullName, ProbeSetFreeze.ShortName, ProbeSetFreeze.Name, ProbeSetFreeze.Name2, ProbeSetFreeze.CreateTime, ProbeSetFreeze.DataScale, Tissue.Short_Name, InbredSet.Name FROM ProbeSetFreeze LEFT JOIN InfoFiles ON InfoFiles.InfoPageName = ProbeSetFreeze.Name LEFT JOIN ProbeFreeze USING (ProbeFreezeId) LEFT JOIN AvgMethod ON AvgMethod.AvgMethodId = ProbeSetFreeze.AvgID LEFT JOIN InbredSet ON ProbeFreeze.InbredSetId = InbredSet.Id LEFT JOIN Tissue ON ProbeFreeze.TissueId = Tissue.TissueId WHERE ProbeSetFreeze.public > 0 AND InfoFiles.InfoPageName IS NULL GROUP BY ProbeFreeze.Id
+```
+
+The above query results to triples that have the form:
+
+```text
+gn:Probesetfreeze_name_ -> rdf:type -> gnc:probesetDataset 
+gn:Probesetfreeze_name_ -> gnt:usesNormalization -> gn:avgmethod_avgmethod_avgmethodname 
+gn:Probesetfreeze_name_ -> dct:title -> ProbeSetFreeze(FullName) 
+gn:Probesetfreeze_name_ -> rdfs:label -> ProbeSetFreeze(ShortName) 
+gn:Probesetfreeze_name_ -> skos:prefLabel -> ProbeSetFreeze(Name) 
+gn:Probesetfreeze_name_ -> skos:altLabel -> ProbeSetFreeze(Name2) 
+gn:Probesetfreeze_name_ -> dct:created -> "ProbeSetFreeze(CreateTime)"^^xsd:datetime 
+gn:Probesetfreeze_name_ -> gnt:usesDataScale -> ProbeSetFreeze(DataScale) 
+gn:Probesetfreeze_name_ -> gnt:hasTissue -> gn:tissue_tissue_short_name 
+gn:Probesetfreeze_name_ -> gnt:belongsToSet -> gn:setInbredset_name 
+```
+Here's an example query:
+
+```sparql
+PREFIX v: <http://www.w3.org/2006/vcard/ns#> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX gdmt: <http://vocab.fairdatacollective.org/gdmt/> 
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
+PREFIX geoSeries: <http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=> 
+PREFIX gnt: <http://genenetwork.org/term/> 
+PREFIX gn: <http://genenetwork.org/id/> 
+PREFIX gnc: <http://genenetwork.org/category/> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX taxon: <http://purl.uniprot.org/taxonomy/> 
+PREFIX dct: <http://purl.org/dc/terms/> 
+
+SELECT * WHERE { 
+    ?s rdf:type gnc:probesetDataset .
+    ?s gnt:usesNormalization gn:avgmethod_rankinv .
+    ?s dct:title "UBC/CMMT BXD P0 Cerebellum ILM Mouse WG-6 v2.0 (May13) RankInv" .
+    ?s rdfs:label "UBC/CMMT BXD P0 Cerebellum ILM Mouse WG-6 v2.0 (May13) RankInv" .
+    ?s ?p ?o .
+}
+```
+
+Expected Result:
+
+```rdf
+gn:Cmmtubcbxdp00cerilm0513 rdf:type gnc:probesetDataset .
+gn:Cmmtubcbxdp00cerilm0513 gnt:usesNormalization gn:avgmethod_rankinv .
+gn:Cmmtubcbxdp00cerilm0513 dct:title "UBC/CMMT BXD P0 Cerebellum ILM Mouse WG-6 v2.0 (May13) RankInv" .
+gn:Cmmtubcbxdp00cerilm0513 rdfs:label "UBC/CMMT BXD P0 Cerebellum ILM Mouse WG-6 v2.0 (May13) RankInv" .
+gn:Cmmtubcbxdp00cerilm0513 skos:prefLabel "CMMTUBCBXDP00CerILM0513" .
+gn:Cmmtubcbxdp00cerilm0513 skos:altLabel "CMMTUBCBXDP00CerILMMay13" .
+gn:Cmmtubcbxdp00cerilm0513 dct:created "2013-04-22"^^xsd:datetime .
+gn:Cmmtubcbxdp00cerilm0513 gnt:usesDataScale "log2" .
+gn:Cmmtubcbxdp00cerilm0513 gnt:hasTissue gn:tissue_cb .
+gn:Cmmtubcbxdp00cerilm0513 gnt:belongsToSet gn:setCmmtubcbxdp00cerilm0513 .
+```
+
+
+## 'investigators'
 
 ## Generated Triples:
 
@@ -151,5 +331,63 @@ gn:investigator_evan_williams_ foaf:name "Evan Williams" .
 gn:investigator_evan_williams_ foaf:givenName "Evan" .
 gn:investigator_evan_williams_ foaf:familyName "Williams" .
 gn:investigator_evan_williams_ v:country-name "Switzerland" .
+```
+
+
+## 'gene-chip'
+
+## Generated Triples:
+
+The following SQL query was executed:
+
+```sql
+SELECT GeneChip.Name, GeneChip.GeneChipName, GeneChip.Name, IF(GeneChip.GeneChipName != GeneChip.Title, Title, NULL) AS Title, GeneChip.Go_tree_value, Species.Fullname, GeneChip.GeoPlatform FROM GeneChip LEFT JOIN Species USING (SpeciesId)
+```
+
+The above query results to triples that have the form:
+
+```text
+gn:platform_genechip_name -> rdf:type -> gnc:geneChip 
+gn:platform_genechip_name -> rdfs:label -> GeneChip(GeneChipName) 
+gn:platform_genechip_name -> skos:prefLabel -> GeneChip(Name) 
+gn:platform_genechip_name -> skos:altLabel -> Title 
+gn:platform_genechip_name -> gnt:hasGOTreeValue -> GeneChip(Go_tree_value) 
+gn:platform_genechip_name -> gnt:belongsToSpecies -> gn:Species_fullname 
+gn:platform_genechip_name -> gnt:hasGeoSeriesId -> geoSeries:GeneChip(GeoPlatform) 
+```
+Here's an example query:
+
+```sparql
+PREFIX v: <http://www.w3.org/2006/vcard/ns#> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX gdmt: <http://vocab.fairdatacollective.org/gdmt/> 
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
+PREFIX geoSeries: <http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=> 
+PREFIX gnt: <http://genenetwork.org/term/> 
+PREFIX gn: <http://genenetwork.org/id/> 
+PREFIX gnc: <http://genenetwork.org/category/> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX taxon: <http://purl.uniprot.org/taxonomy/> 
+PREFIX dct: <http://purl.org/dc/terms/> 
+
+SELECT * WHERE { 
+    ?s rdf:type gnc:geneChip .
+    ?s rdfs:label "Affy Mouse Genome U74Av2 (GPL81)" .
+    ?s skos:prefLabel "MG_U74AV2" .
+    ?s ?p ?o .
+}
+```
+
+Expected Result:
+
+```rdf
+gn:platform_mg_u74av2 rdf:type gnc:geneChip .
+gn:platform_mg_u74av2 rdfs:label "Affy Mouse Genome U74Av2 (GPL81)" .
+gn:platform_mg_u74av2 skos:prefLabel "MG_U74AV2" .
+gn:platform_mg_u74av2 gnt:hasGOTreeValue "affy_mg_u74av2" .
+gn:platform_mg_u74av2 gnt:belongsToSpecies gn:Mus_musculus .
+gn:platform_mg_u74av2 gnt:hasGeoSeriesId geoSeries:GPL81 .
 ```
 

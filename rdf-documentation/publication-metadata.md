@@ -1,5 +1,5 @@
 # Publications Metadata
-## 'dump-publication'
+## 'publication'
 
 ## Generated Triples:
 

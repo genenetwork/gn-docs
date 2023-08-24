@@ -1,5 +1,5 @@
 # ProbeSet Metadata
-## 'dump-probeset'
+## 'probeset'
 
 ## Generated Triples:
 

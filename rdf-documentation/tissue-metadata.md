@@ -1,5 +1,5 @@
 # Tissue Metadata
-## 'dump-tissue'
+## 'tissue'
 
 ## Generated Triples:
 
