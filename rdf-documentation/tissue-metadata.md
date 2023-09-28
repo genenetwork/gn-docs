@@ -12,8 +12,8 @@ SELECT Tissue.Short_Name, Tissue.Name FROM Tissue
 The above query results to triples that have the form:
 
 ```text
-gn:tissue_tissue_short_name -> rdf:type -> gnc:tissue 
-gn:tissue_tissue_short_name -> rdfs:label -> Tissue(Name) 
+gn:tissueTissue_short_name -> rdf:type -> gnc:tissue 
+gn:tissueTissue_short_name -> rdfs:label -> Tissue(Name) 
 ```
 Here's an example query:
 
@@ -35,7 +35,7 @@ SELECT * WHERE {
 Expected Result:
 
 ```rdf
-gn:tissue_brn rdf:type gnc:tissue .
-gn:tissue_brn rdfs:label "Brain mRNA" .
+gn:tissueBrn rdf:type gnc:tissue .
+gn:tissueBrn rdfs:label "Brain mRNA" .
 ```
 

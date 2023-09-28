@@ -12,7 +12,7 @@ SELECT Geno.Name, Geno.Name, Geno.Chr, IFNULL(Geno.Mb, '') AS Mb, IFNULL(Geno.Mb
 The above query results to triples that have the form:
 
 ```text
-gn:Geno_name_ -> rdf:type -> gnc:genotype 
+gn:Geno_name_ -> rdf:type -> gnc:Genotype 
 gn:Geno_name_ -> skos:prefLabel -> GenoName 
 gn:Geno_name_ -> gnt:chr -> Geno(Chr) 
 gn:Geno_name_ -> gnt:mb -> "Mb"^^xsd:double 
@@ -39,7 +39,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
 
 SELECT * WHERE { 
-    ?s rdf:type gnc:genotype .
+    ?s rdf:type gnc:Genotype .
     ?s skos:prefLabel "D1Mit296" .
     ?s gnt:chr "1" .
     ?s gnt:mb #{"9.749729"^^xsd:double}# .
@@ -50,7 +50,7 @@ SELECT * WHERE {
 Expected Result:
 
 ```rdf
-gn:D1mit296 rdf:type gnc:genotype .
+gn:D1mit296 rdf:type gnc:Genotype .
 gn:D1mit296 skos:prefLabel "D1Mit296" .
 gn:D1mit296 gnt:chr "1" .
 gn:D1mit296 gnt:mb "9.749729"^^xsd:double .

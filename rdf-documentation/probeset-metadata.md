@@ -12,32 +12,32 @@ SELECT IF(NULLIF(TRIM(ProbeSet.Name), '') IS NULL, '', TRIM(ProbeSet.Name)) AS P
 The above query results to triples that have the form:
 
 ```text
-gn:probeset_probesetidname -> rdf:type -> gnc:probeset 
-gn:probeset_probesetidname -> rdfs:label -> ProbeSet(Name) 
-gn:probeset_probesetidname -> skos:altLabel -> ProbeSet(alias) 
-gn:probeset_probesetidname -> gnt:hasChip -> gn:platform_genechipname 
-gn:probeset_probesetidname -> gnt:hasTargetId -> TargetId 
-gn:probeset_probesetidname -> gnt:symbol -> ProbeSet(Symbol) 
-gn:probeset_probesetidname -> dct:description -> ProbeSetdescription 
-gn:probeset_probesetidname -> gnt:targetsRegion -> Probe_set_target_region 
-gn:probeset_probesetidname -> gnt:chr -> ProbeSet(Chr) 
-gn:probeset_probesetidname -> gnt:mb -> "Mb"^^xsd:double 
-gn:probeset_probesetidname -> gnt:mbMm8 -> "Mb_mm8"^^xsd:double 
-gn:probeset_probesetidname -> gnt:mb2016 -> "Mb_2016"^^xsd:double 
-gn:probeset_probesetidname -> gnt:hasSpecificity -> Probe_set_specificity 
-gn:probeset_probesetidname -> gnt:hasBlatScore -> Probe_set_BLAT_score 
-gn:probeset_probesetidname -> gnt:hasBlatMbStart -> "Probe_set_Blat_Mb_start"^^xsd:double 
-gn:probeset_probesetidname -> gnt:hasBlatMbStart2016 -> "Probe_set_Blat_Mb_start_2016"^^xsd:double 
-gn:probeset_probesetidname -> gnt:hasBlatMbEnd -> "Probe_set_Blat_Mb_end"^^xsd:double 
-gn:probeset_probesetidname -> gnt:hasBlatMbEnd2016 -> "Probe_set_Blat_Mb_start_2016"^^xsd:double 
-gn:probeset_probesetidname -> gnt:hasBlatSeq -> ProbeSetBlatSeq 
-gn:probeset_probesetidname -> gnt:hasTargetSeq -> ProbeSetTargetSeq 
-gn:probeset_probesetidname -> gnt:hasHomologeneId -> homologene:HomoloGeneID 
-gn:probeset_probesetidname -> gnt:hasUniprotId -> uniprot:UniProtID 
-gn:probeset_probesetidname -> gnt:hasPubChemId -> pubchem:PubChem_ID 
-gn:probeset_probesetidname -> gnt:hasKeggId -> kegg:KEGG_ID 
-gn:probeset_probesetidname -> gnt:hasOmimId ->  
-gn:probeset_probesetidname -> gnt:hasChebiId -> chebi:ChEBI_ID 
+gn:probesetProbesetidname -> rdf:type -> gnc:Probeset 
+gn:probesetProbesetidname -> rdfs:label -> ProbeSet(Name) 
+gn:probesetProbesetidname -> skos:altLabel -> ProbeSet(alias) 
+gn:probesetProbesetidname -> gnt:hasChip -> gn:platformGenechipname 
+gn:probesetProbesetidname -> gnt:hasTargetId -> TargetId 
+gn:probesetProbesetidname -> gnt:symbol -> ProbeSet(Symbol) 
+gn:probesetProbesetidname -> dct:description -> ProbeSetdescription 
+gn:probesetProbesetidname -> gnt:targetsRegion -> Probe_set_target_region 
+gn:probesetProbesetidname -> gnt:chr -> ProbeSet(Chr) 
+gn:probesetProbesetidname -> gnt:mb -> "Mb"^^xsd:double 
+gn:probesetProbesetidname -> gnt:mbMm8 -> "Mb_mm8"^^xsd:double 
+gn:probesetProbesetidname -> gnt:mb2016 -> "Mb_2016"^^xsd:double 
+gn:probesetProbesetidname -> gnt:hasSpecificity -> Probe_set_specificity 
+gn:probesetProbesetidname -> gnt:hasBlatScore -> Probe_set_BLAT_score 
+gn:probesetProbesetidname -> gnt:hasBlatMbStart -> "Probe_set_Blat_Mb_start"^^xsd:double 
+gn:probesetProbesetidname -> gnt:hasBlatMbStart2016 -> "Probe_set_Blat_Mb_start_2016"^^xsd:double 
+gn:probesetProbesetidname -> gnt:hasBlatMbEnd -> "Probe_set_Blat_Mb_end"^^xsd:double 
+gn:probesetProbesetidname -> gnt:hasBlatMbEnd2016 -> "Probe_set_Blat_Mb_start_2016"^^xsd:double 
+gn:probesetProbesetidname -> gnt:hasBlatSeq -> ProbeSetBlatSeq 
+gn:probesetProbesetidname -> gnt:hasTargetSeq -> ProbeSetTargetSeq 
+gn:probesetProbesetidname -> gnt:hasHomologeneId -> homologene:HomoloGeneID 
+gn:probesetProbesetidname -> gnt:hasUniprotId -> uniprot:UniProtID 
+gn:probesetProbesetidname -> gnt:hasPubChemId -> pubchem:PubChem_ID 
+gn:probesetProbesetidname -> gnt:hasKeggId -> kegg:KEGG_ID 
+gn:probesetProbesetidname -> gnt:hasOmimId ->  
+gn:probesetProbesetidname -> gnt:hasChebiId -> chebi:ChEBI_ID 
 ```
 Here's an example query:
 
@@ -57,13 +57,15 @@ PREFIX dct: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#> 
 PREFIX homologene: <https://bio2rdf.org/homologene:> 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX qb: <http://purl.org/linked-data/cube#> 
+PREFIX sdmx-measure: <http://purl.org/linked-data/sdmx/2009/measure#> 
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
 
 SELECT * WHERE { 
-    ?s rdf:type gnc:probeset .
+    ?s rdf:type gnc:Probeset .
     ?s rdfs:label "100001_at" .
     ?s skos:altLabel "T3g; Ctg3; Ctg-3" .
-    ?s gnt:hasChip gn:platform_mg_u74av2 .
+    ?s gnt:hasChip gn:platformMg_u74av2 .
     ?s ?p ?o .
 }
 ```
@@ -71,25 +73,25 @@ SELECT * WHERE {
 Expected Result:
 
 ```rdf
-gn:probeset_100001_at rdf:type gnc:probeset .
-gn:probeset_100001_at rdfs:label "100001_at" .
-gn:probeset_100001_at skos:altLabel "T3g; Ctg3; Ctg-3" .
-gn:probeset_100001_at gnt:hasChip gn:platform_mg_u74av2 .
-gn:probeset_100001_at gnt:symbol "Cd3g" .
-gn:probeset_100001_at dct:description "CD3d antigen, gamma polypeptide" .
-gn:probeset_100001_at gnt:chr "9" .
-gn:probeset_100001_at gnt:mb "44.970689"^^xsd:double .
-gn:probeset_100001_at gnt:mbMm8 "44.721684"^^xsd:double .
-gn:probeset_100001_at gnt:mb2016 "44.778772"^^xsd:double .
-gn:probeset_100001_at gnt:hasSpecificity "9.3" .
-gn:probeset_100001_at gnt:hasBlatScore "186" .
-gn:probeset_100001_at gnt:hasBlatMbStart "44.970689"^^xsd:double .
-gn:probeset_100001_at gnt:hasBlatMbStart2016 "44.778772"^^xsd:double .
-gn:probeset_100001_at gnt:hasBlatMbEnd "44.971291"^^xsd:double .
-gn:probeset_100001_at gnt:hasBlatMbEnd2016 "44.778772"^^xsd:double .
-gn:probeset_100001_at gnt:hasBlatSeq "CTCTGTTGCAAAATGAACAGCTGTACAGCCCCTCAAGGACCGGGAATATGACCAGTACAGCCATCTCCAAGGAAACCAACTGAGGAAGAAGTGAACTCAGCAGGACTCAGGGTGTCCCCACAATGCATTTTGGAGAGAGCCCAGACTGCAAGCAGAGAGGAAGAACTGAGGAAAACAAGCACAGCGTGGTGTT" .
-gn:probeset_100001_at gnt:hasTargetSeq "ctctgttgcaaaatgaacagctgtaccagcccctcaaggaccgggaatatgaccagtacagccatctccaaggaaaccaactgaggaagaagtgaactcagcaggactcagggtgtccccccttntatccagcacccagaatcaaaacaatgcattttggagagagcccagtagagagattttcaaccctacaggtagactgcaagcagagaggaagaactgtcaaagaaattttggtcttttttttttttttnncaaaataaaataaaagcttggaggagccagtggtatgantnnnnnntgnancanttgtcaaccttgtttggggttnncagcaccccacccccagaccccccaaaaaaattcagtgaaggaaaacaagcacagcgtggtgtt" .
-gn:probeset_100001_at gnt:hasHomologeneId homologene:55 .
-gn:probeset_100001_at gnt:hasOmimId omim:186740 .
+gn:probeset100001_at rdf:type gnc:Probeset .
+gn:probeset100001_at rdfs:label "100001_at" .
+gn:probeset100001_at skos:altLabel "T3g; Ctg3; Ctg-3" .
+gn:probeset100001_at gnt:hasChip gn:platformMg_u74av2 .
+gn:probeset100001_at gnt:symbol "Cd3g" .
+gn:probeset100001_at dct:description "CD3d antigen, gamma polypeptide" .
+gn:probeset100001_at gnt:chr "9" .
+gn:probeset100001_at gnt:mb "44.970689"^^xsd:double .
+gn:probeset100001_at gnt:mbMm8 "44.721684"^^xsd:double .
+gn:probeset100001_at gnt:mb2016 "44.778772"^^xsd:double .
+gn:probeset100001_at gnt:hasSpecificity "9.3" .
+gn:probeset100001_at gnt:hasBlatScore "186" .
+gn:probeset100001_at gnt:hasBlatMbStart "44.970689"^^xsd:double .
+gn:probeset100001_at gnt:hasBlatMbStart2016 "44.778772"^^xsd:double .
+gn:probeset100001_at gnt:hasBlatMbEnd "44.971291"^^xsd:double .
+gn:probeset100001_at gnt:hasBlatMbEnd2016 "44.778772"^^xsd:double .
+gn:probeset100001_at gnt:hasBlatSeq "CTCTGTTGCAAAATGAACAGCTGTACAGCCCCTCAAGGACCGGGAATATGACCAGTACAGCCATCTCCAAGGAAACCAACTGAGGAAGAAGTGAACTCAGCAGGACTCAGGGTGTCCCCACAATGCATTTTGGAGAGAGCCCAGACTGCAAGCAGAGAGGAAGAACTGAGGAAAACAAGCACAGCGTGGTGTT" .
+gn:probeset100001_at gnt:hasTargetSeq "ctctgttgcaaaatgaacagctgtaccagcccctcaaggaccgggaatatgaccagtacagccatctccaaggaaaccaactgaggaagaagtgaactcagcaggactcagggtgtccccccttntatccagcacccagaatcaaaacaatgcattttggagagagcccagtagagagattttcaaccctacaggtagactgcaagcagagaggaagaactgtcaaagaaattttggtcttttttttttttttnncaaaataaaataaaagcttggaggagccagtggtatgantnnnnnntgnancanttgtcaaccttgtttggggttnncagcaccccacccccagaccccccaaaaaaattcagtgaaggaaaacaagcacagcgtggtgtt" .
+gn:probeset100001_at gnt:hasHomologeneId homologene:55 .
+gn:probeset100001_at gnt:hasOmimId omim:186740 .
 ```
 

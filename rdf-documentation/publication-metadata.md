@@ -46,6 +46,6 @@ SELECT * WHERE {
 Expected Result:
 
 ```rdf
-gn:unpublished_1 rdf:type fabio:ResearchPaper .
+gn:unpublished1 rdf:type fabio:ResearchPaper .
 ```
 
