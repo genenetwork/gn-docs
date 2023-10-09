@@ -29,6 +29,7 @@ The GN project is directed by a leadership team that was formed in October 2023 
 ## Pjotr Prins
 
 => https://thebird.nl/
+=> https://mastodon.social/@pjotrprins
 
 ## Saunak Sen
 
