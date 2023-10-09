@@ -1,6 +1,6 @@
 # GeneNetwork Leadership Team
 
-The GN project is directed by a leadership team that meets every month. Current members are:
+The GN project is directed by a leadership team that was formed in October 2023 and meets every month. Current members are:
 
 ## Rupert Overall
 
