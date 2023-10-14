@@ -25,12 +25,13 @@ This heavily used cluster, however, is almost self-managed by its users and was 
 <table border="0">
 <tr>
   <td>
-    <img style="width: 40%; margin: 20px 0px;" alt="Octopus HPC" src="https://github.com/genenetwork/gn-docs/raw/master/general/help/octopus.jpg"/>
+    <img style="margin: 20px 0px;" alt="Octopus HPC" src="https://github.com/genenetwork/gn-docs/raw/master/general/help/octopus.jpg"/>
   </td>
   <td>
-    <img style="width: 40%; margin: 20px 0px;" alt="Garrison and Prins" src="https://github.com/genenetwork/gn-docs/raw/master/general/help/garrison-prins.jpg"/>
+    <img style="margin: 20px 0px;" alt="Garrison and Prins" src="https://github.com/genenetwork/gn-docs/raw/master/general/help/garrison-prins.jpg"/>
   </td>
 </tr>
+</table>
 
 ## Backups
 
