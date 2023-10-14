@@ -10,7 +10,7 @@ We also run [continuous integration](https://ci.genenetwork.org/) and [continuou
 The computing facility has four computer racks dedicated to GeneNetwork-related work.
 Each rack has a mix of Dell PowerEdge servers (from a few older low-end R610s, R6515, and two R7425 AMD Epyc 64-core 256GB RAM systems - tux01 and tux02 - running the GeneNetwork web services).
 We also support several more experimental systems, including a 40-core R7425 system with 196 GB RAM and 2x NVIDIA V100 GPU (tux03), and one Penguin Computing Relion 2600GT systems (Penguin2) with NVIDIA Tesla K80 GPU used for software development and to serve outside-facing less secure R/shiny and Python services that run in isolated containers. Effectively, we have three outward facing servers that are fully used by the GeneNetwork team with a total of 64+64+40+28 = 196 real cores.
-In 2023 we added upgrades to tux01 and tux02 -- tux04 and tux05 resp. --- using the latest AMD Genoa EPYC processors adding a total of 96 real CPU cores running at 4GHz. These two machines have 768Gb RAM.
+In 2023 we added upgrades to tux01 and tux02 -- tux04 and tux05 resp. --- using the latest AMD Genoa EPYC processors adding a total of 96 real CPU cores running at 4GHz. These two machines have 768Gb RAM each.
 
 ## Octopus HPC cluster
 
@@ -32,6 +32,10 @@ The total number of cores for Octopus is now 456 real CPU cores.
   </td>
 </tr>
 </table>
+
+## Lambda server
+
+Since August 2023, for large language models (LLMs) and AI, we have a 128 real core Lambda server with 1TB RAM, 40TB of nvme storage AND 8x NVIDIA RTX6000: a total of approx. 144,000 compute cores.
 
 ## Backups
 
