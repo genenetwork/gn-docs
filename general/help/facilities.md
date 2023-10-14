@@ -1,16 +1,16 @@
 # Equipment
 
-The core [GeneNetwork team](https://github.com/genenetwork/) maintains modern Linux servers and storage systems for genetic, genomic, pangenome and phenome analyses.
+The core [GeneNetwork team](https://github.com/genenetwork/) and [Pangenome team](https://github.com/pangenome) maintains modern Linux servers and storage systems for genetic, genomic, pangenome, pangenetics and phenome analyses.
 Machines are located in in the main UTHSC machine room of the Lamar Alexander Building at UTHSC (Memphis TN campus).
-The whole team has access to this space for upgrades and hardware maintenance.
-We use remote racadm and/or ipmi on all important machines.
+The team has access to this space for upgrades and hardware maintenance.
+We use remote racadm and/or ipmi to all machines out-of-band.
 Issues and work packages are tracked through our 'tissue' [tracker board](https://issues.genenetwork.org/) and we use git repositories for documentation, issue tracking and planning (mostly public and some private repos available on request).
 We also run [continuous integration](https://ci.genenetwork.org/) and [continuous deployment](https://cd.genenetwork.org/) services online (CI and CD).
 
 The computing facility has four computer racks dedicated to GeneNetwork-related work.
-Each rack has a mix of Dell PowerEdge servers (from a few older low-end R610s, R6515, and two recent R7425 AMD Epyc 64-core 256GB RAM systems - tux01 and tux02 - running the GeneNetwork web services).
+Each rack has a mix of Dell PowerEdge servers (from a few older low-end R610s, R6515, and two R7425 AMD Epyc 64-core 256GB RAM systems - tux01 and tux02 - running the GeneNetwork web services).
 We also support several more experimental systems, including a 40-core R7425 system with 196 GB RAM and 2x NVIDIA V100 GPU (tux03), and one Penguin Computing Relion 2600GT systems (Penguin2) with NVIDIA Tesla K80 GPU used for software development and to serve outside-facing less secure R/shiny and Python services that run in isolated containers. Effectively, we have three outward facing servers that are fully used by the GeneNetwork team with a total of 64+64+40+28 = 196 real cores.
-We are in the process of installing upgrades to tux01 and tux02 using the latest AMD Genoa EPYC processors adding a total of 96 real CPU cores running at 4GHz. These two machines with 768Gb RAM each will be installed in June 2023.
+In 2023 we added upgrades to tux01 and tux02 -- tux04 and tux05 resp. --- using the latest AMD Genoa EPYC processors adding a total of 96 real CPU cores running at 4GHz. These two machines have 768Gb RAM.
 
 ## Octopus HPC cluster
 
@@ -20,7 +20,10 @@ All machines have large SSD storage (~10TB) driving 100+ TB shared network stora
 All Octopus nodes run Debian and GNU Guix and use Slurm for batch submission.
 We run lizardfs for distributed network file storage and we run the common workflow language (CWL) and Docker containers.
 The racks have dedicated 10Gbs high-speed Cisco switches and firewalls that are maintained by UTHSC IT staff.
-This heavily used cluster, however, is almost self-managed by its users and was featured on the GNU Guix High Performance Computing [2020](https://hpc.guix.info/blog/2021/02/guix-hpc-activity-report-2020/) and  [2022](https://hpc.guix.info/blog/2023/02/guix-hpc-activity-report-2022/) activity reports! In the near future we expect to double the number of nodes.
+This heavily used cluster, however, is almost self-managed by its users and was featured on the GNU Guix High Performance Computing [2020](https://hpc.guix.info/blog/2021/02/guix-hpc-activity-report-2020/) and  [2022](https://hpc.guix.info/blog/2023/02/guix-hpc-activity-report-2022/) activity reports!
+In 2023 we added 4 new AMD Genoa machines  processors adding a total of 192 real CPU cores running at 4GHz. These machines also have 768Gb RAM.
+
+The total number of cores for Octopus is now 456 real CPU cores.
 
 <table border="0" style="width:95%">
 <tr>
