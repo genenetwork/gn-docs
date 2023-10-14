@@ -25,7 +25,7 @@ This heavily used cluster, however, is almost self-managed by its users and was 
 <table border="0" style="width:75%">
 <tr>
   <td>
-    <img style="margin: 20px 0px" alt="Octopus HPC" width="800"  src="https://github.com/genenetwork/gn-docs/raw/master/general/help/combi.jpg"/>
+    <img style="margin: 20px 0px" alt="Octopus HPC" width="1000"  src="https://github.com/genenetwork/gn-docs/raw/master/general/help/combi.jpg"/>
   </td>
 </tr>
 </table>
