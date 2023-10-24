@@ -177,3 +177,131 @@ Example Results:
   "name": "HUB Winter Gsor families (2014-2022)"
 }
 ```
+
+
+## GET /metadata/datasets/:name
+
+Fetch information about a given dataset given it's name.
+
+```
+curl "localhost:8080/api/metadata/datasets/IBR_M_0204_M"
+```
+
+or
+
+```
+curl "localhost:8080/api/metadata/datasets/GN11"
+```
+
+Example Results:
+
+```
+{
+  "@context": {
+    "accessRights": "dct:accessRights",
+    "accessionId": "dct:identifier",
+    "acknowledgement": "gnt:hasAcknowledgement",
+    "altLabel": "skos:altLabel",
+    "caseInfo": "gnt:hasCaseInfo",
+    "classifiedUnder": "xkos:classifiedUnder",
+    "contactPoint": "dcat:contactPoint",
+    "created": "dct:created",
+    "data": "@graph",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/",
+    "description": "dct:description",
+    "ex": "http://example.org/stuff/1.0/",
+    "experimentDesignInfo": "gnt:hasExperimentDesignInfo",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geoSeriesId": "gnt:hasGeoSeriesId",
+    "gnt": "http://genenetwork.org/term/",
+    "id": "@id",
+    "inbredSet": "ex:belongsToInbredSet",
+    "info": "ex:info",
+    "label": "rdfs:label",
+    "normalization": "gnt:usesNormalization",
+    "notes": "gnt:hasNotes",
+    "organization": "foaf:Organization",
+    "platform": "ex:platform",
+    "prefLabel": "skos:prefLabel",
+    "processingInfo": "gnt:hasDataProcessingInfo",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "tissue": "ex:tissue",
+    "title": "dct:title",
+    "type": "@type",
+    "xkos": "http://rdf-vocabulary.ddialliance.org/xkos#"
+  },
+  "accessionId": "GN11",
+  "contactPoint": "Michael Miles",
+  "id": "http://genenetwork.org/id/Ibr_m_0204_m",
+  "inbredSet": "BXD Family",
+  "label": "IBR_M_0204_M",
+  "normalization": "MAS5",
+  "platform": {
+    "id": "http://genenetwork.org/id/platformMoe430",
+    "info": "[...]",
+    "label": "Affy Mouse Genome 430A, 430B, 430A 2.0 (GPL339,GPL340)",
+    "prefLabel": "MOE430",
+    "type": "http://genenetwork.org/category/geneChip"
+  },
+  "tissue": {
+    "id": "http://genenetwork.org/id/tissueBrn",
+    "info": "[...]",
+    "label": "Brain mRNA",
+    "type": "http://genenetwork.org/category/tissue"
+  },
+  "type": "dcat:Dataset"
+}
+```
+
+## GET /metadata/datasets/:group/list
+
+List datasets that belong to a given group.
+
+*Parameters:* page(default=0), per-page(default=10)
+
+```
+curl "localhost:8080/api/metadata/datasets/BXD/list"
+```
+
+Example Results:
+
+```
+{
+  "@context": {
+    "classifiedUnder": "xkos:classifiedUnder",
+    "created": "dct:created",
+    "currentPage": "ex:currentPage",
+    "data": "@graph",
+    "dct": "http://purl.org/dc/terms/",
+    "ex": "http://example.org/stuff/1.0/",
+    "id": "@id",
+    "name": "rdfs:label",
+    "pages": "ex:totalCount",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "result": "ex:result",
+    "resultItem": "ex:resultType",
+    "results": "ex:items",
+    "title": "dct:title",
+    "type": "@type",
+    "xkos": "http://rdf-vocabulary.ddialliance.org/xkos#"
+  },
+  "currentPage": 0,
+  "id": "ex:result",
+  "pages": 42,
+  "results": [
+    {
+      "created": "2001-09-22",
+      "name": "DBA2J-ONH-1212",
+      "title": "Molecular clustering identifies complement and endothelin induction as early events in a mouse model of glaucoma."
+    },
+    [...]
+    {
+      "created": "2003-06-01",
+      "name": "Br_U_0603_M"
+    }
+  ],
+  "type": "resultItem"
+}
+```
