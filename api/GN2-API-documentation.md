@@ -56,7 +56,7 @@ Example Result:
 }
 ```
 
-## GET /metadata/species/<name>
+## GET /metadata/species/:name
 
 Get a list of species with data available in GN.
 
@@ -143,7 +143,7 @@ Example Results:
 }
 ```
 
-## GET /metadata/groups/mouse
+## GET /metadata/groups/:name
 
 Fetch information about a given group given a species' name.
 
