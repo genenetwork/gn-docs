@@ -836,61 +836,62 @@ Example Result
     "pages": "ex:totalCount",
     "pubmed": "dct:references",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "species": "ex:species",
     "type": "@type",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "currentPage": 0,
   "entries": [
     {
+      "author": "Robert Williams",
+      "category": "Genetic variation and alleles",
+      "comment": "cis eQTL in BXD brain RNA-seq data with LRS of 33 and high D allele. No obvious trans target transcripts.",
+      "created": "2012-11-10T07:30:09",
+      "pubmed": "",
+      "species": "Mouse (Mus musculus, mm10)"
+    },
+    {
       "category": "Genetic variation and alleles",
       "comment": "Individual probe analysis:probably true cisQTL",
       "created": "2007-10-05T09:09:52",
-      "ex:species": "Mouse (Mus musculus, mm10)",
-      "pubmed": ""
-    },
-    {
-      "category": "Expression patterns: mature cells, tissues; Gene structure and organization; Genetic variation and alleles",
-      "comment": "cis QTL present in hippocampus LXS, ILM2970706 distal 3' UTR, 121.4 LRS, ISS increases the trait;",
-      "created": "2007-05-10T05:52:22",
-      "ex:species": "Mouse (Mus musculus, mm10)",
-      "pubmed": ""
+      "pubmed": "",
+      "species": "Mouse (Mus musculus, mm10)"
     },
     {
       "category": "",
       "comment": "hippocampal CA1-3 expression signature",
       "created": "2005-12-16T15:23:23",
-      "ex:species": "Mouse (Mus musculus, mm10)",
-      "pubmed": "http://rdf.ncbi.nlm.nih.gov/pubmed/15084669"
+      "pubmed": "http://rdf.ncbi.nlm.nih.gov/pubmed/15084669",
+      "species": "Mouse (Mus musculus, mm10)"
     },
     {
       "category": "Probes and probe sets; Transcriptional and translation control",
       "comment": "Validated strong cis-QTL in CNS using allele-specific expression ASE SNaPshot assay Daniel Ciobanu and al., 2007. Possible 3' UTR variants.",
       "created": "2007-05-08T09:46:07",
-      "ex:species": "Mouse (Mus musculus, mm10)",
-      "pubmed": ""
+      "pubmed": "",
+      "species": "Mouse (Mus musculus, mm10)"
     },
     {
-      "author": "Robert Williams",
-      "category": "Genetic variation and alleles",
-      "comment": "cis eQTL in BXD brain RNA-seq data with LRS of 33 and high D allele. No obvious trans target transcripts.",
-      "created": "2012-11-10T07:30:09",
-      "ex:species": "Mouse (Mus musculus, mm10)",
-      "pubmed": ""
+      "category": "Expression patterns: mature cells, tissues; Gene structure and organization; Genetic variation and alleles",
+      "comment": "cis QTL present in hippocampus LXS, ILM2970706 distal 3' UTR, 121.4 LRS, ISS increases the trait;",
+      "created": "2007-05-10T05:52:22",
+      "pubmed": "",
+      "species": "Mouse (Mus musculus, mm10)"
     },
     {
       "category": "Health and disease associations",
       "comment": "Merck, Rosetta, Schadt, Lusis target gene associated with obesity, diabetes and atherosclerosis.",
       "created": "2008-05-13T08:48:50",
-      "ex:species": "Mouse (Mus musculus, mm10)",
-      "pubmed": ""
+      "pubmed": "",
+      "species": "Mouse (Mus musculus, mm10)"
     },
     {
       "author": "Robert Williams",
       "category": "",
       "comment": "Of interest to Lu Lu and colleagues 2015 due to modulation of expression of this gene in hippocampus following stress or ethanol BXD Illumina Hippocampus data sets.",
       "created": "2015-05-26T11:37:57",
-      "ex:species": "Mouse (Mus musculus, mm10)",
-      "pubmed": ""
+      "pubmed": "",
+      "species": "Mouse (Mus musculus, mm10)"
     }
   ],
   "id": "http://genenetwork.org/id/symbolLpl",
@@ -899,13 +900,13 @@ Example Result
 }
 ```
 
-## GET /genewiki/ncbi/:symol
+## GET /genewiki/ncbi/:symbol
 Get genewiki entries from NCBI about a given symbol
 
 *Parameters:* page(default=0), per-page(default=10)
 
 ```
-curl "localhost:8080/api/metadata/genewikis/ncbi/Lpl"
+curl "localhost:8080/api/metadata/genewikis/ncbi/Lpl?per-page=3"
 ```
 
 Example Result
@@ -913,134 +914,61 @@ Example Result
 ```
 {
   "@context": {
-    "author": "dct:creator",
-    "category": "gnt:belongsToCategory",
-    "comment": "rdfs:comment",
+    "author": "dct:creator", 
+    "category": "gnt:belongsToCategory", 
+    "comment": "rdfs:comment", 
     "created": {
-      "@id": "dct:created",
+      "@id": "dct:created", 
       "@type": "xsd:datetime"
-    },
-    "currentPage": "ex:currentPage",
-    "data": "@graph",
-    "dct": "http://purl.org/dc/terms/",
-    "entries": "ex:entries",
-    "ex": "http://example.org/stuff/1.0/",
-    "gnc": "http://genenetwork.org/category/",
-    "gnt": "http://genenetwork.org/term/",
-    "id": "@id",
-    "pages": "ex:totalCount",
-    "pubmed": "dct:references",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "type": "@type",
+    }, 
+    "currentPage": "ex:currentPage", 
+    "data": "@graph", 
+    "dct": "http://purl.org/dc/terms/", 
+    "entries": "ex:entries", 
+    "ex": "http://example.org/stuff/1.0/", 
+    "geneId": "gnt:hasGeneId", 
+    "gnc": "http://genenetwork.org/category/", 
+    "gnt": "http://genenetwork.org/term/", 
+    "id": "@id", 
+    "pages": "ex:totalCount", 
+    "pubmed": "dct:references", 
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#", 
+    "species": "ex:species", 
+    "type": "@type", 
     "xsd": "http://www.w3.org/2001/XMLSchema#"
-  },
-  "data": [
+  }, 
+  "currentPage": 0, 
+  "entries": [
     {
-      "currentPage": 0,
-      "entries": [
-        {
-          "comment": "Results support the use of LPL and ADAM29 gene expression associated to IGHV mutational status for predicting the clinical outcome of patients treated by oral fludarabine + cyclophosphamide and could be considered for treatment strategies.",
-          "created": "2010-01-20T18:00:00",
-          "ex:species": "Human (Homo sapiens, hg19)",
-          "gnt:hasGeneId": {
-            "id": "http://www.ncbi.nlm.nih.gov/gene?cmd=Retrieve&dopt=Graphics&list_uids=4023"
-          },
-          "pubmed": ""
-        },
-        {
-          "comment": "Observational study of gene-disease association and pharmacogenomic / toxicogenomic. HuGE Navigator",
-          "created": "2009-02-11T15:30:00",
-          "ex:species": "Human (Homo sapiens, hg19)",
-          "gnt:hasGeneId": {
-            "id": "http://www.ncbi.nlm.nih.gov/gene?cmd=Retrieve&dopt=Graphics&list_uids=4023"
-          },
-          "pubmed": ""
-        },
-        {
-          "comment": "analysis of human placental lipoprotein lipase gestational and hormonal regulation",
-          "created": "2010-01-20T18:00:00",
-          "ex:species": "Human (Homo sapiens, hg19)",
-          "gnt:hasGeneId": {
-            "id": "http://www.ncbi.nlm.nih.gov/gene?cmd=Retrieve&dopt=Graphics&list_uids=4023"
-          },
-          "pubmed": ""
-        },
-        {
-          "comment": "LPL 44X alleles were associated with moderately increased LDL peak particle size.",
-          "created": "2010-01-20T18:00:00",
-          "ex:species": "Human (Homo sapiens, hg19)",
-          "gnt:hasGeneId": {
-            "id": "http://www.ncbi.nlm.nih.gov/gene?cmd=Retrieve&dopt=Graphics&list_uids=4023"
-          },
-          "pubmed": ""
-        },
-        {
-          "comment": "LPL gene variant is involved in carotid atherosclerotic lesions.",
-          "created": "2010-01-20T18:00:00",
-          "ex:species": "Human (Homo sapiens, hg19)",
-          "gnt:hasGeneId": {
-            "id": "http://www.ncbi.nlm.nih.gov/gene?cmd=Retrieve&dopt=Graphics&list_uids=4023"
-          },
-          "pubmed": ""
-        },
-        {
-          "comment": "Metformin may increase LPL production, thereby increasing low density lipoprotein particle size which may be independent of the hypoglycemic effect of metforminin type 2 diabetes.",
-          "created": "2010-01-20T18:00:00",
-          "ex:species": "Human (Homo sapiens, hg19)",
-          "gnt:hasGeneId": {
-            "id": "http://www.ncbi.nlm.nih.gov/gene?cmd=Retrieve&dopt=Graphics&list_uids=4023"
-          },
-          "pubmed": ""
-        },
-        {
-          "comment": "LPL may represent a link between low adiponectin levels and dyslipidemia in both nondiabetic individuals and patients with type 2 diabetes.",
-          "created": "2010-01-20T18:00:00",
-          "ex:species": "Human (Homo sapiens, hg19)",
-          "gnt:hasGeneId": {
-            "id": "http://www.ncbi.nlm.nih.gov/gene?cmd=Retrieve&dopt=Graphics&list_uids=4023"
-          },
-          "pubmed": ""
-        },
-        {
-          "comment": "The PvuII polymorphism cannot be used as independent genetic risk factor for coronary artery disease in patients of Saudi Arabic descent.",
-          "created": "2010-01-20T18:00:00",
-          "ex:species": "Human (Homo sapiens, hg19)",
-          "gnt:hasGeneId": {
-            "id": "http://www.ncbi.nlm.nih.gov/gene?cmd=Retrieve&dopt=Graphics&list_uids=4023"
-          },
-          "pubmed": ""
-        }
-      ],
-      "id": "http://genenetwork.org/id/symbolLPL",
-      "pages": 48,
-      "type": "gnc:GNWikiEntry"
-    },
+      "comment": "LPL gene variant is involved in carotid atherosclerotic lesions.", 
+      "created": "2010-01-20T18:00:00", 
+      "geneId": {
+        "id": "http://www.ncbi.nlm.nih.gov/gene?cmd=Retrieve&dopt=Graphics&list_uids=4023"
+      }, 
+      "pubmed": "", 
+      "species": "Human (Homo sapiens, hg19)"
+    }, 
     {
-      "currentPage": 0,
-      "entries": [
-        {
-          "comment": "LPL activity can be inhibited by endogenous apoC-I in apoE-knockout mice.",
-          "created": "2010-01-20T18:00:00",
-          "ex:species": "Mouse (Mus musculus, mm10)",
-          "gnt:hasGeneId": {
-            "id": "http://www.ncbi.nlm.nih.gov/gene?cmd=Retrieve&dopt=Graphics&list_uids=16956"
-          },
-          "pubmed": ""
-        },
-        {
-          "comment": "STZ-induced diabetes causes a decrease in LPL activity in the sciatic nerve that is reversible with insulin treatment",
-          "created": "2010-01-20T18:00:00",
-          "ex:species": "Rat (Rattus norvegicus, rn7.2)",
-          "gnt:hasGeneId": {
-            "id": "http://www.ncbi.nlm.nih.gov/gene?cmd=Retrieve&dopt=Graphics&list_uids=24539"
-          },
-          "pubmed": ""
-        }
-      ],
-      "id": "http://genenetwork.org/id/symbolLpl",
-      "pages": 48,
-      "type": "gnc:GNWikiEntry"
+      "comment": "LPL 44X alleles were associated with moderately increased LDL peak particle size.", 
+      "created": "2010-01-20T18:00:00", 
+      "geneId": {
+        "id": "http://www.ncbi.nlm.nih.gov/gene?cmd=Retrieve&dopt=Graphics&list_uids=4023"
+      }, 
+      "pubmed": "", 
+      "species": "Human (Homo sapiens, hg19)"
+    }, 
+    {
+      "comment": "Observational study of gene-disease association and pharmacogenomic / toxicogenomic. HuGE Navigator", 
+      "created": "2009-02-11T15:30:00", 
+      "geneId": {
+        "id": "http://www.ncbi.nlm.nih.gov/gene?cmd=Retrieve&dopt=Graphics&list_uids=4023"
+      }, 
+      "pubmed": "", 
+      "species": "Human (Homo sapiens, hg19)"
     }
-  ]
+  ], 
+  "id": "http://genenetwork.org/id/symbolLPL", 
+  "pages": 158, 
+  "type": "gnc:GNWikiEntry"
 }
 ```
