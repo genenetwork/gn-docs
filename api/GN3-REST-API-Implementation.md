@@ -103,7 +103,7 @@ Fetch all groups.
 curl "localhost:8080/api/metadata/groups"
 ```
 
-Example Results:
+Example Result:
 
 ```
 {
@@ -151,7 +151,7 @@ Fetch information about a given group given a species' name.
 curl "localhost:8080/api/metadata/groups/bat"
 ```
 
-Example Results:
+Example Result:
 
 ```
 {
@@ -193,7 +193,7 @@ or
 curl "localhost:8080/api/metadata/datasets/GN11"
 ```
 
-Example Results:
+Example Result:
 
 ```
 {
@@ -265,7 +265,7 @@ List datasets that belong to a given group.
 curl "localhost:8080/api/metadata/datasets/BXD/list"
 ```
 
-Example Results:
+Example Result:
 
 ```
 {
@@ -315,7 +315,7 @@ Search datasets based of it's title.
 curl "localhost:8080/api/metadata/datasets/search/BXD?page=2&limit=3"
 ```
 
-Example Results:
+Example Result:
 
 ```
 {
@@ -377,7 +377,7 @@ Search datasets based of it's title.
 curl "localhost:8080/api/metadata/datasets/search/BXD?page=2&limit=3"
 ```
 
-Example Result
+Example Result:
 
 ```
 {
@@ -520,7 +520,7 @@ curl "localhost:8080/api/metadata/publications/search/BXD?page=0&limit=3"
 ```
 
 
-Example Results:
+Example Result:
 
 ```
 {
@@ -759,7 +759,7 @@ Fetch metadata about a given genotype given it's name.
 curl "localhost:8080/api/metadata/genotypes/D1Mit3"
 ```
 
-Example Result
+Example Result:
 
 ```
 {
@@ -813,7 +813,7 @@ Get genewiki entries from Genetwork about a given symbol
 curl "localhost:8080/api/metadata/genewikis/gn/Lpl"
 ```
 
-Example Result
+Example Result:
 
 ```
 {
@@ -909,7 +909,7 @@ Get genewiki entries from NCBI about a given symbol
 curl "localhost:8080/api/metadata/genewikis/ncbi/Lpl?per-page=3"
 ```
 
-Example Result
+Example Result:
 
 ```
 {
