@@ -377,6 +377,90 @@ Search datasets based of it's title.
 curl "localhost:8080/api/metadata/datasets/search/BXD?page=2&limit=3"
 ```
 
+Example Result
+
+```
+{
+  "@context": {
+    "classifiedUnder": "xkos:classifiedUnder",
+    "currentPage": "ex:currentPage",
+    "data": "@graph",
+    "dataset": "rdfs:label",
+    "dct": "http://purl.org/dc/terms/",
+    "ex": "http://example.org/stuff/1.0/",
+    "id": "@id",
+    "inbredSet": "ex:belongsToInbredSet",
+    "pages": "ex:totalCount",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "result": "ex:result",
+    "resultItem": "ex:resultType",
+    "results": "ex:items",
+    "title": "dct:title",
+    "type": "@type",
+    "xkos": "http://rdf-vocabulary.ddialliance.org/xkos#"
+  },
+  "data": [
+    {
+      "currentPage": 2,
+      "id": "ex:result",
+      "pages": 118,
+      "results": [
+        {
+          "dataset": "BR_U_0304_DPMMR",
+          "inbredSet": "BXD Family"
+        },
+        {
+          "dataset": "Br_U_0303_M",
+          "inbredSet": "BXD Family"
+        },
+        {
+          "dataset": "BR_M2_1106_R",
+          "inbredSet": "BXD Family",
+          "title": "Candidate genes and their regulatory elements: alcohol preference and tolerance"
+        },
+        {
+          "dataset": "BR_M2_1106_R",
+          "inbredSet": "BXD Family",
+          "title": "Candidate genes and their regulatory elements: alcohol preference and tolerance"
+        },
+        {
+          "dataset": "BR_M2_1106_R",
+          "inbredSet": "BXD Family",
+          "title": "Candidate genes and their regulatory elements: alcohol preference and tolerance"
+        },
+        {
+          "classifiedUnder": "Phenotype",
+          "dataset": "B6D2RIPublish",
+          "inbredSet": "BXD Aged Hippocampus",
+          "title": "BXD Aged Hippocampus eQTL (Dresden UTHSC 2015)"
+        },
+        {
+          "dataset": "Br_U_0303_M",
+          "inbredSet": "BXD Family"
+        },
+        {
+          "dataset": "BR_M2_1106_R",
+          "inbredSet": "BXD Family",
+          "title": "Candidate genes and their regulatory elements: alcohol preference and tolerance"
+        },
+        {
+          "classifiedUnder": "Phenotype",
+          "dataset": "B6D2RIPublish",
+          "inbredSet": "BXD Aged Hippocampus",
+          "title": "BXD Aged Hippocampus eQTL (Dresden UTHSC 2015)"
+        },
+        {
+          "dataset": "Br_U_0303_M",
+          "inbredSet": "BXD Family"
+        }
+      ],
+      "type": "resultItem"
+    }
+  ]
+}
+
+```
+
 ## GET /metadata/publication/:name
 
 Get a publication given it's name.  Name can be a pubmedId or a GN-specific identifier for unpublished work.
