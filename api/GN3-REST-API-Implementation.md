@@ -972,3 +972,77 @@ Example Result:
   "type": "gnc:GNWikiEntry"
 }
 ```
+## GET /metadata/probesets/:name
+
+Get probeset metadat given it's name
+
+```
+curl "localhost:8080/api/metadata/probesets/1436869_at"
+```
+
+Expected Result:
+
+```
+{
+  "@context": {
+    "alias": "skos:altLabel",
+    "blatMbEnd": "gnt:hasBlatMbEnd",
+    "blatMbEnd2016": "gnt:hasBlatMbEnd2016",
+    "blatMbStart": "gnt:hasBlatMbStart",
+    "blatMbStart2016": "gnt:hasBlatMbStart2016",
+    "blatScore": "gnt:hasBlatScore",
+    "blatSeq": "gnt:hasBlatSeq",
+    "chebi": "gnt:hasChebiId",
+    "chip": "gnt:hasChip",
+    "chr": "gnt:chr",
+    "data": "@graph",
+    "dct": "http://purl.org/dc/terms/",
+    "description": "dct:description",
+    "gnt": "http://genenetwork.org/term/",
+    "homologene": "gnt:hasHomologeneId",
+    "id": "@id",
+    "kegg": "gnt:hasKeggId",
+    "mb": "gnt:mb",
+    "mb2016": "gnt:mb2016",
+    "mbMm8": "gnt:mbMm8",
+    "name": "rdfs:label",
+    "omim": "gnt:hasOmimId",
+    "pubchem": "gnt:hasPubChemId",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "specificity": "gnt:hasSpecificity",
+    "symbol": "gnt:symbol",
+    "targetId": "gnt:hasTargetId",
+    "targetSeq": "gnt:hasTargetSeq",
+    "targetsRegion": "gnt:targetsRegion",
+    "type": "@type",
+    "uniprot": "gnt:hasUniprotId"
+  },
+  "alias": "HHG1; HLP3; HPE3; SMMCI; Dsh; Hhg1",
+  "blatMbEnd": 28.4573,
+  "blatMbEnd2016": 28.7837,
+  "blatMbStart": 28.4572,
+  "blatMbStart2016": 28.7837,
+  "blatScore": "72",
+  "blatSeq": "CATGGGGGTCCACAAATTATATTTTAATTTAACTATTTTCCAATGTAATAGCCGTCTTCTGTACTGCCTTCTT",
+  "chip": "Affy Mouse Genome 430 2.0 (GPL1261)",
+  "chr": "5",
+  "description": "sonic hedgehog hedgehog",
+  "homologene": {
+    "id": "https://bio2rdf.org/homologene:30961"
+  },
+  "id": "http://genenetwork.org/id/probeset1436869_at",
+  "mb": 28.4572,
+  "mb2016": 28.7837,
+  "mbMm8": 28.7879,
+  "name": "1436869_at",
+  "omim": {
+    "id": "https://www.omim.org/entry/600725"
+  },
+  "specificity": "3.6",
+  "symbol": "Shh",
+  "targetSeq": "catgggggtccacaaattatatttttatacacagaattgtanattanatttttgagagatcaatacctaantgaatgacatttcattttttgaaagtgtaaaatatgnaaatatattattttaatttaactattttccaatgtaatagccgtcttctgtactgccttctt",
+  "type": "http://genenetwork.org/category/Probeset"
+}
+```
