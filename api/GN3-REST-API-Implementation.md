@@ -7,7 +7,7 @@ The following end-points are available to all users.  The result of every query 
 Returns a list of species.
 
 ```
-curl localhost:8080/api/metadata/species
+curl "https://cd.genenetwork.org/api3/metadata/species"
 ```
 
 Example Result:
@@ -61,7 +61,7 @@ Example Result:
 Get a list of species with data available in GN.
 
 ```
-curl "localhost:8080/api/metadata/species/bat"
+curl "https://cd.genenetwork.org/api3/metadata/species/bat"
 ```
 
 Example Result:
@@ -100,7 +100,7 @@ Example Result:
 Fetch all groups.
 
 ```
-curl "localhost:8080/api/metadata/groups"
+curl "https://cd.genenetwork.org/api3/metadata/groups"
 ```
 
 Example Result:
@@ -148,7 +148,7 @@ Example Result:
 Fetch information about a given group given a species' name.
 
 ```
-curl "localhost:8080/api/metadata/groups/bat"
+curl "https://cd.genenetwork.org/api3/metadata/groups/bat"
 ```
 
 Example Result:
@@ -184,13 +184,13 @@ Example Result:
 Fetch information about a given dataset given it's name.
 
 ```
-curl "localhost:8080/api/metadata/datasets/IBR_M_0204_M"
+curl "https://cd.genenetwork.org/api3/metadata/datasets/IBR_M_0204_M"
 ```
 
 or
 
 ```
-curl "localhost:8080/api/metadata/datasets/GN11"
+curl "https://cd.genenetwork.org/api3/metadata/datasets/GN11"
 ```
 
 Example Result:
@@ -262,7 +262,7 @@ List datasets that belong to a given group.
 *Parameters:* page(default=0), per-page(default=10)
 
 ```
-curl "localhost:8080/api/metadata/datasets/BXD/list"
+curl "https://cd.genenetwork.org/api3/metadata/datasets/BXD/list"
 ```
 
 Example Result:
@@ -312,7 +312,7 @@ Search datasets based of it's title.
 *Parameters:* page(default=0), per-page(default=10)
 
 ```
-curl "localhost:8080/api/metadata/datasets/search/BXD?page=2&limit=3"
+curl "https://cd.genenetwork.org/api3/metadata/datasets/search/BXD?page=2&limit=3"
 ```
 
 Example Result:
@@ -374,7 +374,7 @@ Search datasets based of it's title.
 *Parameters:* page(default=0), per-page(default=10)
 
 ```
-curl "localhost:8080/api/metadata/datasets/search/BXD?page=2&limit=3"
+curl "https://cd.genenetwork.org/api3/metadata/datasets/search/BXD?page=2&limit=3"
 ```
 
 Example Result:
@@ -466,7 +466,7 @@ Example Result:
 Get a publication given it's name.  Name can be a pubmedId or a GN-specific identifier for unpublished work.
 
 ```
-curl localhost:8080/api/metadata/publications/2760876
+curl "https://cd.genenetwork.org/api3/metadata/publications/2760876"
 ```
 
 Example Result:
@@ -516,7 +516,7 @@ Example Result:
 Search publications using :term.
 
 ```
-curl "localhost:8080/api/metadata/publications/search/BXD?page=0&limit=3"
+curl "https://cd.genenetwork.org/api3/metadata/publications/search/BXD?page=0&limit=3"
 ```
 
 
@@ -587,7 +587,7 @@ Example Result:
 Fetch metadata about a given phenotype given it's name.
 
 ```
-curl "localhost:8080/api/metadata/phenotypes/BXD_10007"
+curl "https://cd.genenetwork.org/api3/metadata/phenotypes/BXD_10007"
 ```
 
 Example Result:
@@ -672,7 +672,7 @@ Example Result:
 Fetch metadata about a given phenotype given it's group and name.
 
 ```
-curl "localhost:8080/api/metadata/phenotypes/BXD/10007"
+curl "https://cd.genenetwork.org/api3/metadata/phenotypes/BXD/10007"
 ```
 
 Example Result:
@@ -756,7 +756,7 @@ Example Result:
 Fetch metadata about a given genotype given it's name.
 
 ```
-curl "localhost:8080/api/metadata/genotypes/D1Mit3"
+curl "https://cd.genenetwork.org/api3/metadata/genotypes/D1Mit3"
 ```
 
 Example Result:
@@ -810,7 +810,7 @@ Get genewiki entries from Genetwork about a given symbol
 *Parameters:* page(default=0), per-page(default=10)
 
 ```
-curl "localhost:8080/api/metadata/genewikis/gn/Lpl"
+curl "https://cd.genenetwork.org/api3/metadata/genewikis/gn/Lpl"
 ```
 
 Example Result:
@@ -906,7 +906,7 @@ Get genewiki entries from NCBI about a given symbol
 *Parameters:* page(default=0), per-page(default=10)
 
 ```
-curl "localhost:8080/api/metadata/genewikis/ncbi/Lpl?per-page=3"
+curl "https://cd.genenetwork.org/api3/metadata/genewikis/ncbi/Lpl?per-page=3"
 ```
 
 Example Result:
@@ -977,7 +977,7 @@ Example Result:
 Get probeset metadat given it's name
 
 ```
-curl "localhost:8080/api/metadata/probesets/1436869_at"
+curl "https://cd.genenetwork.org/api3/metadata/probesets/1436869_at"
 ```
 
 Expected Result:
