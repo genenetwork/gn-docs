@@ -312,7 +312,7 @@ Search datasets based of it's title.
 *Parameters:* page(default=0), per-page(default=10)
 
 ```
-curl "https://cd.genenetwork.org/api3/metadata/datasets/search/BXD?page=2&limit=3"
+curl "https://cd.genenetwork.org/api3/metadata/datasets/search/BXD?page=2&per-page=3"
 ```
 
 Example Result:
@@ -374,7 +374,7 @@ Search datasets based of it's title.
 *Parameters:* page(default=0), per-page(default=10)
 
 ```
-curl "https://cd.genenetwork.org/api3/metadata/datasets/search/BXD?page=2&limit=3"
+curl "https://cd.genenetwork.org/api3/metadata/datasets/search/BXD?page=2&per-page=3"
 ```
 
 Example Result:
@@ -516,7 +516,7 @@ Example Result:
 Search publications using :term.
 
 ```
-curl "https://cd.genenetwork.org/api3/metadata/publications/search/BXD?page=0&limit=3"
+curl "https://cd.genenetwork.org/api3/metadata/publications/search/BXD?page=0&per-page=3"
 ```
 
 
