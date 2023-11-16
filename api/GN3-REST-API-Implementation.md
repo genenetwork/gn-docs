@@ -461,7 +461,7 @@ Example Result:
 
 ```
 
-## GET /metadata/publication/:name
+## GET /metadata/publications/:name
 
 Get a publication given it's name.  Name can be a pubmedId or a GN-specific identifier for unpublished work.
 
