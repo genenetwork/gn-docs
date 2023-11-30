@@ -680,34 +680,43 @@ Example Result:
 ```
 {
   "@context": {
-    "LRS": "gnt:LRS",
-    "abbreviation": "dct:abbreviation",
+    "abbreviation": "gnt:abbreviation",
     "abstract": "dct:abstract",
     "additive": "gnt:additive",
     "altName": "rdfs:altLabel",
+    "chromosome": "gnt:chr",
     "contributor": "dct:contributor",
     "creator": "dct:creator",
     "data": "@graph",
+    "dataset": "dcat:Distribution",
+    "dcat": "http://www.w3.org/ns/dcat#",
     "dct": "http://purl.org/dc/terms/",
     "description": "dct:description",
     "fabio": "http://purl.org/spar/fabio/",
     "gnc": "http://genenetwork.org/category/",
     "gnt": "http://genenetwork.org/term/",
+    "group": "gnt:belongsToGroup",
     "id": "@id",
+    "identifier": "dct:identifier",
     "journal": "fabio:Journal",
     "labCode": "gnt:labCode",
     "locus": "gnt:locus",
+    "lodScore": "gnt:lodScore",
+    "mb": "gnt:mb",
     "mean": "gnt:mean",
     "month": {
       "@id": "prism:publicationDate",
       "@type": "xsd:gMonth"
     },
     "page": "fabio:page",
+    "peakLocation": "gnt:locus",
+    "prefLabel": "skos:prefLabel",
     "prism": "http://prismstandard.org/namespaces/basic/2.0/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "references": "dct:isReferencedBy",
     "sequence": "gnt:sequence",
     "skos": "http://www.w3.org/2004/02/skos/core#",
+    "species": "gnt:belongsToSpecies",
     "submitter": "gnt:submitter",
     "title": "dct:title",
     "trait": "rdfs:label",
@@ -720,35 +729,54 @@ Example Result:
       "@type": "xsd:gYear"
     }
   },
-  "LRS": 14.3203,
-  "abstract": "To discover [...]",
+  "abbreviation": "AdjIGLVol",
   "additive": 1.24101,
-  "creator": [
-    "Airey DC",
-    "Williams RW",
-    "Lu L"
+  "dataset": [
+    {
+      "id": "http://genenetwork.org/id/Gitrmetpublish",
+      "identifier": "GITrMetPublish",
+      "prefLabel": "GI Tract Metagenome Phenotypes",
+      "type": "dcat:Dataset"
+    },
+    {
+      "id": "http://genenetwork.org/id/Bxdpublish",
+      "identifier": "BXDPublish",
+      "prefLabel": "BXD Published Phenotypes",
+      "type": "dcat:Dataset"
+    }
   ],
   "description": "Central nervous system, morphology: Internal granule layer IGL of the cerebellum volume, adjusted for sex, age, body and brain weight [mm3]",
-  "gnt:abbreviation": "AdjIGLVol",
-  "http://example.org/stuff/1.0/inbredSet": "BXD Family",
-  "http://example.org/stuff/1.0/species": "Mouse (Mus musculus, mm10)",
+  "group": "BXD Family",
   "id": "http://genenetwork.org/id/traitBxd_10007",
-  "journal": "J Neurosci",
-  "locus": "rsm10000005700",
+  "locus": {
+    "chromosome": "8",
+    "id": "http://genenetwork.org/id/Rsm10000005700",
+    "mb": 95.713,
+    "trait": "rsm10000005700"
+  },
+  "lodScore": 3.11041,
   "mean": 18.2129,
-  "month": "Jul",
-  "page": "5099-5109",
   "references": {
-    "id": "http://rdf.ncbi.nlm.nih.gov/pubmed/11438585"
+    "abstract": "To discover genes influencing cerebellum development, we conducted a complex trait analysis of variation in the size of the adult mouse cerebellum. We analyzed two sets of recombinant inbred BXD strains and an F2 intercross of the common inbred strains, C57BL/6J and DBA/2J. We measured cerebellar size as the weight or volume of fixed or histologically processed tissue. Among BXD recombinant inbred strains, the cerebellum averages 52 mg 12.4% of the brain and ranges 18 mg in size. In F2 mice, the cerebellum averages 62 mg 12.9% of the brain and ranges approximately 20 mg in size. Five quantitative trait loci QTLs that significantly control variation in cerebellar size were mapped to chromosomes 1 Cbs1a, 8 Cbs8a, 14 Cbs14a, and 19 Cbs19a, Cbs19b. In combination, these QTLs can shift cerebellar size an appreciable 35% of the observed range. To assess regional genetic control of the cerebellum, we also measured the volume of the cell-rich, internal granule layer IGL in a set of BXD strains. The IGL ranges from 34 to 43% of total cerebellar volume. The QTL Cbs8a is significantly linked to variation in IGL volume and is suggestively linked to variation in the number of cerebellar folia. The QTLs we have discovered are among the first loci shown to modulate the size and architecture of the adult mouse cerebellum.5",
+    "creator": [
+      "Airey DC",
+      "Williams RW",
+      "Lu L"
+    ],
+    "id": "http://rdf.ncbi.nlm.nih.gov/pubmed/11438585",
+    "journal": "J Neurosci",
+    "month": "Jul",
+    "page": "5099-5109",
+    "title": "Genetic control of the mouse cerebellum: identification of quantitative trait loci modulating size and architecture",
+    "volume": "21(14)",
+    "year": "2001"
   },
   "sequence": 1,
+  "species": "Mouse (Mus musculus, mm10)",
   "submitter": "robwilliams",
-  "title": "Genetic control of the mouse cerebellum: identification of quantitative trait loci modulating size and architecture",
   "trait": "10007",
   "traitName": "BXD_10007",
-  "type": "gnc:Phenotype",
-  "volume": "21(14)",
-  "year": "2001"
+  "type": "gnc:Phenotype"
 }
 ```
 
