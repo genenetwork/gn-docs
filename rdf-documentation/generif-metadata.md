@@ -56,7 +56,7 @@ SELECT GeneRIF.symbol, GeneRIF.comment, GeneRIF.createtime AS EntryCreateTime, G
 The above query results to triples that have the form:
 
 ```text
-gn:symbolGeneRIF_symbol_ -> rdfs:comment -> [ rdf:type gnc:GNWikiEntry ; xkos:classifiedUnder gn:Species_fullname ; rdfs:comment "GeneRIFcomment"^^xsd:string ; dct:references pubmed:GeneRIF(PMID) ; dct:creator gn:investigatorInvestigators_firstname_investigators_lastname_investigators_email ; gnt:belongsToCategory "GeneCategory" ; foaf:homepage "GeneRIF(weburl)" ;  ]  
+gn:symbolGeneRIF_symbol_ -> rdfs:comment -> [ rdf:type gnc:GNWikiEntry ; gnt:belongsToSpecies gn:Species_fullname ; rdfs:comment "GeneRIFcomment"^^xsd:string ; dct:references pubmed:GeneRIF(PMID) ; dct:creator gn:investigatorInvestigators_firstname_investigators_lastname_investigators_email ; gnt:belongsToCategory "GeneCategory" ; foaf:homepage "GeneRIF(weburl)" ;  ]  
 ```
 Here's an example query:
 
@@ -77,7 +77,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#> 
 
 SELECT * WHERE { 
-    ?s rdfs:comment #{\x5b; rdf:type gnc:GNWikiEntry ; xkos:classifiedUnder gn:Mus_musculus ; rdfs:comment "Part 2 of the Slc9a1 wiki.\\r\\n\\r\\nThe human SLC9A1 gene was cloned and mapped to human chromosome 1p Lifton et al., 1990.\\r\\n\\r\\nThe mouse Slc9a1 gene maps to chromosome 4. Morahan et al., 1993. There are three common alleles of Slc9a1, originally detected by RFLP analyses. Each of these allelic SLC9A1 proteins have different levels of antiporter activity. Morahan et al. 1994  Remarkably, intracellular pH varies between strains based on their Slc9a1 alleles.  McClive et al. 1996."^^xsd:string ; dct:created "2011-06-10T12:06:30"^^xsd:datetime ; dct:references pubmed:094369 ; dct:references pubmed:8016086 ; dct:references pubmed:8550102 ; dct:creator gn:investigatorGrant_morahan_gem_waimr.uwa.edu.au ; gnt:belongsToCategory "Biochemistry" ; gnt:belongsToCategory "Genetic variation and alleles" ; gnt:belongsToCategory "Physiology and function" ;  \x5d; }# .
+    ?s rdfs:comment #{\x5b; rdf:type gnc:GNWikiEntry ; gnt:belongsToSpecies gn:Mus_musculus ; rdfs:comment "Part 2 of the Slc9a1 wiki.\\r\\n\\r\\nThe human SLC9A1 gene was cloned and mapped to human chromosome 1p Lifton et al., 1990.\\r\\n\\r\\nThe mouse Slc9a1 gene maps to chromosome 4. Morahan et al., 1993. There are three common alleles of Slc9a1, originally detected by RFLP analyses. Each of these allelic SLC9A1 proteins have different levels of antiporter activity. Morahan et al. 1994  Remarkably, intracellular pH varies between strains based on their Slc9a1 alleles.  McClive et al. 1996."^^xsd:string ; dct:created "2011-06-10T12:06:30"^^xsd:datetime ; dct:references pubmed:094369 ; dct:references pubmed:8016086 ; dct:references pubmed:8550102 ; dct:creator gn:investigatorGrant_morahan_gem_waimr.uwa.edu.au ; gnt:belongsToCategory "Biochemistry" ; gnt:belongsToCategory "Genetic variation and alleles" ; gnt:belongsToCategory "Physiology and function" ;  \x5d; }# .
     ?s ?p ?o .
 }
 ```
@@ -85,7 +85,7 @@ SELECT * WHERE {
 Expected Result:
 
 ```rdf
-gn:symbolSlc9a1 rdfs:comment [ rdf:type gnc:GNWikiEntry ; xkos:classifiedUnder gn:Mus_musculus ; rdfs:comment "Part 2 of the Slc9a1 wiki.\\r\\n\\r\\nThe human SLC9A1 gene was cloned and mapped to human chromosome 1p Lifton et al., 1990.\\r\\n\\r\\nThe mouse Slc9a1 gene maps to chromosome 4. Morahan et al., 1993. There are three common alleles of Slc9a1, originally detected by RFLP analyses. Each of these allelic SLC9A1 proteins have different levels of antiporter activity. Morahan et al. 1994  Remarkably, intracellular pH varies between strains based on their Slc9a1 alleles.  McClive et al. 1996."^^xsd:string ; dct:created "2011-06-10T12:06:30"^^xsd:datetime ; dct:references pubmed:094369 ; dct:references pubmed:8016086 ; dct:references pubmed:8550102 ; dct:creator gn:investigatorGrant_morahan_gem_waimr.uwa.edu.au ; gnt:belongsToCategory "Biochemistry" ; gnt:belongsToCategory "Genetic variation and alleles" ; gnt:belongsToCategory "Physiology and function" ;  ]  .
+gn:symbolSlc9a1 rdfs:comment [ rdf:type gnc:GNWikiEntry ; gnt:belongsToSpecies gn:Mus_musculus ; rdfs:comment "Part 2 of the Slc9a1 wiki.\\r\\n\\r\\nThe human SLC9A1 gene was cloned and mapped to human chromosome 1p Lifton et al., 1990.\\r\\n\\r\\nThe mouse Slc9a1 gene maps to chromosome 4. Morahan et al., 1993. There are three common alleles of Slc9a1, originally detected by RFLP analyses. Each of these allelic SLC9A1 proteins have different levels of antiporter activity. Morahan et al. 1994  Remarkably, intracellular pH varies between strains based on their Slc9a1 alleles.  McClive et al. 1996."^^xsd:string ; dct:created "2011-06-10T12:06:30"^^xsd:datetime ; dct:references pubmed:094369 ; dct:references pubmed:8016086 ; dct:references pubmed:8550102 ; dct:creator gn:investigatorGrant_morahan_gem_waimr.uwa.edu.au ; gnt:belongsToCategory "Biochemistry" ; gnt:belongsToCategory "Genetic variation and alleles" ; gnt:belongsToCategory "Physiology and function" ;  ]  .
 ```
 
 
@@ -102,7 +102,7 @@ SELECT GeneRIF_BASIC.symbol AS GeneRIFSymbol, GeneRIF_BASIC.comment, Species.Ful
 The above query results to triples that have the form:
 
 ```text
-gn:symbolGeneRIF_BASIC_GeneRIFSymbol_ -> rdfs:comment -> [ rdf:type gnc:NCBIWikiEntry ; rdfs:comment "GeneRIF_BASICcomment"^^xsd:string ; xkos:classifiedUnder gn:Species_speciesfullname ; skos:notation taxon:GeneRIF_BASIC(TaxonomicId) ; gnt:hasGeneId generif:GeneRIF_BASIC(GeneId) ; gnt:hasVersionId 'GeneRIF_BASIC(VersionId)'^^xsd:integer ; dct:references pubmed:GeneRIF_BASIC(PMID) ;  ] 
+gn:symbolGeneRIF_BASIC_GeneRIFSymbol_ -> rdfs:comment -> [ rdf:type gnc:NCBIWikiEntry ; rdfs:comment "GeneRIF_BASICcomment"^^xsd:string ; gnt:belongsToSpecies gn:Species_speciesfullname ; skos:notation taxon:GeneRIF_BASIC(TaxonomicId) ; gnt:hasGeneId generif:GeneRIF_BASIC(GeneId) ; gnt:hasVersionId 'GeneRIF_BASIC(VersionId)'^^xsd:integer ; dct:references pubmed:GeneRIF_BASIC(PMID) ;  ] 
 ```
 Here's an example query:
 
@@ -123,7 +123,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#> 
 
 SELECT * WHERE { 
-    ?s rdfs:comment #{\x5b; rdf:type gnc:NCBIWikiEntry ; rdfs:comment "he results demonstrate that apoM-S1P inhibits ox-LDL-induced inflammation in HUVECs via the S1PR2-mediated PI3K/Akt signaling pathway."^^xsd:string ; xkos:classifiedUnder gn:Homo_sapiens ; skos:notation taxon:9606 ; gnt:hasGeneId generif:55937 ; gnt:hasVersionId '1'^^xsd:integer ; dct:created "2019-08-03T07:43:00"^^xsd:datetime ;  \x5d;}# .
+    ?s rdfs:comment #{\x5b; rdf:type gnc:NCBIWikiEntry ; rdfs:comment "he results demonstrate that apoM-S1P inhibits ox-LDL-induced inflammation in HUVECs via the S1PR2-mediated PI3K/Akt signaling pathway."^^xsd:string ; gnt:belongsToSpecies gn:Homo_sapiens ; skos:notation taxon:9606 ; gnt:hasGeneId generif:55937 ; gnt:hasVersionId '1'^^xsd:integer ; dct:created "2019-08-03T07:43:00"^^xsd:datetime ;  \x5d;}# .
     ?s ?p ?o .
 }
 ```
@@ -131,6 +131,6 @@ SELECT * WHERE {
 Expected Result:
 
 ```rdf
-gn:symbolAPOM rdfs:comment [ rdf:type gnc:NCBIWikiEntry ; rdfs:comment "he results demonstrate that apoM-S1P inhibits ox-LDL-induced inflammation in HUVECs via the S1PR2-mediated PI3K/Akt signaling pathway."^^xsd:string ; xkos:classifiedUnder gn:Homo_sapiens ; skos:notation taxon:9606 ; gnt:hasGeneId generif:55937 ; gnt:hasVersionId '1'^^xsd:integer ; dct:created "2019-08-03T07:43:00"^^xsd:datetime ;  ] .
+gn:symbolAPOM rdfs:comment [ rdf:type gnc:NCBIWikiEntry ; rdfs:comment "he results demonstrate that apoM-S1P inhibits ox-LDL-induced inflammation in HUVECs via the S1PR2-mediated PI3K/Akt signaling pathway."^^xsd:string ; gnt:belongsToSpecies gn:Homo_sapiens ; skos:notation taxon:9606 ; gnt:hasGeneId generif:55937 ; gnt:hasVersionId '1'^^xsd:integer ; dct:created "2019-08-03T07:43:00"^^xsd:datetime ;  ] .
 ```
 

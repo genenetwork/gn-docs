@@ -13,7 +13,7 @@ The above query results to triples that have the form:
 
 ```text
 genbank:Genbank(Id) -> gnt:hasSequence -> Genbank(Sequence) 
-genbank:Genbank(Id) -> xkos:classifiedUnder -> gn:Species_fullname 
+genbank:Genbank(Id) -> gnt:belongsToSpecies -> gn:Species_fullname 
 ```
 Here's an example query:
 
@@ -36,7 +36,7 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT * WHERE { 
     ?s gnt:hasSequence "GAAAAGGACGAGAGAAAATTATTTTTAAGATAATTAAACATAAAAACCCTGGTGCTTATTACATTATAAAGTACGTTTTTAAAAACCCACAAACTATTATACATACGTTTATGAATCAATTAAATACTCTGCACTTGTTAGGAACACGCATATCCCTTCTTTGTTGAGTTTAACGGAACGGGACAGCGGCGTGCGCCCGCGGCTGGGCTGCTCTGGCCGCGGGTCTCCCCAGGCG" .
-    ?s xkos:classifiedUnder gn:Mus_musculus .
+    ?s gnt:belongsToSpecies gn:Mus_musculus .
     ?s ?p ?o .
 }
 ```
@@ -45,6 +45,6 @@ Expected Result:
 
 ```rdf
 genbank:AA002843 gnt:hasSequence "GAAAAGGACGAGAGAAAATTATTTTTAAGATAATTAAACATAAAAACCCTGGTGCTTATTACATTATAAAGTACGTTTTTAAAAACCCACAAACTATTATACATACGTTTATGAATCAATTAAATACTCTGCACTTGTTAGGAACACGCATATCCCTTCTTTGTTGAGTTTAACGGAACGGGACAGCGGCGTGCGCCCGCGGCTGGGCTGCTCTGGCCGCGGGTCTCCCCAGGCG" .
-genbank:AA002843 xkos:classifiedUnder gn:Mus_musculus .
+genbank:AA002843 gnt:belongsToSpecies gn:Mus_musculus .
 ```
 

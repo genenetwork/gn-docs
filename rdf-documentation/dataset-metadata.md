@@ -6,7 +6,7 @@
 The following SQL query was executed:
 
 ```sql
-SELECT InfoFiles.InfoPageName, IF(GenoFreeze.Id IS NOT NULL, 'gnc:Genotype', IF(PublishFreeze.Id IS NOT NULL, 'gnc:Phenotype', IF(ProbeSetFreeze.Name IS NOT NULL, 'gnc:Probeset', ''))) AS DatasetType, InfoFiles.InfoPageName, IFNULL(GenoFreeze.FullName, IFNULL(PublishFreeze.FullName, '')) AS DatasetFullName, Datasets.DatasetName AS DatasetGroup, Datasets.PublicationTitle, InfoFiles.InfoFileTitle, IFNULL(GenoFreeze.CreateTime, IFNULL(PublishFreeze.CreateTime, IFNULL(ProbeSetFreeze.CreateTime, ''))) AS createTimeGenoFreeze, Investigators.FirstName, Investigators.LastName, Investigators.Email, Organizations.OrganizationName, InfoFiles.GN_AccesionId, DatasetStatus.DatasetStatusName, InbredSet.Name AS InbredSetName, Tissue.Short_Name, AvgMethod.Name AS AvgMethodName, AvgMethod.Name AS AvgMethodName, GeneChip.Name AS GeneChip, Datasets.Summary, IFNULL(Datasets.GeoSeries, '') AS GeoSeries, Datasets.AboutTissue, InfoFiles.Specifics, Datasets.AboutCases, Datasets.AboutPlatform, Datasets.AboutDataProcessing, Datasets.Notes, Datasets.ExperimentDesign, Datasets.Contributors, Datasets.Citation, Datasets.Acknowledgment FROM InfoFiles LEFT JOIN PublishFreeze ON InfoFiles.InfoPageName = PublishFreeze.Name LEFT JOIN GenoFreeze ON InfoFiles.InfoPageName = GenoFreeze.Name LEFT JOIN ProbeSetFreeze ON InfoFiles.InfoPageName = ProbeSetFreeze.Name LEFT JOIN InbredSet ON InfoFiles.InbredSetId = InbredSet.InbredSetId LEFT JOIN Species ON InfoFiles.SpeciesId = Species.SpeciesId LEFT JOIN Datasets USING (DatasetId) LEFT JOIN DatasetStatus USING (DatasetStatusId) LEFT JOIN Tissue USING (TissueId) LEFT JOIN Investigators USING (InvestigatorId) LEFT JOIN AvgMethod USING (AvgMethodId) LEFT JOIN Organizations USING (OrganizationId) LEFT JOIN GeneChip USING (GeneChipId) WHERE GN_AccesionId IS NOT NULL
+SELECT InfoFiles.InfoPageName, IF(GenoFreeze.Id IS NOT NULL, 'gnc:Genotype', IF(PublishFreeze.Id IS NOT NULL, 'gnc:Phenotype', IF(ProbeSetFreeze.Name IS NOT NULL, 'gnc:Probeset', ''))) AS DatasetType, InfoFiles.InfoPageName, IFNULL(GenoFreeze.FullName, IFNULL(PublishFreeze.FullName, '')) AS DatasetFullName, Datasets.DatasetName AS DatasetGroup, Datasets.PublicationTitle, InfoFiles.InfoFileTitle, IFNULL(GenoFreeze.CreateTime, IFNULL(PublishFreeze.CreateTime, IFNULL(ProbeSetFreeze.CreateTime, ''))) AS createTimeGenoFreeze, Investigators.FirstName, Investigators.LastName, Investigators.Email, Organizations.OrganizationName, InfoFiles.GN_AccesionId, DatasetStatus.DatasetStatusName, IFNULL(InbredSet.Name, IFNULL(PublishInbredSet.Name, GenoInbredSet.Name)) AS InbredSetName, Tissue.Short_Name, AvgMethod.Name AS AvgMethodName, AvgMethod.Name AS AvgMethodName, GeneChip.Name AS GeneChip, Datasets.Summary, IFNULL(Datasets.GeoSeries, '') AS GeoSeries, Datasets.AboutTissue, InfoFiles.Specifics, Datasets.AboutCases, Datasets.AboutPlatform, Datasets.AboutDataProcessing, Datasets.Notes, Datasets.ExperimentDesign, Datasets.Contributors, Datasets.Citation, Datasets.Acknowledgment FROM InfoFiles LEFT JOIN PublishFreeze ON InfoFiles.InfoPageName = PublishFreeze.Name LEFT JOIN GenoFreeze ON InfoFiles.InfoPageName = GenoFreeze.Name LEFT JOIN ProbeSetFreeze ON InfoFiles.InfoPageName = ProbeSetFreeze.Name LEFT JOIN InbredSet ON InfoFiles.InbredSetId = InbredSet.InbredSetId LEFT JOIN Species ON InfoFiles.SpeciesId = Species.SpeciesId LEFT JOIN Datasets USING (DatasetId) LEFT JOIN DatasetStatus USING (DatasetStatusId) LEFT JOIN Tissue USING (TissueId) LEFT JOIN Investigators USING (InvestigatorId) LEFT JOIN AvgMethod USING (AvgMethodId) LEFT JOIN Organizations USING (OrganizationId) LEFT JOIN GeneChip USING (GeneChipId) LEFT JOIN InbredSet PublishInbredSet ON PublishFreeze.InbredSetId = PublishInbredSet.InbredSetId LEFT JOIN InbredSet GenoInbredSet ON GenoFreeze.InbredSetId = GenoInbredSet.InbredSetId  WHERE GN_AccesionId IS NOT NULL
 ```
 
 The above query results to triples that have the form:
@@ -23,7 +23,7 @@ gn:Infofiles_infopagename_ -> dcat:contactPoint -> gn:investigatorInvestigators_
 gn:Infofiles_infopagename_ -> foaf:Organization -> Organizations(OrganizationName) 
 gn:Infofiles_infopagename_ -> dct:identifier -> GNInfoFiles(GN_AccesionId) 
 gn:Infofiles_infopagename_ -> dct:accessRights -> datasetstatus(datasetstatusname) 
-gn:Infofiles_infopagename_ -> xkos:classifiedUnder -> gn:setInbredset_inbredsetname 
+gn:Infofiles_infopagename_ -> gnt:belongsToGroup -> gn:setInbredsetname 
 gn:Infofiles_infopagename_ -> gnt:hasTissue -> gn:tissueTissue_short_name 
 gn:Infofiles_infopagename_ -> gnt:usesNormalization -> gn:avgMethodAvgmethod_avgmethodname 
 gn:Infofiles_infopagename_ -> gnt:usesPlatform -> gn:platformGenechip_genechip 
@@ -79,7 +79,7 @@ gn:Br_u_0803_m dcat:contactPoint gn:investigatorRobert_williams_rwilliams_uthsc.
 gn:Br_u_0803_m foaf:Organization "University of Tennessee Health Science Center" .
 gn:Br_u_0803_m dct:identifier "GN1" .
 gn:Br_u_0803_m dct:accessRights "public" .
-gn:Br_u_0803_m xkos:classifiedUnder gn:setBxd .
+gn:Br_u_0803_m gnt:belongsToGroup gn:setBxd .
 gn:Br_u_0803_m gnt:hasTissue gn:tissueBrn .
 gn:Br_u_0803_m gnt:usesNormalization gn:avgMethodMas5 .
 gn:Br_u_0803_m gnt:usesPlatform gn:platformMg_u74av2 .
@@ -106,12 +106,13 @@ SELECT PublishFreeze.Name, PublishFreeze.FullName, PublishFreeze.Name, PublishFr
 The above query results to triples that have the form:
 
 ```text
+gn:Publishfreeze_name_ -> rdf:type -> dcat:Dataset 
 gn:Publishfreeze_name_ -> xkos:classifiedUnder -> gnc:Phenotype 
 gn:Publishfreeze_name_ -> dct:title -> PublishFreeze(FullName) 
 gn:Publishfreeze_name_ -> rdfs:label -> PublishFreeze(Name) 
 gn:Publishfreeze_name_ -> skos:altLabel -> PublishFreeze(ShortName) 
 gn:Publishfreeze_name_ -> dct:created -> "PublishFreeze(CreateTime)"^^xsd:date 
-gn:Publishfreeze_name_ -> xkos:classifiedUnder -> gn:setInbredset_inbredsetname 
+gn:Publishfreeze_name_ -> gnt:belongsToGroup -> gn:setInbredset_inbredsetname 
 ```
 Here's an example query:
 
@@ -133,9 +134,9 @@ PREFIX taxon: <http://purl.uniprot.org/taxonomy/>
 PREFIX dct: <http://purl.org/dc/terms/> 
 
 SELECT * WHERE { 
+    ?s rdf:type dcat:Dataset .
     ?s xkos:classifiedUnder gnc:Phenotype .
     ?s dct:title "B6D2F2 PSU Phenotypes" .
-    ?s rdfs:label "B6D2F2-PSUPublish" .
     ?s ?p ?o .
 }
 ```
@@ -143,12 +144,13 @@ SELECT * WHERE {
 Expected Result:
 
 ```rdf
+gn:B6d2f2_psupublish rdf:type dcat:Dataset .
 gn:B6d2f2_psupublish xkos:classifiedUnder gnc:Phenotype .
 gn:B6d2f2_psupublish dct:title "B6D2F2 PSU Phenotypes" .
 gn:B6d2f2_psupublish rdfs:label "B6D2F2-PSUPublish" .
 gn:B6d2f2_psupublish skos:altLabel "B6D2F2 PSU Publish" .
 gn:B6d2f2_psupublish dct:created "2015-03-18"^^xsd:date .
-gn:B6d2f2_psupublish xkos:classifiedUnder gn:setB6d2f2-psu .
+gn:B6d2f2_psupublish gnt:belongsToGroup gn:setB6d2f2-psu .
 ```
 
 
@@ -159,18 +161,19 @@ gn:B6d2f2_psupublish xkos:classifiedUnder gn:setB6d2f2-psu .
 The following SQL query was executed:
 
 ```sql
-SELECT GenoFreeze.Name, GenoFreeze.Name, GenoFreeze.FullName, GenoFreeze.ShortName, GenoFreeze.CreateTime, InbredSet.Name FROM GenoFreeze LEFT JOIN InfoFiles ON InfoFiles.InfoPageName = GenoFreeze.Name LEFT JOIN InbredSet ON GenoFreeze.InbredSetId = InbredSet.InbredSetId WHERE GenoFreeze.public > 0 AND GenoFreeze.confidentiality < 1 AND InfoFiles.InfoPageName IS NULL
+SELECT GenoFreeze.Name, GenoFreeze.Name, GenoFreeze.FullName, GenoFreeze.ShortName, GenoFreeze.CreateTime, InbredSet.Name AS InbredSetName FROM GenoFreeze LEFT JOIN InfoFiles ON InfoFiles.InfoPageName = GenoFreeze.Name LEFT JOIN InbredSet ON GenoFreeze.InbredSetId = InbredSet.InbredSetId WHERE GenoFreeze.public > 0 AND GenoFreeze.confidentiality < 1 AND InfoFiles.InfoPageName IS NULL
 ```
 
 The above query results to triples that have the form:
 
 ```text
+gn:Genofreeze_name_ -> rdf:type -> dcat:Dataset 
 gn:Genofreeze_name_ -> xkos:classifiedUnder -> gnc:Genotype 
 gn:Genofreeze_name_ -> rdfs:label -> GenoFreeze(Name) 
 gn:Genofreeze_name_ -> dct:title -> GenoFreeze(FullName) 
 gn:Genofreeze_name_ -> skos:altLabel -> GenoFreeze(ShortName) 
 gn:Genofreeze_name_ -> dct:created -> "GenoFreeze(CreateTime)"^^xsd:date 
-gn:Genofreeze_name_ -> xkos:classifiedUnder -> gn:setInbredset_name 
+gn:Genofreeze_name_ -> gnt:belongsToGroup -> gn:setInbredset_inbredsetname 
 ```
 Here's an example query:
 
@@ -192,9 +195,9 @@ PREFIX taxon: <http://purl.uniprot.org/taxonomy/>
 PREFIX dct: <http://purl.org/dc/terms/> 
 
 SELECT * WHERE { 
+    ?s rdf:type dcat:Dataset .
     ?s xkos:classifiedUnder gnc:Genotype .
     ?s rdfs:label "B6D2RIGeno" .
-    ?s dct:title "B6D2RI Genotypes" .
     ?s ?p ?o .
 }
 ```
@@ -202,12 +205,13 @@ SELECT * WHERE {
 Expected Result:
 
 ```rdf
+gn:B6d2rigeno rdf:type dcat:Dataset .
 gn:B6d2rigeno xkos:classifiedUnder gnc:Genotype .
 gn:B6d2rigeno rdfs:label "B6D2RIGeno" .
 gn:B6d2rigeno dct:title "B6D2RI Genotypes" .
 gn:B6d2rigeno skos:altLabel "B6D2RIGeno" .
 gn:B6d2rigeno dct:created "2022-10-24"^^xsd:date .
-gn:B6d2rigeno xkos:classifiedUnder gn:setB6d2rigeno .
+gn:B6d2rigeno gnt:belongsToGroup gn:setB6d2ri .
 ```
 
 
@@ -224,6 +228,7 @@ SELECT ProbeSetFreeze.Name, AvgMethod.Name AS AvgMethodName, AvgMethod.Name AS A
 The above query results to triples that have the form:
 
 ```text
+gn:Probesetfreeze_name_ -> rdf:type -> dcat:Dataset 
 gn:Probesetfreeze_name_ -> xkos:classifiedUnder -> gnc:Probeset 
 gn:Probesetfreeze_name_ -> gnt:usesNormalization -> gn:avgMethodAvgmethod_avgmethodname 
 gn:Probesetfreeze_name_ -> dct:title -> ProbeSetFreeze(FullName) 
@@ -233,7 +238,7 @@ gn:Probesetfreeze_name_ -> skos:altLabel -> ProbeSetFreeze(Name2)
 gn:Probesetfreeze_name_ -> dct:created -> "ProbeSetFreeze(CreateTime)"^^xsd:datetime 
 gn:Probesetfreeze_name_ -> gnt:usesDataScale -> ProbeSetFreeze(DataScale) 
 gn:Probesetfreeze_name_ -> gnt:hasTissue -> gn:tissueTissue_short_name 
-gn:Probesetfreeze_name_ -> xkos:classifiedUnder -> gn:setInbredset_inbredsetname 
+gn:Probesetfreeze_name_ -> gnt:belongsToGroup -> gn:setInbredset_inbredsetname 
 ```
 Here's an example query:
 
@@ -255,10 +260,10 @@ PREFIX taxon: <http://purl.uniprot.org/taxonomy/>
 PREFIX dct: <http://purl.org/dc/terms/> 
 
 SELECT * WHERE { 
+    ?s rdf:type dcat:Dataset .
     ?s xkos:classifiedUnder gnc:Probeset .
     ?s gnt:usesNormalization gn:avgMethodRankinv .
     ?s dct:title "UBC/CMMT BXD P0 Cerebellum ILM Mouse WG-6 v2.0 (May13) RankInv" .
-    ?s rdfs:label "UBC/CMMT BXD P0 Cerebellum ILM Mouse WG-6 v2.0 (May13) RankInv" .
     ?s ?p ?o .
 }
 ```
@@ -266,6 +271,7 @@ SELECT * WHERE {
 Expected Result:
 
 ```rdf
+gn:Cmmtubcbxdp00cerilm0513 rdf:type dcat:Dataset .
 gn:Cmmtubcbxdp00cerilm0513 xkos:classifiedUnder gnc:Probeset .
 gn:Cmmtubcbxdp00cerilm0513 gnt:usesNormalization gn:avgMethodRankinv .
 gn:Cmmtubcbxdp00cerilm0513 dct:title "UBC/CMMT BXD P0 Cerebellum ILM Mouse WG-6 v2.0 (May13) RankInv" .
@@ -275,7 +281,7 @@ gn:Cmmtubcbxdp00cerilm0513 skos:altLabel "CMMTUBCBXDP00CerILMMay13" .
 gn:Cmmtubcbxdp00cerilm0513 dct:created "2013-04-22"^^xsd:datetime .
 gn:Cmmtubcbxdp00cerilm0513 gnt:usesDataScale "log2" .
 gn:Cmmtubcbxdp00cerilm0513 gnt:hasTissue gn:tissueCb .
-gn:Cmmtubcbxdp00cerilm0513 xkos:classifiedUnder gn:setBxd .
+gn:Cmmtubcbxdp00cerilm0513 gnt:belongsToGroup gn:setBxd .
 ```
 
 

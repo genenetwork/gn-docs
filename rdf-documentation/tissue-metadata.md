@@ -19,7 +19,7 @@ Here's an example query:
 
 ```sparql
 PREFIX gn: <http://genenetwork.org/id/> 
-PREFIX gnt: <http://genenetwork.org/terms/> 
+PREFIX gnt: <http://genenetwork.org/term/> 
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
 PREFIX gnc: <http://genenetwork.org/category/> 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 

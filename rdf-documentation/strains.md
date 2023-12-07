@@ -13,7 +13,7 @@ The above query results to triples that have the form:
 
 ```text
 gn:Strain_name_ -> rdf:type -> gnc:strain 
-gn:Strain_name_ -> xkos:classifiedUnder -> gn:Species_fullname 
+gn:Strain_name_ -> gnt:belongsToSpecies -> gn:Species_fullname 
 gn:Strain_name_ -> rdfs:label -> StrainName 
 gn:Strain_name_ -> skos:altLabel -> Name2 
 gn:Strain_name_ -> gnt:alias -> Alias 
@@ -34,7 +34,7 @@ PREFIX taxon: <http://purl.uniprot.org/taxonomy/>
 
 SELECT * WHERE { 
     ?s rdf:type gnc:strain .
-    ?s xkos:classifiedUnder gn:Mus_musculus .
+    ?s gnt:belongsToSpecies gn:Mus_musculus .
     ?s rdfs:label "B6D2F1" .
     ?s ?p ?o .
 }
@@ -44,7 +44,7 @@ Expected Result:
 
 ```rdf
 gn:B6d2f1 rdf:type gnc:strain .
-gn:B6d2f1 xkos:classifiedUnder gn:Mus_musculus .
+gn:B6d2f1 gnt:belongsToSpecies gn:Mus_musculus .
 gn:B6d2f1 rdfs:label "B6D2F1" .
 ```
 
@@ -100,14 +100,14 @@ gn:mappingMethodQtlreaper rdfs:label "qtlreaper" .
 The following SQL query was executed:
 
 ```sql
-SELECT AvgMethod.Name, AvgMethod.Normalization FROM AvgMethod
+SELECT AvgMethod.Name AS AvgMethodName, AvgMethod.Normalization FROM AvgMethod
 ```
 
 The above query results to triples that have the form:
 
 ```text
-gn:avgMethodAvgmethod_name -> rdf:type -> gnc:avgMethod 
-gn:avgMethodAvgmethod_name -> rdfs:label -> AvgMethod(Normalization) 
+gn:avgMethodAvgmethod_avgmethodname -> rdf:type -> gnc:avgMethod 
+gn:avgMethodAvgmethod_avgmethodname -> rdfs:label -> AvgMethod(Normalization) 
 ```
 Here's an example query:
 

@@ -13,7 +13,7 @@ The above query results to triples that have the form:
 
 ```text
 gn:Geno_name_ -> rdf:type -> gnc:Genotype 
-gn:Geno_name_ -> skos:prefLabel -> GenoName 
+gn:Geno_name_ -> rdfs:label -> GenoName 
 gn:Geno_name_ -> gnt:chr -> Geno(Chr) 
 gn:Geno_name_ -> gnt:mb -> "Mb"^^xsd:double 
 gn:Geno_name_ -> gnt:mbMm8 -> "Mb_mm8"^^xsd:double 
@@ -36,11 +36,12 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
 PREFIX owl: <http://www.w3.org/2002/07/owl#> 
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
+PREFIX xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
 
 SELECT * WHERE { 
     ?s rdf:type gnc:Genotype .
-    ?s skos:prefLabel "D1Mit296" .
+    ?s rdfs:label "D1Mit296" .
     ?s gnt:chr "1" .
     ?s gnt:mb #{"9.749729"^^xsd:double}# .
     ?s ?p ?o .
@@ -51,7 +52,7 @@ Expected Result:
 
 ```rdf
 gn:D1mit296 rdf:type gnc:Genotype .
-gn:D1mit296 skos:prefLabel "D1Mit296" .
+gn:D1mit296 rdfs:label "D1Mit296" .
 gn:D1mit296 gnt:chr "1" .
 gn:D1mit296 gnt:mb "9.749729"^^xsd:double .
 gn:D1mit296 gnt:mbMm8 "9.734943"^^xsd:double .

@@ -26,7 +26,7 @@ pubmed:pmid -> dct:creator -> PublicationAuthors
 Here's an example query:
 
 ```sparql
-PREFIX gnt: <http://genenetwork.org/terms/> 
+PREFIX gnt: <http://genenetwork.org/term/> 
 PREFIX fabio: <http://purl.org/spar/fabio/> 
 PREFIX dct: <http://purl.org/dc/terms/> 
 PREFIX prism: <http://prismstandard.org/namespaces/basic/2.0/> 
