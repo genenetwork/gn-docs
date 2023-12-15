@@ -1051,63 +1051,274 @@ Expected Result:
 {
   "@context": {
     "alias": "skos:altLabel",
+    "alignID": "gnt:hasAlignID",
     "blatMbEnd": "gnt:hasBlatMbEnd",
-    "blatMbEnd2016": "gnt:hasBlatMbEnd2016",
     "blatMbStart": "gnt:hasBlatMbStart",
-    "blatMbStart2016": "gnt:hasBlatMbStart2016",
     "blatScore": "gnt:hasBlatScore",
     "blatSeq": "gnt:hasBlatSeq",
-    "chebi": "gnt:hasChebiId",
     "chip": "gnt:hasChip",
     "chr": "gnt:chr",
+    "chromosome": "gnt:chromosome",
+    "comments": "rdfs:comments",
     "data": "@graph",
     "dct": "http://purl.org/dc/terms/",
     "description": "dct:description",
+    "gene": "gnt:gene",
+    "gnc": "http://genenetwork.org/category/",
     "gnt": "http://genenetwork.org/term/",
-    "homologene": "gnt:hasHomologeneId",
     "id": "@id",
-    "kegg": "gnt:hasKeggId",
+    "kgID": "gnt:hasKgID",
+    "location": "gnt:location",
     "mb": "gnt:mb",
-    "mb2016": "gnt:mb2016",
-    "mbMm8": "gnt:mbMm8",
     "name": "rdfs:label",
-    "omim": "gnt:hasOmimId",
-    "pubchem": "gnt:hasPubChemId",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#>",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "references": "dct:references",
     "skos": "http://www.w3.org/2004/02/skos/core#",
+    "species": "gnt:belongsToSpecies",
     "specificity": "gnt:hasSpecificity",
+    "strand": "gnt:Strand",
+    "strandProbe": "gnt:strandProbe",
     "symbol": "gnt:symbol",
-    "targetId": "gnt:hasTargetId",
-    "targetSeq": "gnt:hasTargetSeq",
-    "targetsRegion": "gnt:targetsRegion",
+    "targetID": "gnt:hasTargetId",
+    "targetRegion": "gnt:targetsRegion",
+    "targetSequence": "gnt:hasTargetSeq",
+    "transcript": "gnt:transcript",
+    "txEnd": "gnt:TxEnd",
+    "txStart": "gnt:TxStart",
     "type": "@type",
-    "uniprot": "gnt:hasUniprotId"
+    "unigenID": "gnt:hasUnigenID",
+    "uniprot": "gnt:uniprot"
   },
   "alias": "HHG1; HLP3; HPE3; SMMCI; Dsh; Hhg1",
   "blatMbEnd": 28.4573,
-  "blatMbEnd2016": 28.7837,
   "blatMbStart": 28.4572,
-  "blatMbStart2016": 28.7837,
   "blatScore": "72",
   "blatSeq": "CATGGGGGTCCACAAATTATATTTTAATTTAACTATTTTCCAATGTAATAGCCGTCTTCTGTACTGCCTTCTT",
-  "chip": "Affy Mouse Genome 430 2.0 (GPL1261)",
+  "chip": {
+    "id": "http://genenetwork.org/id/platformMouse430_2",
+    "name": "Affy Mouse Genome 430 2.0 (GPL1261)"
+  },
   "chr": "5",
   "description": "sonic hedgehog hedgehog",
-  "homologene": {
-    "id": "https://bio2rdf.org/homologene:30961"
-  },
   "id": "http://genenetwork.org/id/probeset1436869_at",
+  "location": "Chr 5 @ 28.457155 on the minus strand",
   "mb": 28.4572,
-  "mb2016": 28.7837,
-  "mbMm8": 28.7879,
   "name": "1436869_at",
-  "omim": {
-    "id": "https://www.omim.org/entry/600725"
-  },
+  "references": [
+    {
+      "id": "http://www.ncbi.nlm.nih.gov/homologene/?term=30961"
+    },
+    {
+      "id": "http://www.ncbi.nlm.nih.gov/omim/600725"
+    },
+    {
+      "id": "http://www.ncbi.nlm.nih.gov/gene?cmd=Retrieve&dopt=Graphics&list_uids=20423"
+    }
+  ],
   "specificity": "3.6",
-  "symbol": "Shh",
-  "targetSeq": "catgggggtccacaaattatatttttatacacagaattgtanattanatttttgagagatcaatacctaantgaatgacatttcattttttgaaagtgtaaaatatgnaaatatattattttaatttaactattttccaatgtaatagccgtcttctgtactgccttctt",
-  "type": "http://genenetwork.org/category/Probeset"
+  "strandProbe": "-",
+  "symbol": {
+    "alignID": [
+      "uc008wua.2",
+      "R17645"
+    ],
+    "chromosome": [
+      "4",
+      "7",
+      "5"
+    ],
+    "description": "sonic hedgehog",
+    "gene": [
+      {
+        "id": "http://www.ncbi.nlm.nih.gov/gene?cmd=Retrieve&dopt=Graphics&list_uids=6469"
+      },
+      {
+        "id": "http://www.ncbi.nlm.nih.gov/gene?cmd=Retrieve&dopt=Graphics&list_uids=29499"
+      },
+      {
+        "id": "http://www.ncbi.nlm.nih.gov/gene?cmd=Retrieve&dopt=Graphics&list_uids=20423"
+      }
+    ],
+    "gnt:hasProteinID": [
+      "Q62226",
+      "SHH"
+    ],
+    "gnt:hasRgdID": "3673",
+    "id": "http://genenetwork.org/id/geneShh",
+    "kgID": [
+      "L27340",
+      "uc008wua.2"
+    ],
+    "name": [
+      "SHH",
+      "Shh"
+    ],
+    "references": [
+      {
+        "comments": "Expression across many tissues and cell types",
+        "id": "http://biogps.org/?org=mouse#goto=genereport&id=20423",
+        "name": [
+          "BioGPS",
+          "BioGPS Resource Link"
+        ]
+      },
+      {
+        "comments": "GeneMANIA",
+        "id": "https://genemania.org/search/homo-sapiens/6469",
+        "name": "GeneMANIA"
+      },
+      {
+        "id": "http://www.pantherdb.org/genes/geneList.do?searchType=basic&fieldName=all&organism=all&listType=1&fieldValue=SHH"
+      },
+      {
+        "comments": "GTEx Portal",
+        "id": "https://www.gtexportal.org/home/gene/SHH",
+        "name": "GTEx Portal"
+      },
+      {
+        "comments": "GTEx Portal",
+        "id": "https://www.gtexportal.org/home/gene/Shh",
+        "name": "GTEx Portal"
+      },
+      {
+        "comments": "Human Protein Atlas",
+        "id": "http://www.proteinatlas.org/search/Shh",
+        "name": "Protein Atlas"
+      },
+      {
+        "comments": "Meta-analysis of gene expression data",
+        "id": "http://www.chibi.ubc.ca/Gemma/gene/showGene.html?ncbiid=29499",
+        "name": "Gemma"
+      },
+      {
+        "comments": "Rat Genome DB",
+        "id": "https://rgd.mcw.edu/rgdweb/elasticResults.html?term=Shh&category=Gene&species=Mouse",
+        "name": "Rat Genome DB"
+      },
+      {
+        "comments": "Allen Brain Atlas",
+        "id": "http://mouse.brain-map.org/search/show?search_type=gene&search_term=",
+        "name": "ABA"
+      },
+      {
+        "comments": "Protein interactions: known and inferred",
+        "id": "http://string-db.org/newstring_cgi/show_network_section.pl?identifier=SHH",
+        "name": "STRING"
+      },
+      {
+        "comments": "EBI GWAS",
+        "id": "https://www.ebi.ac.uk/gwas/search?query=SHH",
+        "name": "EBI GWAS"
+      },
+      {
+        "id": "http://www.pantherdb.org/genes/geneList.do?searchType=basic&fieldName=all&organism=all&listType=1&fieldValue=Shh"
+      },
+      {
+        "comments": "GeneMANIA",
+        "id": "https://genemania.org/search/rattus-norvegicus/29499",
+        "name": "GeneMANIA"
+      },
+      {
+        "comments": "EBI GWAS",
+        "id": "https://www.ebi.ac.uk/gwas/search?query=Shh",
+        "name": "EBI GWAS"
+      },
+      {
+        "comments": "Meta-analysis of gene expression data",
+        "id": "http://www.chibi.ubc.ca/Gemma/gene/showGene.html?ncbiid=6469",
+        "name": "Gemma"
+      },
+      {
+        "comments": "Rat Genome DB",
+        "id": "https://rgd.mcw.edu/rgdweb/elasticResults.html?term=SHH&category=Gene&species=Human",
+        "name": "Rat Genome DB"
+      },
+      {
+        "comments": "Meta-analysis of gene expression data",
+        "id": "http://www.chibi.ubc.ca/Gemma/gene/showGene.html?ncbiid=20423",
+        "name": "Gemma"
+      },
+      {
+        "comments": "GeneMANIA",
+        "id": "https://genemania.org/search/mus-musculus/20423",
+        "name": "GeneMANIA"
+      },
+      {
+        "comments": "Expression across many tissues and cell types",
+        "id": "http://biogps.org/?org=human#goto=genereport&id=6469",
+        "name": [
+          "BioGPS Resource Link",
+          "BioGPS"
+        ]
+      },
+      {
+        "comments": "Expression across many tissues and cell types",
+        "id": "http://biogps.org/?org=rat#goto=genereport&id=29499",
+        "name": [
+          "BioGPS Resource Link",
+          "BioGPS"
+        ]
+      },
+      {
+        "comments": "Human Protein Atlas",
+        "id": "http://www.proteinatlas.org/search/SHH",
+        "name": "Protein Atlas"
+      },
+      {
+        "comments": "Protein interactions: known and inferred",
+        "id": "http://string-db.org/newstring_cgi/show_network_section.pl?identifier=Shh",
+        "name": "STRING"
+      }
+    ],
+    "species": [
+      {
+        "id": "http://genenetwork.org/id/Rat"
+      },
+      {
+        "id": "http://genenetwork.org/id/Human"
+      },
+      {
+        "id": "http://genenetwork.org/id/Rattus_norvegicus"
+      },
+      {
+        "id": "http://genenetwork.org/id/Mouse"
+      }
+    ],
+    "strand": [
+      "+",
+      "-"
+    ],
+    "transcript": [
+      {
+        "id": "https://portals.broadinstitute.org/gpp/public/trans/details?transName=NM_017221"
+      },
+      {
+        "id": "https://portals.broadinstitute.org/gpp/public/trans/details?transName=NM_009170"
+      },
+      {
+        "id": "https://portals.broadinstitute.org/gpp/public/trans/details?transName=NM_000193"
+      }
+    ],
+    "txEnd": [
+      28.4671,
+      0.727691,
+      155.104,
+      2.20966
+    ],
+    "txStart": [
+      2.2005,
+      0.718538,
+      155.095,
+      28.4568
+    ],
+    "type": "gnc:GeneSymbol",
+    "unigenID": [
+      "Mm.57202",
+      "Hs.164537"
+    ]
+  },
+  "targetSequence": "catgggggtccacaaattatatttttatacacagaattgtanattanatttttgagagatcaatacctaantgaatgacatttcattttttgaaagtgtaaaatatgnaaatatattattttaatttaactattttccaatgtaatagccgtcttctgtactgccttctt",
+  "type": "gnc:Probeset"
 }
 ```
