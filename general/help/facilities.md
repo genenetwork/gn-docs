@@ -1,7 +1,9 @@
 # Equipment
 
 The core [GeneNetwork team](https://github.com/genenetwork/) and [Pangenome team](https://github.com/pangenome) at UTHSC maintains modern Linux servers and storage systems for genetic, genomic, pangenome, pangenetics and phenome analyses.
-Machines are located in in the main UTHSC machine room of the Lamar Alexander Building at UTHSC (Memphis TN campus).
+Machines are located in in the main UTHSC machine room of the Lamar Alexander Building at UTHSC (Memphis TN campus). This is a physically secure location with raised
+floors and an advanced fire extinguishing system.
+
 We have access to this space for upgrades and hardware maintenance.
 We use remote racadm and/or ipmi to all machines for out-of-band maintenance.
 Issues and work packages are tracked through our 'tissue' [tracker board](https://issues.genenetwork.org/) and we use git repositories for documentation, issue tracking and planning (mostly public and some private repos available on request).
@@ -14,7 +16,7 @@ In 2023 we added two machines to upgrade from tux01 and tux02 -- named tux04 and
 
 ## Octopus HPC cluster
 
-In 2020 we installed a small but powerful HPC cluster (Octopus) dedicated to [pangenomic](https://www.biorxiv.org/content/10.1101/2021.11.10.467921v1) and [genetic](https://genenetwork.org/) computations, consisting of 11 PowerEdge R6515 AMD EPYC 7402P 24-core CPUs (264 real cores).
+In 2020 we installed a powerful HPC cluster (Octopus) dedicated to [pangenomic](https://www.biorxiv.org/content/10.1101/2021.11.10.467921v1) and [genetic](https://genenetwork.org/) computations, consisting of 11 PowerEdge R6515 AMD EPYC 7402P 24-core CPUs (264 real cores).
 Nine of these machines are equipped with 378 GB RAM and two have 1 TB of memory.
 All machines have large SSD storage (~10TB) driving 100+ TB shared network storage.
 All Octopus nodes run Debian and GNU Guix and use Slurm for batch submission.
