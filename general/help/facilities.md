@@ -7,25 +7,26 @@ floors and an advanced fire extinguishing system.
 We have access to this space for upgrades and hardware maintenance.
 We use remote racadm and/or ipmi to all machines for out-of-band maintenance.
 Issues and work packages are tracked through our 'tissue' [tracker board](https://issues.genenetwork.org/) and we use git repositories for documentation, issue tracking and planning (mostly public and some private repos available on request).
-We also run [continuous integration](https://ci.genenetwork.org/) and [continuous deployment](https://cd.genenetwork.org/) services online (CI and CD).
+We also run [continuous integration](https://ci.genenetwork.org/) and [continuous deployment](https://cd.genenetwork.org/) services online (CI and CD). At FOSDEM 2023
+Arun Isaac presented tissue, our [minimalist git+plain text issue tracker](https://archive.fosdem.org/2023/schedule/event/tissue/) that allows us to move away from github soure code hosting and issue trackers.
 
 The computing facility has four computer racks dedicated to GeneNetwork-related work and pangenomics.
 Each rack has a mix of Dell PowerEdge servers (from a few older low-end R610s, R6515, and two R7425 AMD Epyc 64-core 256GB RAM systems - tux01 and tux02 - running the GeneNetwork web services).
 We also support several experimental systems, including a 40-core R7425 system with 196 GB RAM and 2x NVIDIA V100 GPU (tux03), and one Penguin Computing Relion 2600GT systems (Penguin2) with NVIDIA Tesla K80 GPU used for software development and to serve outside-facing less secure R/shiny and Python services that run in isolated containers. Effectively, we have three outward facing servers that are fully utilized by the GeneNetwork team with a total of 64+64+40+28 = 196 real cores.
-In 2023 we added two machines to upgrade from tux01 and tux02 -- named tux04 and tux05 resp. --- that have the latest AMD Genoa EPYC processors adding a total of 96 real CPU cores running at 4GHz. These two machines have 768Gb RAM each.
+In 2023 we added two machines to upgrade from tux01 and tux02 -- named tux04 and tux05 resp. --- that have the latest Dell Poweredge R6625 AMD Genoa EPYC processors adding a total of 96 real CPU cores running at 4GHz. These two machines have 768Gb RAM each.
 
 ## Octopus HPC cluster
 
 In 2020 we installed a powerful HPC cluster (Octopus) dedicated to [pangenomic](https://www.biorxiv.org/content/10.1101/2021.11.10.467921v1) and [genetic](https://genenetwork.org/) computations, consisting of 11 PowerEdge R6515 AMD EPYC 7402P 24-core CPUs (264 real cores).
-Nine of these machines are equipped with 378 GB RAM and two have 1 TB of memory.
-All machines have large SSD storage (~10TB) driving 100+ TB shared network storage.
+In 2023 we added 4 new R6625 AMD Genoa machines adding a total of 192 real CPU cores running at 4GHz (total of 438 real CPU cores).
+Nine of these machines are equipped with 378 GB RAM, four R6625 have 768 GB and two have 1 TB of memory.
+All machines have large SSD storage (~10TB) driving the lizard shared network storage.
 All Octopus nodes run Debian and GNU Guix and use Slurm for batch submission.
 We run lizardfs for distributed network file storage and we run the common workflow language (CWL) and Docker containers.
 The racks have dedicated 10Gbs high-speed Cisco switches and firewalls that are maintained by UTHSC IT staff.
 This heavily used cluster, notably, is almost self-managed by its users and  features on the GNU Guix High Performance Computing [2020](https://hpc.guix.info/blog/2021/02/guix-hpc-activity-report-2020/) and  [2022](https://hpc.guix.info/blog/2023/02/guix-hpc-activity-report-2022/) activity reports!
-In 2023 we added 4 new AMD Genoa machines  processors adding a total of 192 real CPU cores running at 4GHz. These machines also have 768Gb RAM each.
 
-The total number of cores for Octopus has doubled to a total of 456 real CPU cores and the Lizardfs SSD distributed network storage is getting close to 200TB with fiber optic interconnect.
+The total number of cores for Octopus has essentially doubled to a total of 456 real CPU cores and the Lizardfs SSD distributed network storage is getting close to 200TB with fiber optic interconnect.
 
 <table border="0" style="width:95%">
 <tr>
