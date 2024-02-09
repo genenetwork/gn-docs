@@ -1,0 +1,15 @@
+<blockquote><strong>Probe (cell) level data from the CEL file: </strong>These CEL values produced by <a class="fs14" href="http://www.affymetrix.com/support/technical/product_updates/gcos_download.affx" target="_blank">GCOS</a> are 75% quantiles from a set of pixel measured in each cell.</blockquote>
+
+<blockquote>
+<p><strong>Probe set data: </strong>The original CEL values were log2 transformed and quantile normalized. We then took the antilog values of these quantile adjusted CEL values as input to the standard MAS5 algorithm. Probe set values listed in WebQTL pages are typically the averages of four biological replicates within strain.</p>
+</blockquote>
+
+<p>About Quality Control Procedures:</p>
+
+<blockquote>
+<p><strong>RNA processing:</strong>RNA was extracted using Trizol reagent (Invitrogen) and purified using an RNeasy Mini kit from Qiagen. Double-stranded cDNA was generated without pooling. The Ambion MEGAscript T7 kit from Ambion was used to generate biotinylated cRNA for kidney. Fat samples were processed at this step using the Enzo Diagnostics Bioarray High Yield RNA Transcript labeling kit. See H&uuml;bner et al. 2005 for additional detail. One-hundred and twenty eight samples passed RNA quality control steps.</p>
+
+<p><strong>Probe level QC:</strong> All 128 CEL files were collected into a single DataDesk 6.2 file. Probe data from pairs of arrays were plotted and compared. Eight arrays were considered potential outliers (despite having passed RNA quality control) and in the interest of minimizing technical variance, a decision was made to withhold them from the calculation of strain means used in WebQTL. The remaining 120 arrays were quantile normalized and reexamined in DataDesk to ensure reasonble colinearity of all array data sets.</p>
+
+<p><strong>Probe set level QC:</strong> Probe set level QC involves counting the number of times that a single array data set from a single sample generates outliers at the level of the probe set consensus estimates of expression. With 120 arrays, any single array should generate a comparatively small fraction of the total number of outlier calls. This final step of array QC has NOT been implemented yet in this data set.</p>
+</blockquote>

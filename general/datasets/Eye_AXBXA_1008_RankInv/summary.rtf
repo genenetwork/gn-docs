@@ -1,0 +1,769 @@
+<blockquote>
+<p><b>FINAL RECOMMENDED AXB/BXA EYE DATA SET</b>. The Eye AXBXA Illumina Illumina V6.2 (Oct08) data set provides estimates of mRNA expression for whole eyes of 28 strains of mice, including 26 AXB/BXA recombinant inbred strains, and two parental strains, A/J and C57BL/6J. All eye samples were obtained from normal adult control animals raised in a standard laboratory environment at the Jackson Laboratory. We used the <a class="fs14" href="http://www.illumina.com/pages.ilmn?ID=198" target="_empty">Illumina Sentrix MouseWG-6 v2 BeadChip</a> (despite the nomenclature, this is actually the third version of the Illumina Mouse-6 platform).</p>
+
+<p>Users of these mouse eye data may also find the following complementary resources extremely useful:</p>
+
+<ol>
+	<li><a class="fs14" href="http://neibank.nei.nih.gov/index.shtml" target="_blank">NEIBank</a> collection of ESTs and SAGE data</li>
+	<li><a class="fs14" href="http://www.sph.uth.tmc.edu/Retnet/" target="_blank">RetNet</a>: the Retinal Information Network--tables of genes and loci causing inherited retinal diseases</li>
+	<li><a class="fs14" href="http://cepko.med.harvard.edu/" target="_blank">Mouse Retina SAGE Library</a> from the Cepko laboratory. This site provides extensive developmental data from as early as embryonic day E12.5.</li>
+	<li><a class="fs14" href="http://microarray-pubs.stanford.edu/eyecompartments/" target="_blank">Data sets on differential gene expression in anatomical compartments of the human eye</a> from Pat Brown&#39;s lab. View expression signatures for different ocular tissues using the <b>geneXplorer 2.0</b>.</li>
+</ol>
+</blockquote>
+
+<p class="subtitle">&nbsp;&nbsp;&nbsp;&nbsp;About the cases used to generate this set of data:</p>
+
+<blockquote>
+<p>&nbsp;</p>
+
+<p>A total of 54 pooled whole eye samples were processed using approximately 10 <a class="fs14" href="http://www.illumina.com/pages.ilmn?ID=198/" target="_empty">Illumina Sentrix Mouse WG-6 v2 oligomer BeadChip</a> slides. All 10 slides and a total of 54 samples passed stringent quality control and error checking. This particular data set was processed using the Illumina &quot;Rank Invariant&quot; protocol. Values were log2 transformed. Variance of each array was stabilized to 4 units (SD of 2 units) and recentered to a mean of 8. values range from a low of 6.3 (e.g., ILMN_1225143, no expression) to a high of about 19.7 for ILMN_2772482 (<i>Crygd</i>, extremely highly expressed). Data were entered by Arthur Centeno, Hongqiang Li, Robert W. Williams, and Lu Lu, October 1, 2008.</p>
+
+<p>As a measure of data quality we often count the number of probes that are associated with LOD scores of greater than 10. In this data set, 255 probes have LRS values &gt;46 (LOD &gt;10). The maximum LOD score achieved in this data set is 27.7 for <i>Zfp330</i> (LRS of 127.9 using ILMN_2825109).</p>
+
+<p>The probe ILMN_2475156 can be used to check sex assignment. With three exceptions, all 28 strains are represented by one male sample and one female sample. The three exceptions are are follows: both AXB13/14 cases are males, BXA25 is represented by a single male sample or a mixed sex sample, and BXA11 is represented by a single female sample.</p>
+
+<p><img src="/images/upload/AXB_BXA_Eye_Sex.gif" valign="top" /></p>
+
+<p><small><b>Legend:</b> Bar chart of the expression of <i>Xist</i> probe ILMN_2475156 in the AXB/BXA eye data set. This probe is used to check sex. Strains represented by equal numbers of male and female arrays (usually one of each) should have intermediate values and a high error term. Strains represented only by males will have very low values (for example, AXB13/14 is represented by only one male) and strains represented by only females will have very high expression (for example, BXA11 is represented by only one female). </small></p>
+
+<p class="subtitle">&nbsp;&nbsp;&nbsp;&nbsp;About the animals and tissue used to generate this set of data:</p>
+
+<blockquote>
+<p>AXB/BXA animals were obtained directly from The Jackson Laboratory. Animals were housed at UTHSC before sacrifice. Mice were killed by cervical dislocation and eyes and brains were removed and placed in RNAlater.</p>
+
+<p>Animals used in this study were between 51 and 90 days of age (see Table 1 below). All animals were sacrifice between 9 AM and 5 PM during the light phase.</p>
+</blockquote>
+
+<p><b>Experimental Design and Batch Structure:</b> This data set consists arrays processed September 2008 and all arrays in this data set were processed using a single protocol by a single operator. Processing was supervised directly by Dr. Lu Lu. All samples were scanned on a single Illumina Beadstation housed in the Hamilton Eye Institute in September 2008. Details on sample assignment to slides and batches is provide in the table below.</p>
+</blockquote>
+
+<p class="subtitle">&nbsp;&nbsp;&nbsp;&nbsp;Data Table 1:</p>
+
+<blockquote>
+<blockquote>
+<p>This table lists all arrays by order of strain (<b>index</b>) and includes data on tube ID, strain, age, sex, number of animals in each sample pool (<b>pool size</b>), slide ID, slide position (A through F), batch by slide number (1 or 2), and Source of animals.</p>
+
+<blockquote>
+<table align="Center" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td>
+			<table border="1" cellpadding="5" cellspacing="0" width="600">
+				<tbody>
+					<tr bgcolor="royalblue">
+						<td><font color="#FFFFFF">Index</font></td>
+						<td><font color="#FFFFFF">Tube ID</font></td>
+						<td><font color="#FFFFFF">Strain</font></td>
+						<td><font color="#FFFFFF">Age</font></td>
+						<td><font color="#FFFFFF">Sex</font></td>
+						<td><font color="#FFFFFF">Pool size</font></td>
+						<td><font color="#FFFFFF">Slide Id</font></td>
+						<td><font color="#FFFFFF">Slide Position</font></td>
+						<td><font color="#FFFFFF">Batch Id</font></td>
+						<td><font color="#FFFFFF">Source</font></td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>1</td>
+						<td>R4893E1</td>
+						<td>A/J</td>
+						<td>59</td>
+						<td>F</td>
+						<td>0</td>
+						<td>4252491010</td>
+						<td>A</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>2</td>
+						<td>R4982E1</td>
+						<td>A/J</td>
+						<td>79</td>
+						<td>M</td>
+						<td>2</td>
+						<td>4252491006</td>
+						<td>A</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>3</td>
+						<td>R4894E1</td>
+						<td>A/J</td>
+						<td>59</td>
+						<td>M</td>
+						<td>0</td>
+						<td>4252491011</td>
+						<td>A</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>4</td>
+						<td>R3655E1</td>
+						<td>A/J</td>
+						<td>86</td>
+						<td>M</td>
+						<td>0</td>
+						<td>4252491031</td>
+						<td>A</td>
+						<td>2</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>5</td>
+						<td>R4897E1</td>
+						<td>AXB1</td>
+						<td>90</td>
+						<td>F</td>
+						<td>0</td>
+						<td>4252491005</td>
+						<td>C</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>6</td>
+						<td>R5005E1</td>
+						<td>AXB1</td>
+						<td>56</td>
+						<td>M</td>
+						<td>0</td>
+						<td>4252491008</td>
+						<td>A</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>7</td>
+						<td>R5001E1</td>
+						<td>AXB10</td>
+						<td>63</td>
+						<td>F</td>
+						<td>2</td>
+						<td>4252491008</td>
+						<td>B</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>8</td>
+						<td>R5002E1</td>
+						<td>AXB10</td>
+						<td>63</td>
+						<td>M</td>
+						<td>2</td>
+						<td>4252491021</td>
+						<td>B</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>9</td>
+						<td>R4891E1</td>
+						<td>AXB12</td>
+						<td>63</td>
+						<td>F</td>
+						<td>0</td>
+						<td>4252491009</td>
+						<td>A</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>10</td>
+						<td>R4999E1</td>
+						<td>AXB12</td>
+						<td>57</td>
+						<td>M</td>
+						<td>2</td>
+						<td>4252491005</td>
+						<td>D</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>11</td>
+						<td>R5000E1</td>
+						<td>AXB13</td>
+						<td>57</td>
+						<td>M</td>
+						<td>2</td>
+						<td>4252491008</td>
+						<td>C</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>12</td>
+						<td>R5003E1</td>
+						<td>AXB15</td>
+						<td>63</td>
+						<td>F</td>
+						<td>2</td>
+						<td>4252491005</td>
+						<td>E</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>13</td>
+						<td>R4963E1</td>
+						<td>AXB15</td>
+						<td>63</td>
+						<td>M</td>
+						<td>2</td>
+						<td>4252491031</td>
+						<td>B</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>14</td>
+						<td>R3661E1</td>
+						<td>AXB19</td>
+						<td>89</td>
+						<td>F</td>
+						<td>0</td>
+						<td>4252491008</td>
+						<td>D</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>15</td>
+						<td>R4962E1</td>
+						<td>AXB19</td>
+						<td>62</td>
+						<td>M</td>
+						<td>0</td>
+						<td>4252491005</td>
+						<td>F</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>16</td>
+						<td>R4975E1</td>
+						<td>AXB2</td>
+						<td>79</td>
+						<td>F</td>
+						<td>2</td>
+						<td>4252491006</td>
+						<td>C</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>17</td>
+						<td>R4976E1</td>
+						<td>AXB2</td>
+						<td>79</td>
+						<td>M</td>
+						<td>2</td>
+						<td>4252491021</td>
+						<td>C</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>18</td>
+						<td>R4973E1</td>
+						<td>AXB23</td>
+						<td>66</td>
+						<td>F</td>
+						<td>2</td>
+						<td>4252491009</td>
+						<td>E</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>19</td>
+						<td>R4972E1</td>
+						<td>AXB23</td>
+						<td>66</td>
+						<td>M</td>
+						<td>2</td>
+						<td>4252491006</td>
+						<td>D</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>20</td>
+						<td>R4959E1</td>
+						<td>AXB24</td>
+						<td>100</td>
+						<td>F</td>
+						<td>2</td>
+						<td>4252491006</td>
+						<td>E</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>21</td>
+						<td>R4960E1</td>
+						<td>AXB24</td>
+						<td>100</td>
+						<td>M</td>
+						<td>2</td>
+						<td>4252491019</td>
+						<td>A</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>22</td>
+						<td>R4994E1</td>
+						<td>AXB4</td>
+						<td>54</td>
+						<td>F</td>
+						<td>2</td>
+						<td>4252491031</td>
+						<td>C</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>23</td>
+						<td>R5007E1</td>
+						<td>AXB4</td>
+						<td>54</td>
+						<td>M</td>
+						<td>2</td>
+						<td>4252491006</td>
+						<td>F</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>24</td>
+						<td>R4995E1</td>
+						<td>AXB5</td>
+						<td>61</td>
+						<td>F</td>
+						<td>2</td>
+						<td>4252491021</td>
+						<td>F</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>25</td>
+						<td>R4996E1</td>
+						<td>AXB5</td>
+						<td>61</td>
+						<td>M</td>
+						<td>2</td>
+						<td>4252491009</td>
+						<td>F</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>26</td>
+						<td>R4997E1</td>
+						<td>AXB6</td>
+						<td>60</td>
+						<td>F</td>
+						<td>2</td>
+						<td>4252491010</td>
+						<td>C</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>27</td>
+						<td>R4998E1</td>
+						<td>AXB6</td>
+						<td>60</td>
+						<td>M</td>
+						<td>2</td>
+						<td>4252491021</td>
+						<td>D</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>28</td>
+						<td>R4958E1</td>
+						<td>AXB8</td>
+						<td>52</td>
+						<td>F</td>
+						<td>2</td>
+						<td>4252491019</td>
+						<td>D</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>29</td>
+						<td>R4957E1</td>
+						<td>AXB8</td>
+						<td>52</td>
+						<td>M</td>
+						<td>2</td>
+						<td>4252491010</td>
+						<td>D</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>30</td>
+						<td>R4991E1</td>
+						<td>BXA1</td>
+						<td>54</td>
+						<td>F</td>
+						<td>2</td>
+						<td>4252491010</td>
+						<td>E</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>31</td>
+						<td>R4990E1</td>
+						<td>BXA1</td>
+						<td>54</td>
+						<td>M</td>
+						<td>2</td>
+						<td>4252491009</td>
+						<td>B</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>32</td>
+						<td>R4980E1</td>
+						<td>BXA11</td>
+						<td>52</td>
+						<td>F</td>
+						<td>0</td>
+						<td>4252491020</td>
+						<td>A</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>33</td>
+						<td>R5006E1</td>
+						<td>BXA12</td>
+						<td>48</td>
+						<td>F</td>
+						<td>2</td>
+						<td>4252491011</td>
+						<td>C</td>
+						<td>2</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>34</td>
+						<td>R4993E1</td>
+						<td>BXA12</td>
+						<td>48</td>
+						<td>M</td>
+						<td>2</td>
+						<td>4252491031</td>
+						<td>D</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>35</td>
+						<td>R4968E1</td>
+						<td>BXA13</td>
+						<td>61</td>
+						<td>F</td>
+						<td>2</td>
+						<td>4252491011</td>
+						<td>D</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>36</td>
+						<td>R4969E1</td>
+						<td>BXA13</td>
+						<td>61</td>
+						<td>M</td>
+						<td>2</td>
+						<td>4252491008</td>
+						<td>E</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>37</td>
+						<td>R4966E1</td>
+						<td>BXA14</td>
+						<td>56</td>
+						<td>F</td>
+						<td>2</td>
+						<td>4252491031</td>
+						<td>E</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>38</td>
+						<td>R4967E1</td>
+						<td>BXA14</td>
+						<td>56</td>
+						<td>M</td>
+						<td>2</td>
+						<td>4252491011</td>
+						<td>E</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>39</td>
+						<td>R4970E1</td>
+						<td>BXA16</td>
+						<td>51</td>
+						<td>F</td>
+						<td>2</td>
+						<td>4252491011</td>
+						<td>F</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>40</td>
+						<td>R5004E1</td>
+						<td>BXA16</td>
+						<td>51</td>
+						<td>M</td>
+						<td>2</td>
+						<td>4252491031</td>
+						<td>F</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>41</td>
+						<td>R4981E1</td>
+						<td>BXA2</td>
+						<td>50</td>
+						<td>F</td>
+						<td>2</td>
+						<td>4252491008</td>
+						<td>F</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>42</td>
+						<td>R4965E1</td>
+						<td>BXA2</td>
+						<td>54</td>
+						<td>M</td>
+						<td>0</td>
+						<td>4252491020</td>
+						<td>B</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>43</td>
+						<td>R4984E1</td>
+						<td>BXA24</td>
+						<td>54</td>
+						<td>F</td>
+						<td>2</td>
+						<td>4252491021</td>
+						<td>E</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>44</td>
+						<td>R4974E1</td>
+						<td>BXA24</td>
+						<td>54</td>
+						<td>M</td>
+						<td>2</td>
+						<td>4252491019</td>
+						<td>C</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>45</td>
+						<td>R4988E1</td>
+						<td>BXA25</td>
+						<td>70</td>
+						<td>M</td>
+						<td>0</td>
+						<td>4252491020</td>
+						<td>F</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>46</td>
+						<td>R4964E1</td>
+						<td>BXA26</td>
+						<td>54</td>
+						<td>F</td>
+						<td>0</td>
+						<td>4252491019</td>
+						<td>B</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>47</td>
+						<td>R3636E1</td>
+						<td>BXA26</td>
+						<td>87</td>
+						<td>M</td>
+						<td>0</td>
+						<td>4252491009</td>
+						<td>D</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>48</td>
+						<td>R4977E1</td>
+						<td>BXA4</td>
+						<td>65</td>
+						<td>F</td>
+						<td>0</td>
+						<td>4252491020</td>
+						<td>C</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>49</td>
+						<td>R3638E1</td>
+						<td>BXA4</td>
+						<td>87</td>
+						<td>M</td>
+						<td>0</td>
+						<td>4252491019</td>
+						<td>E</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>50</td>
+						<td>R4978E1</td>
+						<td>BXA7</td>
+						<td>65</td>
+						<td>F</td>
+						<td>2</td>
+						<td>4252491019</td>
+						<td>F</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>51</td>
+						<td>R4979E1</td>
+						<td>BXA7</td>
+						<td>65</td>
+						<td>M</td>
+						<td>2</td>
+						<td>4252491021</td>
+						<td>A</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>52</td>
+						<td>R5008E1</td>
+						<td>BXA8</td>
+						<td>52</td>
+						<td>F</td>
+						<td>2</td>
+						<td>4252491020</td>
+						<td>E</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>53</td>
+						<td>R4983E1</td>
+						<td>BXA8</td>
+						<td>52</td>
+						<td>M</td>
+						<td>2</td>
+						<td>4252491020</td>
+						<td>D</td>
+						<td>1</td>
+						<td>JAX</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>54</td>
+						<td>R5012E1</td>
+						<td>C57BL/6J</td>
+						<td>87</td>
+						<td>F</td>
+						<td>2</td>
+						<td>4252491006</td>
+						<td>B</td>
+						<td>1</td>
+						<td>UTHSC RW</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>55</td>
+						<td>R5010E1</td>
+						<td>C57BL/6J</td>
+						<td>87</td>
+						<td>F</td>
+						<td>2</td>
+						<td>4252491011</td>
+						<td>B</td>
+						<td>1</td>
+						<td>UTHSC RW</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>56</td>
+						<td>R5011E1</td>
+						<td>C57BL/6J</td>
+						<td>79</td>
+						<td>M</td>
+						<td>2</td>
+						<td>4252491005</td>
+						<td>B</td>
+						<td>1</td>
+						<td>UTHSC RW</td>
+					</tr>
+					<tr bgcolor="#eeeeee">
+						<td>57</td>
+						<td>R5009E1</td>
+						<td>C57BL/6J</td>
+						<td>79</td>
+						<td>M</td>
+						<td>2</td>
+						<td>4252491010</td>
+						<td>B</td>
+						<td>1</td>
+						<td>UTHSC RW</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p class="subtitle">&nbsp;&nbsp;&nbsp;&nbsp;Downloading all data:</p>
+
+			<blockquote>
+			<p>All data links (right-most column above) will be made active as soon as the global analysis of these data has been accepted for publication. Please see text on <a class="fs14" href="http://www.genenetwork.org/dataSharing.html" target="_empty">Data Sharing Policies</a>, and <a class="fs14" href="http://www.genenetwork.org/conditionsofUse.html" target="_empty">Conditions and Limitations</a>, and <a class="fs14" href="http://www.genenetwork.org/statusandContact.html" target="_empty">Contacts</a>. Following publication, download a summary text file or Excel file of data. Please contact <a class="fs14" href="mailto:rwilliams@nb.utmem.edu">RW Williams</a> if you have any questions on the use of these open data.</p>
+			</blockquote>
+
+			<p class="subtitle">&nbsp;&nbsp;&nbsp;&nbsp;About data processing:</p>
+
+			<blockquote>
+			<p>This data set uses the standard Rank Invariant method developed by Illumina and described in their BeadStation Studio documentation.</p>
+			</blockquote>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</blockquote>
+</blockquote>
+</blockquote>

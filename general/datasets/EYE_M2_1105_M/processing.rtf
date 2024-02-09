@@ -1,0 +1,11 @@
+<blockquote><strong>Probe (cell) level data from the CEL file: </strong>These CEL values produced by <a class="fs14" href="http://www.affymetrix.com/support/technical/product_updates/gcos_download.affx" target="_blank">GCOS</a> are 75% quantiles from a set of 91 pixel values per cell.
+
+<ul>
+	<li>Step 1: We added an offset of 1.0 unit to each cell signal to ensure that all values could be logged without generating negative values. We then computed the log base 2 of each cell.</li>
+	<li>Step 2: We performed a quantile normalization of the log base 2 values for the total set of arrays using the same initial steps used by the RMA transform.</li>
+	<li>Step 3: We computed the Z scores for each cell value.</li>
+	<li>Step 4: We multiplied all Z scores by 2.</li>
+	<li>Step 5: We added 8 to the value of all Z scores. The consequence of this simple set of transformations is to produce a set of Z scores that have a mean of 8, a variance of 4, and a standard deviation of 2. The advantage of this modified Z score is that a two-fold difference in expression level corresponds approximately to a 1 unit difference.</li>
+	<li>Step 7: Finally, when appropriate, we computed the arithmetic mean of the values for the set of microarrays for each strain. Technical replicates were averaged before computing the mean for independent biological samples.</li>
+</ul>
+</blockquote>

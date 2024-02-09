@@ -1,0 +1,102 @@
+<p>Analysis Methods</p>
+
+<p>Preprocessing</p>
+
+<p>RNA-seq</p>
+
+<p>RNA-seq was performed using the Illumina TruSeq library construction protocol. This is a non-strand specific polyA+ selected library. The sequencing produced 76-bp paired end reads.</p>
+
+<p>See also:How to Evaluate and Use Human and Mouse mRNA Data Sets (e.g. GTEx)</p>
+
+<p>Alignment to the HG19 human genome was performed using Tophat v1.1.4 assisted by the GENCODE v12 transcriptome definition. In a post processing step, unaligned reads are reintroduced into the bam. The final bam contains aligned and unaligned reads, marked duplicates, quality score recalibration. It should be noted that Tophat produces multiple mappings for some reads, but in post processing one read is flagged as the primary alignment.</p>
+
+<p>Genotyping</p>
+
+<p>DNA samples that are sent to the Broad Institute Genetic Analysis Platform for genotyping, are placed on 96-well plates using the Illumina HumanOmni5-4v1_B SNP array. Omni genotypes are called using GenomeStudio v2010.3 with the calling algorithm/genotyping module version 1.8.4 using the default cluster file HumanOmni5-4v1-Multi_B.egt. Called genotypes are run through a standard QC pipeline and only samples passing a call rate threshold of 97%, and passing genetic fingerprint and gender concordance are passed. For the final eQTL analysis, the following filters were applied: call rate (&lt; 90%), low HWE (pValue &lt; 1E-6) or are monormorphic.</p>
+
+<p>Expression Quantification</p>
+
+<p>Gene/Transcript Model</p>
+
+<p>Gencode Version 12<br />
+Contig names modified to match the reference genome used for alignment<br />
+Procedure for collapsing transcript model into gene model</p>
+
+<p>Primary source: gencode.v12<br />
+List exons as a set of intervals, discarding any labeled as &#39;retained_intron&#39; and retaining only coding and linc rna.<br />
+Create a separate bin for other types of transcripts and process them independently.<br />
+Merge overlapping intervals.<br />
+Discard intervals associated with multiple genes.<br />
+Map intervals back to gene identifiers and output in GTF format.<br />
+Quantification</p>
+
+<p>For gene/exon level read count and gene level RPKM values, we filter reads based on the requirements:</p>
+
+<p>Reads must have be uniquely mapped (for tophat this is mapping quality &gt; 3; == 255).<br />
+Reads must have proper pairs.<br />
+Alignment distance must be &lt;=6.<br />
+Reads must be contained 100% within exon boundaries. Reads overlapping introns are not counted.<br />
+Exon</p>
+
+<p>For exon read counts, if a read overlaps multiple exons, then then a fractional value equal to the portion of the read contained within that exon is allotted.</p>
+
+<p>Transcript</p>
+
+<p>Transcript-level quantification is provided by Flux Capacitor.</p>
+
+<p>eQTL Analysis</p>
+
+<p>QC and Sample Exclusion Process</p>
+
+<p>D statistic outliers are removed.<br />
+Gender-specific expression outliers are removed.<br />
+Samples with less than 10 million mapped reads are removed.<br />
+In the case of replicates, the samples with the greater number of reads are chosen.<br />
+Covariates</p>
+
+<p>3 Genotyping PCs.<br />
+15 Peer factors:</p>
+
+<p><br />
+The input to PEER are the post-normalization expression values described below.<br />
+Gender.<br />
+Expression</p>
+
+<p>RPKM data are used as produced by RNA-SeQC.<br />
+Filter on &gt;=10 individuals having &gt;0.1RPKM.<br />
+Log and quantile normalize the expression values across all samples.<br />
+Outlier correction: for each gene, rank values across samples then map to a standard normal.<br />
+Genotypes</p>
+
+<p>Imputation-based genotypes:<br />
+Call Rate Threshold 95%.<br />
+Info score Threshold 0.4.<br />
+Minor Allele Frequency &gt;= 5%.<br />
+Sex chromosomes have been excluded excluded.<br />
+Matrix eQTL Parameters</p>
+
+<p>Produced for radius +-1mb from TSS.<br />
+P value threshold set to 1 to emit all p-values.<br />
+Storey FDR</p>
+
+<p>The Storey q-value method was applied using the public R package with default values.<br />
+eQTLs were filtered for an FDR &lt;=5%.<br />
+Tissues</p>
+
+<p>There are 9 Tissues that have sufficient sample numbers (n &gt; 80).</p>
+
+<p>Adipose_Subcutaneous<br />
+Artery_Tibial<br />
+Heart_Left_Ventricle<br />
+Lung<br />
+Muscle_Skeletal<br />
+Nerve_Tibial<br />
+Skin_Sun_Exposed_Lower_leg<br />
+Thyroid<br />
+Whole_Blood</p>
+
+<p>Note: RPKM original values that we enter in GeneNetwork have been log2 transformed after added 1, then values lower than 2.0 were transformed to 0 (zero).</p>
+
+<p>Read Bits of DNA blog:&nbsp;<a href="http://liorpachter.wordpress.com/2013/10/21/gtex/" target="_blank">GTEx is throwing away 90% of their data</a>&nbsp;and <a href="http://liorpachter.wordpress.com/2013/10/31/response-to-gtex-is-throwing-away-90-of-their-data/" target="_blank">response to: &quot;GTEx is throwing away 90% of their data</a>. by Manolis Dermitzakis, Gad Getz, Krisitn Ardlie, Roderic Guigo for the GTEx consortium.</p>
+
+<p>See also:&nbsp;<a href="http://www.genenetwork.org/tutorial/ppt/html/human-mouse_mrna.html" target="_blank">How to Evaluate and Use Human and Mouse mRNA Data Sets (e.g. GTEx)</a></p>

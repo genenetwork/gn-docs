@@ -1,0 +1,27 @@
+<blockquote><strong>Probe (cell) level data from the CEL file: </strong> Probe signal intensity estimates in the Affymetrix CEL files are the 75% quantile value taken from a set of <a class="fs14" href="images/AffyU74.pdf" target="_blank">36</a> (6x6) pixels per probe cell in the DAT image file.
+<ul>
+	<li>Step 1: We added an offset of 1.0 to the CEL expression values for each cell to ensure that all values could be logged without generating negative values.</li>
+	<li>Step 2: We took the log2 of each cell signal intensity.</li>
+	<li>Step 3: We computed the Z score for each of these log2 cell signal intensity values within a single array.</li>
+	<li>Step 4: We multiplied all Z scores by 2.</li>
+	<li>Step 5: We added a constant of 8 units to the value of the Z score. The consequence of this simple set of transformations is to produce a set of Z scores that have a mean of 8 units, a variance of 4 units, and a standard deviation of 2 units. The advantage of this modified Z score is that a 2-fold difference in expression level corresponds roughly to 1 unit.</li>
+	<li>Step 6: We computed the arithmetic mean of the values for the set of microarrays for each strain. We have not corrected for variance introduced by sex, age, source of animals, or any possible interaction. We have not corrected for background beyond that implemented by Affymetrix in generating the CEL file.</li>
+</ul>
+<strong>Probe set data from the CHP file: </strong>Probe set estimates of expression were initially generated using the standard Affymetrix MAS 5 algorithm. The CHP values were then processed following precisely the same six steps listed above to normalize expression and stabilize the variance of all 106 arrays. The mean expression within each array is therefore 8 units with a standard deviation of 2 units. A 1-unit difference represents roughly a 2-fold difference in expression level. Expression levels below 5 are close to the background noise level. While a value of 8 unit is nominally the average expression, this average includes all those transcripts with negligible expression in the brain that would often be eliminated from subsequent analysis (so-called &quot;absent&quot; and &quot;marginal&quot; calls in the CHP file).</blockquote>
+
+<p>About the array probe set names:</p>
+
+<blockquote>
+<p>Most probe sets on the U74Av2 array consist of a total of 32 probes, divided into 16 perfect match probes and 16 mismatch controls. Each set of these 25-nucleotide-long probes has an identifier code that includes a unique number, an underscore character, and several suffix characters that highlight design features. The most common probe set suffix is <strong>at</strong>. This code indicates that the probes should hybridize relatively selectively with the complementary anti-sense target (i.e., the complemenary RNA) produced from a single gene. Other codes include:</p>
+
+<ul>
+	<li><strong>f_at (sequence family)</strong>: Some probes in this probe set will hybridize to identical and/or slightly different sequences of related gene transcripts.</li>
+	<li><strong>s_at (similarity constraint)</strong>: All Probes in this probe set target common sequences found in transcripts from several genes.</li>
+	<li><strong>g_at (common groups)</strong>: Some probes in this set target identical sequences in multiple genes and some target unique sequences in the intended target gene.</li>
+	<li><strong>r_at (rules dropped)</strong>: Probe sets for which it was not possible to pick a full set of unique probes using the Affymetrix probe selection rules. Probes were picked after dropping some of the selection rules.</li>
+	<li><strong>i_at (incomplete)</strong>: Designates probe sets for which there are fewer than the standard numbers of unique probes specified in the design (16 perfect match for the U74Av2).</li>
+	<li><strong>st </strong> (sense target): Designates a sense target; almost always generated in error.</li>
+</ul>
+
+<p>Descriptions for the probe set extensions were taken from the Affymetrix<a class="fs14" href="./dbdoc/data_analysis_fundamentals_manual.pdf"> GeneChip Expression Analysis Fundamentals</a>.</p>
+</blockquote>

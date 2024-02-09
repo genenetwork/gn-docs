@@ -1,0 +1,14 @@
+<blockquote><strong>Probe (cell) level data from the CEL file: </strong>These CEL values produced by MAS 5 are the 75% quantiles from a set of <a class="fs14" href="images/AffyU74.pdf" target="_blank">36 pixel </a>values per cell (the pixel with the 12th highest value represents the whole cell).
+<ul>
+	<li>Step 1: We added an offset of 1.0 to the CEL expression values for each cell to ensure that all values could be logged without generating negative values.</li>
+	<li>Step 2: We took the log2 of each cell.</li>
+	<li>Step 3: We computed the Z score for each cell.</li>
+	<li>Step 4: We multiplied all Z scores by 2.</li>
+	<li>Step 5: We added 8 to the value of all Z scores. The consequence of this simple set of transformations is to produce a set of Z scores that have a mean of 8, a variance of 4, and a standard deviation of 2. The advantage of this modified Z score is that a two-fold difference in expression level corresponds approximately to a 1 unit difference.</li>
+	<li>Step 6: We computed the arithmetic mean of the values for the set of microarrays for each of the individual strains. We have not corrected for variance introduced by sex, age, or a sex-by-age interaction. We have not corrected for background beyond the background correction implemented by Affymetrix in generating the CEL file.</li>
+</ul>
+<strong>Probe set data from the .TXT file: </strong>These .TXT files were generated using the MAS 5. The same simple steps described above were also applied to these values. Every microarray data set therefore has a mean expression of 8 with a standard deviation of 2. A 1-unit difference therefor represents roughly a 2-fold difference in expression level. Expression levels below 5 are usually close to background noise levels.</blockquote>
+
+<p>About the chromosome and megabase position values:</p>
+
+<blockquote>The chromosomal locations of probe sets and gene markers were initially determined by BLAT analysis using the Mouse Genome Sequencing Consortium OCT 2003 Assembly (see <a class="fs14" href="http://genome.ucsc.edu/cgi-bin/hgBlat?command=start&amp;org=mouse">http://genome.ucsc.edu/</a>). We thank Yan Cui (UTHSC) for allowing us to use his Linux cluster to perform this analysis.</blockquote>

@@ -1,0 +1,15 @@
+<blockquote><strong>Probe (cell) level data from the .CEL file: </strong>These .CEL values produced by <a class="normal" href="http://www.affymetrix.com/support/technical/product_updates/gcos_download.affx" target="_blank">GCOS</a> are 75% quantiles from a set of 91 pixel values per cell.
+<ul>
+	<li>Step 1: We added an offset of 1.0 to the .CEL expression values for each cell to ensure that all values could be logged without generating negative values.</li>
+	<li>Step 2: We took the log base 2 of each cell.</li>
+	<li>Step 3: We computed the Z scores for each cell.</li>
+	<li>Step 4: We multiplied all Z scores by 2.</li>
+	<li>Step 5: We added 8 to the value of all Z scores. The consequence of this simple set of transformations is to produce a set of Z scores that have a mean of 8, a variance of 4, and a standard deviation of 2. The advantage of this modified Z score is that a two-fold difference in expression level corresponds approximately to a 1 unit difference.</li>
+	<li>Step 6a: The 430A and 430B GeneChips include a set of 100 shared probe sets (2200 probes) that have identical sequences. These probes and probe sets provide a way to calibrate expression of the two GeneChips to a common scale. The absolute mean expression on the 430B array is almost invariably lower than that on the 430A array. To bring the two arrays into alignment, we regressed Z scores of the common set of probes to obtain a linear regression corrections to rescale the 430B arrays to the 430A array. In our case this involved multiplying all 430B Z scores by the slope of the regression and adding or subtracting a very small offset. The result of this step is that the mean of the 430A GeneChip expression is fixed at a value of 8, whereas that of the 430B chip is typically 7. Thus average of A and B arrays is approximately 7.5.</li>
+	<li>Step 6b: We recenter the whole set of 430A and B transcripts to a mean of 8 and a standard deviation of 2. This involves reapplying Steps 3 through 5 above but now using the entire set of probes and probe sets from a merged 430A and B data set.</li>
+</ul>
+<strong>Probe set data from the .CHP file: </strong>The expression data were generated using <a href="http://www.affymetrix.com/products/software/specific/mas.affx" target="_blank">MAS5</a>. The same simple steps described above were also applied to these values. A 1-unit difference represents roughly a two-fold difference in expression level. Expression levels below 5 are usually close to background noise levels.</blockquote>
+
+<p>About the chromosome and megabase position values:</p>
+
+<blockquote>The chromosomal locations of probe sets and gene markers on the 430A and 430B microarrays were determined by BLAT analysis using the Mouse Genome Sequencing Consortium May 2004 (mm5) assembly (see <a class="normal" href="http://genome.ucsc.edu/cgi-bin/hgBlat?command=start&amp;org=mouse">http://genome.ucsc.edu/cgi-bin/hgBlat?command=start&amp;org=mouse</a>). We thank Dr. Yan Cui (UTHSC) for allowing us to use his Linux cluster to perform this analysis.</blockquote>

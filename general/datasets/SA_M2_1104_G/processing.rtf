@@ -1,0 +1,11 @@
+<blockquote>Affymetrix CEL files obtained from the BIDMC <a class="normal" href="https://www.bidmcgenomics.org/" target="_blank">Genomics Core</a> were processed as follows.
+<ul>
+	<li>Step 1: We added an offset of 1 to the CEL expression values for each cell to ensure that all values could be logged without generating negative values.</li>
+	<li>Step 2: We took the log base 2 of each cell.</li>
+	<li>Step 3: We computed the Z score for each cell.</li>
+	<li>Step 4: We multiplied all Z scores by 2.</li>
+	<li>Step 5: We added 8 to the value of all Z scores. The consequence of this simple set of transformations is to produce a set of Z scores that have a mean of 8, a variance of 4, and a standard deviation of 2. The advantage of this modified Z score is that a two-fold difference in expression level corresponds approximately to a 1 unit difference.</li>
+	<li>Step 6: We plotted these modified Z score probe level expression estimates in DataDesk. Male-female scatterplots of the probe signals were compared strain by strain to highlight poor array data sets. A total of 36 arrays passed this stringent quality control step.</li>
+	<li>Step 7: We computed the arithmetic mean of the values for the set of microarrays for each of the individual strains. We have not corrected for background beyond the background correction implemented by Affymetrix in generating the CEL file.</li>
+</ul>
+<strong>Probe set data from the CHP file: </strong>The expression values were generated using the MAS 5. The same simple steps described above were also applied to these values. Every microarray data set therefore has a mean expression of 8 with a standard deviation of 2. A 1 unit difference therefor represents roughly a two-fold difference in expression level. Expression levels below 5 are usually close to background noise levels.</blockquote>
