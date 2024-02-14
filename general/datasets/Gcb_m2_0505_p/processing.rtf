@@ -1,0 +1,15 @@
+<blockquote><strong>Probe (cell) level data from the CEL file: </strong>These CEL values produced by <a class="fs14" href="http://www.affymetrix.com/support/technical/product_updates/gcos_download.affx" target="_blank">GCOS</a> are 75% quantiles from a set of 91 pixel values per cell.
+<ul>
+	<li>Step 1: We added an offset of 1.0 unit to each cell signal to ensure that all values could be logged without generating negative values. We then computed the log base 2 of each cell.</li>
+	<li>Step 2: We performed a quantile normalization for the log base 2 values for the total set of 104 arrays (all three batches) using the same initial steps used by the RMA transform.</li>
+	<li>Step 3: We computed the Z scores for each cell value.</li>
+	<li>Step 4: We multiplied all Z scores by 2.</li>
+	<li>Step 5: We added 8 to the value of all Z scores. The consequence of this simple set of transformations is to produce a set of Z scores that have a mean of 8, a variance of 4, and a standard deviation of 2. The advantage of this modified Z score is that a two-fold difference in expression level corresponds approximately to a 1 unit difference.</li>
+	<li>Step 6: No correction for potential batch effect was attempted.</li>
+	<li>Step 7: Finally, we computed the arithmetic mean of the values for the set of microarrays for each strain. Technical replciates were averaged before computing the mean for independent biological samples. Note, that we have not (yet) corrected for variance introduced by differences in sex, age, source of animals, or any interaction terms. We have not corrected for background beyond the background correction implemented by Affymetrix in generating the CEL file. We eventually hope to add statistical controls and adjustments for these variables.</li>
+</ul>
+<strong>Probe set data: </strong>The expression data were processed by Yanhua Qu (UTHSC). Probe set data were generated from the fully normalized CEL files (quantile and batch corrected) using the standard MAS 5 Tukey biweight procedure. A 1-unit difference represents roughly a two-fold difference in expression level. Expression levels below 5 are usually close to background noise levels.</blockquote>
+
+<p>About the chromosome and megabase position values:</p>
+
+<blockquote>The chromosomal locations of probe sets included on the microarrays were determined by BLAT analysis using the Mouse Genome Sequencing Consortium March 2005 Assembly (see <a class="fs14" href="http://genome.ucsc.edu/cgi-bin/hgBlat?command=start&amp;org=mouse">http://genome.ucsc.edu/cgi-bin/hgBlat?command=start&amp;org=mouse</a>). We thank Dr. Yan Cui (UTHSC) for allowing us to use his Linux cluster to perform this analysis.</blockquote>

@@ -1,0 +1,25 @@
+<p><strong>Probe and Probe set data: </strong>The original cell-level files (in text format) were downloaded from <a href="http://www.ebi.ac.uk/arrayexpress/">Array Express</a>. These files were then converted to a standard Affymetrix CEL file (old MAS5 style) format using a Perl script written by Senhua Yu. These files were then processed as a large batch (either all 130 arrays or the final 124 arrays) using a custom quantile normalization program written by KF Manly. The output of this program automatically performs the log normalization and variance stabilization at the probe level. We then computed the mean and standard error for each strain using these normalized probe data.</p>
+
+<p>Probe set data were generated starting with the raw Affymetrix CEL file described above (prior to any normalization) and were processed using the Robust Multichip Average (<a class="fs14" href="http://www.bioconductor.org" target="_blank">RMA</a>) method (Irrizary et al. 2003).</p>
+
+<p>This data set include further normalization to produce final estimates of expression that can be compared directly to the other transforms (average of 8 units and stabilized variance of 2 units within each array). Data were further transformed as follows:</p>
+
+<ul>
+	<li>Step 1: RMA values were generated as described above.</li>
+	<li>Step 2: We computed the Z scores for each probe set value for each array.</li>
+	<li>Step 3: We multiplied all Z scores by 2.</li>
+	<li>Step 4: We added 8 to the value of all Z scores. The consequence of this simple set of transformations is to produce a set of Z scores that have a mean of 8, a variance of 4, and a standard deviation of 2. The advantage of this modified Z score is that a two-fold difference in expression level corresponds approximately to a 1 unit difference.</li>
+	<li>Step 5: Finally, we computed the arithmetic mean of the values for the set of microarrays for each strain. We have not corrected for background beyond the background correction implemented by Affymetrix.</li>
+</ul>
+
+<p>All transformation steps were carried out by Senhua Yu at UTHSC.</p>
+
+<p>About Quality Control Procedures:</p>
+
+<p><strong>RNA processing:</strong>RNA was extracted using Trizol reagent (Invitrogen) and purified using an RNeasy Mini kit from Qiagen. Double-stranded cDNA was generated without pooling. Fat samples were processed using the Enzo Diagnostics Bioarray High Yield RNA Transcript labeling kit. See Hubner et al. 2005 for additional detail. One-hundred and twenty eight samples passed RNA quality control assays.</p>
+
+<p><strong>Probe level QC:</strong> All 130 CEL files were collected into a single DataDesk 6.2 analysis file. Probe data from pairs of arrays were plotted and compared after quantile normalization. Six arrays were considered potential outliers (despite having passed RNA quality control) and in the interest of minimizing technical variance, a decision was made to withhold them from the calculation of strain means. The remaining 124 arrays were then quantile normalized again and reexamined in DataDesk to ensure reasonable colinearity of all final array data sets.</p>
+
+<p><strong>Strain assignment check:</strong> To confirm strain assignment we exploit a set of transcripts with near-Mendelian segregation patterns (search for &quot;test Mendelian&quot;). Strain means with both intermediate expression values AND unusually high error terms often indicate at a misassignment of a case to a particular strain. This error checking has identified 4 strains with possible errors in this data set.</p>
+
+<p>&nbsp;</p>
