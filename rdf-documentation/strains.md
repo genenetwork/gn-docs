@@ -6,7 +6,7 @@
 The following SQL query was executed:
 
 ```sql
-SELECT Strain.Name, Species.Fullname, Strain.Name, IF ((Strain.Name2 != Strain.Name), Strain.Name2, '') AS Name2, IF ((Strain.Alias != Strain.Name), Strain.Alias, '') AS Alias, IF ((Strain.Symbol != Strain.Name), Strain.Symbol, '') AS Symbol FROM Strain LEFT JOIN Species ON Strain.SpeciesId = Species.SpeciesId
+SELECT Strain.Name, Species.Fullname, Strain.Name, IF ((Strain.Name2 != Strain.Name), Strain.Name2, '') AS Name2, IF ((Strain.Alias != Strain.Name), Strain.Alias, '') AS Alias, Strain.Symbol FROM Strain LEFT JOIN Species ON Strain.SpeciesId = Species.SpeciesId
 ```
 
 The above query results to triples that have the form:
@@ -17,7 +17,7 @@ gn:Strain_name_ -> gnt:belongsToSpecies -> gn:Species_fullname
 gn:Strain_name_ -> rdfs:label -> StrainName 
 gn:Strain_name_ -> skos:altLabel -> Name2 
 gn:Strain_name_ -> gnt:alias -> Alias 
-gn:Strain_name_ -> gnt:symbol -> Symbol 
+gn:Strain_name_ -> gnt:geneSymbol -> Strain(Symbol) 
 ```
 Here's an example query:
 
