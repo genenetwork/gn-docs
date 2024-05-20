@@ -26,6 +26,18 @@ gn:Infofiles_infopagename_ -> dct:accessRights -> datasetstatus(datasetstatusnam
 gn:Infofiles_infopagename_ -> gnt:belongsToGroup -> gn:setInbredsetname 
 gn:Infofiles_infopagename_ -> gnt:hasTissue -> gn:tissueTissue_short_name 
 gn:Infofiles_infopagename_ -> gnt:usesNormalization -> gn:avgMethodAvgmethod_avgmethodname 
+gn:Infofiles_infopagename_ -> gnt:hasSummary -> <https://git.genenetwork.org/gn-docs/tree/general/datasets/Infofiles_infopagename_/summary.rtf> 
+gn:Infofiles_infopagename_ -> gnt:hasTissueInfo -> <https://git.genenetwork.org/gn-docs/tree/general/datasets/Infofiles_infopagename_/tissue.rtf> 
+gn:Infofiles_infopagename_ -> gnt:hasCitation -> <https://git.genenetwork.org/gn-docs/tree/general/datasets/Infofiles_infopagename_/citation.rtf> 
+gn:Infofiles_infopagename_ -> gnt:hasSpecifics -> <https://git.genenetwork.org/gn-docs/tree/general/datasets/Infofiles_infopagename_/specifics.rtf> 
+gn:Infofiles_infopagename_ -> gnt:hasCaseInfo -> <https://git.genenetwork.org/gn-docs/tree/general/datasets/Infofiles_infopagename_/cases.rtf> 
+gn:Infofiles_infopagename_ -> gnt:hasPlatformInfo -> <https://git.genenetwork.org/gn-docs/tree/general/datasets/Infofiles_infopagename_/platform.rtf> 
+gn:Infofiles_infopagename_ -> gnt:hasDataProcessingInfo -> <https://git.genenetwork.org/gn-docs/tree/general/datasets/Infofiles_infopagename_/processing.rtf> 
+gn:Infofiles_infopagename_ -> gnt:hasNotes -> <https://git.genenetwork.org/gn-docs/tree/general/datasets/Infofiles_infopagename_/notes.rtf> 
+gn:Infofiles_infopagename_ -> gnt:hasExperimentType -> <https://git.genenetwork.org/gn-docs/tree/general/datasets/Infofiles_infopagename_/experiment-type.rtf> 
+gn:Infofiles_infopagename_ -> gnt:hasExperimentDesign -> <https://git.genenetwork.org/gn-docs/tree/general/datasets/Infofiles_infopagename_/experiment-design.rtf> 
+gn:Infofiles_infopagename_ -> gnt:hasContributors -> <https://git.genenetwork.org/gn-docs/tree/general/datasets/Infofiles_infopagename_/contributors.rtf> 
+gn:Infofiles_infopagename_ -> gnt:hasAcknowledgement -> <https://git.genenetwork.org/gn-docs/tree/general/datasets/Infofiles_infopagename_/acknowledgment.rtf> 
 gn:Infofiles_infopagename_ -> gnt:usesPlatform -> gn:platformGenechip_genechip 
 gn:Infofiles_infopagename_ -> gnt:hasGeoSeriesId ->  
 ```

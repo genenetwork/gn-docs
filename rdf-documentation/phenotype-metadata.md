@@ -20,13 +20,13 @@ gn:traitPhenotype -> dct:description -> PhenotypePost_publication_description
 gn:traitPhenotype -> gnt:abbreviation -> Phenotype(Post_publication_abbreviation) 
 gn:traitPhenotype -> gnt:labCode -> Phenotype(Lab_code) 
 gn:traitPhenotype -> gnt:submitter -> PhenotypeSubmitter 
+gn:traitPhenotype -> dct:contributor -> PhenotypeOwner 
 gn:traitPhenotype -> gnt:mean -> "mean"^^xsd:double 
 gn:traitPhenotype -> gnt:locus -> gn:Publishxreflocus 
 gn:traitPhenotype -> gnt:lodScore -> "lrs"^^xsd:double 
 gn:traitPhenotype -> gnt:additive -> "additive"^^xsd:double 
 gn:traitPhenotype -> gnt:sequence -> "PublishXRef(Sequence)"^^xsd:integer 
 gn:traitPhenotype -> dct:isReferencedBy -> pubmed:pmid 
-gn:traitPhenotype -> dct:contributor -> PhenotypeOwner 
 ```
 Here's an example query:
 
