@@ -62,6 +62,29 @@ Search for results with mean greater than 7:
 
 `mean:7..`
 
+### RIF/WIKI search
+
+To do a RIF search you can use the prefixes: `RIF:` or `rif:`.  Here are some searches you can try out:
+
+```
+rif:Brca2
+rif:Brca2 mean:2.4..2.404
+rif:isoneuronal mean:12.103..12.105
+rif:glioma symbol:shh
+rif:diabetes
+```
+
+To do a WIKI search you can use the prefixes: `WIKI:` or `wiki:`.  Here are some example searches:
+
+```
+wiki:nicotine
+wiki:nicotine mean:12.103..12.105
+wiki:addiction species:mouse
+wiki:nicotine symbol:shh
+wiki:glioma species:mouse group:bxd dataset:hc_m2_0606_p
+```
+
+
 ### Synteny search
 
 Search for results near (+/- 50 kbases) base 9930021 of chromosome 4 of the human species and syntenic locations in other species:
