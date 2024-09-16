@@ -238,7 +238,7 @@ Several excellent resources can be used to explore patterns of gene expression p
 *  <a href="http://www.bioinformatics.ubc.ca/pavlidis/lab/software.html" target="_blank">**Gemma and ErmineJ**</a> are powerful resources for analysis and metaanalysis of gene expression data sets at UBC. Pavlidis and colleagues also provide updated <a href="http://bioinformatics.ubc.ca/microannots/">GO data</a> for common microarray platforms.  
     - <small>[Added Jan 4, 2005; last site review June 7, 2007 by RWW.]</small>
 
-* <a href="http://www.cytoscape.org/index.php" target="_blank">**Cytoscape**</a> is one of several <a href="http://sbml.org/index.psp" target="_blank">SBML</a>-compatible open source programs for visualizing molecular interaction networks and overlaying these networks with gene expression profiles and other data sets to generate and test specific hypotheses. 
+* <a href="http://www.cytoscape.org/index.php" target="_blank">**Cytoscape**</a> is one of several <a href="http://sbml.org/index.psp" target="_blank">SBML</a>-compatible open source programs for visualizing molecular interaction networks and overlaying these networks with gene expression profiles and other data sets to generate and test specific hypotheses.
   - <small>[Added Jan 5, 2005; last site review Jan 5, 2005 by RWW.]</small>
 
 * <a href="http://cgap.nci.nih.gov/Pathways/Pathway_Searcher" target="_blank">**Pathway Searcher**</a> provides fast access to gene/protein interaction pathways. An intuitive interface. 
