@@ -38,7 +38,7 @@ The total number of cores for Octopus has essentially doubled to a total of 456 
 
 ## Lambda server
 
-Additionally, since August 2023, we run a 128 real core AMD EPYC 7713 Lambda server with 1TB RAM, 40TB nvme storage AND 8x NVIDIA RTX6000: a total of approx. 144,000 compute cores for large language models (LLMs) and AI.
+We also run a 128 real core AMD EPYC 7713 Lambda server (2023) with 1TB RAM, 40TB nvme storage AND 8x NVIDIA RTX6000: a total of approx. 144,000 compute cores for large language models (LLMs) and AI.
 
 ## Backups
 
