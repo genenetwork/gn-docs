@@ -72,4 +72,4 @@ All current tools are maintained on [https://gitlab.com/genenetwork/guix-bioinfo
 
 ## Cloud computing
 
-In addition the the "bare metal" described above we increasingly use cloud services for running VMs for teaching and fallbacks, as well as for storing data, including backups.
+In addition the the "bare metal" described above we increasingly use cloud services for running VMs for teaching and fallbacks, as well as  for storing data, including backups.
