@@ -18,9 +18,3 @@ GNQA is a tool utilizing a large language model and a separately maintained scie
 
 ### System Workflow
 ![GNQA workflow](https://raw.githubusercontent.com/genenetwork/gn-docs/master/general/brand/gnqa/imgs/workflow.svg)
-
-
-<!-- ![GNQA reference list](https://raw.githubusercontent.com/genenetwork/gn-docs/master/general/brand/gnqa/imgs/refs.png)
-
-![GNQA References on PubMed](https://raw.githubusercontent.com/genenetwork/gn-docs/master/general/brand/gnqa/imgs/pubmed-ref.svg)
--->
