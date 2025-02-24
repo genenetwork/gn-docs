@@ -60,7 +60,7 @@ Additionally, together with Chris Batten of Cornell and Michael Taylor of the Un
 ## ISAAC access
 
 In addition to above hardware the GeneNetwork team has batch submission access to the HIPAA complient cluster computing resource at the ISAAC computing facility operated by the UT Joint Institute for Computational Sciences in a secure setup at the DOE Oak Ridge National Laboratory (ORNL) and on the UT Knoxville campus.
-We have a 10 Gbit connection from the machine room at UTHSC to data transfer nodes at ISAAC.  ISAAC has been upgraded in the past year (see [ISAAC system overview](https://oit.utk.edu/hpsc/available-resources/)) and has over 7 PB of high-performance Lustre DDN storage and contains over 20,000 cores with some large RAM nodes and 29 GPU nodes.
+We have a 10 Gbit connection from the machine room at UTHSC to data transfer nodes at ISAAC.  ISAAC is continuously being upgraded (see [ISAAC system overview](https://oit.utk.edu/hpsc/available-resources/)) and has over 7 PB of high-performance Lustre DDN storage and contains over 20,000 cores with some large RAM nodes and 32 GPU nodes.
 Drs. Prins, Garrison, Colonna, Chen, Ashbrook and other team members use ISAAC systems to analyze genomic and genetic data sets.
 Note that we can not use ISAAC and storage facilities for public-facing web services because of stringent security requirements.
 ISAAC however, can be highly useful for precomputed genomics and genetics results using standardized pipelines.
