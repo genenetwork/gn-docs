@@ -14,7 +14,6 @@ The above query results to triples that have the form:
 ```text
 gn:traitPhenotype -> rdf:type -> gnc:Phenotype 
 gn:traitPhenotype -> gnt:belongsToGroup -> gn:setInbredset_inbredsetname 
-gn:traitPhenotype -> rdfs:label -> PublishXRef(Id) 
 gn:traitPhenotype -> skos:altLabel -> Phenotype 
 gn:traitPhenotype -> dct:description -> PhenotypePost_publication_description 
 gn:traitPhenotype -> gnt:abbreviation -> Phenotype(Post_publication_abbreviation) 
@@ -48,7 +47,6 @@ PREFIX pubmed: <http://rdf.ncbi.nlm.nih.gov/pubmed/>
 SELECT * WHERE { 
     ?s rdf:type gnc:Phenotype .
     ?s gnt:belongsToGroup gn:setBxd .
-    ?s rdfs:label "10001" .
     ?s skos:altLabel "BXD_10001" .
     ?s ?p ?o .
 }
