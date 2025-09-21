@@ -1,5 +1,9 @@
-New aging portal! This is initial work for providing a full community webservice for aging.
+New UMHET3 and aging portal! This is initial work for providing a full community webservice for aging.
 
-This is a stub until David edits it! Or Rob. See this link to [edit](https://github.com/genenetwork/gn-docs/edit/master/general/brand/aging/home.md).
+To view the preprint, see:
 
-For markdown check [the docs](https://commonmark.org/help/). To embed images you can use a link somewhere from the internet or check it into the gn-doc repo and I'll add a link.
+Genetic Modulation of Lifespan: Dynamic Effects, Sex Differences, and Body Weight Trade-offs https://doi.org/10.1101/2025.04.27.649857
+
+Published files are available [here](https://files.genenetwork.org/current/umhet3_2025/).
+
+Code is available on  https://github.com/DannyArends/UM-HET3/
