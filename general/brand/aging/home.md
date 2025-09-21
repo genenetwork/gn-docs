@@ -2,10 +2,14 @@ New UMHET3 and aging portal! This is initial work for providing a full community
 
 To view the preprint, see:
 
-Genetic Modulation of Lifespan: Dynamic Effects, Sex Differences, and Body Weight Trade-offs [https://doi.org/10.1101/2025.04.27.649857](https://doi.org/10.1101/2025.04.27.649857).
+**Genetic Modulation of Lifespan: Dynamic Effects, Sex Differences, and Body Weight Trade-offs**
 
-Published files are available [here](https://files.genenetwork.org/current/umhet3_2025/).
+- [https://doi.org/10.1101/2025.04.27.649857](https://doi.org/10.1101/2025.04.27.649857).
 
-Code is available on [https://github.com/DannyArends/UM-HET3/](https://github.com/DannyArends/UM-HET3/)
+Data files are available [here](https://files.genenetwork.org/current/umhet3_2025/).
 
-See also GeneNetwork [examples](https://aging.genenetwork.org/].
+Code is available on
+
+- [https://github.com/DannyArends/UM-HET3/](https://github.com/DannyArends/UM-HET3/)
+
+See also [GeneNetwork examples](https://aging.genenetwork.org/).
