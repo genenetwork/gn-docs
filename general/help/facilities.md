@@ -1,6 +1,6 @@
 # Equipment
 
-The core [GeneNetwork team](https://github.com/genenetwork/) and [Pangenome team](https://github.com/pangenome) at UTHSC maintains modern Linux servers and storage systems for genetic, genomic, pangenome, pangenetics and phenome analyses.
+The core [GeneNetwork team](https://github.com/genenetwork/) and [Pangenome team](https://github.com/pangenome) at UTHSC maintains modern Linux servers and storage systems for genetic, genomic, pangenome, pangenetics, and phenome analyses.
 Machines are located in in the main UTHSC machine room of the Lamar Alexander Building at UTHSC (Memphis TN campus). This is a physically secure location with raised
 floors and an advanced fire extinguishing system.
 
@@ -20,13 +20,13 @@ In 2023 we added two machines to upgrade from tux01 and tux02 -- named tux04 and
 In 2020 we installed a powerful HPC cluster (Octopus) dedicated to [pangenomic](https://www.biorxiv.org/content/10.1101/2021.11.10.467921v1) and [genetic](https://genenetwork.org/) computations, consisting of 11 PowerEdge R6515 AMD EPYC 7402P 24-core CPUs (264 real cores).
 In 2023 we added 4 new R6625 AMD Genoa machines adding a total of 192 real CPU cores running at 4GHz (total of 438 real CPU cores).
 Nine of these machines are equipped with 378 GB RAM, four R6625 have 768 GB and two have 1 TB of memory.
-All machines have large SSD storage (~10TB) driving the lizard shared network storage.
+All machines have large SSD storage (~10TB) driving the MooseFS shared network storage. MooseFS is configured with three storage classes: 2CP (default) with one copy on SSD and one on RAID5 spinning HDD for redundancy, scratch for fast non-redundant SSD access, and raid5 for archival storage on spinning disks.
 All Octopus nodes run Debian and GNU Guix and use Slurm for batch submission.
-We run lizardfs for distributed network file storage and we run the common workflow language (CWL) and Docker containers.
+We run MooseFS for distributed network file storage and we run the common workflow language (CWL), Docker, and Apptainer containers.
 The racks have dedicated 10Gbs high-speed Cisco switches and firewalls that are maintained by UTHSC IT staff.
 This heavily used cluster, notably, is almost self-managed by its users and  features on the GNU Guix High Performance Computing [2020](https://hpc.guix.info/blog/2021/02/guix-hpc-activity-report-2020/) and  [2022](https://hpc.guix.info/blog/2023/02/guix-hpc-activity-report-2022/) activity reports!
 
-The total number of cores for Octopus has essentially doubled to a total of 456 real CPU cores and the Lizardfs SSD distributed network storage is getting close to 200TB with fiber optic interconnect.
+The total number of cores for Octopus has essentially doubled to a total of 456 real CPU cores and the MooseFS SSD distributed network storage is getting close to 200TB with fiber optic interconnect.
 
 <table border="0" style="width:95%">
 <tr>
