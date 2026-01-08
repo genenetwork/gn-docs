@@ -38,7 +38,7 @@ The total number of cores for Octopus has essentially doubled to a total of 456 
 
 ## Lambda server
 
-We also run a 128 real core AMD EPYC 7713 Lambda server (2023) with 1TB RAM, 40TB nvme storage AND 8x NVIDIA RTX6000: a total of approx. 144,000 compute cores for large language models (LLMs) and AI.
+We also run a 128 real core AMD EPYC 7713 Lambda server (2023) with 1TB RAM, 40TB nvme storage AND 8x NVIDIA RTX6000: a total of approx. 145,000 compute cores for large language models (LLMs) and AI.
 
 ## Backups
 
@@ -55,7 +55,7 @@ have also two RISC-V
 [SiFive](https://www.sifive.com/blog/the-heart-of-risc-v-development-is-unmatched)
 computers for development purposes.
 
-Additionally, together with Chris Batten of Cornell and Michael Taylor of the University of Washington, Erik Garrison and Pjotr Prins are UTHSC PIs responsible for leading the NSF-funded [RISC-V supercomputer for pangenomics](https://news.cornell.edu/stories/2021/11/5m-grant-will-tackle-pangenomics-computing-challenge). This RISC-V supercomputer 'in a rack' will come online in 2025.
+Additionally, together with Chris Batten of Cornell and Michael Taylor of the University of Washington, Erik Garrison and Pjotr Prins are UTHSC PIs responsible for leading the NSF-funded [RISC-V supercomputer for pangenomics](https://news.cornell.edu/stories/2021/11/5m-grant-will-tackle-pangenomics-computing-challenge). This RISC-V supercomputer 'in a rack' will come online in 2026.
 
 ## ISAAC access
 
