@@ -1,6 +1,6 @@
 # Equipment
 
-The core [GeneNetwork team](https://github.com/genenetwork/) and [Pangenome team](https://github.com/pangenome) at UTHSC maintains modern Linux servers and storage systems for genetic, genomic, pangenome, pangenetics, and phenome analyses.
+The x core [GeneNetwork team](https://github.com/genenetwork/) and [Pangenome team](https://github.com/pangenome) at UTHSC maintains modern Linux servers and storage systems for genetic, genomic, pangenome, pangenetics, and phenome analyses.
 Machines are located in in the main UTHSC machine room of the Lamar Alexander Building at UTHSC (Memphis TN campus). This is a physically secure location with raised
 floors and an advanced fire extinguishing system.
 
