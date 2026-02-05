@@ -1,63 +1,37 @@
 # Equipment
 
-The core [GeneNetwork team](https://github.com/genenetwork/) and [Pangenome
-team](https://github.com/pangenome) at UTHSC maintains modern Linux servers
-and storage systems for genetic, genomic, pangenome, pangenetics, and
-phenome analyses.
-Machines are located in in the main UTHSC machine room of the Lamar
-Alexander Building at UTHSC (Memphis TN campus). This is a physically
-secure location with raised
-floors and an advanced fire extinguishing system.
-
+The core [GeneNetwork team](https://github.com/genenetwork/) and [Pangenome team](https://github.com/pangenome) at UTHSC maintains modern Linux servers and storage systems for genetic, genomic, pangenome, pangenetics, and phenome analyses. Machines are located in in the main UTHSC machine room of the Lamar Alexander Building at UTHSC (Memphis TN campus).
+This is a physically secure location with raised floors and an advanced fire extinguishing system.
 We have access to this space for upgrades and hardware maintenance.
-We use remote racadm and/or ipmi to all machines for out-of-band
-maintenance.
-Issues and work packages are tracked through our 'tissue' [tracker board](
-https://issues.genenetwork.org/) and we use git repositories for
-documentation, issue tracking and planning (mostly public and some private
-repos available on request).
-We also run [continuous integration](https://ci.genenetwork.org/) and
-[continuous deployment](https://cd.genenetwork.org/) services online (CI
-and CD). At FOSDEM 2023
-Arun Isaac presented tissue, our [minimalist git+plain text issue tracker](https://archive.fosdem.org/2023/schedule/event/tissue/) that allows us to
-move away from github soure code hosting and issue trackers.
 
-The computing facility has four computer racks dedicated to
-GeneNetwork-related work and pangenomics.
-Each rack has a mix of Dell PowerEdge servers (from a few older low-end
-R610s, R6515, and two R7425 AMD Epyc 64-core 256GB RAM systems - tux01 and
-tux02 - running the GeneNetwork web services).
-We also support several experimental systems, including a 40-core R7425
-system with 196 GB RAM and 2x NVIDIA V100 GPU (tux03), and one Penguin
-Computing Relion 2600GT systems (Penguin2) with NVIDIA Tesla K80 GPU used
-for software development and to serve outside-facing less secure R/shiny
-and Python services that run in isolated containers. Effectively, we have
-three outward facing servers that are fully utilized by the GeneNetwork
-team with a total of 64+64+40+28 = 196 real cores.
-In 2023 we added two machines to upgrade from tux01 and tux02 -- named
-tux04 and tux05 resp. --- that have the latest Dell Poweredge R6625 AMD
-Genoa EPYC processors adding a total of 96 real CPU cores running at 4GHz.
-These two machines have 768Gb RAM each.
+We use remote racadm and/or ipmi to all machines for out-of-band maintenance.
+Issues and work packages are tracked through our 'tissue' [tracker board](https://issues.genenetwork.org/) and we use git repositories for documentation, issue tracking and planning (mostly public and some private repos available on request).
+We also run [continuous integration](https://ci.genenetwork.org/) and [continuous deployment](https://cd.genenetwork.org/) services online (CI and CD).
+At FOSDEM 2023 Arun Isaac presented tissue, our [minimalist git+plain text issue tracker](https://archive.fosdem.org/2023/schedule/event/tissue/) that allowed us to move away from github soure code hosting and github issue trackers.
+
+The computing facility has four computer racks dedicated to GeneNetwork-related work and pangenomics. Each rack has a mix of Dell PowerEdge servers (from a few older low-end R610s, R6515, and three R7425 AMD Epyc systems - tux01 and tux02 - running development and experimental web services). In 2023 we added two machines to upgrade from tux01 and tux02 -- named tux04 and tux05 resp. --- that have the latest Dell Poweredge R6625 AMD Genoa EPYC processors adding a total of 96 real CPU cores running at 4GHz. These two machines have 768Gb RAM each.
+We also support several experimental systems, including a 40-core R7425 system with 196 GB RAM and 2x NVIDIA V100 GPU (tux03), and one Penguin Computing Relion 2600GT systems (Penguin2) with NVIDIA Tesla K80 GPU used for software development and to serve outside-facing less secure R/shiny and Python services that run in isolated containers.
+Effectively, we have outward facing servers that are fully utilized by the GeneNetwork team with a total of 64+64+40+28 = 196 real cores.
 
 ## Octopus HPC cluster
 
 In 2020 we installed a powerful HPC cluster (Octopus) dedicated to
-[pangenomic](https://www.biorxiv.org/content/10.1101/2021.11.10.467921v1)
+[pangenomic](https://pubmed.ncbi.nlm.nih.gov/39433878/)
 and [genetic](https://genenetwork.org/) computations, consisting of 11
 PowerEdge R6515 AMD EPYC 7402P 24-core CPUs (264 real cores).
-In 2023 we added 4 new R6625 AMD Genoa machines adding a total of 192 real
-CPU cores running at 4GHz (total of 438 real CPU cores).
-Nine of these machines are equipped with 378 GB RAM, four R6625 have 768 GB
-and two have 1 TB of memory.
-All machines have large SSD storage (~10TB) driving the MooseFS shared
-network storage. MooseFS is configured with three storage classes: 2CP
+In 2023 we added 5 new R6625 AMD Genoa machines adding a total of 240 real
+CPU cores running at 4GHz (i.e., a total of 504 real CPU cores).
+Nine of these machines are equipped with 378 GB RAM, five R6625 have 768 GB
+and two R6515 have 1 TB of memory.
+All machines have large SSD storage (~10TB) driving the MooseFS distributed shared
+network storage. MooseFS is flexible in its storage policies. MooseFS is configured with three storage classes: 2CP
 (default) with one copy on SSD and one on RAID5 spinning HDD for
 redundancy, scratch for fast non-redundant SSD access, and raid5 for
-archival storage on spinning disks.
+archival storage on spinning disks. For high throughput we also define multiple copies on the network storage (e.g. 4CP).
 All Octopus nodes run Debian and GNU Guix and use Slurm for batch
 submission.
-We run MooseFS for distributed network file storage and we run the common
-workflow language (CWL), Docker, and Apptainer containers.
+We can run the common
+workflow language (CWL), Docker, and Apptainer containers amongst other solutions.
 The racks have dedicated 10Gbs high-speed Cisco switches and firewalls that
 are maintained by UTHSC IT staff.
 This heavily used cluster, notably, is almost self-managed by its users and
@@ -69,8 +43,8 @@ This heavily used cluster, notably, is almost self-managed by its users and
 activity reports!
 
 The total number of cores for Octopus has essentially doubled to a total of
-456 real CPU cores and the MooseFS SSD distributed network storage is
-getting close to 200TB with fiber optic interconnect.
+504 real CPU cores and the MooseFS SSD distributed network storage is
+getting close to 250TB with fiber optic interconnect.
 
 <table border="0" style="width:95%">
 <tr>
